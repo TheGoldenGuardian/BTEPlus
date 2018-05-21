@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Polycarbonate Sliver"
+	aliases="Plastic Sliver"
+    category="Material"
+    Tags="smallitem"
+    description="Polycarbonate is a thermoplastic polymer, which can be molded into hard, soft or optically transparent materials."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="15">
+   
+    <Deconstruct time="5">
+	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="13,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="9.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Polycarbonate Bar"
+	aliases="Plastic Bar"
+    category="Material"
+    Tags="smallitem"
+    description="Polycarbonate is a thermoplastic polymer, which can be molded into hard, soft or optically transparent materials."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="30">
+   
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="25,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="9.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Polycarbonate Block"
+	aliases="Plastic Block"
+    category="Material"
+    Tags="smallitem"
+    description="Polycarbonate is a thermoplastic polymer, which can be molded into hard, soft or optically transparent materials."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="60">
+   
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="25,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="9.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+
+  <Item
+    name="Aluminium Sliver"
+	aliases="Aluminum Sliver"
+    category="Material"
+    Tags="smallitem"
+    description="Aluminium is a metal with a wide range of applications, from electronic devices to weapons and packaging."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="20">
+   
+    <Deconstruct time="5">
+	  <Item name="Aluminium Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="30"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Aluminium Bar"
+	aliases="Aluminum Bar"
+    category="Material"
+    Tags="smallitem"
+    description="Aluminium is a metal with a wide range of applications, from electronic devices to weapons and packaging."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="40">
+   
+    <Deconstruct time="5">
+      <Item name="Aluminium Sliver"/>
+      <Item name="Aluminium Sliver"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="30"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Aluminium Block"
+	aliases="Aluminum Block"
+    category="Material"
+    Tags="smallitem"
+    description="Aluminium is a metal with a wide range of applications, from electronic devices to weapons and packaging."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="80">
+   
+    <Deconstruct time="5">
+      <Item name="Aluminium Bar"/>
+      <Item name="Aluminium Bar"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="30"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Copper Sliver"
+    category="Material"
+    Tags="smallitem"
+    description="Copper is a metal with applications in electronics, plumbing and industrial machinery."
+    spritecolor="0.78,0.55,0.2,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="25">
+   
+    <Deconstruct time="5">
+	  <Item name="Copper Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="40"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Copper Bar"
+    category="Material"
+    Tags="smallitem"
+    description="Copper is a metal with applications in electronics, plumbing and industrial machinery."
+    spritecolor="0.78,0.55,0.2,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="50">
+   
+    <Deconstruct time="5">
+      <Item name="Copper Sliver"/>
+      <Item name="Copper Sliver"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="40"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Copper Block"
+    category="Material"
+    Tags="smallitem"
+    description="Copper is a metal with applications in electronics, plumbing and industrial machinery."
+    spritecolor="0.78,0.55,0.2,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="100">
+   
+    <Deconstruct time="5">
+      <Item name="Copper Bar"/>
+      <Item name="Copper Bar"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="40"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Bronze Sliver"
+    category="Material"
+    Tags="smallitem"
+    description="Bronze is an alloy with applications in electronics, plumbing, industrial machinery and musical instruments."
+    spritecolor="0.8,0.7,0.2,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="30">
+   
+    <Deconstruct time="5">
+	  <Item name="Bronze Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="35"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Bronze Bar"
+    category="Material"
+    Tags="smallitem"
+    description="Bronze is an alloy with applications in electronics, plumbing, industrial machinery and musical instruments."
+    spritecolor="0.8,0.7,0.2,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="60">
+   
+    <Deconstruct time="5">
+      <Item name="Bronze Sliver"/>
+      <Item name="Bronze Sliver"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="35"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Bronze Block"
+    category="Material"
+    Tags="smallitem"
+    description="Bronze is an alloy with applications in electronics, plumbing, industrial machinery and musical instruments."
+    spritecolor="0.8,0.7,0.2,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="120">
+   
+    <Deconstruct time="5">
+      <Item name="Bronze Bar"/>
+      <Item name="Bronze Bar"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="35"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Steel Sliver"
+    category="Material"
+    Tags="smallitem"
+	description="Steel is an iron alloy and a major component in infrastructure, tools, vehicles, machines, appliances and weapons."
+	spritecolor="0.6,0.6,0.6,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="35">
+
+    <Deconstruct time="5">
+	  <Item name="Steel Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="50"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Steel Bar"
+    category="Material"
+    Tags="smallitem"
+	description="Steel is an iron alloy and a major component in infrastructure, tools, vehicles, machines, appliances and weapons."
+	spritecolor="0.6,0.6,0.6,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="70">
+
+    <Deconstruct time="5">
+      <Item name="Steel Sliver"/>
+      <Item name="Steel Sliver"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="50"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Steel Block"
+    category="Material"
+    Tags="smallitem"
+	description="Steel is an iron alloy and a major component in infrastructure, tools, vehicles, machines, appliances and weapons."
+	spritecolor="0.6,0.6,0.6,1.0"
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="140">
+
+    <Deconstruct time="5">
+      <Item name="Steel Bar"/>
+      <Item name="Steel Bar"/>     
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="50"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Uranium Sliver"
+    category="Material"
+    Tags="smallitem"
+	description="Uranium is a radioactive metal with mostly military applications."
+    spritecolor="0.2,0.35,0.06,1.0"
+    canbepicked="true"
+	cargocontainername="Radiation Shipping Box"
+    price="50">
+
+    <Deconstruct time="5">
+	  <Item name="Uranium Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="60"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+
+  <Item
+    name="Uranium Bar"
+    category="Material"
+    Tags="smallitem"
+	description="Uranium is a radioactive metal with mostly military applications."
+    spritecolor="0.2,0.35,0.06,1.0"
+    canbepicked="true"
+	cargocontainername="Radiation Shipping Box"
+    price="100">
+
+    <Deconstruct time="5">
+      <Item name="Uranium Sliver"/>
+      <Item name="Uranium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="60"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Uranium Block"
+    category="Material"
+    Tags="smallitem"
+	description="Uranium is a radioactive metal with mostly military applications."
+    spritecolor="0.2,0.35,0.06,1.0"
+    canbepicked="true"
+	cargocontainername="Radiation Shipping Box"
+    price="200">
+
+    <Deconstruct time="5">
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="0,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="60"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Fulgurium Sliver"
+    category="Material"
+    Tags="smallitem"
+    description="Fulgurium is a rare metal with some very unique properties. It's only found in Europa."
+    spritecolor="1.0,0.7,0.05,1.0"
+    canbepicked="true">
+   
+    <Deconstruct time="5">
+	  <Item name="Fulgurium Sliver" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="13,38,12,12" depth="0.55"/>
+
+    <Body width="12" height="12" density="10"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Fulgurium Bar"
+    category="Material"
+    Tags="smallitem"
+    description="Fulgurium is a rare metal with some very unique properties. It's only found in Europa."
+    spritecolor="1.0,0.7,0.05,1.0"
+    canbepicked="true">
+   
+    <Deconstruct time="5">
+      <Item name="Fulgurium Sliver"/>
+      <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="25,0,24,12" depth="0.55"/>
+
+    <Body width="24" height="12" density="10"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+
+  <Item
+    name="Fulgurium Block"
+    category="Material"
+    Tags="smallitem"
+    description="Fulgurium is a rare metal with some very unique properties. It's only found in Europa."
+    spritecolor="1.0,0.7,0.05,1.0"
+    canbepicked="true">
+   
+    <Deconstruct time="5">
+      <Item name="Fulgurium Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="materials.png" sourcerect="25,13,24,24" depth="0.55"/>
+
+    <Body width="24" height="24" density="10"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+  
+  <Item
+    name="Spare Parts"
+    category="Material"
+    Tags="smallitem"
+    description="A box containing mechanical parts of various shapes and sizes."
+    canbepicked="true"
+	cargocontainername="Workshop Shipping Box"
+    price="175">
+   
+    <Deconstruct time="5">
+      <Item name="Steel Bar"/>
+      <Item name="Aluminium Bar"/>
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTE/Items/Tools/Tools.png" sourcerect="0,130,29,30" depth="0.55"/>
+
+    <Body width="27" height="28" density="12.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+  </Item>
+</Items>

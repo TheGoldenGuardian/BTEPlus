@@ -1,0 +1,2076 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Items>
+  <Item
+    name="Diving Knife"
+    category="Equipment"
+    Tags="meditem,weapon"
+	description="A Diving Knife is a general purpose tool meant for divers but is usually used by most crew members for personal protection purposes."
+    canuseonself="true"
+	cargocontainername="Weapons Shipping Box"
+	price="150">
+
+    <Deconstruct time="5">
+	  <Item name="Polycarbonate Sliver"/>
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Knives.png" sourcerect="0,0,52,10" depth="0.55"/>
+    
+    <Body width="42" height="8" density="25"/>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-4.2">
+	    <sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="1.2" duration="5">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="0.8">
+      <Attack damage="8" bleedingdamage="2" stun="0.2" targetforce="10" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="8" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Shiv"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="A makeshift knife made from a food can."
+    canuseonself="true">
+
+    <Deconstruct time="5">
+      <Item name="Aluminium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="Knives.png" sourcerect="0,14,40,8" depth="0.55"/>
+    
+    <Body width="38" height="6" density="15"/>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-2.2">
+	    <sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="0.9" duration="5">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="0.8">
+      <Attack damage="4.5" bleedingdamage="1.4" stun="0.15" targetforce="10" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="4.5" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="4.5" stun="-0.15" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Medical Dart"
+	aliases="Dart"
+    category="Equipment"
+	Tags="smallitem,medical,weapon"
+	description="A dart with a hypodermic needle."
+	usecontainedspritecolor="true"
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+    price="100">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver" outcondition="0.75"/>
+	  <Item name="Aluminium Sliver" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="31,78,25,8" depth="0.55"/>
+
+    <Body width="23" height="6" density="10.1"/>
+
+    <Projectile launchimpulse="30" sticktocharacters="true">
+      <Attack damage="1" bleedingdamage="0.1" structuredamage="1" damagetype="Slash" stun="0.1" targetforce="5"/>
+      <StatusEffect type="OnImpact" target="Contained, Character" Condition="-100" disabledeltatime="true">
+        <sound file="Content/Items/Medical/syringe.ogg" range="500"/>
+        <RequiredItem name="chem" type="Contained"/>
+        <Use/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+	
+	<ItemContainer capacity="1" hideitems="true">
+      <Containable name="chem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Dart Gun"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="This is an scoped pneumatic rifle that can propel darts containing different drugs."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+    price="1500">
+
+    <Deconstruct time="10">      
+      <Item name="Aluminium Bar"/>
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="weapons.png" sourcerect="0,0,98,33" depth="0.55"/>
+
+    <Body width="90" height="30" density="40"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="0" unskilledspread="10">
+      <Sound file="Mods/BTE/Items/Weapons/DartGun1.ogg" type="OnUse"/>
+      <Sound file="Mods/BTE/Items/Weapons/DartGun2.ogg" type="OnUse"/>
+      <RequiredItems name="Medical Dart" type="Contained" msg="The loaded dart is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Medical Dart"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
+  </Item>
+  
+  <Item
+    name="Polycarbonate Spear"
+	aliases="Plastic Spear,Toy Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="Polycarbonate spears are used mainly for Harpoon Gun or Spear Gun training."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="35">
+
+    <Deconstruct time="6">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,26,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="9.8"/>
+
+    <Projectile launchimpulse="16">
+      <Attack damage="3" stun="4" targetforce="16" damagetype="Blunt"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="2.6">
+      <Attack damage="2" stun="1" structuredamage="1" targetforce="16" damagetype="Blunt" sound="Content/Items/Weapons/smack.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="10" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="10" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="2" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="2" stun="-1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Aluminium Spear"
+	aliases="Aluminum Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="An aluminium spear, which can be used as Harpoon Gun or Spear Gun ammo or as a melee weapon in a pinch."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Aluminium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,34,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="16"/>
+
+    <Projectile launchimpulse="22" sticktocharacters="true">
+      <Attack damage="20" bleedingdamage="1" stun="1" structuredamage="10" targetforce="30" damagetype="Slash"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="2.6">
+      <Attack damage="8" bleedingdamage="1" stun="0.2" targetforce="18" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="8" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Copper Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="A copper spear, which can be used as Harpoon Gun or Spear Gun ammo or as a melee weapon in a pinch."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,42,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="18"/>
+
+    <Projectile launchimpulse="24" sticktocharacters="true">
+      <Attack damage="30" bleedingdamage="2" stun="1.5" structuredamage="20" targetforce="40" damagetype="Slash"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="2.6">
+      <Attack damage="10" bleedingdamage="1" stun="0.2" targetforce="20" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="10" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="10" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Bronze Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="A bronze spear, which can be used as Harpoon Gun or Spear Gun ammo or as a melee weapon in a pinch."
+	spritecolor="0.8,0.7,0.2,1.0"
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Bronze Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,34,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="18"/>
+
+    <Projectile launchimpulse="24" sticktocharacters="true">
+      <Attack damage="35" bleedingdamage="2.5" stun="2" structuredamage="25" targetforce="45" damagetype="Slash"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="2.6">
+      <Attack damage="15" bleedingdamage="1.25" stun="0.25" targetforce="22" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="15" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="15" stun="-0.25" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Steel Spear"
+	aliases="Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="Steel spears are standard issue ammunition for Harpoon Guns or Spear Guns but they can be used as melee weapons in a pinch."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+    price="125">
+
+    <Deconstruct time="8">
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,50,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="20"/>
+
+    <Projectile launchimpulse="20" sticktocharacters="true">
+      <Attack damage="40" bleedingdamage="3" stun="3" structuredamage="30" targetforce="50" damagetype="Slash"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-1,4" holdangle="-80" reload="2.6">
+      <Attack damage="20" bleedingdamage="1.5" stun="0.3" targetforce="25" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="20" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="20" stun="-5.0" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Uranium Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="An uranium spear for Harpoon Guns or Spear Guns. They are heavier but still useful as ammo or melee weapons."
+    interactthroughwalls="true">
+
+    <Deconstruct time="10">
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,66,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="28"/>
+
+    <Projectile launchimpulse="18" sticktocharacters="true">
+      <Attack damage="35" bleedingdamage="2.5" stun="4" structuredamage="40" targetforce="60" damagetype="Blunt"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-1,4" holdangle="-80" reload="2.8">
+      <Attack damage="15" bleedingdamage="1" stun="0.4" targetforce="30" damagetype="Blunt" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="15" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="15" stun="-0.4" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Fulgurium Spear"
+    category="Equipment"
+	tags="bigitem,weapon,spearammo"
+	description="A fulgurium spear, which can be used as Harpoon Gun or Spear Gun ammo or as a melee weapon in a pinch."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,58,65,7" depth="0.55"/>
+
+    <Body width="64" height="5" density="10"/>
+
+    <Projectile launchimpulse="26" sticktocharacters="true">
+      <Attack damage="19" bleedingdamage="0.9" stun="0.9" structuredamage="5" targetforce="30" damagetype="Slash"/>
+    </Projectile>
+	
+	<MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-12,3" handle2="-9,4" holdangle="-80" reload="2.6">
+      <Attack damage="7" bleedingdamage="0.8" stun="0.15" targetforce="20" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="7" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="7" stun="-0.1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Hollowhead Spear"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A heavily modified plastic spear with enough room for an explosive charge. This spear is wider than normal ones so it can only be loaded in Harpoon Guns."
+	interactthroughwalls="true">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Copper Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="SpearGun.png" sourcerect="0,73,65,9" depth="0.55"/>
+
+    <Body width="64" height="5" density="10.2"/>
+
+    <Projectile launchimpulse="17">
+      <Attack damage="1.5" stun="2" targetforce="8" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="Contained">
+	    <RequiredItem name="explosive" type="Contained"/>
+		<Use/>
+	  </StatusEffect>
+    </Projectile>
+	
+	<Throwable slots="RightHand+LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="2" aimpos="35,-10"/>
+	
+	<ItemContainer capacity="1" hideitems="true">
+      <Containable name="Explosive"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Harpoon Gun"
+	aliases="Harpoon"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A pneumatic implement designed to fire a spear at underwater creatures. It's meant to be used for hunting but it's usually used for self defense."
+    cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+	price="500">
+
+    <Deconstruct time="10">      
+      <Item name="Steel Bar"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="0,25,98,25" depth="0.55"/>
+
+    <Body width="90" height="30" density="40"/>
+	
+	<ItemContainer capacity="1" itempos="27,9" iteminterval="0,-4" hideitems="false">
+      <Containable name="spearammo,Hollowhead Spear"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,7"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="1" unskilledspread="8">
+      <Sound file="Content/Items/Weapons/harpoon1.ogg" type="OnUse"/>
+      <Sound file="Content/Items/Weapons/harpoon2.ogg" type="OnUse"/>
+      <RequiredItems name="spearammo,Hollowhead Spear" type="Contained" msg="The loaded spear is too damaged"/>
+      <RequiredSkill name="Weapons" level="20"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="1" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+  </Item>
+  
+  <Item
+    name="Spear Gun"
+	aliases="Speargun"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A military pneumatic weapon used by security. It can hold up to three spears and it can be deadly in the right, or wrong hands."
+    cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+	price="1750">
+
+    <Deconstruct time="10">      
+      <Item name="Steel bar"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="SpearGun.png" sourcerect="0,0,98,25" depth="0.55"/>
+
+    <Body width="90" height="30" density="50"/>
+	
+	<ItemContainer capacity="3" itempos="27,9" iteminterval="0,-4" hideitems="false">
+      <Containable name="spearammo"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="2" unskilledspread="10">
+      <Sound file="Content/Items/Weapons/harpoon1.ogg" type="OnUse"/>
+      <Sound file="Content/Items/Weapons/harpoon2.ogg" type="OnUse"/>
+      <RequiredItems name="spearammo" type="Contained" msg="The loaded spear is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="1" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+  </Item>
+  
+  <Item
+    name="Polycarbonate Saw"
+	aliases="Plastic Saw,Toy Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="A polycarbonate saw. It's practically a waste of resources."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="0,44,33,34" depth="0.55"/>
+
+    <Body radius="12" density="9.7" friction="0.95"/>
+
+    <Projectile launchimpulse="15">
+      <Attack damage="4" stun="2" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="This" damage="2">
+	  <Explosion range="5" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Aluminium Saw"
+	aliases="Aluminum Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="An aluminium saw. It's useless as a Saw Cutter blade."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Aluminium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="34,44,33,34" depth="0.55"/>
+
+    <Body radius="12" density="16" friction="0.95"/>
+
+    <Projectile launchimpulse="21" sticktocharacters="true">
+      <Attack damage="20" bleedingdamage="2" stun="0.2" structuredamage="5" damagetype="Slash" severlimbsprobability="0.8"/>
+	  <StatusEffect type="OnImpact" target="This" damage="10">
+	    <Explosion range="5" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Copper Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="A copper saw. It's useless as a Saw Cutter blade."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="0,78,33,34" depth="0.55"/>
+
+    <Body radius="12" density="17" friction="0.95"/>
+
+    <Projectile launchimpulse="23" sticktocharacters="true">
+      <Attack damage="30" bleedingdamage="3" stun="0.4" structuredamage="10" damagetype="Slash" severlimbsprobability="0.9"/>
+	  <StatusEffect type="OnImpact" target="This" damage="10">
+	    <Explosion range="5" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Bronze Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="A bronze saw. It's useless as a Saw Cutter blade."
+	spritecolor="0.8,0.7,0.2,1.0"
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Bronze Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="34,44,33,34" depth="0.55"/>
+
+    <Body radius="12" density="17" friction="0.95"/>
+
+    <Projectile launchimpulse="21" sticktocharacters="true">
+      <Attack damage="35" bleedingdamage="3.5" stun="0.8" structuredamage="12" damagetype="Slash" severlimbsprobability="0.9"/>
+	  <StatusEffect type="OnImpact" target="This" damage="10">
+	    <Explosion range="5" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Steel Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="A standard issue Steel Saw used mostly to craft or repair Saw Cutters."
+    interactthroughwalls="true"
+	cargocontainername="Workshop Shipping Box"
+    price="100">
+
+    <Deconstruct time="8">
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="34,78,33,34" depth="0.55"/>
+
+    <Body radius="12" density="18" friction="0.95"/>
+
+    <Projectile launchimpulse="19" sticktocharacters="true">
+      <Attack damage="40" bleedingdamage="4" stun="1" structuredamage="15" damagetype="Slash" severlimbsprobability="1"/>
+	  <StatusEffect type="OnImpact" target="This" damage="20">
+	    <Explosion range="5" force="15" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Uranium Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="An Uranium Saw. This is a custom made blade."
+    interactthroughwalls="true">
+
+    <Deconstruct time="10">
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="34,112,33,34" depth="0.55"/>
+
+    <Body radius="12" density="20" friction="0.95"/>
+
+    <Projectile launchimpulse="17" sticktocharacters="true">
+      <Attack damage="35" bleedingdamage="3.5" stun="2" structuredamage="20" damagetype="Blunt" severlimbsprobability="0.9"/>
+	  <StatusEffect type="OnImpact" target="This" damage="20">
+	    <Explosion range="5" force="20" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Fulgurium Saw"
+    category="Equipment"
+	tags="bigitem,weapon,sawammo"
+	description="A fulgurium saw. This is a custom made blade."
+    interactthroughwalls="true">
+
+    <Deconstruct time="6">
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="SawGun.png" sourcerect="0,112,33,34" depth="0.55"/>
+
+    <Body radius="12" density="10" friction="0.1"/>
+
+    <Projectile launchimpulse="25" sticktocharacters="true">
+      <Attack damage="17" bleedingdamage="1.3" stun="0.25" structuredamage="2.5" damagetype="Slash" severlimbsprobability="0.7"/>
+	  <StatusEffect type="OnImpact" target="This" damage="10">
+	    <Explosion range="5" force="8" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Projectile>
+	
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+    name="Saw Gun"
+	aliases="Sawgun"
+    category="Equipment"
+	description="A makeshift weapon. This is a heavily modified Saw Cutter designed to throw saws instead."
+	impacttolerance="3"
+	tags="bigitem,weapon">
+
+    <Deconstruct time="10">
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture ="SawGun.png" sourcerect="0,0,66,41" depth="0.55"/>
+
+    <Body width="74" height="48" density="50"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="3" unskilledspread="10">
+      <Sound file="Content/Items/Weapons/harpoon1.ogg" type="OnUse"/>
+      <Sound file="Content/Items/Weapons/harpoon2.ogg" type="OnUse"/>
+      <RequiredItems name="sawammo" type="Contained" msg="The loaded saw is too damaged"/>
+      <RequiredSkill name="Weapons" level="30"/>
+	  <StatusEffect type="OnUse" target="This">
+	  <Explosion range="1" force="11" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" itempos="26,5" hideitems="false">
+	  <Containable name="sawammo"/>
+    </ItemContainer>
+	
+	<Holdable slots="Any,RightHand+LeftHand" controlpose="true"
+              holdpos="35,-10" aimpos="50,0" handle1="-12,4"/>
+  </Item>
+  
+  <Item
+    name="HTM Grenade"
+	aliases="Nade,Grenade"
+    category="Equipment"
+	tags="smallitem,weapon"
+	description="HTM or Hand Thrown Munition, is an empty steel casing with a screw-off cap and a trigger mechanism that ignites the containing payload after a certain amount of time."
+    canuseonself="true"
+	impacttolerance="3"
+	cargocontainername="Explosives Shipping Box"
+	price="225">
+	
+	<Deconstruct time="5">      
+      <Item name="Steel Bar"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="117,68,11,21" depth="0.55"/>
+
+    <Body width="11" height="24" density="20" friction="0.95"/>
+	
+	<ItemContainer capacity="1" hideitems="true">
+	  <Containable name="explosive"/>
+    </ItemContainer>
+	
+	<Projectile launchimpulse="18" sticktocharacters="false">
+      <Attack damage="8" bleedingdamage="0" stun="0.5" structuredamage="0" targetforce="1" damagetype="Blunt"/>
+    </Projectile>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GrenadePrimer.ogg"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" delay="5">
+	    <RequiredItem name="explosive" type="Contained"/>
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GrenadeHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="Molotov Cocktail"
+	aliases="Incendium Grenade,Molotov"
+    category="Equipment"
+    tags="smallitem,weapon"
+	description="This crude incendiary bomb uses thermite for an easy ignition method, making it really unstable."
+	impacttolerance="4">
+	
+	<Deconstruct time="5">      
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
+	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+	  <Item name="Ethanol" mincondition="0.99"/>
+	  <Item name="Ethanol" mincondition="0.99"/>
+	  <Item name="Ethanol" mincondition="0.99"/>
+	  <Item name="Thermite Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="0,139,10,45" depth="0.55"/>
+
+    <Body width="18" height="28" density="18"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This" Condition="-100">
+	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+        <Fire size="75"/>
+      </StatusEffect>
+	  <StatusEffect type="OnFire" target="this" condition="-100">
+	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="Hot Can"
+	aliases="Cannade"
+    category="Equipment"
+    tags="cntnr,meditem,weapon"
+	description="This Food Can has been rigged with Thermite, which will ignite the contents on impact. It's very sensitive so it can be set off by accident."
+	impacttolerance="3">
+	
+	<Deconstruct time="5">      
+      <Item name="Aluminium Sliver"/>
+	  <Item name="Aluminium Sliver" mincondition="0.99"/>
+	  <Item name="Copper Sliver" mincondition="0.99"/>
+	  <Item name="Thermite Powder" mincondition="0.99" outcondition="0.25"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="108,100,20,28" depth="0.55"/>
+	<BrokenSprite texture="weapons.png" sourcerect="108,129,20,28" depth="0.55" maxcondition="0" fadein="true"/>
+
+    <Body width="16" height="22" density="18" friction="0.95"/>
+	
+	<ItemComponent>
+      <StatusEffect type="OnImpact" target="This,Contained" delay="1" IsOn="true">
+	    <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+	
+	<LightComponent LightColor="1.0,0.0,0.0,1.0" Flicker="0.5" range="100" IsOn="false">
+      <StatusEffect type="OnActive" target="This,Contained" Condition="-1.0">
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemContainer capacity="1" hideitems="true">
+	  <Containable name="smallitem"/>
+    </ItemContainer>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/FoodCan.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="Revolver Round"
+	aliases="Bullet"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="Self-propelled revolver rounds designed to work underwater."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="50">
+	
+	<Deconstruct time="5">      
+      <Item name="Steel Sliver" outcondition="0.25"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="52,99,8,3" depth="0.55"/>
+
+    <Body width="6" height="2" density="30"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="50" bleedingdamage="6" stun="1.0" targetforce="25" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <Explosion range="50" structuredamage="50" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="5.0"/>
+	  </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Revolver HL Round"
+	aliases="HL Round"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="Custom hand-loaded Revolver ammunition. More stopping power but less damage."
+    interactthroughwalls="true">
+	
+	<Deconstruct time="5">      
+      <Item name="Copper Sliver" outcondition="0.25"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.5"/>
+	  <Item name="Phosphorus" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="96,25,8,3" depth="0.55"/>
+
+    <Body width="6" height="2" density="30"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="40" bleedingdamage="4" stun="3.5" targetforce="50" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <Explosion range="50" structuredamage="40" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="5.0"/>
+	  </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Revolver Flare Round"
+	aliases="Flare Round"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="Pyrotechnic revolver ammunition. Designed to be used for signalling or illumination."
+	spritecolor="1.0,0.0,0.0,1.0"
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="75">
+	
+	<Deconstruct time="5">      
+      <Item name="Aluminium Sliver" outcondition="0.25"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.5"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="96,25,8,3" depth="0.55"/>
+
+    <Body width="6" height="2" density="10.5"/>
+	
+	<LightComponent LightColor="1.0,0.0,0.0,1.0" Flicker="0.5" range="500" IsOn="false">
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-1.5">
+	    <ParticleEmitter particle="flare" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+		<Explosion range="40" damage="0.3" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="Parent,This" Condition="-100" setvalue="true">
+        <RequiredItem name="Revolver" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="Parent,This" Condition="-100" setvalue="true">
+        <RequiredItem name="Diving Revolver" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+	  <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="600" loop="true"/>
+    </LightComponent>
+
+	<Pickable slots="Any"/>
+    <Projectile launchimpulse="25" sticktocharacters="true">
+      <Attack damage="20" bleedingdamage="2" stun="0.5" structuredamage="10" targetforce="50" damagetype="Burn"/>
+    </Projectile>
+  </Item>
+  
+  <!-- <Item
+    name="Revolver"
+    category="Equipment"
+	tags="meditem,weapon"
+    description="It belongs in a museum! This old handgun still packs a punch, though."
+    impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="0,24,40,20" depth="0.55"/>
+
+    <Body width="40" height="20" density="35"/>
+    
+    <RangedWeapon barrelpos="37,3" spread="0" unskilledspread="2" reload="0.3">
+      <Sound file="Mods/BTE/Items/Weapons/Revolver.ogg" type="OnUse"/>
+	  <StatusEffect type="InWater" target="This" Condition="-75"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" Condition="-5">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="31,-23" aimpos="75,18" handle1="-12,-3" handle2="-1,-7" holdangle="36"/>
+  </Item> -->
+  
+  <!-- <Item
+    name="Diving Revolver"
+    category="Equipment"
+	tags="meditem,weapon"
+    description="A lightweight underwater handgun. Standard issue firearm for officers."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+    price="2000"
+	canuseonself="true">
+
+    <Deconstruct time="10">
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="50,24,40,20" depth="0.55"/>
+
+    <Body width="40" height="20" density="25"/>
+    
+    <RangedWeapon barrelpos="37,3" spread="0" unskilledspread="2" reload="0.3">
+      <Sound file="Mods/BTE/Items/Weapons/Revolver.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-45">
+	    <sound file="Mods/BTE/Items/Weapons/Revolver.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="1" duration="5">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="31,-23" aimpos="75,18" handle1="-12,-3" handle2="-1,-7" holdangle="36"/>
+  </Item> -->
+  
+  <Item
+    name="Shotgun Slug Round"
+	aliases="Slug Round"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="A shell containing a self-propelled slug."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="100">
+	
+	<Deconstruct time="5">      
+      <Item name="Steel Sliver" outcondition="0.5"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,5,10,4" depth="0.55"/>
+
+    <Body width="6" height="2" density="20"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="75" bleedingdamage="6" stun="3.5" targetforce="800" severlimbsprobability="0.3" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <Explosion range="50" structuredamage="75" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="5.0"/>
+	  </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Shotgun Beanbag Round"
+	aliases="Beanbag Round,Pillow Round"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="A shell containing a self-propelled pillow filled slug."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="50">
+	
+	<Deconstruct time="5">      
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,0,10,4" depth="0.55"/>
+
+    <Body width="6" height="2" density="20"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="15" stun="15" targetforce="800" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <Explosion range="50" structuredamage="5" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="5.0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
+		  <Conditional SpeciesName="robot"/>
+		</StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Shotgun Taser Round"
+	aliases="Taser Round,Shock Round"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="A shell containing a self-propelled electrified slug."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="150">
+	
+	<Deconstruct time="5">      
+      <Item name="Aluminium Sliver" outcondition="0.25"/>
+	  <Item name="Copper Sliver" outcondition="0.25"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,10,10,4" depth="0.55"/>
+
+    <Body width="6" height="2" density="20"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="20" stun="40" targetforce="800" damagetype="Burn"/>
+	  <StatusEffect type="OnImpact" target="Character">
+		  <Explosion range="50" force="5" structuredamage="10" shockwave="false" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnImpact" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnImpact" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <Explosion range="250" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-80" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>       
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>       
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>       
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>       
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>     
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>       
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <!-- <Item
+    name="Diving Shotgun"
+	aliases="Shotgun,Shotty,Boomstick"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A lightweight underwater firearm. Standard issue gun for security."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+    price="3750">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="0,0,93,19" depth="0.55"/>
+
+    <Body width="90" height="16" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="35,-10" holdangle="-6" aimpos="45,-3" handle1="-18,-5" handle2="26,4.5"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="1" unskilledspread="3">
+      <Sound file="Mods/BTE/Items/Weapons/Shotgun.ogg" type="OnUse"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="8" hideitems="true">
+      <Containable name="Shotgun Slug Round"/>
+	  <Containable name="Shotgun Beanbag Round"/>
+	  <Containable name="Shotgun Taser Round"/>
+    </ItemContainer>
+  </Item> -->
+  
+  <Item
+    name="Gauss Pistol Magazine"
+	aliases="Gauss Pistol Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="Gauss magazines are just a casing containing a dense steel bar and a power source to make the pistol work."
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Sliver"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="78,74,8,12" depth="0.55"/>
+
+    <Body width="6" height="10" density="14" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
+  </Item>
+  
+  <Item
+    name="Gauss Pistol"
+    category="Equipment"
+	tags="meditem,weapon"
+    description="Gauss weapons use magnetic force and mass drivers to generate and propel projectiles the size of a sand grain from a dense bar of metal."
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="0,70,38,20" depth="0.55"/>
+
+    <Body width="36" height="18" density="25"/>
+	
+	<ItemContainer capacity="1" itempos="10,-4" hideitems="false">
+      <Containable name="Gauss Pistol Magazine"/>
+    </ItemContainer>
+	
+	<RepairTool structurefixamount="-6" limbfixamount="-30" range="2000" barrelpos="28,3" particles="plasma">
+	  <ParticleEmitter particle="plasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
+	  <RequiredItems name="Gauss Pistol Magazine" type="Contained" msg="The loaded magazine is depleted"/>
+      <RequiredSkill name="Weapons" level="20"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="65" force="0.9" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.4" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              aimpos="75,18" handle1="-12,-3" handle2="-11,-4">
+	  <StatusEffect type="OnUse" target="This" Condition="-99" disabledeltatime="true">
+	    <RequiredItems name="Gauss Pistol Magazine" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="2">
+	    <sound file="Mods/BTE/Items/Weapons/EnergyOn.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Gauss Carbine Magazine"
+	aliases="Gauss Carbine Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="Gauss magazines are just a casing containing a dense steel bar and a power source to make the pistol work."
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="88,74,14,10" depth="0.55"/>
+
+    <Body width="12" height="8" density="16" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
+  </Item>
+  
+  <Item
+    name="Gauss Carbine"
+    category="Equipment"
+	tags="bigitem,weapon"
+    description="Gauss weapons use magnetic force and mass drivers to generate and propel projectiles the size of a sand grain from a dense bar of metal."
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="0,39,99,26" depth="0.55"/>
+
+    <Body width="97" height="24" density="35"/>
+	
+	<ItemContainer capacity="1" itempos="3,-6" hideitems="false">
+      <Containable name="Gauss Carbine Magazine"/>
+    </ItemContainer>
+	
+	<RepairTool structurefixamount="-2" limbfixamount="-6" range="2000" barrelpos="57,6" particles="plasma">
+	  <ParticleEmitter particle="plasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergyLoop.ogg" type="OnUse" range="800" loop="true"/>
+	  <RequiredItems name="Gauss Carbine Magazine" type="Contained" msg="The loaded magazine is depleted"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="100" force="0.18" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1">
+	  <StatusEffect type="OnUse" target="This" Condition="-300">
+	    <RequiredItems name="Gauss Carbine Magazine" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="Always" target="This" Condition="10"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="4">
+	    <sound file="Mods/BTE/Items/Weapons/EnergyOn.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Gauss Rifle Magazine"
+	aliases="Gauss Rifle Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="Gauss magazines are just a casing containing a dense steel bar and a power source to make the pistol work."
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="104,74,14,14" depth="0.55"/>
+
+    <Body width="12" height="12" density="18" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
+  </Item>
+  
+  <Item
+    name="Gauss Rifle"
+    category="Equipment"
+	tags="bigitem,weapon"
+    description="Gauss weapons use magnetic force and mass drivers to generate and propel projectiles the size of a sand grain from a dense bar of metal."
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="0,0,120,35" depth="0.55"/>
+
+    <Body width="118" height="33" density="45"/>
+	
+	<ItemContainer capacity="1" itempos="-8,-10" hideitems="false">
+      <Containable name="Gauss Rifle Magazine"/>
+    </ItemContainer>
+	
+	<RepairTool structurefixamount="-10" limbfixamount="-100" range="4000" barrelpos="62,3" particles="plasma">
+	  <ParticleEmitter particle="plasma" particlespersecond="100"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="900"/>
+	  <RequiredItems name="Gauss Rifle Magazine" type="Contained" msg="The loaded bar is depleted"/>
+      <RequiredSkill name="Weapons" level="60"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="150" force="1.5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.6" disabledeltatime="true">
+	    <RequiredItems name="Gauss Rifle Magazine" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7">
+	  <StatusEffect type="OnUse" target="This" Condition="-99" disabledeltatime="true"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="6">
+	    <sound file="Mods/BTE/Items/Weapons/EnergyOn.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Gauss Gun"
+    category="Equipment"
+	tags="meditem,weapon"
+    description="A makeshift Gauss weapon. It's not as powerful as military ones but they can propel metal powder grains at lethal speeds."
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Sliver"/>
+	  <Item name="FPGA Circuit"/>
+	  <Item name="Copper Sliver"/>
+    </Deconstruct>
+  
+    <Sprite texture="weapons.png" sourcerect="36,160,48,24" depth="0.55"/>
+
+    <Body width="42" height="20" density="25"/>
+	
+	<ItemContainer capacity="1" itempos="10,-4" hideitems="true">
+      <Containable name="Aluminium Powder,Copper Powder,Iron Powder,Uranium Powder,Fulgurium Powder"/>
+    </ItemContainer>
+	
+	<RepairTool structurefixamount="-3" limbfixamount="-15" range="1000" barrelpos="28,4" particles="plasma">
+	  <ParticleEmitter particle="plasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
+	  <RequiredItems name="Aluminium Powder,Copper Powder,Bronze Powder,Iron Powder,Uranium Powder,Fulgurium Powder" type="Contained" msg="The loaded powder is depleted"/>
+      <RequiredSkill name="Electrical Engineering" level="60"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="65" force="0.9" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
+		<ParticleEmitter particle="plasmasmoke" particlespersecond="50"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-1.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.2" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              aimpos="75,18" handle1="-14,-3" handle2="-13,-4">
+	  <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true">
+	    <RequiredItems name="Aluminium Powder,Copper Powder,Bronze Powder,Iron Powder,Uranium Powder,Fulgurium Powder" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="1.5"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Shock Rod"
+	aliases="Shocker"
+    category="Equipment"
+    Tags="bigitem,weapon"
+    description="A makeshift melee weapon that uses battery power to deliver an electric shock to the target. The shock can stun but it might be lethal too."
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="Copper Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="0,96,70,13" depth="0.55"/>
+    
+    <Body width="68" height="11" density="15"/>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+              aimpos="50,0" handle1="-5,0" holdangle="10" reload="2.0">
+      <Attack damage="4" stun="0.2" damagetype="Blunt" sound="Content/Items/Weapons/smack.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="4" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="4" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		
+	  <StatusEffect type="OnUse" target="Character" health="-10" stun="15" disabledeltatime="true">
+	    <sound file="Content/Items/Weapons/stunbaton.ogg"/>
+        <RequiredItem name="Battery Cell" type="Contained" msg="Depleted battery cell"/>        
+        <Explosion range="100" force="0.6" shockwave="false" flames="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="300" damage="10" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Health="10" stun="-15" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="400" damage="25" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="250" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-15" health="-50" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-15" health="-25" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-15" health="-25" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-15" health="-25" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-15" health="-25" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-15" health="-25" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-50" disabledeltatime="true">
+	    <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+      </StatusEffect>
+
+	  <StatusEffect type="OnUse" target="Character" health="-15" stun="30" disabledeltatime="true">
+	    <sound file="Content/Items/Weapons/stunbaton.ogg"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Depleted battery cell"/>        
+        <Explosion range="100" force="0.2" shockwave="false" flames="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="300" damage="15" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Health="15" stun="-30" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="400" damage="50" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="250" damage="50" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-30" health="-90" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-30" health="-45" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-30" health="-45" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-30" health="-45" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-30" health="-45" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-30" health="-45" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-35" disabledeltatime="true">
+	    <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+      </StatusEffect>
+	  
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </MeleeWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell"/>
+      <Containable name="Fulgurium Battery Cell"/>      
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Stun Baton"
+	aliases="Cattle Prod,Stock Prod"
+    category="Equipment"
+    Tags="bigitem,weapon"
+	description="If verbal orders are insufficient, a high-voltage shock from a Stun Baton may be enough to beat an unruly crew member into submission."
+    cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+	price="100">
+
+    <Deconstruct time="10">
+      <Item name="Spare Parts"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="21,0,77,22" depth="0.55"/>
+    
+    <Body width="90" height="30" density="25"/>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+              aimpos="50,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <Attack damage="3" stun="0.2" damagetype="Blunt" sound="Content/Items/Weapons/smack.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="3" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="3" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+
+	  <StatusEffect type="OnUse" target="Character" stun="20" disabledeltatime="true">
+	    <sound file="Content/Items/Weapons/stunbaton.ogg"/>
+        <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+        <Explosion range="100" force="0.5" shockwave="false" flames="false" smoke="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="400" damage="25" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="250" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" health="-20" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" health="-20" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" health="-20" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" health="-20" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-20" health="-20" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+	    <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+      </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" stun="40" disabledeltatime="true">
+	    <sound file="Content/Items/Weapons/stunbaton.ogg"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+        <Explosion range="100" force="0.1" shockwave="false" flames="false" smoke="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="400" damage="50" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="250" damage="50" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" health="-80" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-10" disabledeltatime="true">
+	    <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+      </StatusEffect>
+	  
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </MeleeWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell"/>
+      <Containable name="Fulgurium Battery Cell"/>      
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Sonar Blaster"
+	aliases="Sonar Gun,Sonargun"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="A heavily modified personal sonar device designed to produce an intensely loud sonar ping. It can stun both the user and those around for about a second."
+    >
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Sliver"/>
+	  <Item name="Copper Bar"/>
+	  <Item name="Bronze Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="42,0,22,9" depth="0.55"/>
+
+    <Body width="31" height="6" density="14"/>
+
+    <Holdable slots="RightHand,LeftHand,Any" aimpos="100,0" handle1="-5,0"/>
+
+    <RangedWeapon reload="3">
+	  <StatusEffect type="OnUse" target="Contained" Condition="-8" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Weapons/SonarGun.ogg"/>
+        <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+        <Explosion range="200" damage="3" stun="3" force="1.6" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" Condition="-10" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Weapons/SonarGun.ogg"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+        <Explosion range="400" damage="3" stun="3" force="1.8" shockwave="false" sparks="false" flames="false" smoke="false" camerashake="5.0"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell, Fulgurium Battery Cell"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Plasma Torcher"
+	aliases="Torcher,Flamethrower"
+    category="Equipment"
+    Tags="meditem,weapon"
+	description="A modified plasma cutter that uses an unstable jet of ionized gas as a crude form of flamethrower."
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+	  <Item name="Polycarbonate Block"/>
+	  <Item name="Aluminium Block"/>
+	  <Item name="Steel Block"/>
+    </Deconstruct>
+    
+    <Sprite texture ="weapons.png" sourcerect="0,35,80,16" depth="0.55"/>
+
+    <Body width="76" height="16" density="40"/>
+
+    <RepairTool structurefixamount="-0.1" limbfixamount="-2.2" range="350" barrelpos="17,8" particles="largeplasma">
+      <ParticleEmitter particle="largeplasma" particlespersecond="50"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="25" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="25" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="25" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Sulphurite Tank,Thermite Tank" type="Contained" msg="Gas tank depleted"/>
+      <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-2"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-1.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-4" oxygen="-3750"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-8"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+      <sound file="Mods/BTE/Items/Weapons/PlasmaTorcher.ogg" type="OnUse" range="650" loop="true"/>
+      <Fixable name="structure"/>
+      <RequiredSkill name="Construction" level="60"/>
+      <StatusEffect type="OnFailure" target="Contained" Condition="-0.5"/>
+      <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
+      </LightComponent>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="10" force="5" damage="3" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RepairTool>
+
+    <ItemContainer capacity="1" hideitems="false" itempos="-17,-21">
+      <Containable name="Oxygen Tank"/>
+	  <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
+  </Item>
+  
+  <Item
+    name="Aluminium Bat"
+	aliases="Aluminum Bat,Baseball Bat"
+    category="Equipment"
+    Tags="bigitem,weapon"
+	description="A smooth aluminium club used in the Earth sport of baseball. It's an effective melee weapon against people too."
+    >
+
+    <Deconstruct time="10">
+      <Item name="Aluminium Block"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="0,118,90,8" depth="0.55"/>
+    
+    <Body width="95" height="6" density="16"/>
+
+    <MeleeWeapon slots="RightHand+LeftHand,Any"
+              aimpos="50,0" handle1="-30,0" handle2="-20,-10" holdangle="60" reload="2.4">
+      <Attack damage="14" bleedingdamage="0.1" stun="0.8" damagetype="Blunt" targetforce="35" sound="Mods/BTE/Items/Weapons/BatHit.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="14" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="14" stun="-5.0" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <!-- Cheat Items -->
+  
+  <Item
+    name="Fire Axe"
+	aliases="Axe"
+    category="Equipment"
+    Tags="bigitem,weapon"
+	description="Here's Johnny!"
+    >
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="FireAxe.png" depth="0.55" sourcerect="0,0,97,27"/>
+    
+    <Body width="95" height="6" density="20"/>
+
+    <MeleeWeapon slots="RightHand+LeftHand,Any"
+              aimpos="50,0" handle1="-30,0" handle2="-20,-10" holdangle="60" reload="2.6">
+      <Attack damage="24" bleedingdamage="4" stun="0.6" structuredamage="12" damagetype="Slash" severlimbsprobability="0.7"
+	  targetforce="35" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/> 
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="24" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="24" stun="-0.6" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="SMRSL"
+	aliases="Ban Hammer,Shoulder-Mounted Railgun Spear Launcher"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="Shoulder-Mounted Railgun Spear Launcher. A weapon to surpass Metal Gear."
+    impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Steel Bar"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="SMSG.png" sourcerect="0,0,90,21" depth="0.55"/>
+
+    <Body width="86" height="16" density="40"/>
+	
+	<ItemContainer capacity="1" itempos="27,9" iteminterval="0,-4" hideitems="false">
+      <Containable name="Railgun Polycarbonate Spear,Railgun Aluminium Spear,Railgun Copper Spear,Railgun Bronze Spear,Railgun Steel Spear,Railgun Uranium Spear,Railgun Fulgurium Spear"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="30,12" handle1="-15,-6" handle2="26,7"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="1" unskilledspread="8">
+      <Sound file="Content/Items/Weapons/harpoon1.ogg" type="OnUse"/>
+      <Sound file="Content/Items/Weapons/harpoon2.ogg" type="OnUse"/>
+      <RequiredItems name="Railgun Polycarbonate Spear,Railgun Aluminium Spear,Railgun Copper Spear,Railgun Bronze Spear,Railgun Steel Spear,Railgun Uranium Spear,Railgun Fulgurium Spear" type="Contained" msg="The loaded spear is too damaged"/>
+      <RequiredSkill name="Weapons" level="20"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="30" force="20" stun="3.0" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+  </Item>
+</Items>

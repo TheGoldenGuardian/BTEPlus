@@ -1,0 +1,588 @@
+﻿<Items>
+  <Item
+    name="Radio"
+    category="Equipment"
+    tags="smallitem"
+	description="A handheld radio. Allows remote communication between the crew."
+	cargocontainername="Electronics Shipping Box"
+	price="50">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" depth="0.6" sourcerect="117,92,11,36"/>
+
+    <Body width="9" height="30" density="10.3"/>
+
+    <WifiComponent range="50000" LinkToChat="true">
+      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+    </WifiComponent>
+
+      <ItemContainer capacity="1" hideitems="true">
+        <Containable name="Battery Cell"/>
+        <Containable name="Fulgurium Battery Cell"/>
+      </ItemContainer>
+	
+	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16" holdpos="9,6">
+	  <StatusEffect type="OnActive" target="Contained" Condition="-0.05"/>
+	  <StatusEffect type="InWater" target="This" Condition="-75"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Headset"
+    category="Equipment"
+    tags="smallitem"
+	description="Allows short-range communication between the crew."
+	cargocontainername="Electronics Shipping Box"
+	price="100">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture ="securitygear.png" depth="0.6" sourcerect="100,112,16,16"/>
+
+    <Body radius="8" density="10.1"/>
+
+    <WifiComponent range="25000" LinkToChat="true">
+      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+    </WifiComponent>
+
+      <ItemContainer capacity="1" hideitems="true">
+        <Containable name="Battery Cell"/>
+        <Containable name="Fulgurium Battery Cell"/>
+      </ItemContainer>
+    
+    <Wearable limbtype="Head" slots="Any,Face">
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.1"/>
+      <sprite texture="securitygear.png" limb="Head" origin="0.5,0.5" sourcerect="100,112,16,16"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Flat Hat"
+	aliases="Flat Hat"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A soft, round, flat-crowned hat made of synthetic fiber."
+	cargocontainername="Standard Shipping Box"
+	price="30">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="FlatHat.png" depth="0.6" sourcerect="0,0,32,32"/>
+
+    <Body width="14" height="6" radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="FlatHat.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.001" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Beanie"
+	aliases="Beanie"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fiber knit cap designed to provide warmth in cold environments."
+	cargocontainername="Standard Shipping Box"
+	price="30">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="BeanieHat.png" depth="0.6" sourcerect="0,0,32,32"/>
+
+    <Body width="14" height="6" radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="BeanieHat.png" limb="Head" depthlimb="Tail" origin="0.6,0.7" sourcerect="0,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Cowboy Hat"
+	aliases="Cowboy Hat"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fiber cowboy hat."
+	cargocontainername="Standard Shipping Box"
+	price="35">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="CowboyHat.png" depth="0.6" sourcerect="0,0,43,17"/>
+
+    <Body width="42" height="15" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="CowboyHat.png" limb="Head" depthlimb="Tail" origin="0.5,1.15" sourcerect="0,0,43,17"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Cap A"
+	aliases="Baseball Cap"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic soft kepi with a stiff, rounded visor."
+	cargocontainername="Standard Shipping Box"
+	price="35">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="CapHat.png" sourcerect="0,0,32,16" depth="0.6"/>
+
+    <Body width="14" height="6" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="CapHat.png" limb="Head" depthlimb="Tail" sourcerect="0,0,32,16" origin="0.4,1.2"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Cap B"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic soft kepi with a stiff, rounded visor."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="CapHat.png" sourcerect="0,16,32,18" depth="0.6"/>
+
+    <Body width="14" height="6" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="CapHat.png" limb="Head" depthlimb="Tail" sourcerect="0,16,32,16" origin="0.65,1.2"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Beret"
+	aliases="Beret"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A soft, round, flat-crowned hat made of synthetic fiber."
+	cargocontainername="Standard Shipping Box"
+	price="40">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="securitygear.png" depth="0.6" sourcerect="0,82,32,32"/>
+
+    <Body width="14" height="6" radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="securitygear.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,82,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Ushanka A"
+	aliases="Ushanka"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fur cap with ear flaps designed to provide warmth in cold environments."
+	cargocontainername="Standard Shipping Box"
+	price="35">
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="UshankaHat.png" sourcerect="26,0,25,16" depth="0.6"/>
+
+    <Body width="21" height="13" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="UshankaHat.png" limb="Head" depthlimb="Tail" sourcerect="26,0,25,16" origin="0.55,1.2"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Ushanka B"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fur cap with ear flaps designed to provide warmth in cold environments."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="UshankaHat.png" sourcerect="26,0,25,16" depth="0.6"/>
+
+    <Body width="21" height="13" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="UshankaHat.png" limb="Head" depthlimb="Tail" sourcerect="0,0,23,34" origin="0.55,0.6"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Vest"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A sleeveless formal garment that covers the torso."
+	cargocontainername="Standard Shipping Box"
+	price="50">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+	<Sprite texture = "Sweater.png" sourcerect="0,50,50,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Sweater A"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A garment covering the torso and arms, intended to provide warmth in cold environments."
+	cargocontainername="Standard Shipping Box"
+	price="50">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture = "Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+      <sprite texture="Sweater.png" limb="LeftHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+
+      <sprite texture="Sweater.png" limb="RightArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Sweater B"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A garment covering the torso and arms, intended to provide warmth in cold environments."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture = "Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.5,0.6"/>
+
+      <sprite texture="Sweater.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Jumper A"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A garment covering the torso and arms with a muff sewn onto the lower front."
+	cargocontainername="Standard Shipping Box"
+	price="75">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture ="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,67,29,49" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+      <sprite texture="Sweater.png" limb="LeftHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.007" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Jumper B"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A garment covering the torso and arms with a muff sewn onto the lower front."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture ="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,67,29,49" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.007" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Trousers A"
+	aliases="Doctor's Trousers"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A standard issue pairs of synthetic fiber trousers."
+	cargocontainername="Standard Shipping Box"
+    price="60">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="12"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="doctorgear.png" limb="Waist" sourcerect="0,0,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="RightThigh" sourcerect="0,61,24,46" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftThigh" sourcerect="0,61,24,46" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="doctorgear.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Trousers B"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A standard issue pairs of synthetic fiber trousers."
+    >
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="12"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="doctorgear.png" limb="Waist" sourcerect="0,0,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="RightThigh" sourcerect="0,61,24,46" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftThigh" sourcerect="0,61,24,46" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="doctorgear.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" depth="0.12" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Cargo Trousers A"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A pair of loosely cut trousers with cargo pockets, convenient for carrying extra items."
+	cargocontainername="Standard Shipping Box"
+	price="75">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="15"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="crewLegs.png" limb="Waist" sourcerect="0,0,32,29" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="RightThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="crewLegs.png" limb="RightLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Cargo Trousers B"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A pair of loosely cut trousers with cargo pockets, convenient for carrying extra items."
+	>
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="15"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="crewLegs.png" limb="Waist" sourcerect="0,0,32,29" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="RightThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="doctorgear.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.12" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.16" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+</Items>

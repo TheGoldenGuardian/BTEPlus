@@ -1,0 +1,277 @@
+﻿<Items>
+  <Item
+    name="Ballistic Helmet A"
+	aliases="Ballistic Helmet"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+    
+    <Sprite texture ="securitygear.png" sourcerect="39,31,29,22" depth="0.6"/>
+
+    <Body radius="12" density="30"/>
+
+    <Wearable slots="Any,Head">
+      <sprite texture="securitygear.png" limb="Head" depthlimb="Tail" sourcerect="39,31,29,22" origin="0.51,0.9"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.1" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ballistic Helmet B"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+    
+    <Sprite texture ="securitygear.png" sourcerect="53,76,29,38" depth="0.6"/>
+
+    <Body height="35" radius="2" density="30"/>
+
+    <Wearable slots="Any,Head">
+      <sprite texture="securitygear.png" limb="Head" depthlimb="Tail" sourcerect="53,76,29,38" origin="0.51,0.5"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.12" ObstructVision="true" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ballistic Vest A"
+	aliases="Body Armor,Body Armour"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board."
+    >
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="securitygear.png" limb="RightArm" sourcerect="41,0,21,21" origin="0.5,1.1"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.13" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ballistic Vest B"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board."
+    >
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="securitygear.png" limb="RightHand" sourcerect="86,38,15,47" origin="0.45,0.55" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="LeftHand" sourcerect="86,38,15,47" origin="0.45,0.55" hidelimb="true"/>
+
+      <sprite texture="securitygear.png" limb="RightArm" sourcerect="106,38,21,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+
+  <Item
+    name="Handcuffs"
+    category="Equipment"
+    tags="smallitem" >
+	
+	<Deconstruct time="5">
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" sourcerect="0,63,32,14" depth="0.6"/>
+
+    <Body width="30" height="12" density="25"/>
+
+    <Wearable slots="Any,RightHand+LeftHand">
+      <sprite texture="securitygear.png" limb="RightHand" sourcerect="32,62,16,16" origin="0.5,-0.5"/>
+      <sprite texture="securitygear.png" limb="LeftHand" sourcerect="32,62,16,16" origin="0.5,-0.5"/>
+      
+      <StatusEffect type="OnWearing" target="Character" lockhands="true" SpeedMultiplier="-0.24" disabledeltatime="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Restraint Set"
+    aliases="Restrain Set,Bondage Set"
+	category="Equipment"
+    tags="smallitem"
+	description="This is a set of four shackles and a hood designed to restrain highly dangerous detainees but is usually used by security along with beatings as a punishment method.">
+	
+	<Deconstruct time="5">
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" sourcerect="50,54,32,19" depth="0.6"/>
+
+    <Body width="30" height="12" density="25"/>
+
+    <Wearable slots="Head+Face+RightHand+LeftHand,Any">
+      <sprite texture="bodyBag.png" limb="Head" sourcerect="0,92,24,27" origin="0.5,0.48" hidelimb="true"/>
+	  <sprite texture="securitygear.png" limb="RightHand" sourcerect="32,62,16,16" origin="0.5,-0.5"/>
+      <sprite texture="securitygear.png" limb="LeftHand" sourcerect="32,62,16,16" origin="0.5,-0.5"/>
+	  <sprite texture="securitygear.png" limb="RightFoot" sourcerect="38,85,5,14" origin="0.1,1.0"/>
+      <sprite texture="securitygear.png" limb="LeftFoot" sourcerect="38,85,5,14" origin="0.1,1.0"/>
+      
+      <StatusEffect type="OnWearing" target="Character" Stun="1" lockhands="true" ObstructVision="true" HideFace="true" setvalue="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Prisoner Jumpsuit A"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+	<Sprite texture = "prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="prisonergear.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48" depthlimb="Head"/>
+	  
+	  <sprite texture="prisonergear.png" limb="RightHand" sourcerect="72,0,17,42" origin="0.45,0.6"/>
+      <sprite texture="prisonergear.png" limb="LeftHand" sourcerect="72,0,17,42" origin="0.45,0.6"/>
+
+      <sprite texture="prisonergear.png" limb="RightArm" sourcerect="56,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftArm" sourcerect="56,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergear.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergear.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Prisoner Jumpsuit B"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+	<Sprite texture = "prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="prisonergear.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="prisonergear.png" limb="RightArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="prisonergear.png" limb="LeftArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="false"/>
+
+      <sprite texture="prisonergear.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergear.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Prisoner Jumpsuit C"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+	<Sprite texture = "prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="prisonergear.png" limb="Waist" sourcerect="97,1,31,27" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergear.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergear.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+</Items>

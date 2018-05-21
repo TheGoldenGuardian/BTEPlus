@@ -1,0 +1,1198 @@
+﻿<Items> 
+  <Item
+    name="Ragged Flat Hat"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A soft, round, flat-crowned hat made of synthetic fiber."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="FlatHat.png" depth="0.6" sourcerect="32,0,32,32"/>
+
+    <Body width="14" height="6" radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="FlatHat.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.001" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Beanie"
+    category="Misc"
+	tags="smallitem,clothing"
+	description="A worn knit cap designed to provide warmth in cold environments."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="BeanieHat.png" depth="0.6" sourcerect="32,0,32,32"/>
+
+    <Body width="14" height="6" radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="BeanieHat.png" limb="Head" depthlimb="Tail" origin="0.6,0.7" sourcerect="32,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Cowboy Hat"
+    category="Equipment"
+	tags="smallitem,clothing"
+	description="A synthetic fiber cowboy hat."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="CowboyHat.png" depth="0.6" sourcerect="43,0,43,17"/>
+
+    <Body width="42" height="15" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="CowboyHat.png" limb="Head" depthlimb="Tail" origin="0.5,1.15" sourcerect="43,0,43,17"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Cap A"
+    category="Misc"
+	tags="smallitem,clothing"
+	description="A worn kepi with a stiff, rounded visor."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="CapHatRagged.png" sourcerect="0,0,32,16" depth="0.6"/>
+
+    <Body width="14" height="6" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="CapHatRagged.png" limb="Head" depthlimb="Tail" sourcerect="0,0,32,16" origin="0.4,1.2"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Cap B"
+    category="Misc"
+	tags="smallitem,clothing"
+	description="A worn kepi with a stiff, rounded visor."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="CapHatRagged.png" sourcerect="0,16,32,18" depth="0.6"/>
+
+    <Body width="14" height="6" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="CapHatRagged.png" limb="Head" depthlimb="Tail" sourcerect="0,16,32,16" origin="0.65,1.2"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Beret"
+    category="Misc"
+	tags="smallitem,clothing"
+	description="A worn, round, flat-crowned hat made of synthetic fiber."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="securitygearRagged.png" depth="0.6" sourcerect="0,82,32,32"/>
+
+    <Body width="14" height="6" radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="securitygearRagged.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,82,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Ushanka A"
+    category="Misc"
+	tags="smallitem,clothing"
+	description="A worn fur cap with ear flaps designed to provide warmth in cold environments."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="UshankaHatRagged.png" sourcerect="26,0,25,16" depth="0.6"/>
+
+    <Body width="21" height="13" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="UshankaHatRagged.png" limb="Head" depthlimb="Tail" sourcerect="26,0,25,16" origin="0.55,1.2"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Ushanka B"
+    category="Misc"
+	tags="smallitem,clothing"
+	description="A worn fur cap with ear flaps designed to provide warmth in cold environments."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="UshankaHatRagged.png" sourcerect="26,0,25,16" depth="0.6"/>
+
+    <Body width="21" height="13" radius="8" density="10.2"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="UshankaHatRagged.png" limb="Head" depthlimb="Tail" sourcerect="0,0,23,34" origin="0.55,0.6"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Capt's Cap"
+    category="Misc"
+    tags="meditem,clothing"
+    description="A token of the Captain's unquestionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainTorsoRagged.png" depth="0.6" sourcerect="32,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="captainTorsoRagged.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Assistant's Cap A"
+	aliases="Ragged Asscap A,Ragged Asshat A"
+    category="Misc"
+    tags="meditem,clothing"
+    description="A token of the Assistant's questionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantTorsoRagged.png" depth="0.6" sourcerect="32,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="assistantTorsoRagged.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Assistant's Cap B"
+	aliases="Ragged Asscap B,Ragged Asshat B"
+    category="Misc"
+    tags="meditem,clothing"
+    description="A token of the Assistant's even more questionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantTorsoRagged.png" depth="0.6" sourcerect="64,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="assistantTorsoRagged.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="64,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Safety Helmet"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A headgear worn to protect the head from injuries."
+	>
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="engigearRagged.png" depth="0.6" sourcerect="69,0,32,32"/>
+
+    <Body width="14" height="8" radius="8" density="16"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="engigearRagged.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="69,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Welding Helmet"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A headgear worn to protect the head and eyes from injuries."
+	>
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="engigearRagged.png" depth="0.6" sourcerect="102,0,32,42"/>
+
+    <Body height="35" radius="2" density="17"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="engigearRagged.png" limb="Head" depthlimb="Tail" origin="0.45,0.5" sourcerect="102,0,32,42"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" ObstructVision="true" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingdamagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Ballistic Helmet"
+    category="Misc"
+    tags="meditem,clothing"
+    description="While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+    
+    <Sprite texture ="securitygearRagged.png" sourcerect="66,53,29,22" depth="0.6"/>
+
+    <Body radius="12" density="30"/>
+
+    <Wearable slots="Any,Head">
+      <sprite texture="securitygearRagged.png" limb="Head" depthlimb="Tail" sourcerect="66,53,29,22" origin="0.51,0.9" />
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.1" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Vest"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A sleeveless worn garment that covers the torso."
+	price="50">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+	<Sprite texture ="doctorgearRagged.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Raggedgear.png" limb="Torso" sourcerect="14,51,29,49" depthlimb="Head" origin="0.52,0.6"/>
+	  
+      <sprite texture="Raggedgear.png" limb="LeftHand" sourcerect="0,0,12,37" origin="0.56,0.6"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Sweater"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A worn garment covering the torso and arms."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture ="doctorgearRagged.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Raggedgear.png" limb="Torso" sourcerect="14,0,28,51" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="Raggedgear.png" limb="RightHand" sourcerect="0,0,12,37" origin="0.56,0.6"/>
+      <sprite texture="Sweater.png" limb="LeftHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+
+      <sprite texture="Raggedgear.png" limb="RightArm" sourcerect="45,3,17,39" origin="0.5,0.5"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Jumper"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A worn garment covering the torso and arms with a muff sewn onto the lower front."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture ="captainLegsRagged.png" sourcerect="0,71,51,12" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="Raggedgear.png" limb="Torso" sourcerect="47,51,29,49" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="Raggedgear.png" limb="RightHand" sourcerect="64,2,14,37" origin="0.6,0.6"/>
+      <sprite texture="Raggedgear.png" limb="LeftHand" sourcerect="0,0,12,37" origin="0.56,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Raggedgear.png" limb="LeftArm" sourcerect="45,3,17,39" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.007" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Assistant's Jacket"
+    category="Misc"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantLegsRagged.png" sourcerect="0,52,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="12"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="assistantTorsoRagged.png" limb="Torso" sourcerect="0,3,30,58" depthlimb="Head" origin="0.5,0.48"/>
+
+      <sprite texture="assistantTorsoRagged.png" limb="RightHand" sourcerect="48,0,15,41" origin="0.6,0.6"/>
+
+      <sprite texture="assistantTorso.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantTorsoRagged.png" limb="LeftArm" sourcerect="30,0,19,43" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Utilitу Vest"
+	aliases="Deathswitch Vest,Deadman's Switch Vest"
+    category="Equipment"
+    tags="meditem,clothing"
+	canuseonself="true"
+    description="An utility vest used mostly by engineers. It has pockets for carrying any extra gear an engineer might need.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Copper Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="engigear.png" sourcerect="53,50,51,21" depth="0.6"/>
+
+    <Body width="50" height="17" density="17"/>
+	
+	<LightComponent LightColor="0.0,0.0,0.0,0.1" range="1" IsOn="false">
+      <StatusEffect type="OnActive" target="Contained">
+		<RequiredItem name="explosive" type="Contained"/>
+		<Use/>
+      </StatusEffect>
+    </LightComponent>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnWearing" target="This,Character" IsOn="true">
+        <Conditional IsDead="true"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="This,Character" IsOn="false">
+        <Conditional IsDead="false"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="engigear.png" limb="Torso" sourcerect="0,77,32,51" origin="0.5,0.48" depthlimb="Head"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem,explosive"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Utility Vest"
+    category="Misc"
+    tags="meditem,clothing"
+    description="An utility vest used mostly by engineers. It has pockets for carrying any extra gear an engineer might need.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture = "engigearRagged.png" sourcerect="53,50,51,21" depth="0.6"/>
+
+    <Body width="50" height="17" density="17"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="engigearRagged.png" limb="Torso" sourcerect="0,77,32,51" origin="0.5,0.48" depthlimb="Head"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Utility Jumpsuit"
+    category="Misc"
+    tags="meditem,clothing"
+    description="The fire-resistant fabric offers some protection against fires. Plenty of pockets for carrying any extra gear a mechanic might need.">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture = "engigearRagged.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="19"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="engigearRagged.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48"/>
+	  
+	  <sprite texture="engigearRagged.png" limb="RightHand" sourcerect="52,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="engigearRagged.png" limb="LeftHand" sourcerect="52,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="engigearRagged.png" limb="RightArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="engigearRagged.png" limb="LeftArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="engigearRagged.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="engigearRagged.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="engigear.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="engigearRagged.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="5">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Doc's Coat"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A worn standard issued garment given to Medical Doctors."
+    >
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="doctorgearRagged.png" sourcerect="75,0,53,18" depth="0.6"/>
+
+    <Body width="52" height="17" density="11.5"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="doctorgearRagged.png" limb="RightHand" sourcerect="93,59,15,47" origin="0.45,0.55"/>
+      <sprite texture="doctorgearRagged.png" limb="LeftHand" sourcerect="51,0,15,47" origin="0.45,0.55" hidelimb="true"/>
+
+      <sprite texture="doctorgearRagged.png" limb="RightArm" sourcerect="73,61,17,40" origin="0.5,0.5"/>
+      <sprite texture="doctorgearRagged.png" limb="LeftArm" sourcerect="33,0,17,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.04" disabledeltatime="true"/> <!-- oxygen="-0.007" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="chem"/>
+	  <Containable name="medical"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Armor Vest"
+    category="Misc"
+    tags="bigitem,clothing"
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board."
+    >
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="securitygearRagged.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="securitygearRagged.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="securitygearRagged.png" limb="RightArm" sourcerect="40,0,21,45" origin="0.5,0.5"/>
+	  <sprite texture="Raggedgear.png" limb="RightHand" sourcerect="0,0,12,37" origin="0.56,0.6"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Capt's Uniform"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainLegsRagged.png" sourcerect="0,52,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="16"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="captainTorsoRagged.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="captainTorso.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="captainTorsoRagged.png" limb="LeftHand" sourcerect="48,0,15,41" origin="0.6,0.6"/>
+
+      <sprite texture="captainTorso.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainTorsoRagged.png" limb="LeftArm" sourcerect="30,0,19,43" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="captainLegsRagged.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsRagged.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsRagged.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="captainLegsRagged.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegsRagged.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Prisoner Jumpsuit"
+    category="Misc"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+	<Sprite texture = "prisonergearRagged.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs" armorvalue="1.5">
+      <sprite texture="prisonergearRagged.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48" depthlimb="Head"/>
+	  
+	  <sprite texture="prisonergearRagged.png" limb="LeftHand" sourcerect="72,0,17,42" origin="0.45,0.6"/>
+
+      <sprite texture="prisonergearRagged.png" limb="RightArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="false"/>
+	  <sprite texture="prisonergearRagged.png" limb="LeftArm" sourcerect="56,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergearRagged.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergearRagged.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Trousers"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A pair of worn trousers."
+    >
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="doctorgearRagged.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="12"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="doctorgear.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Raggedgear.png" limb="RightThigh" sourcerect="80,53,24,46" origin="0.5,0.5"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="Raggedgear.png" limb="RightLeg" sourcerect="107,0,22,50" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Raggedgear.png" limb="LeftLeg" sourcerect="107,0,22,50" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="Raggedgear.png" limb="RightFoot" sound="footstep_metal" sourcerect="110,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Raggedgear.png" limb="LeftFoot" sound="footstep_metal" sourcerect="110,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Cargo Trousers"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A pair of worn cargo trousers."
+    >
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="doctorgearRagged.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="12"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="crewLegs.png" limb="Waist" sourcerect="0,0,32,29" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Raggedgear.png" limb="RightThigh" sourcerect="80,0,24,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="Raggedgear.png" limb="RightLeg" sourcerect="107,0,22,50" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="Raggedgear.png" limb="RightFoot" sound="footstep_metal" sourcerect="110,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Assistant's Trousers"
+    category="Misc"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantLegsRagged.png" sourcerect="0,71,51,12" depth="0.6"/>
+
+    <Body width="51" height="13" density="13"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="assistantLegsRagged.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegsRagged.png" limb="RightThigh" sourcerect="52,34,28,46" origin="0.5,0.5"/>
+      <sprite texture="assistantLegsRagged.png" limb="LeftThigh" sourcerect="52,34,28,46" origin="0.5,0.5"/>
+
+      <sprite texture="assistantLegsRagged.png" limb="RightLeg" sourcerect="31,0,21,51" origin="0.5,0.5"/>
+      <sprite texture="assistantLegsRagged.png" limb="LeftLeg" sourcerect="86,0,21,50" origin="0.5,0.5"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Raggedgear.png" limb="LeftFoot" sound="footstep_metal" sourcerect="110,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.04" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Clown Mask"
+    category="Misc"
+    tags="smallitem,clothing"
+    description="Praise the honkmother."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="clownmask.png" depth="0.6" sourcerect="0,0,37,38"/>
+
+    <Body radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head+Face">
+      <sprite texture="clownmask.png" limb="Head" depthlimb="Tail" origin="0.5,0.5" sourcerect="0,0,37,38"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.01" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.005" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Clown Mask"
+    category="Misc"
+    tags="smallitem,clothing"
+    description="Praise the honkmother."
+	>
+	
+	<Deconstruct time="5">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="clownmask.png" depth="0.6" sourcerect="37,0,37,38"/>
+
+    <Body radius="8" density="10.1"/>
+
+    <Wearable limbtype="Head" slots="Any,Head+Face">
+      <sprite texture="clownmask.png" limb="Head" depthlimb="Tail" origin="0.5,0.5" sourcerect="37,0,37,38"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.01" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.005" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+
+  <Item
+    name="Clown Costume"
+    category="Misc"
+    tags="meditem,clothing"
+    description="Praise the honkmother."
+	>
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+    <Sprite texture ="clownpants.png" sourcerect="0,62,53,18" depth="0.6"/>
+
+    <Body width="53" height="18" density="12"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="clownshirt.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48"/>
+
+      <sprite texture="clownshirt.png" limb="RightHand" sourcerect="49,0,15,49" origin="0.45,0.5"/>
+      <sprite texture="clownshirt.png" limb="LeftHand" sourcerect="49,0,15,49" origin="0.45,0.5"/>
+
+      <sprite texture="clownshirt.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5"/>
+      <sprite texture="clownshirt.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5"/>
+
+      <sprite texture="clownpants.png" limb="Waist" sourcerect="0,0,1,1" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="clownpants.png" limb="RightThigh" sourcerect="0,0,38,50" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="clownpants.png" limb="LeftThigh" sourcerect="0,0,38,50" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="clownpants.png" limb="RightLeg" sourcerect="37,0,28,52" origin="0.55,0.5" hidelimb="true"/>
+      <sprite texture="clownpants.png" limb="LeftLeg" sourcerect="37,0,28,52" origin="0.55,0.5" hidelimb="true"/>
+
+      <sprite texture="clownpants.png" limb="RightFoot" sound="footstep_clown" sourcerect="65,41,15,39" origin="0.5,0.35" hidelimb="true"/>
+      <sprite texture="clownpants.png" limb="LeftFoot" sound="footstep_clown" sourcerect="65,41,15,39" origin="0.5,0.35" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.09" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" damagesound="LimbClown" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" damagesound="LimbClown" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Clown Costume"
+    category="Misc"
+    tags="meditem,clothing"
+    description="Praise the honkmother."
+	>
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+    <Sprite texture ="clownpantsRagged.png" sourcerect="0,62,53,18" depth="0.6"/>
+
+    <Body width="53" height="18" density="12"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="clownshirtRagged.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48"/>
+
+      <sprite texture="clownshirtRagged.png" limb="RightHand" sourcerect="49,0,15,49" origin="0.45,0.5"/>
+      <sprite texture="clownshirtRagged.png" limb="LeftHand" sourcerect="49,0,15,49" origin="0.45,0.5"/>
+
+      <sprite texture="clownshirtRagged.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5"/>
+      <sprite texture="clownshirt.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5"/>
+
+      <sprite texture="clownpantsRagged.png" limb="Waist" sourcerect="0,0,1,1" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="clownpantsRagged.png" limb="RightThigh" sourcerect="0,0,38,50" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="clownpantsRagged.png" limb="LeftThigh" sourcerect="0,0,38,50" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="clownpantsRagged.png" limb="RightLeg" sourcerect="37,0,28,52" origin="0.55,0.5" hidelimb="true"/>
+      <sprite texture="clownpantsRagged.png" limb="LeftLeg" sourcerect="37,0,28,52" origin="0.55,0.5" hidelimb="true"/>
+
+      <sprite texture="clownpantsRagged.png" limb="RightFoot" sound="footstep_clown" sourcerect="65,41,15,39" origin="0.5,0.35" hidelimb="true"/>
+      <sprite texture="clownpantsRagged.png" limb="LeftFoot" sound="footstep_clown" sourcerect="65,41,15,39" origin="0.5,0.35" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.09" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" damagesound="LimbClown" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" damagesound="LimbClown" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Survivor Docgear"
+    category="Misc"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Ragged Doc's Coat"/>
+      <Item name="Ragged Armor Vest"/>
+	  <Item name="Ragged Cargo Trousers"/>
+    </Deconstruct>
+
+	<Sprite texture="securitygearRagged.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs" armorvalue="1.5">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="doctorgear.png" limb="RightHand" sourcerect="93,59,15,47" origin="0.45,0.55"/>
+      <sprite texture="doctorgear.png" limb="LeftHand" sourcerect="93,59,15,47" origin="0.45,0.55"/>
+
+      <sprite texture="doctorgearRagged.png" limb="RightArm" sourcerect="73,61,17,40" origin="0.5,0.5"/>
+	  <sprite texture="doctorgearRagged.png" limb="LeftArm" sourcerect="73,61,17,40" origin="0.5,0.5"/>
+
+      <sprite texture="crewLegs.png" limb="Waist" sourcerect="0,0,32,29" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="RightThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="doctorgear.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.29" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingdamagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="6">
+      <Containable name="chem"/>
+	  <Containable name="medical"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Survivor Engigear"
+    category="Misc"
+    tags="meditem,clothing"
+    description="The fire-resistant fabric offers some protection against fires. Plenty of pockets for carrying any extra gear a mechanic might need.">
+	
+	<Deconstruct time="15">
+      <Item name="Ragged Utility Jumpsuit"/>
+	  <Item name="Ragged Armor Vest"/>
+    </Deconstruct>
+
+	<Sprite texture="securitygearRagged.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="50" height="17" density="19"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="securitygear.png" limb="RightHand" sourcerect="86,38,15,47" origin="0.45,0.55" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="LeftHand" sourcerect="86,38,15,47" origin="0.45,0.55" hidelimb="true"/>
+
+      <sprite texture="securitygear.png" limb="RightArm" sourcerect="106,38,21,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="engigearRagged.png" limb="LeftArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="engigearRagged.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="engigearRagged.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="engigearRagged.png" limb="RightLeg" sourcerect="113,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="engigearRagged.png" limb="LeftLeg" sourcerect="113,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.31" disabledeltatime="true"/> <!-- oxygen="-0.1" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.7"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingdamagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Survivor Cellgear"
+    category="Misc"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Ragged Prisoner Jumpsuit"/>
+      <Item name="Ragged Armor Vest"/>
+    </Deconstruct>
+
+	<Sprite texture="securitygearRagged.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs" armorvalue="1.5">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="prisonergearRagged.png" limb="Waist" sourcerect="98,0,30,36" origin="0.5,0.3" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergearRagged.png" limb="RightLeg" sourcerect="1,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="LeftLeg" sourcerect="1,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.3" disabledeltatime="true"/> <!-- oxygen="-0.09" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingdamagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Plastic Bag"
+    category="Misc"
+    tags="smallitem,cntnr"
+	description="It's commonly found inside cargo crates. Usually used to carry small items but sometimes used in other, questionable activities."
+	>
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="PlasticBag.png" sourcerect="50,0,30,43" depth="0.5"/>
+
+    <Body width="14" height="6" radius="8" density="9.9"/>
+
+    <Wearable limbtype="Head" slots="Any,Head+Face">
+      <sprite texture="PlasticBag.png" limb="Head" sourcerect="0,0,31,35" origin="0.5,0.6" hidelimb="false"/>
+	  <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-80"/>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="250" Condition="-0.6" Health="-0.06">
+        <RequiredItem type="Contained" name="Liquid Oxygenite"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-25" Condition="-0.3" Health="-0.1">
+        <RequiredItem type="Contained" name="Aluminium Powder,Copper Powder,Bronze Powder,Iron Powder"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-50" Condition="-0.3" Health="-0.2">
+        <RequiredItem type="Contained" name="Flash Powder,Propellant Powder"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-75" Condition="-0.3" Health="-0.4">
+        <RequiredItem type="Contained" name="Uranium Powder,Thermite Powder,Fulgurium Powder"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-60" Condition="-0.6" Stun="10" delay="5">
+        <RequiredItem type="Contained" name="Chloral Hydrate"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Condition="-0.6" Health="-1">
+        <RequiredItem type="Contained" name="Chlorine"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3" hideitems="true">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Hogtie Set"
+    category="Equipment"
+    tags="smallitem"
+	description="This is a makeshift set of copper coil and a holed plastic bag made to temporarily restrain an individual.">
+	
+	<Deconstruct time="5">
+      <Item name="Copper Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygearRagged.png" sourcerect="45,89,32,16" depth="0.6"/>
+
+    <Body width="30" height="12" density="25"/>
+
+    <Wearable slots="Head+Face+RightHand+LeftHand,Any">
+      <sprite texture="PlasticBag.png" limb="Head" sourcerect="0,0,31,35" origin="0.5,0.6" hidelimb="false"/>
+	  <sprite texture="securitygearRagged.png" limb="RightHand" sourcerect="89,84,25,11" origin="0.5,-0.5"/>
+      <sprite texture="securitygearRagged.png" limb="LeftHand" sourcerect="89,84,25,11" origin="0.5,-0.5"/>
+	  <sprite texture="securitygearRagged.png" limb="RightFoot" sourcerect="98,100,11,25" origin="0.3,0.8"/>
+      <sprite texture="securitygearRagged.png" limb="LeftFoot" sourcerect="98,100,11,25" origin="0.3,0.8"/>
+      
+      <StatusEffect type="OnWearing" target="Character" Stun="1" lockhands="true" ObstructVision="true" HideFace="true" setvalue="true"/>
+	  <StatusEffect type="OnWearing" target="This" Condition="-0.26"/>
+    </Wearable>
+  </Item>
+</Items>

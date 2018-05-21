@@ -1,0 +1,136 @@
+﻿<Items>
+  <Item
+    name="Safety Helmet"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A headgear worn to protect the head from injuries."
+	cargocontainername="Standard Shipping Box"
+	price="85">
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="engigear.png" depth="0.6" sourcerect="69,0,32,32"/>
+
+    <Body width="14" height="8" radius="8" density="16"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="engigear.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="69,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Welding Helmet"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A headgear worn to protect the head and eyes from injuries."
+	cargocontainername="Standard Shipping Box"
+	price="95">
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Aluminium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="engigear.png" depth="0.6" sourcerect="102,0,32,42"/>
+
+    <Body height="35" radius="2" density="17"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="engigear.png" limb="Head" depthlimb="Tail" origin="0.45,0.5" sourcerect="102,0,32,42"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" ObstructVision="true" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingdamagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Utility Vest"
+	aliases="Orange Jumpsuit"
+    category="Equipment"
+	cargocontainername="Standard Shipping Box"
+	price="100"
+    tags="meditem,clothing"
+    description="An utility vest used mostly by engineers. It has pockets for carrying any extra gear an engineer might need.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture = "engigear.png" sourcerect="53,50,51,21" depth="0.6"/>
+
+    <Body width="50" height="17" density="17"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="engigear.png" limb="Torso" sourcerect="0,77,32,51" origin="0.5,0.48" depthlimb="Head"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Utility Jumpsuit"
+	aliases="Blue Jumpsuit"
+    category="Equipment"
+	cargocontainername="Standard Shipping Box"
+	price="250"
+    tags="meditem,clothing"
+    description="The fire-resistant fabric offers some protection against fires. Plenty of pockets for carrying any extra gear a mechanic might need.">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Block"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture = "engigear.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="19"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="engigear.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48"/>
+	  
+	  <sprite texture="engigear.png" limb="RightHand" sourcerect="52,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="engigear.png" limb="LeftHand" sourcerect="52,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="engigear.png" limb="RightArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="engigear.png" limb="LeftArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="engigear.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="engigear.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="engigear.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="engigear.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="5">
+      <Containable name="smallitem,meditem"/>
+    </ItemContainer>
+  </Item>
+</Items>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Analysis Report: Thermal"
+    category="Misc"
+    tags="smallitem,docs"
+    description="This is a document listing what's known about the alien 'Thermal' Artefect."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Paper Boat"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Misc/Documents.png" sourcerect="31,0,25,40" depth="0.81"/>
+
+    <Body width="24" height="36" density="10.02"/>
+	
+	<Radar range="0" powerconsumption="10" drawhudwhenequipped="true" displaybordersize="0.2">
+	  <GuiFrame rect="0,0,0.5,0.7" alignment="Center" style="ItemUI" color="0.0,0.0,0.0,0.0"/>
+      <PingCircle texture="Content/Items/Engine/pingCircle.png" origin="0.5,0.5"/>
+      <ScreenOverlay texture="Mods/BTEPlus/Items/Documents/docThermal.png" origin="0.6,0.5"/>
+	  <Blip texture="Content/Items/Engine/radarBlip.png" origin="0.5,0.5"/>
+    </Radar>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Analysis Report: Skyholder"
+    category="Misc"
+    tags="smallitem,docs"
+    description="This is a document listing what's known about the alien 'Skyholder' Artefect."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Paper Boat"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Misc/Documents.png" sourcerect="31,0,25,40" depth="0.81"/>
+
+    <Body width="24" height="36" density="10.02"/>
+	
+	<Radar range="0" powerconsumption="10" drawhudwhenequipped="true" displaybordersize="0.2">
+	  <GuiFrame rect="0,0,0.5,0.7" alignment="Center" style="ItemUI" color="0.0,0.0,0.0,0.0"/>
+      <PingCircle texture="Content/Items/Engine/pingCircle.png" origin="0.5,0.5"/>
+      <ScreenOverlay texture="Mods/BTEPlus/Items/Documents/docSkyholder.png" origin="0.6,0.5"/>
+	  <Blip texture="Content/Items/Engine/radarBlip.png" origin="0.5,0.5"/>
+    </Radar>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Analysis Report: Nasonov"
+    category="Misc"
+    tags="smallitem,docs"
+    description="This is a document listing what's known about the alien 'Nasonov' Artefect."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Paper Boat"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Misc/Documents.png" sourcerect="31,0,25,40" depth="0.81"/>
+
+    <Body width="24" height="36" density="10.02"/>
+	
+	<Radar range="0" powerconsumption="10" drawhudwhenequipped="true" displaybordersize="0.2">
+	  <GuiFrame rect="0,0,0.5,0.7" alignment="Center" style="ItemUI" color="0.0,0.0,0.0,0.0"/>
+      <PingCircle texture="Content/Items/Engine/pingCircle.png" origin="0.5,0.5"/>
+      <ScreenOverlay texture="Mods/BTEPlus/Items/Documents/docNasonov.png" origin="0.6,0.5"/>
+	  <Blip texture="Content/Items/Engine/radarBlip.png" origin="0.5,0.5"/>
+    </Radar>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Analysis Report: Claret"
+    category="Misc"
+    tags="smallitem,docs"
+    description="This is a document listing what's known about the alien 'Claert' Artefect."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Paper Boat"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Misc/Documents.png" sourcerect="31,0,25,40" depth="0.81"/>
+
+    <Body width="24" height="36" density="10.02"/>
+	
+	<Radar range="0" powerconsumption="10" drawhudwhenequipped="true" displaybordersize="0.2">
+	  <GuiFrame rect="0,0,0.5,0.7" alignment="Center" style="ItemUI" color="0.0,0.0,0.0,0.0"/>
+      <PingCircle texture="Content/Items/Engine/pingCircle.png" origin="0.5,0.5"/>
+      <ScreenOverlay texture="Mods/BTEPlus/Items/Documents/docClaret.png" origin="0.6,0.5"/>
+	  <Blip texture="Content/Items/Engine/radarBlip.png" origin="0.5,0.5"/>
+    </Radar>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+</Items>

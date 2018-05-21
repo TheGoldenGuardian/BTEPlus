@@ -1,0 +1,46 @@
+<Items>
+  <Item
+    name="Gravity Gun"
+	aliases="Punter,Puntgun,Gravgun"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A high-tech gun capable of holding heavy objects and punting them at a high velocity."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="gravgun.png" sourcerect="0,0,62,40" depth="0.55"/>
+
+    <Body width="62" height="40" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="42,-10" holdangle="-8" aimpos="48,-3" handle1="-28,-6" handle2="-16,-16">
+			<Sound file="Mods/BTEPlus/Items/gravgunhold.ogg" type="OnActive" loop="true"/>
+	</Holdable>
+    
+    <RangedWeapon barrelpos="70,17" spread="1" unskilledspread="10" reload="3">
+      <Sound file="Mods/BTEPlus/Items/gravgun4.ogg" type="OnUse"/>
+      <RequiredItems name="Steel Chair,Steel Table" type="Contained" msg="The loaded object won't fire"/>
+      <RequiredSkill name="Science" level="40"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="true" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+	
+	<LightComponent LightColor="1.0,0.5,0.0,1.0" Flicker="0" range="120" IsOn="false">
+      <StatusEffect type="Always" target="This" IsOn="true"/>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+    </LightComponent>
+
+	<ItemContainer capacity="1" itempos="45,0" iteminterval="0,-4" hideitems="false">
+      <Containable name="Steel Chair,Steel Table"/>
+    </ItemContainer>
+  </Item>
+</Items>

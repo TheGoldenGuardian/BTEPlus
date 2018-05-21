@@ -1,0 +1,290 @@
+﻿<Items>
+  <Item
+    name="Health Scanner Headset"
+	aliases="Doctor Headset HUD,Medical Headset HUD,Health HUD Headset"
+    category="Equipment"
+    tags="smallitem"
+	description="A Health Scanner HUD with an embedded communications device."
+    >
+	
+	<Deconstruct time="15">
+      <Item name="Aluminium Sliver"/>
+      <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/Jobgear/doctorgear.png" sourcerect="0,120,20,8" depth="0.6"/>
+
+    <Body width="18" height="6" density="15"/>
+	
+	<WifiComponent range="25000.0" LinkToChat="true">
+      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+    </WifiComponent>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell"/>
+      <Containable name="Fulgurium Battery Cell"/>
+    </ItemContainer>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="Jobgear/doctorgear.png" limb="Head" sourcerect="0,120,20,8" origin="0.45,0.9"/>
+	<!--  <sprite texture="headset.png" limb="Head" origin="0.5,0.5"/> -->
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.05"/>
+	</Wearable>
+
+    <StatusHUD drawhudwhenequipped="true"/>
+  </Item>
+  
+  <Item
+	name="Crewmember Bandanna"
+	aliases="Bandanna,Facebandanna,Facemask"
+	category="Equipment"
+	tags="smallitem,clothing"
+	description="A bandana that fits snugly to the wearer's face, concealing their identity without obstructing their vision."
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+    
+    <Sprite texture ="miscellaneous.png" depth="0.65" sourcerect="6,18,21,16"/>
+  
+    <Body height="10.5" radius="8" density="10.02"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="miscellaneous.png" limb="Head" sourcerect="0,0,32,42" origin="0.45,0.5"/>
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" SpeedMultiplier="-0.001" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.99"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+    </Wearable> 
+  </Item>
+  
+  <Item
+    name="Medical Spray"
+	aliases="Medspray"
+    category="Equipment"
+    Tags="meditem,tool,medical"
+	description="A specialised canister designed to be sprayed over injures to help them heal."
+	cargocontainername="Medical Shipping Box"
+	impacttolerance="3"
+	canuseonself="true"
+    price="250">
+	
+	<Deconstruct time="3">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="36,3,15,8" depth="0.52"/>
+
+    <Body width="7.5" height="4" density="40"/>
+
+    <RepairTool extinquishamount="3" limbfixamount="0.075" range="100" barrelpos="15,0.5" particles="weld">
+	  <ParticleEmitter particle="waterdrop" velocitymin="350" velocitymax="450" particlespersecond="60"/>
+      <ParticleEmitterHitCharacter particle="watersplash" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
+      <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5"/>
+      <RequiredSkill name="Medical" level="20"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RepairTool>
+   
+    <ItemContainer capacity="1" hideitems="false" itempos="-1,-15">
+      <Containable name="Medical Spray Canister"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              holdpos="25,-15" aimpos="45,-8" handle1="0,-4"/>
+			  
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="0.5">
+	    <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	    <sound file="Content/Items/Tools/weldingTool.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5"/>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Medical Spray Canister"
+	aliases="Medspray Fuel, Medical Spray Fuel"
+    category="Equipment"
+    Tags="meditem,medical"
+	description="A canister with the corrigodone-based healing spray used by the Medical Spray."
+	cargocontainername="Medical Shipping Box"
+    price="60">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Corrigodone"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="55,8,16,32" depth="0.53"/>
+
+    <Body width="8" height="16" density="3"/>
+
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,5" handle2="0,-5">
+    </Holdable>
+  </Item>
+  <Item
+    name="Baguette"
+	aliases="Longbread,Long Bread,Coolbread, Cool Bread"
+    category="Misc"
+    Tags="meditem,food"
+	canuseonself="true"
+	description="You're about to Baguette your ass kicked!">
+	
+	<Deconstruct time="1">
+	  <Item name="Bread"/>
+      <Item name="Bread"/>
+    </Deconstruct>
+
+    <Sprite  texture ="miscellaneous.png" sourcerect="75,2,61,37" depth="0.55"/>
+
+    <Body width="61" height="37" density="48"/>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="10,8" handle1="-7,-8" handle2="-7,-8" holdangle="30" reload="1.0">
+      <Attack damage="1" bleedingdamage="0" structuredamage="0" damagetype="Blunt" stun="1.0" targetforce="11" sound="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+    </MeleeWeapon>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.008" Health="0.004" disabledeltatime="true" duration="60"/>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-12.5" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Nuclear Charge"
+	aliases="Nuke"
+    category="Equipment"
+    Tags="bigitem,explosive"
+	spritecolor="1.0,1.0,1.0,1.0"
+	description="A nuclear explosive charge designed to be used to obliterate an enemy submarine or as a self-destruct mechanism. It's impact sensitive so it is very highly advised to keep safely stored! (Note: Not actually nuclear.)"
+	impacttolerance="12"
+	cargocontainername="Explosives Shipping Box"
+    price="4000">
+	
+	<Deconstruct time="20">      
+      <Item name="Polycarbonate Block" maxcondition="0.0" outcondition="0.25"/>
+	  <Item name="Polycarbonate Bar" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="miscellaneous.png" depth="0.8" sourcerect="1,43,31,15"/>
+
+    <Body width="31" height="15"/>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100"/>
+    </ItemComponent>
+
+    <Pickable slots="LeftHand+RightHand,Any">
+	  <StatusEffect type="OnFire" target="This" Condition="-10"/>
+	  <StatusEffect type="OnImpact" target="This" Condition="-12.5" setvalue="true"/>
+      <StatusEffect type="OnBroken" target="This">
+	  <sound file="Mods/BTEPlus/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="5000" structuredamage="2000" damage="1500" bleedingdamage="20.0" stun="50" force="100" severlimbsprobability="2.0" camerashake="36.0" decal="explosion" decalsize="3"/>
+		<Remove/>
+      </StatusEffect>
+    </Pickable>
+  </Item>
+  
+  <Item
+    name="Duct Tape"
+    category="Misc"
+	Tags="smallitem">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Biomass" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" depth="0.55" sourcerect="137,1,15,15"/>
+
+    <Body radius="7.5" width="7.5" density="6"/>
+	
+	<Wearable slots="Any,RightHand+LeftHand">
+      <sprite texture="miscellaneous.png" limb="RightHand" sourcerect="136,17,16,16" origin="0.5,-0.5"/>
+      <sprite texture="miscellaneous.png" limb="LeftHand" sourcerect="136,17,16,16" origin="0.5,-0.5"/>
+      
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.55" lockhands="true" setvalue="true"/>
+	  <StatusEffect type="OnWearing" target="This" Condition="-2.5"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Makeshift Headlight"
+	aliases="Glowstick Headlight"
+    category="Equipment"
+	description="A very cheap form of headlight made out of a glowstick and a copper coil."
+	Tags="smallitem">
+
+    <Deconstruct time="5">
+      <Item name="Glowstick"/>
+	  <Item name="Copper Coil"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" depth="0.55" sourcerect="138,40,29,11"/>
+
+    <Body height="20" width="11" density="8"/>
+	
+	<Wearable slots="Any,Head,Face">
+      <sprite texture="miscellaneous.png" limb="Head" sourcerect="153,1,37,38" origin="0.5,0.5"/>
+		<LightComponent range="120" lightcolor="0.0,1.0,0.0,1.0" powerconsumption="0" IsOn="true">
+		  <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
+			<Conditional IsDead="false"/>
+		  </StatusEffect>
+          <sprite texture="Content/Lights/light.png" depth="0.025" alpha="5.0"/>
+        </LightComponent>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="PDW Ammo Crate"
+    category="Equipment"
+    Tags="cntnr,meditem"
+    description="A somewhat small box used to store and carry PDW ammunition."
+    canbepicked="true"
+    price="350">
+   
+    <Deconstruct time="10">
+      <Item name="Aluminium Bar"/>
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/miscellaneous.png" sourcerect="98,40,40,34" depth="0.55"/>
+
+    <Body width="40" height="34" density="12.5"/>
+
+    <Holdable slots="Any,RightHand+LeftHand" handle1="0,0"/>
+	
+	<ItemContainer capacity="50" canbeselected="true" hideitems="true">
+      <Containable name="PDW Round"/>
+    </ItemContainer>
+  </Item>
+</Items>

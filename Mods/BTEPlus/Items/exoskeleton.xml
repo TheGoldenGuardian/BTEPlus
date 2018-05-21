@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Exoskeletal Legs"
+	aliases="Exolegs, Exoskeleton"
+    category="Equipment"
+    tags="meditem,clothing"
+	fireproof="true"
+	description="An electronically powered exoskeleton worn over the legs"
+    price="3500">
+	
+	<Deconstruct time="30">
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture ="Exoskeleton.png" sourcerect="73,102,50,25" depth="0.55"/>
+
+    <Body width="50" height="25" density="20"/>
+
+    <Wearable limbtype="Legs" slots="Any,Legs">	  
+	  <sprite texture="Exoskeleton.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.006" inheritlimbdepth="true" depthlimb="Legs" hidelimb="false"/>
+
+      <sprite texture="Exoskeleton.png" limb="RightHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.0" inheritlimbdepth="true" hidelimb="false"/>
+      <sprite texture="Exoskeleton.png" limb="LeftHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.016" inheritlimbdepth="true" hidelimb="false"/>
+
+      <sprite texture="Exoskeleton.png" limb="RightArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.001" inheritlimbdepth="true" hidelimb="false"/>
+      <sprite texture="Exoskeleton.png" limb="LeftArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.015" inheritlimbdepth="true" hidelimb="false"/>
+
+      <sprite texture="Exoskeleton.png" limb="RightThigh" sourcerect="22,0,18,44" origin="0.5,0.5" depth="0.011" depthlimb="Tail" inheritlimbdepth="true" hidelimb="false"/>
+      <sprite texture="Exoskeleton.png" limb="LeftThigh" sourcerect="0,0,1,1" origin="0.5,0.5" depth="0.015" inheritlimbdepth="true" hidelimb="false"/>
+
+      <sprite texture="Exoskeleton.png" limb="RightLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.012" depthlimb="Tail" inheritlimbdepth="false" hidelimb="false"/>
+      <sprite texture="Exoskeleton.png" limb="LeftLeg" sourcerect="87,47,21,51" origin="0.5,0.55" depth="0.016" inheritlimbdepth="true" hidelimb="false"/>
+
+      <sprite texture="Exoskeleton.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="true" hidelimb="false"/>
+      <sprite texture="Exoskeleton.png" limb="LeftFoot" sound="footstep_armor" sourcerect="50,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="true" hidelimb="false"/>
+     
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.8" LowPassMultiplier="0.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.05">
+        <RequiredItem type="Contained" name="loadable"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1" disabledeltatime="true">
+        <RequiredItem type="Contained" name="loadable"/>
+      </StatusEffect>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>  
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+	  <Containable name="Battery Cell,Fulgurium Battery Cell">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
+    </ItemContainer>
+  </Item>
+</Items>

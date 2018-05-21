@@ -1,0 +1,321 @@
+﻿<Items>
+  <Item
+    name="Captain's Cap A"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Captain's unquestionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainTorso.png" depth="0.6" sourcerect="32,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="captainTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Captain's Cap B"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Captain's unquestionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainTorsoB.png" depth="0.6" sourcerect="32,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="captainTorsoB.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Assistant's Cap A"
+	aliases="Asscap A,Asshat A"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Assistant's questionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantTorso.png" depth="0.6" sourcerect="32,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="assistantTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  <Item
+    name="Assistant's Cap B"
+	aliases="Asscap B,Asshat B"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Assistant's even more questionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantTorso.png" depth="0.6" sourcerect="64,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="assistantTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="64,48,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Assistant's Beret"
+	aliases="Assberet,Asshat C"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Assistant's undeniable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantBeret.png" depth="0.6" sourcerect="0,0,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="assistantBeret.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,0,32,32"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Captain's Uniform A"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainLegs.png" sourcerect="0,52,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="16"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="captainTorso.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="captainTorso.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="captainTorso.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="captainTorso.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainTorso.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="captainLegs.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegs.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegs.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="captainLegs.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegs.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Captain's Uniform B"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainLegsB.png" sourcerect="0,52,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="16"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="captainTorsoB.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="captainTorsoB.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="captainTorsoB.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="captainTorsoB.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainTorsoB.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="captainLegsB.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsB.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsB.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="captainLegsB.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsB.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Assistant's Jacket"
+	aliases="Captain's Jacket"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantLegs.png" sourcerect="0,52,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="12"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="assistantTorso.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="assistantTorso.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="assistantTorso.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="assistantTorso.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantTorso.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Assistant's Trousers A"
+	aliases="Captain's Trousers A"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
+
+    <Body width="51" height="13" density="13"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="assistantLegs.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegs.png" limb="RightThigh" sourcerect="52,34,28,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegs.png" limb="LeftThigh" sourcerect="52,34,28,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="assistantLegs.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegs.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.04" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Assistant's Trousers B"
+	aliases="Captain's Trousers B"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="assistantLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
+
+    <Body width="51" height="13" density="13"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="assistantLegs.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegs.png" limb="RightThigh" sourcerect="52,34,28,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegs.png" limb="LeftThigh" sourcerect="52,34,28,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="assistantLegs.png" limb="RightLeg" sourcerect="86,0,21,50" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegs.png" limb="LeftLeg" sourcerect="86,0,21,50" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.04" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+</Items>

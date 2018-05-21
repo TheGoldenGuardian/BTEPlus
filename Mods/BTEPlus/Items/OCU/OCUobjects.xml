@@ -1,0 +1,26 @@
+<Items>
+   <Item
+   name="OCU Mount"
+   linkable="true"
+   category="Equipment"
+   description="A special OCU wall-mount designed to safely hold and store dangerous alien artifacts, provided it has power."
+   Tags="cntnr">
+
+    <Sprite texture="Mods/BTEPlus/Items/OCU/OCUmount.png" depth="0.8" sourcerect="0,0,64,64"/>
+
+    <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="32,-32">
+      <Containable name="alien"/>
+    </ItemContainer>
+	
+	<Powered powerconsumption="1500" currpowerconsumption="1500" minvoltage="0.5" isactive="true">
+	  <RequiredItem item="Skyholder Artifact,Thermal Artifact"/>
+      <StatusEffect type="OnActive" target="Contained" targetnames="Skyholder Artifact" Condition="100"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Thermal Artifact" Condition="0" setvalue="true"/>
+    </Powered>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+	</Item>
+</Items>

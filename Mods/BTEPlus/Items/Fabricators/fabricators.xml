@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+	<Item
+		name="Fabricator"
+		Tags="cntnr"
+		linkable="true"
+
+    category="Machine"
+    description="A machine capable of manufacturing a wide range of parts and basic items from raw materials.">
+    
+    <Sprite texture="Fabricators.png" depth="0.8" sourcerect="0,0,64,128"/>
+
+		<Fabricator canbeselected = "true" powerconsumption="250">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
+	  
+	  <fabricableitem name="Railgun Plastic Spear" requireditems="Polycarbonate Block,Polycarbonate Bar" requiredtime="10">
+        <RequiredSkill name="Construction" level="10"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Aluminium Spear" requireditems="Aluminium Block,Aluminium Bar" requiredtime="12">
+        <RequiredSkill name="Construction" level="12"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Copper Spear" requireditems="Copper Block,Copper Bar" requiredtime="14">
+        <RequiredSkill name="Construction" level="14"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Bronze Spear" requireditems="Bronze Block,Bronze Bar" requiredtime="15">
+        <RequiredSkill name="Construction" level="15"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Steel Spear" requireditems="Steel Block,Steel Bar" requiredtime="16">
+        <RequiredSkill name="Construction" level="16"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Uranium Spear" requireditems="Uranium Block,Uranium Bar" requiredtime="18">
+        <RequiredSkill name="Construction" level="18"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Fulgurium Spear" requireditems="Fulgurium Block,Fulgurium Bar" requiredtime="20">
+        <RequiredSkill name="Construction" level="20"/>
+      </fabricableitem>
+
+	  <fabricableitem name="Plastic Spear" requireditems="Polycarbonate Bar" requiredtime="8"/>
+	  <fabricableitem name="Aluminium Spear" requireditems="Aluminium Bar" requiredtime="10"/>
+	  <fabricableitem name="Copper Spear" requireditems="Copper Bar" requiredtime="12"/>
+	  <fabricableitem name="Bronze Spear" requireditems="Bronze Bar" requiredtime="13"/>
+      <fabricableitem name="Steel Spear" requireditems="Steel Bar" requiredtime="14"/>
+	  <fabricableitem name="Uranium Spear" requireditems="Uranium Bar" requiredtime="16"/>
+	  <fabricableitem name="Fulgurium Spear" requireditems="Fulgurium Bar" requiredtime="18"/>
+	  
+	  <fabricableitem name="Plastic Saw" requireditems="Polycarbonate Bar" requiredtime="6"/>
+	  <fabricableitem name="Aluminium Saw" requireditems="Aluminium Bar" requiredtime="8"/>
+	  <fabricableitem name="Copper Saw" requireditems="Copper Bar" requiredtime="10"/>
+	  <fabricableitem name="Bronze Saw" requireditems="Bronze Bar" requiredtime="11"/>
+	  <fabricableitem name="Steel Saw" requireditems="Steel Bar" requiredtime="12"/>
+	  <fabricableitem name="Uranium Saw" requireditems="Uranium Bar" requiredtime="14"/>
+	  <fabricableitem name="Fulgurium Saw" requireditems="Fulgurium Bar" requiredtime="16"/>
+	  
+	  <fabricableitem name="Diving Knife" requireditems="Polycarbonate Sliver, Steel Sliver" requiredtime="15">
+	    <RequiredSkill name="Construction" level="15"/>
+      </fabricableitem>
+	  <fabricableitem name="Utility Knife" requiredtime="10">
+	    <Item name="Polycarbonate Sliver" mincondition="0.75" usecondition="true"/>
+		<Item name="Steel Sliver" mincondition="0.75" usecondition="true"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Screwdriver" requiredtime="5">
+	    <Item name="Polycarbonate Sliver" mincondition="0.75" usecondition="true"/>
+		<Item name="Steel Sliver" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Wrench" requireditems="Steel Bar, Polycarbonate Sliver" requiredtime="10"/>
+	  
+	  <fabricableitem name="Frying Pan" requireditems="Steel Bar, Polycarbonate Sliver" requiredtime="10"/>
+	  
+	  <fabricableitem name="Food Can" requireditems="Aluminium Bar" requiredtime="5"/>
+
+      <fabricableitem name="Copper Coil" requireditems="Copper Sliver" requiredtime="5"/>
+	  <fabricableitem name="Wire" requireditems="Copper Coil, Polycarbonate Sliver" requiredtime="10"/>
+	  
+	  <fabricableitem name="FPGA Circuit" requireditems="Polycarbonate Sliver, Bronze Sliver" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Spare Parts" requireditems="Polycarbonate Bar, Aluminium Bar, Steel Bar" requiredtime="15">
+	    <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Duct Tape" requireditems="Polycarbonate Sliver, Biomass" requiredtime="5"/>
+
+	  <fabricableitem name="Polycarbonate Sliver" requireditems="Biomass" requiredtime="15">
+	    <Item name="Sulphuric Acid" mincondition="0.1" usecondition="true"/>
+		<Item name="Salt" mincondition="0.1" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Polycarbonate Bar" requireditems="Polycarbonate Sliver, Polycarbonate Sliver" requiredtime="8"/>
+	  <fabricableitem name="Polycarbonate Block" requireditems="Polycarbonate Bar, Polycarbonate Bar" requiredtime="10"/>
+	  <fabricableitem name="Aluminium Sliver" requireditems="Aluminium Powder, Aluminium Powder" requiredtime="8"/>
+	  <fabricableitem name="Aluminium Bar" requireditems="Aluminium Sliver, Aluminium Sliver" requiredtime="10"/>
+	  <fabricableitem name="Aluminium Block" requireditems="Aluminium Bar, Aluminium Bar" requiredtime="12"/>
+	  <fabricableitem name="Copper Sliver" requireditems="Copper Powder, Copper Powder" requiredtime="10"/>
+	  <fabricableitem name="Copper Bar" requireditems="Copper Sliver, Copper Sliver" requiredtime="12"/>
+	  <fabricableitem name="Copper Block" requireditems="Copper Bar, Copper Bar" requiredtime="14"/>
+	  <fabricableitem name="Bronze Sliver" requiredtime="11">
+	    <Item name="Aluminium Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Copper Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Bronze Sliver" requireditems="Bronze Powder, Bronze Powder" requiredtime="11"/>
+	  <fabricableitem name="Bronze Bar" requireditems="Aluminium Sliver, Copper Sliver" requiredtime="13"/>
+	  <fabricableitem name="Bronze Bar" requireditems="Bronze Sliver, Bronze Sliver" requiredtime="13"/>
+	  <fabricableitem name="Bronze Block" requireditems="Aluminium Bar, Copper Bar" requiredtime="15"/>
+	  <fabricableitem name="Bronze Block" requireditems="Bronze Bar, Bronze Bar" requiredtime="15"/>
+	  <fabricableitem name="Steel Sliver" requireditems="Iron Powder, Iron Powder" requiredtime="12"/>
+	  <fabricableitem name="Steel Bar" requireditems="Steel Sliver, Steel Sliver" requiredtime="14"/>
+	  <fabricableitem name="Steel Block" requireditems="Steel Bar, Steel Bar" requiredtime="16"/>
+	  <fabricableitem name="Uranium Sliver" requireditems="Uranium Powder, Uranium Powder" requiredtime="14"/>
+	  <fabricableitem name="Uranium Bar" requireditems="Uranium Sliver, Uranium Sliver" requiredtime="16"/>
+	  <fabricableitem name="Uranium Block" requireditems="Uranium Bar, Uranium Bar" requiredtime="18"/>
+	  <fabricableitem name="Fulgurium Sliver" requireditems="Fulgurium Powder, Fulgurium Powder" requiredtime="16"/>
+	  <fabricableitem name="Fulgurium Bar" requireditems="Fulgurium Sliver, Fulgurium Sliver" requiredtime="18"/>
+	  <fabricableitem name="Fulgurium Block" requireditems="Fulgurium Bar, Fulgurium Bar" requiredtime="20"/>
+    </Fabricator>
+		
+		<ConnectionPanel selectkey="Action" canbeselected = "true">
+			<requireditem name="Screwdriver" type="Equipped"/>
+			<output name="power_in"/>
+		</ConnectionPanel>
+
+		<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
+		<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
+	</Item>
+	
+	<Item
+		name="Assembler"
+		Tags="cntnr"
+		linkable="true"
+
+    category="Machine"
+    description="A machine capable of manufacturing a wide range of items out of parts and basic materials.">
+    
+    <Sprite texture="Fabricators.png" depth="0.79" sourcerect="65,0,64,69"/>
+
+		<Fabricator canbeselected = "true" powerconsumption="250">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
+	  
+	  <fabricableitem name="Railgun Shell" requireditems="Steel Block, Polycarbonate Bar" requiredtime="20">
+        <RequiredSkill name="Construction" level="25"/>
+      </fabricableitem>
+	  <fabricableitem name="Depth Charge Shell" requireditems="Steel Block, Steel Bar" requiredtime="20">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Depth Mine Shell" requireditems="Steel Block, Steel Bar" requiredtime="20">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Buoy Mine Shell" requireditems="Aluminium Block, Polycarbonate Bar" requiredtime="20">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Light Ballistic Vest" requireditems="Polycarbonate Bar, Polycarbonate Sliver, Steel Sliver" requiredtime="15">
+        <RequiredSkill name="Construction" level="20"/>
+		<RequiredSkill name="Weapons" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Handgun Ammo Box" requireditems="Polycarbonate Sliver, Aluminium Sliver" requiredtime="15">
+        <RequiredSkill name="Weapons" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Shotgun Ammo Box" requireditems="Polycarbonate Sliver, Aluminium Sliver" requiredtime="15">
+        <RequiredSkill name="Weapons" level="30"/>
+      </fabricableitem>
+
+      <fabricableitem name="Harpoon Gun" requireditems="Steel Bar, Spare Parts" requiredtime="20">
+        <RequiredSkill name="Construction" level="20"/>
+      </fabricableitem>
+	  <fabricableitem name="Spear Gun" requireditems="Harpoon Gun, Spare Parts" requiredtime="40">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Grenade Launcher" requireditems="Steel Bar, Spare Parts" requiredtime="35">
+        <RequiredSkill name="Construction" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Dart Gun" requireditems="Aluminium Bar, Spare Parts" requiredtime="30">
+        <RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Welding Tool" requireditems="Spare Parts" requiredtime="20">
+        <RequiredSkill name="Construction" level="35"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Saw Cutter" requireditems="Steel Bar, Spare Parts, Steel Saw" requiredtime="25">
+        <RequiredSkill name="Construction" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Plasma Cutter" requireditems="Spare Parts" requiredtime="30">
+        <RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Oxygen Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
+	  
+	  <fabricableitem name="Radio" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="10">
+	    <RequiredSkill name="Electrical Engineering" level="15"/>
+      </fabricableitem>
+	  <fabricableitem name="Diving Radio" requireditems="Radio, Polycarbonate Sliver" requiredtime="5">
+	    <RequiredSkill name="Construction" level="10"/>
+		<RequiredSkill name="Electrical Engineering" Level="20"/>
+      </fabricableitem>
+	  <fabricableitem name="Headset" requireditems="FPGA Circuit" requiredtime="20">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="20"/>
+      </fabricableitem>
+      
+      <fabricableitem name="Basic Switch" requireditems="Polycarbonate Sliver, Aluminium Sliver" requiredtime="10">
+	    <RequiredSkill name="Electrical Engineering" level="20"/>
+      </fabricableitem>
+	  <fabricableitem name="Access Panel" requireditems="Polycarbonate Bar, Aluminium Sliver, FPGA Circuit" requiredtime="20">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  
+      <fabricableitem name="And Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+      <fabricableitem name="Or Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+      <fabricableitem name="Not Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+      <fabricableitem name="Signal Check Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+      <fabricableitem name="RegEx Find Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+      <fabricableitem name="Wifi Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Oscillator Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Light Component" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="10">
+	    <RequiredSkill name="Electrical Engineering" level="25"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Oxygen Detector" requireditems="Polycarbonate Bar, Aluminium Sliver, Copper Coil, FPGA Circuit" requiredtime="25">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+      <fabricableitem name="Water Detector" requireditems="Polycarbonate Bar, Aluminium Sliver, Copper Coil, FPGA Circuit" requiredtime="25">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name="Motion Detector" requireditems="Polycarbonate Bar, Aluminium Sliver, Copper Coil, FPGA Circuit" requiredtime="25">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+
+      <fabricableitem name="Emergency Siren" requireditems="Polycarbonate Bar, Copper Coil, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="35"/>
+      </fabricableitem>
+	  <fabricableitem name="Alarm Buzzer" requireditems="Steel Bar, Copper Coil, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="35"/>
+      </fabricableitem>
+	  <fabricableitem name="Alarm Buzzer B" requireditems="Steel Bar, Copper Coil, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="35"/>
+      </fabricableitem>
+	  <fabricableitem name="Alarm Buzzer C" requireditems="Steel Bar, Copper Coil, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="35"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Camera" requireditems="Polycarbonate Bar, Aluminium Sliver, FPGA Circuit" requiredtime="15">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Battery Cell" requireditems="Aluminium Sliver, Copper Sliver" requiredtime="10">
+        <Item name="Sulphuric Acid" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Fulgurium Battery Cell" requireditems="Fulgurium Sliver" requiredtime="15">
+        <Item name="Battery Cell" mincondition="0.0" usecondition="false"/>
+		<Item name="Sulphuric Acid" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Flashlight" requireditems="Polycarbonate Bar, Aluminium Sliver, Copper Coil, FPGA Circuit" requiredtime="20">
+        <RequiredSkill name="Electrical Engineering" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Handheld Sonar" requireditems="Polycarbonate Bar, Aluminium Sliver, Copper Coil, FPGA Circuit" requiredtime="25">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+
+      <fabricableitem name="Underwater Scooter" requireditems="Polycarbonate Bar, Spare Parts, Copper Coil, FPGA Circuit" requiredtime="30">
+	    <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Stun Baton" requireditems="Spare Parts, FPGA Circuit" requiredtime="30">
+	    <RequiredSkill name="Electrical Engineering" level="45"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Shockwave Charge" requireditems="Aluminium Bar, Copper Coil, FPGA Circuit" requiredtime="30">
+	    <RequiredSkill name="Electrical Engineering" level="55"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name ="HTM Grenade" requireditems="Steel Bar, Aluminium Sliver" requiredtime="20">
+		<RequiredSkill name="Construction" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name ="Buoy Grenade" requireditems="HTM Grenade, Polycarbonate Sliver" requiredtime="20">
+		<RequiredSkill name="Construction" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Flare" requireditems="Polycarbonate Sliver" requiredtime="10">
+        <Item name="Aluminium Powder" mincondition="0.25" usecondition="true"/>
+		<Item name="Potassium" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Construction" level="25"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Diesel Can" requireditems="Polycarbonate Bar, Biomass, Liquid Oxygenite, Sulphuric Acid" requiredtime="20">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+
+      <fabricableitem name="Uranium Fuel Rod" requireditems="Uranium Bar, Aluminium Bar" requiredtime="30">
+        <RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Thermite Fuel Rod" requireditems="Thermite Shard" requiredtime="40">
+        <Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name="Fulgurium Fuel Rod" requireditems="Fulgurium Bar" requiredtime="50">
+        <Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="60"/>
+      </fabricableitem>
+	  <fabricableitem name="Sulphurite Coolant Rod" requireditems="Sulphurite Shard" requiredtime="35">
+        <Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="45"/>
+      </fabricableitem>
+	  <fabricableitem name="Oxygenite Coolant Rod" requireditems="Oxygenite Shard" requiredtime="45">
+        <Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="55"/>
+      </fabricableitem>
+    </Fabricator>
+		
+		<ConnectionPanel selectkey="Action" canbeselected = "true">
+			<requireditem name="Screwdriver" type="Equipped"/>
+			<output name="power_in"/>
+		</ConnectionPanel>
+
+		<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
+		<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
+	</Item>
+	
+	<Item
+	  name="Tool Kit"
+	  Tags="cntnr"
+	  category="Equipment"
+	  price="2500"
+      description="A kit containing the necessary tools to repair items or manufacture makeshift equipment in case of emergency."
+	  linkable="true">
+	  
+	<Deconstruct time="50">
+	  <Item name="Spare Parts"/>
+      <Item name="Claw Hammer"/>
+	  <Item name="Hacksaw"/>
+	  <Item name="Screwdriver"/>
+	  <Item name="Pliers"/>
+	  <Item name="Wrench"/>
+	  <Item name="Utility Knife"/>
+    </Deconstruct>
+    
+    <Sprite texture="Mods/BTE/Items/Tools/Tools.png" depth="0.54" sourcerect="0,0,80,40"/>
+	
+	<Body width="80" height="40" density="50"/>
+
+	<Fabricator canbeselected ="true" minvoltage="0" powerconsumption="0">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="500.0" loop="true"/>
+
+	  <fabricableitem name="Saw Cutter" requireditems="Steel Saw" requiredtime="5">
+        <Item name="Saw Cutter" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="20"/>
+      </fabricableitem>
+	  <fabricableitem name="Saw Gun" requireditems="Spare Parts" requiredtime="40">
+        <Item name="Saw Cutter" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Plastic Saw" requireditems="Polycarbonate Bar" requiredtime="10">
+	  <RequiredSkill name="Construction" level="10"/>
+	  </fabricableitem>
+	  <fabricableitem name="Aluminium Saw" requireditems="Aluminium Bar" requiredtime="15">
+	  <RequiredSkill name="Construction" level="15"/>
+	  </fabricableitem>
+	  
+	  <fabricableitem name="Plastic Spear" requireditems="Polycarbonate Bar" requiredtime="10">
+	  <RequiredSkill name="Construction" level="10"/>
+	  </fabricableitem>
+	  <fabricableitem name="Aluminium Spear" requireditems="Aluminium Bar" requiredtime="15">
+	  <RequiredSkill name="Construction" level="15"/>
+	  </fabricableitem>
+	  <fabricableitem name="Hollowhead Spear" requireditems="Plastic Spear, Copper Coil" requiredtime="25">
+	  <RequiredSkill name="Construction" level="35"/>
+	  </fabricableitem>
+	  
+	  <fabricableitem name="Medical Dart" requireditems="Medical Syringe" requiredtime="15">
+        <RequiredSkill name="Weapons" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Medical Syringe" requireditems="Medical Dart" requiredtime="15">
+        <RequiredSkill name="Medical" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Glowstick Headlight" requireditems="Copper Coil, Glowstick" requiredtime="5"/>
+	  
+	  <fabricableitem name="Diving Revolver" requireditems="Antique Revolver, Spare Parts" requiredtime="40">
+        <RequiredSkill name="Weapons" level="60"/>
+		<RequiredSkill name="Construction" level="15"/>
+      </fabricableitem>
+	  <fabricableitem name="Revolver Round" requiredtime="20">
+        <Item name="Steel Sliver" mincondition="0.25" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Revolver HL Round" requiredtime="20">
+        <Item name="Copper Sliver" mincondition="0.25" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.5" usecondition="true"/>
+		<Item name="Phosphorus" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name="Revolver Flare Round" requiredtime="20">
+        <Item name="Aluminium Sliver" mincondition="0.25" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.5" usecondition="true"/>
+		<Item name="Potassium" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="45"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Flashlight Shotgun" requireditems="Diving Shotgun, Flashlight, Steel Sliver" requiredtime="15">
+	    <RequiredSkill name="Construction" level="20"/>
+		<RequiredSkill name="Weapons" level="20"/>
+	  </fabricableitem>
+	  <fabricableitem name="Shotgun Slug Round" requiredtime="30">
+        <Item name="Steel Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name="Shotgun Beanbag Round" requiredtime="30">
+        <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="PDW Round" requiredtime="10">
+        <Item name="Steel Sliver" mincondition="0.25" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="45"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Shock Rod" requireditems="Plastic Spear, FPGA Circuit, Copper Coil" requiredtime="25">
+	    <RequiredSkill name="Electrical Engineering" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Sonar Blaster" requireditems="Handheld Sonar, Copper Coil" requiredtime="40">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Flare" requiredtime="15">
+        <Item name="Flare" mincondition="0.0" usecondition="false"/>
+		<Item name="Aluminium Powder" mincondition="0.25" usecondition="true"/>
+		<Item name="Potassium" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Construction" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Seabed Soup" requireditems="Food Can, Kelp" requiredtime="20">
+	    <Item name="Frying Pan" mincondition="0.0" usecondition="true"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Bandage" requiredtime="10" outcondition="0.8">
+        <Item name="Bandage" mincondition="0.0" usecondition="false"/>
+		<Item name="Vodka" mincondition="0.20" usecondition="true"/>
+		<RequiredSkill name="Medical" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Bandage" requiredtime="10">
+        <Item name="Bandage" mincondition="0.0" usecondition="false"/>
+		<Item name="Ethanol" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Medical" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Shiv" requireditems="Food Can" requiredtime="10"/>
+	  <fabricableitem name="Scrap Machete" requireditems="Food Can, Steel Bar, Steel Bar, Duct Tape" requiredtime="25"/>
+	  
+	  <fabricableitem name="Hogtie Set" requireditems="Copper Coil, Copper Coil, Plastic Bag" requiredtime="6"/>
+	  
+	  <fabricableitem name="Molotov Cocktail" requireditems="Vodka" requiredtime="10">
+        <Item name="Bandage" mincondition="0.0" usecondition="false"/>
+		<Item name="Thermite Powder" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="15"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Hot Can" requireditems="Food Can, Copper Coil" requiredtime="15">
+		<Item name="Thermite Powder" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Detonator" requireditems="Aluminium Sliver, Copper Coil" requiredtime="25">
+        <RequiredSkill name="Electrical Engineering" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Utilitу Vest" requireditems="Utility Vest, Detonator, Copper Coil" requiredtime="50">
+        <RequiredSkill name="Electrical Engineering" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name ="Flash Charge" requireditems="Polycarbonate Sliver, Flash Powder, Flash Powder, Flash Powder, Flash Powder" requiredtime="25">
+        <RequiredSkill name="Weapons" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Propellant Charge" requireditems="Polycarbonate Sliver, Propellant Powder, Propellant Powder, Propellant Powder, Propellant Powder" requiredtime="25">
+        <RequiredSkill name="Weapons" level="25"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Shockwave Charge" requireditems="Aluminium Sliver, Copper Coil, FPGA Circuit" requiredtime="40">
+	    <RequiredSkill name="Electrical Engineering" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Plasma Torcher" requireditems="Plasma Cutter, Spare Parts" requiredtime="50">
+	    <RequiredSkill name="Construction" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Gauss Gun" requireditems="Spare Parts, Fulgurium Sliver, FPGA Circuit, Copper Coil" requiredtime="50">
+	    <RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Oxygen Tank" requiredtime="20">
+		<Item name="Oxygen Tank" mincondition="0.0" usecondition="false"/>
+		<Item name="Potassium" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Oxygen Tank" requiredtime="20">
+		<Item name="Oxygenite Tank" mincondition="0.0" usecondition="false"/>
+		<Item name="Potassium" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Oxygenite Tank" requireditems="Liquid Oxygenite, Liquid Oxygenite" requiredtime="20">
+		<Item name="Oxygen Tank" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Oxygenite Tank" requireditems="Liquid Oxygenite, Liquid Oxygenite" requiredtime="20">
+		<Item name="Oxygenite Tank" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Sulphurite Tank" requireditems="Sulphuric Acid, Sulphuric Acid" requiredtime="20">
+		<Item name="Sulphurite Tank" mincondition="0.0" usecondition="false"/>
+		<Item name="Chlorine" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Thermite Tank" requireditems="Thermite Powder, Thermite Powder" requiredtime="20">
+		<Item name="Thermite Tank" mincondition="0.0" usecondition="false"/>
+		<Item name="Stabilozine" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+
+	  <fabricableitem name="Diesel Can" requireditems="Biomass, Liquid Oxygenite, Sulphuric Acid" requiredtime="20">
+		<Item name="Diesel Can" mincondition="0.0" usecondition="false"/>
+		<RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Fulgurium Battery Cell" requireditems="Sulphuric Acid" requiredtime="20">
+		<Item name="Fulgurium Battery Cell" mincondition="0.0" usecondition="false"/>
+      </fabricableitem>
+	  <fabricableitem name="Fulgurium Fuel Rod" requireditems="Sulphuric Acid, Sulphuric Acid" requiredtime="20">
+		<Item name="Fulgurium Fuel Rod" mincondition="0.0" usecondition="false"/>
+      </fabricableitem>
+	  
+	 <fabricableitem name="Spare Parts" requireditems="Welding Tool" requiredtime="25">
+	    <RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	 <fabricableitem name="Spare Parts" requireditems="Plasma Cutter" requiredtime="25">
+	    <RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Spare Parts" requireditems="Harpoon Gun" requiredtime="30">
+	    <RequiredSkill name="Construction" level="50"/>
+      </fabricableitem>
+
+	 <fabricableitem name="Wire" requireditems="Copper Coil, Polycarbonate Sliver" requiredtime="15"/>
+	  <fabricableitem name="Copper Coil" requireditems="Wire" requiredtime="10"/>
+	  <fabricableitem name="Copper Coil" requireditems="Red Wire" requiredtime="10"/>
+	  <fabricableitem name="Copper Coil" requireditems="Blue Wire" requiredtime="10"/>
+	  <fabricableitem name="Copper Coil" requireditems="Orange Wire" requiredtime="10"/>
+	  
+	  <fabricableitem name="Makeshift Suppressed Pistol" requireditems="Spare Parts, Steel Bar, Duct Tape, Polycarbonate Bar, Copper Sliver" requiredtime="15">
+	    <RequiredSkill name="Construction" level="50"/>
+		<RequiredSkill name="Weapons" level="40"/>
+	  </fabricableitem>
+	  <fabricableitem name="Subsonic Round" requiredtime="15">
+	    <Item name="Copper Sliver" mincondition="0.25" usecondition="true"/>
+	    <Item name="Steel Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="50"/>
+	  </fabricableitem>
+	  <fabricableitem name="Makeshift Rifle" requireditems="Spare Parts, Steel Bar, Steel Bar, Bandage, Glowstick" requiredtime="20">
+	    <RequiredSkill name="Construction" level="40"/>
+		<RequiredSkill name="Weapons" level="40"/>
+		<RequiredSkill name="Electrical Engineering" level="40"/>
+	  </fabricableitem>
+	  <fabricableitem name="Rifle Round" requiredtime="12">
+	    <Item name="Copper Sliver" mincondition="0.5" usecondition="true"/>
+	    <Item name="Steel Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Propellant Powder" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Weapons" level="30"/>
+	  </fabricableitem>
+    </Fabricator>
+	
+	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" aimpos="20,-40" handle1="-30,14" handle2="30,14" aimable="false"/>
+
+	<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1">
+	  <Containable name="smallitem"/>
+	  <Containable name="meditem"/>
+	  <Containable name="bigitem"/>
+	</ItemContainer>
+	<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1">
+	  <Containable name="smallitem"/>
+	  <Containable name="meditem"/>
+	  <Containable name="bigitem"/>
+	</ItemContainer>
+	</Item>
+	
+	<Item
+	  name="Card Maker"
+	  Tags="cntnr"
+	  linkable="true"
+
+      category="Machine"
+      description="A machine capable of manufacturing access cards from raw materials.">
+    
+      <Sprite texture="Fabricators.png" depth="0.8" sourcerect="65,70,65,49"/>
+	
+	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+        <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="65,70,65,49" alpha="1.0"/>
+	    <StatusEffect type="Always" target="This" IsOn="true"/>
+      </LightComponent>
+
+	<Fabricator canbeselected = "true" powerconsumption="250">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
+	  
+	  <fabricableitem name="Access Card" requiredtime="10">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Prisoner ID Card" requiredtime="20">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Seaman ID Card" requiredtime="30">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Cook ID Card" requiredtime="40">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Mechanic ID Card" requiredtime="50">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Engineer ID Card" requiredtime="60">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Doctor ID Card" requiredtime="70">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Scientist ID Card" requiredtime="75">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Security ID Card" requiredtime="80">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Assistant ID Card" requiredtime="90">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Captain ID Card" requiredtime="100">
+	    <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Iron Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+    </Fabricator>
+		
+	<ConnectionPanel selectkey="Action" canbeselected = "true">
+	  <requireditem name="Screwdriver" type="Equipped"/>
+	  <output name="power_in"/>
+	</ConnectionPanel>
+
+	  <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
+	  <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
+	</Item>
+	
+	<Item
+      name="Sewing Kit"
+	  Tags="cntnr"
+      linkable="true"
+      description="Basic tools for clothing repair or modification.">
+
+      <Sprite texture="Mods/BTE/Items/Tools/Tools.png" depth="0.8" sourcerect="81,1,29,20"/>
+    
+      <Fabricator canbeselected = "true" minvoltage="0" powerconsumption="0">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Mods/BTE/Items/Fabricators/SewingKit.ogg" type="OnActive" range="500" loop="true"/>
+
+      <fabricableitem name="Crewmember Cap A" requireditems="Crewmember Cap B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cap B" requireditems="Crewmember Cap A" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Cap A" requireditems="Assistant's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Cap B" requireditems="Assistant's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Beret" requireditems="Assistant's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Beret" requireditems="Assistant's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Cap A" requireditems="Assistant's Beret" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Ushanka A" requireditems="Crewmember Ushanka B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Ushanka B" requireditems="Crewmember Ushanka A" requiredtime="2"/>
+	  <fabricableitem name="Ballistic Helmet B" requireditems="Ballistic Helmet A" requiredtime="2">
+        <RequiredSkill name="Weapons" level="60"/>
+      </fabricableitem>
+	  <fabricableitem name="Ballistic Helmet A" requireditems="Ballistic Helmet B" requiredtime="2">
+        <RequiredSkill name="Weapons" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Captain's Cap A" requireditems="Captain's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap B" requireditems="Captain's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="Captain's Uniform B" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform B" requireditems="Captain's Uniform A" requiredtime="2"/>
+	  <fabricableitem name="Doctor's Coat A" requireditems="Doctor's Coat B" requiredtime="2"/>
+	  <fabricableitem name="Doctor's Coat B" requireditems="Doctor's Coat A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Sweater A" requireditems="Crewmember Sweater B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Sweater B" requireditems="Crewmember Sweater A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Jumper A" requireditems="Crewmember Jumper B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Jumper B" requireditems="Crewmember Jumper A" requiredtime="2"/>
+	  <fabricableitem name="Prisoner Jumpsuit A" requireditems="Prisoner Jumpsuit B" requiredtime="2"/>
+	  <fabricableitem name="Prisoner Jumpsuit B" requireditems="Prisoner Jumpsuit A" requiredtime="2"/>
+	  <fabricableitem name="Prisoner Jumpsuit C" requireditems="Prisoner Jumpsuit A" requiredtime="2"/>
+	  <fabricableitem name="Prisoner Jumpsuit A" requireditems="Prisoner Jumpsuit C" requiredtime="2"/>
+	  <fabricableitem name="Ballistic Vest B" requireditems="Ballistic Vest A" requiredtime="2">
+        <RequiredSkill name="Weapons" level="60"/>
+      </fabricableitem>
+	  <fabricableitem name="Ballistic Vest A" requireditems="Ballistic Vest B" requiredtime="2">
+        <RequiredSkill name="Weapons" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Assistant's Trousers A" requireditems="Assistant's Trousers B" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Trousers B" requireditems="Assistant's Trousers A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Trousers A" requireditems="Crewmember Trousers B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Trousers B" requireditems="Crewmember Trousers A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cargo Trousers A" requireditems="Crewmember Cargo Trousers B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cargo Trousers B" requireditems="Crewmember Cargo Trousers A" requiredtime="2"/>
+	  
+	  <fabricableitem name="German Cap" requireditems="Captain's Cap A" requiredtime="2"/>
+	  <fabricableitem name="German Cap" requireditems="Captain's Cap B" requiredtime="2"/>
+	  <fabricableitem name="German Uniform A" requireditems="Captain's Uniform A" requiredtime="2"/>
+	  <fabricableitem name="German Uniform B" requireditems="Captain's Uniform B" requiredtime="2"/>
+	  <fabricableitem name="German Uniform A" requireditems="German Uniform B" requiredtime="2"/>
+	  <fabricableitem name="German Uniform B" requireditems="German Uniform A" requiredtime="2"/>
+	  
+	  <fabricableitem name="Captain's Cap A" requireditems="German Cap" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="German Uniform A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="German Uniform B" requiredtime="2"/>
+	  
+	  <fabricableitem name="Ragged Beanie" requireditems="Crewmember Beanie" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Beanie" requireditems="Ragged Beanie" requiredtime="2"/>
+	  <fabricableitem name="Ragged Cowboy Hat" requireditems="Crewmember Cowboy Hat" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cowboy Hat" requireditems="Ragged Cowboy Hat" requiredtime="2"/>
+	  <fabricableitem name="Ragged Cap A" requireditems="Crewmember Cap A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cap A" requireditems="Ragged Cap A" requiredtime="2"/>
+	  <fabricableitem name="Ragged Cap B" requireditems="Crewmember Cap B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cap B" requireditems="Ragged Cap B" requiredtime="2"/>
+	  <fabricableitem name="Ragged Flat Hat" requireditems="Crewmember Flat Hat" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Flat Hat" requireditems="Ragged Flat Hat" requiredtime="2"/>
+	  <fabricableitem name="Ragged Beret" requireditems="Crewmember Beret" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Beret" requireditems="Ragged Beret" requiredtime="2"/>
+	  <fabricableitem name="Ragged Ushanka A" requireditems="Crewmember Ushanka A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Ushanka A" requireditems="Ragged Ushanka A" requiredtime="2"/>
+	  <fabricableitem name="Ragged Ushanka B" requireditems="Crewmember Ushanka B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Ushanka B" requireditems="Ragged Ushanka B" requiredtime="2"/>
+	  <fabricableitem name="Ragged Capt's Cap" requireditems="Captain's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap A" requireditems="Ragged Capt's Cap" requiredtime="2"/>
+	  <fabricableitem name="Ragged Assistant's Cap A" requireditems="Assistant's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Cap A" requireditems="Ragged Assistant's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Ragged Assistant's Cap B" requireditems="Assistant's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Cap B" requireditems="Ragged Assistant's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Ragged Safety Helmet" requireditems="Safety Helmet" requiredtime="2"/>
+	  <fabricableitem name="Safety Helmet" requireditems="Ragged Safety Helmet" requiredtime="2"/>
+	  <fabricableitem name="Ragged Welding Helmet" requireditems="Welding Helmet" requiredtime="2"/>
+	  <fabricableitem name="Welding Helmet" requireditems="Ragged Welding Helmet" requiredtime="2"/>
+	  <fabricableitem name="Ragged Ballistic Helmet" requireditems="Ballistic Helmet A" requiredtime="2"/>
+	  <fabricableitem name="Ballistic Helmet A" requireditems="Ragged Ballistic Helmet" requiredtime="2"/>
+	  
+	  <fabricableitem name="Ragged Vest" requireditems="Crewmember Vest" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Vest" requireditems="Ragged Vest" requiredtime="2"/>
+	  <fabricableitem name="Ragged Sweater" requireditems="Crewmember Sweater A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Sweater A" requireditems="Ragged Sweater" requiredtime="2"/>
+	  <fabricableitem name="Ragged Jumper" requireditems="Crewmember Jumper A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Jumper A" requireditems="Ragged Jumper" requiredtime="2"/>
+	  <fabricableitem name="Ragged Capt's Uniform" requireditems="Captain's Uniform A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="Ragged Capt's Uniform" requiredtime="2"/> 
+	  <fabricableitem name="Ragged Assistant's Jacket" requireditems="Assistant's Jacket" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Jacket" requireditems="Ragged Assistant's Jacket" requiredtime="2"/> 
+	  <fabricableitem name="Ragged Doc's Coat" requireditems="Doctor's Coat A" requiredtime="2"/>
+	  <fabricableitem name="Doctor's Coat A" requireditems="Ragged Doc's Coat" requiredtime="2"/>
+	  <fabricableitem name="Ragged Utility Vest" requireditems="Utility Vest" requiredtime="2"/>
+	  <fabricableitem name="Utility Vest" requireditems="Ragged Utility Vest" requiredtime="2"/>
+	  <fabricableitem name="Ragged Utility Jumpsuit" requireditems="Utility Jumpsuit" requiredtime="2"/>
+	  <fabricableitem name="Utility Jumpsuit" requireditems="Ragged Utility Jumpsuit" requiredtime="2"/>
+	  <fabricableitem name="Ragged Prisoner Jumpsuit" requireditems="Prisoner Jumpsuit A" requiredtime="2"/>
+	  <fabricableitem name="Prisoner Jumpsuit A" requireditems="Ragged Prisoner Jumpsuit" requiredtime="2"/>
+	  <fabricableitem name="Ragged Armor Vest" requireditems="Ballistic Vest A" requiredtime="2"/>
+	  <fabricableitem name="Ballistic Vest A" requireditems="Ragged Armor Vest" requiredtime="2"/>
+	  <fabricableitem name="Ragged Trousers" requireditems="Crewmember Trousers A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Trousers A" requireditems="Ragged Trousers" requiredtime="2"/>
+	  <fabricableitem name="Ragged Cargo Trousers" requireditems="Crewmember Cargo Trousers A" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cargo Trousers A" requireditems="Ragged Cargo Trousers" requiredtime="2"/>
+	  <fabricableitem name="Ragged Assistant's Trousers" requireditems="Assistant's Trousers A" requiredtime="2"/>
+	  <fabricableitem name="Assistant's Trousers A" requireditems="Ragged Assistant's Trousers" requiredtime="2"/>
+	  <fabricableitem name="Ragged Clown Mask" requireditems="Clown Mask" requiredtime="2"/>
+	  <fabricableitem name="Clown Mask" requireditems="Ragged Clown Mask" requiredtime="2"/>
+	  <fabricableitem name="Ragged Clown Costume" requireditems="Clown Costume" requiredtime="2"/>
+	  <fabricableitem name="Clown Costume" requireditems="Ragged Clown Costume" requiredtime="2"/>
+	  <fabricableitem name="Shiv" requireditems="Food Can" requiredtime="12">
+		<RequiredSkill name="Construction" level="30"/>
+		<RequiredSkill name="Weapons" level="30"/>
+	  </fabricableitem>
+	  <fabricableitem name="Glowstick Headlight" requireditems="Copper Coil, Glowstick" requiredtime="5"/>
+    </Fabricator>
+
+    <ItemContainer capacity="2" canbeselected="true" hideitems="true" hudpos="0.15, 0.6" slotsperrow="1">
+	  <Containable name="clothing,Food Can"/>
+	</ItemContainer>
+    <ItemContainer capacity="2" canbeselected="true" hideitems="true" hudpos="0.85, 0.6" slotsperrow="1">
+	  <Containable name="clothing,Shiv,Glowstick,Copper Coil"/>
+	</ItemContainer>
+  </Item>
+
+  <Item
+      name="Chemical Fabricator"
+	  aliases="Medical Fabricator"
+	  Tags="cntnr"
+      linkable="true"
+      category="Machine"
+      description="A machine that can be used to manufacture various medicines.">
+
+      <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" depth="0.8" sourcerect="65,129,64,128"/>
+	
+	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+        <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="65,129,64,128" alpha="1.0"/>
+	    <StatusEffect type="Always" target="This" IsOn="true"/>
+      </LightComponent>
+    
+      <Fabricator canbeselected = "true" powerconsumption="100">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000.0" loop="true"/>
+
+      <fabricableitem name="Bodybag" requireditems="Polycarbonate Block, Aluminium Sliver" requiredtime="15">
+        <RequiredSkill name="Medical" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="MedKit" requireditems="Polycarbonate Sliver, Aluminium Sliver" requiredtime="15">
+        <RequiredSkill name="Medical" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Medical Inhaler" requireditems="Polycarbonate Sliver" requiredtime="15">
+		<Item name="Aluminium Sliver" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Medical" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Medical Syringe" requiredtime="15">
+		<Item name="Polycarbonate Sliver" mincondition="0.75" usecondition="true"/>
+		<Item name="Aluminium Sliver" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Medical" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Medical Dart" requiredtime="15">
+		<Item name="Polycarbonate Sliver" mincondition="0.75" usecondition="true"/>
+		<Item name="Aluminium Sliver" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Medical" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Bandage" requiredtime="10">
+        <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
+		<Item name="Ethanol" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Medical" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Ethanol" requireditems="Sugar" outcondition="0.5" requiredtime="15">
+        <RequiredSkill name="Medical" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Chlorine" requireditems="Salt" outcondition="0.2" requiredtime="15">
+        <RequiredSkill name="Medical" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Chloral Hydrate" requiredtime="20">
+		<Item name="Chlorine" mincondition="0.5" usecondition="true"/>
+		<Item name="Ethanol" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Medical" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Ethylzine" requiredtime="20">
+	    <Item name="Salt" mincondition="0.25" usecondition="true"/>
+		<Item name="Potassium" mincondition="0.25" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.5" usecondition="true"/>
+        <RequiredSkill name="Medical" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Neurozinide" requiredtime="20">
+	    <Item name="Biomass" mincondition="0.25" usecondition="true"/>
+		<Item name="Copper Powder" mincondition="0.25" usecondition="true"/>
+		<Item name="Ethanol" mincondition="0.5" usecondition="true"/>
+        <RequiredSkill name="Medical" level="40"/>
+      </fabricableitem>
+
+	  <fabricableitem name="Corrigodone" requiredtime="20">
+		<Item name="Chloral Hydrate" mincondition="0.5" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Medical" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Erythrozine" requiredtime="20">
+		<Item name="Iron Powder" mincondition="0.25" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Medical" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Fibrinozine" requiredtime="20">
+		<Item name="Phosphorus" mincondition="0.25" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Medical" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Chloromydride" requiredtime="20">
+		<Item name="Erythrozine" mincondition="0.15" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.15" usecondition="true"/>
+		<Item name="Sugar" mincondition="0.15" usecondition="true"/>
+		<RequiredSkill name="Medical" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Auxiliorizine" requiredtime="25">
+		<Item name="Corrigodone" mincondition="0.15" usecondition="true"/>
+		<Item name="Erythrozine" mincondition="0.15" usecondition="true"/>
+		<Item name="Flash Powder" mincondition="0.15" usecondition="true"/>
+		<RequiredSkill name="Medical" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Hyperzine" requiredtime="25">
+		<Item name="Phosphorus" mincondition="0.15" usecondition="true"/>
+		<Item name="Sugar" mincondition="0.15" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.15" usecondition="true"/>
+		<RequiredSkill name="Medical" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Morbusine" requiredtime="30">
+        <Item name="Snailfish Meat" mincondition="0.5" usecondition="false"/>
+		<Item name="Sulphuric Acid" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Medical" level="70"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Morbusanide" requiredtime="30">
+		<Item name="Morbusine" mincondition="0.25" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Medical" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Hematosine" requiredtime="30">
+		<Item name="Fibrinozine" mincondition="0.15" usecondition="true"/>
+		<Item name="Ethanol" mincondition="0.15" usecondition="true"/>
+		<Item name="Stabilozine" mincondition="0.15" usecondition="true"/>
+		<RequiredSkill name="Medical" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Sufforin" requiredtime="30">
+		<Item name="Erythrozine" mincondition="0.15" usecondition="true"/>
+		<Item name="Flash Powder" mincondition="0.15" usecondition="true"/>
+		<Item name="Sulphuric Acid" mincondition="0.15" usecondition="true"/>
+		<RequiredSkill name="Medical" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Calyxanide" requiredtime="30">
+		<Item name="Velonaceps Calyx Eggs" mincondition="0.0" usecondition="false"/>
+		<Item name="Chlorine" mincondition="0.15" usecondition="true"/>
+		<Item name="Sulphuric Acid" mincondition="0.15" usecondition="true"/>
+		<RequiredSkill name="Medical" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Aluminium Powder" requiredtime="10">
+	    <Item name="Aluminium Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Copper Powder" requiredtime="10">
+	    <Item name="Copper Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Bronze Powder" requiredtime="10">
+	    <Item name="Bronze Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Iron Powder" requiredtime="10">
+	    <Item name="Steel Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Uranium Powder" requiredtime="10">
+	    <Item name="Uranium Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	  <fabricableitem name="Fulgurium Powder" requiredtime="10">
+	    <Item name="Fulgurium Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
+	
+	  <fabricableitem name ="Flash Charge" requireditems="Polycarbonate Sliver, Aluminium Powder, Potassium, Chloral Hydrate" requiredtime="20">
+        <RequiredSkill name="Weapons" level="25"/>
+      </fabricableitem>
+	  <fabricableitem name ="Propellant Charge" requireditems="Polycarbonate Sliver, Aluminium Powder, Sulphuric Acid" requiredtime="20">
+	    <Item name="Nitroglycerin" mincondition="0.25" usecondition="true"/>
+        <RequiredSkill name="Weapons" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name ="Concussion Charge" requireditems="Polycarbonate Sliver, Propellant Powder, Propellant Powder, Phosphorus" requiredtime="20">
+        <RequiredSkill name="Weapons" level="35"/>
+      </fabricableitem>
+	  <fabricableitem name ="Blast Charge" requireditems="Concussion Charge, Propellant Powder, Chlorine" requiredtime="20">
+        <RequiredSkill name="Weapons" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name ="Destroyer Charge" requireditems="Blast Charge, Aluminium Powder, Sulphuric Acid" requiredtime="20">
+        <RequiredSkill name="Weapons" level="45"/>
+      </fabricableitem>
+	  <fabricableitem name ="Demolition Charge" requireditems="Destroyer Charge" requiredtime="20">
+	    <Item name="Nitroglycerin" mincondition="0.5" usecondition="true"/>
+        <RequiredSkill name="Weapons" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name ="Shrapnel Charge" requireditems="Steel Sliver, Aluminium Powder, Propellant Powder" requiredtime="20">
+        <RequiredSkill name="Weapons" level="45"/>
+      </fabricableitem>
+	  <fabricableitem name ="Flak Charge" requireditems="Shrapnel Charge, Aluminium Powder, Propellant Powder" requiredtime="20">
+        <RequiredSkill name="Weapons" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name ="Thermate Charge" requireditems="Polycarbonate Sliver, Propellant Powder, Thermite Powder, Thermite Powder, Phosphorus" requiredtime="20">
+        <RequiredSkill name="Weapons" level="55"/>
+      </fabricableitem>
+	  <fabricableitem name ="Wetbomb Charge" requireditems="Blast Charge, Potassium" requiredtime="20">
+        <RequiredSkill name="Weapons" level="60"/>
+      </fabricableitem>
+	  <fabricableitem name ="Dye Charge" requireditems="Polycarbonate Sliver" requiredtime="20">
+	    <Item name="Potassium" mincondition="0.5" usecondition="true"/>
+		<Item name="Phosphorus" mincondition="0.5" usecondition="true"/>
+		<Item name="Sugar" mincondition="0.5" usecondition="true"/>
+        <RequiredSkill name="Weapons" level="20"/>
+      </fabricableitem>
+	  <fabricableitem name ="Chemgas Charge" requireditems="Polycarbonate Sliver, Sulphuric Acid, Chlorine" requiredtime="20">
+        <RequiredSkill name="Medical" level="25"/>
+      </fabricableitem>
+	</Fabricator>
+
+    <ConnectionPanel selectkey="Action" canbeselected = "true">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
+  </Item>
+  
+  <Item
+    name="Electrical Oven"
+	Tags="cntnr"
+    linkable="true"
+
+    category="Machine"
+    description="An oven useful enough to cook a number of delicious food.">
+
+    <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" depth="0.8" sourcerect="131,0,61,121"/>
+	
+	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+      <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="131,0,61,121" alpha="1.0"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+    
+    <Fabricator canbeselected="true" powerconsumption="75">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Mods/BTE/Items/Fabricators/Cooking.ogg" type="OnActive" range="1000" loop="true"/>
+	  
+	  <fabricableitem name="Protein Bar" requiredtime="20">
+		<Item name="Biomass" mincondition="0.5" usecondition="true"/>
+		<Item name="Sugar" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Baked Potato" requiredtime="10">
+        <Item name="Potato" mincondition="0.2" usecondition="false"/>
+      </fabricableitem>
+	  <fabricableitem name="Fries" requiredtime="15">
+        <Item name="Frying Pan" mincondition="0.0" usecondition="true"/>
+		<Item name="Potato" count="2" mincondition="0.2" usecondition="false"/>
+		<Item name="Salt" mincondition="0.1" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="10"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Candy Apple" requiredtime="15">
+		<Item name="Apple" mincondition="0.2" usecondition="false"/>
+		<Item name="Sugar" mincondition="0.2" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="15"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Bread" requiredtime="15">
+        <Item name="Flour" mincondition="0.25" usecondition="true"/>
+		<Item name="Salt" mincondition="0.1" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Seared Snailfish" requiredtime="20">
+        <Item name="Frying Pan" mincondition="0.0" usecondition="true"/>
+		<Item name="Snailfish Meat" mincondition="0.3" usecondition="false"/>
+		<RequiredSkill name="Cooking" level="10"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Seared Crawler" requiredtime="20">
+        <Item name="Frying Pan" mincondition="0.0" usecondition="true"/>
+		<Item name="Crawler Meat" mincondition="0.3" usecondition="false"/>
+		<RequiredSkill name="Cooking" level="10"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Seared Mantis" requiredtime="20">
+        <Item name="Frying Pan" mincondition="0.0" usecondition="true"/>
+		<Item name="Mantis Meat" mincondition="0.3" usecondition="false"/>
+		<RequiredSkill name="Cooking" level="10"/>
+      </fabricableitem>
+	  <fabricableitem name="Fried Mantis" requiredtime="20">
+        <Item name="Mantis Meat" mincondition="0.2" usecondition="false"/>
+		<Item name="Flour" mincondition="0.2" usecondition="true"/>
+		<Item name="Beer" mincondition="0.2" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Seared Thresher" requiredtime="20">
+        <Item name="Frying Pan" mincondition="0.0" usecondition="true"/>
+		<Item name="Thresher Meat" mincondition="0.4" usecondition="false"/>
+		<RequiredSkill name="Cooking" level="10"/>
+      </fabricableitem>
+	  <fabricableitem name="Fried Thresher" requiredtime="20">
+        <Item name="Thresher Meat" mincondition="0.3" usecondition="false"/>
+		<Item name="Flour" mincondition="0.2" usecondition="true"/>
+		<Item name="Beer" mincondition="0.2" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="20"/>
+      </fabricableitem>
+	  <fabricableitem name="Glazed Thresher" requiredtime="20">
+        <Item name="Thresher Meat" mincondition="0.2" usecondition="false"/>
+		<Item name="Red Wine" mincondition="0.25" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="25"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Apple Pie" requiredtime="25">
+        <Item name="Apple" count="2" mincondition="0.1" usecondition="false"/>
+		<Item name="Flour" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Carrot Pie" requiredtime="25">
+        <Item name="Carrot" count="2" mincondition="0.1" usecondition="false"/>
+		<Item name="Flour" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Crawler Pie" requiredtime="30">
+        <Item name="Crawler Meat" count="2" mincondition="0.4" usecondition="false"/>
+		<Item name="Flour" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Thresher Pie" requiredtime="30">
+        <Item name="Thresher Meat" count="2" mincondition="0.4" usecondition="false"/>
+		<Item name="Flour" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="50"/>
+      </fabricableitem>
+
+	  <fabricableitem name="Mantcrawl Cocktail" requireditems="Food Can" requiredtime="35">
+        <Item name="Mantis Meat" mincondition="0.4" usecondition="false"/>
+		<Item name="Crawler Meat" mincondition="0.4" usecondition="false"/>
+		<Item name="Beer" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Thresher Stew" requireditems="Food Can" requiredtime="40">
+        <Item name="Thresher Meat" mincondition="0.4" usecondition="false"/>
+		<Item name="Potato" mincondition="0.1" usecondition="false"/>
+		<Item name="Carrot" mincondition="0.1" usecondition="false"/>
+		<Item name="Beer" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="60"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Seabed Soup" requireditems="Food Can, Kelp" requiredtime="10"/>
+	  
+	  <fabricableitem name="Mantcrawl CocktaiI" requireditems="Food Can" requiredtime="40">
+        <Item name="Mantis Meat" mincondition="0.4" usecondition="false"/>
+		<Item name="Crawler Meat" mincondition="0.4" usecondition="false"/>
+		<Item name="Snailfish Meat" mincondition="0.0" usecondition="false"/>
+		<Item name="Beer" mincondition="0.75" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="50"/>
+      </fabricableitem>
+    </Fabricator>
+
+    <ConnectionPanel selectkey="Action" canbeselected = "true">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
+  </Item>
+
+  <Item
+    name="Deconstructor"
+	Tags="cntnr"
+    linkable="true"
+
+    category="Machine"
+    description="Disassembles and breaks down items to reusable components and material bars.">
+
+    <Sprite texture="Content/Items/machines.png" depth="0.8" sourcerect="64,128,64,128"/>
+
+    <Deconstructor canbeselected = "true" powerconsumption="500">
+      <sound file="Content/Items/Fabricators/deconstructor.ogg" type="OnActive" range="1000" loop="true"/>
+      
+      <GuiFrame rect="0,0,300,200" alignment="Center" style="ItemUI"/>
+    </Deconstructor>
+
+    <ConnectionPanel selectkey="Action" canbeselected = "true">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="5"/>
+    <ItemContainer capacity="10" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="5"/>
+  </Item>
+</Items>

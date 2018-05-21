@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Missions>
+  <SalvageMission 
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Skyholder Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="4000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Thermal Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Thermal Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Claret Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="5000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Nasonov Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="4500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Nasonov Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="4500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Claret Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <MonsterMission
+    name="Killing a Moloch"
+    description="A particularly aggressive Moloch has been terrorizing vessels traveling between [location1] and [location2]. A reward of 2,500 credits has been promised to those who kill the creature."
+    commonness="10"
+    reward="2500"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Moloch."
+    successmessage="The Moloch has been killed."
+    monsterfile="Mods/BTE/Characters/Molochboss/molochboss.xml">
+    <message header="Target terminated" text="The Moloch is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+
+  <MonsterMission
+    name="Killing a Tiger Thresher"
+    description="A particularly aggressive Tiger Thresher has been terrorizing vessels traveling between [location1] and [location2]. A reward of 1,000 credits has been promised to those who kill the creature."
+    commonness="10"
+    reward="1000"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Tiger Thresher."
+    successmessage="The Tiger Thresher has been killed."
+    monsterfile="Mods/BTE/Characters/Tigerboss/tigerboss.xml">
+    <message header="Target terminated" text="The Tiger Thresher is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Killing a Mantis"
+    description="A seafood processing plant in [location2] is offering a reward of 500 credits to anyone who can slay a particularly big Mantis spotted between [location1] and [location2]. They will handle the transport once the creature is dead."
+    commonness="10"
+    reward="500"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Mantis."
+    successmessage="The Mantis has been killed."
+    monsterfile="Mods/BTE/Characters/Mantisboss/mantisboss.xml">
+    <message header="Target terminated" text="The Mantis is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Rogue Test Subject"
+    description="Researchers in [location2] are offering a reward of 3000 credits to hunt down a rogue Mantis between [location1] and [location2]. They will handle the retrieval once the creature is dead. A non-disclosure agreement is required for this mission."
+    commonness="4"
+    reward="3000"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Mantis."
+    successmessage="As soon as you got to [location2], a team of coalition personnel boarded your vessel and retrieved every piece of data regarding this mission and the creature. The person in charge then handled the payment soon after they were done."
+    monsterfile="Mods/BTE/Characters/Mantisthresher/mantisthresher.xml">
+    <message header="Target terminated" text="The creature is dead. This was not a Mantis, at least not completely. You should report to the researchers and claim the reward."/>
+  </MonsterMission>
+
+  <MonsterMission
+    name="Beast from the Abyss"
+    description="Seismic readings are indicating that something colossal has emerged from the depths of Europa into the passageway between [location1] and [location2]. All transports through the passageway have been cancelled for now and a reward of 15,000 has been promised to those who get rid of whatever is causing the seismic activity."
+    commonness="2"
+    reward="15000"
+    radarlabel="Target"
+	failuremessage="Failed to kill the beast."
+    successmessage="The End Worm is dead and the passageway is open for transport again."
+    monsterfile="Content/Characters/Endworm/endworm.xml">
+    <message header="Target terminated" text="The beast is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+
+  <MonsterMission
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3000"
+    radarlabel="Infrasonic Signal"
+	failuremessage="Retrieving the artifact failed."
+    successmessage="Upon receiving the news, the researchers of [location1] have agreed to pay you the reward nevertheless and also asked for the coordinates so they can send a research team to examine the creature."
+    monsterfile="Mods/BTE/Characters/Molochboss/molochboss.xml">
+	<message header="Target terminated" text="It turns out the signal was emitted by a Moloch. You should report the incident to [location2]."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3000"
+    radarlabel="Infrasonic Signal"
+	failuremessage="Retrieving the artifact failed."
+    successmessage="Upon receiving the news, the researchers of [location1] have agreed to pay you the reward for the coordinates so they can send a research team to examine the anomaly."
+    spawntype="ruin"
+	monsterfile="Mods/BTE/Characters/Teleglitch/teleglitch.xml">
+	<message header="Target terminated" text="The signal was being emitted by some kind of sentient anomaly. You should report the incident to [location2]."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="4000"
+    radarlabel="Infrasonic Signal"
+	failuremessage="Retrieving the artifact failed."
+    successmessage="Upon receiving the news, the researchers of [location1] have agreed to pay you the reward for the coordinates so they can send a research team to examine the anomaly."
+    spawntype="ruin"
+	monsterfile="Mods/BTE/Characters/Teleglitchboss/teleglitchboss.xml">
+	<message header="Target terminated" text="The signal was being emitted by some kind of sentient humanoid anomaly. You should report the incident to [location2]."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="1"
+    reward="4000"
+    radarlabel="Infrasonic Signal"
+	failuremessage="Retrieving the artifact failed."
+    successmessage="Upon receiving the news, the researchers of [location1] have agreed to pay you the reward in exchange for the coordinates. You were also &quot;required&quot; to sign a non-disclosure agreement."
+    monsterfile="Mods/BTE/Characters/Mantisthresher/mantisthresher.xml">
+	<message header="Target terminated" text="It turns out the signal was emitted by an unknown creature. You should report the incident to [location2]."/>
+  </MonsterMission>
+
+  <MonsterMission
+    name="Salvaging a Derelict"
+    description="A small cargo vessel went missing approximately two months ago when transporting xenomaterials from [location1] to [location2]. The vessel was presumed to be taken by the abyss, but now its emergency beacon seems to have been activated near [location2]. Find the vessel and recover the cargo."
+    commonness="10"
+    reward="2000"
+    radarlabel="Emergency Signal"
+	failuremessage="Salvaging the derelict failed."
+    successmessage="The researchers of [location2] are eager to know all the details of the encounter, but seem hesitant to answer any questions regarding the vessel. They do however offer you 2,000 credits as &quot;reimbursement for your troubles&quot;."
+    monsterfile="Mods/BTE/Characters/Carrier/carrier.xml">
+    <message header="Target destroyed" text="The missing vessel appears to have been taken over by some sort of parasitic growth, but it seems to be incapacitated now. You should report the incident to [location2]."/>
+  </MonsterMission>
+  
+  <CargoMission
+    name="Explosive cargo"
+    description="A local arms dealer is offering 500 credits in exchange for delivering two crates of high explosives to a customer in [location2]."
+    commonness="10"
+    reward="500"
+	failuremessage="Cargo delivery failed."
+    successmessage="The explosives have been successfully delivered.">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Blast Charge" amount="10"/>
+      </Item>
+      <Item name="Explosives Shipping Box">
+        <Item name="Detonator" amount="10">
+          <Item name="Blast Charge"/>
+        </Item>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+    name="Explosive cargo"
+    description="A local arms dealer is offering 600 credits in exchange for delivering two crates of high explosives to a customer in [location2]."
+    commonness="10"
+    reward="600"
+	failuremessage="Cargo delivery failed."
+    successmessage="The explosives have been successfully delivered.">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Destroyer Charge" amount="10"/>
+      </Item>
+      <Item name="Explosives Shipping Box">
+        <Item name="Detonator" amount="10">
+          <Item name="Destroyer Charge"/>
+        </Item>
+      </Item>
+    </Items>
+  </CargoMission>
+
+  <CargoMission
+    name="Explosive cargo"
+    description="A local arms dealer is offering 1,000 credits in exchange for delivering two crates of high explosives to a customer in [location2]."
+    commonness="5"
+    reward="1000"
+	failuremessage="Cargo delivery failed."
+    successmessage="The explosives have been successfully delivered.">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Blast Charge" amount="10"/>
+      </Item>
+      <Item name="Explosives Shipping Box">
+        <Item name="Detonator" amount="10">
+          <Item name="Destroyer Charge"/>
+        </Item>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+    name="Nuclear cargo"
+    description="A local arms dealer is offering 10,000 credits in exchange for delivering 4 extremely dangerous explosives to a company stationed in [location2]."
+    commonness="1"
+    reward="10000"
+	failuremessage="Cargo delivery failed."
+    successmessage="The nuclear explosives have been successfully delivered. Whew...">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="4"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+    name="Oh no..."
+    description="Get to [location2]."
+    commonness="1"
+    reward="100000000000000000"
+	failuremessage="I'm not surprised at all."
+    successmessage="I'm surprised you didn't manage to fuck that up.">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+	  <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+	  <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+	  <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+    name="Diesel shipment"
+    description="A shipment of diesel cans in [location1] needs to be delivered to [location2] for a reward of 350 credits."
+    commonness="10"
+    reward="350"
+	failuremessage="Shipment delivery failed."
+    successmessage="The diesel cans been successfully delivered."
+    requireddeliveryamount="12">
+    <Items>
+      <Item name="Diesel Can" amount="15"/>
+    </Items>
+  </CargoMission>
+
+  <CargoMission
+    name="Chemical shipment"
+    description="Reseachers of [location1] need someone to deliver some dangerous chemicals to [location2] for a reward of 400 credits."
+    commonness="10"
+    reward="400"
+	failuremessage="Shipment delivery failed."
+    successmessage="The chemicals have been successfully delivered."
+    requireddeliveryamount="20">
+    <Items>
+      <Item name="Chemical Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Auxiliorizine" amount="4"/>
+        <Item name="Sulphuric Acid" amount="5"/>
+      </Item>
+      <Item name="Chemical Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Morbusine" amount="4"/>
+        <Item name="Flash Powder" amount="3"/>
+        <Item name="Chloral Hydrate" amount="2"/>
+      </Item>
+    </Items>
+  </CargoMission>
+
+  <CargoMission
+    name="Biohazard"
+    description="Local researchers are offering 750 credits for delivering a container of husk parasite eggs to [location2]."
+    commonness="10"
+    reward="750"
+	failuremessage="Cargo delivery failed."
+    successmessage="The husk eggs have been successfully delivered.">
+    <Items>
+      <Item name="Biohazard Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Velonaceps Calyx Eggs" amount="9"/>
+      </Item>
+    </Items>
+  </CargoMission>
+
+  <CargoMission
+    name="Handle with care"
+    description="Local researchers are offering 4,000 credits for delivering a large amount of nitroglycerin to [location2]."
+    commonness="15"
+    reward="4000"
+	failuremessage="Cargo delivery failed."
+    successmessage="The chemicals have been successfully delivered.">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Nitroglycerin" amount="10"/>
+      </Item>
+      <Item name="Explosives Shipping Box">
+        <Item name="Nitroglycerin" amount="10"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Some food supplies in a warehouse need fast transportation. Anyone interested in delivering the supplies to [location2] will receive 400 credits."
+   commonness="10"
+   reward="400"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Potato" amount="10"/>
+		<Item name="Carrot" amount="8"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Some food supplies have been sitting in a warehouse for days. Anyone interested in delivering the supplies to [location2] will receive 300 credits."
+   commonness="5"
+   reward="300"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Food Can" amount="10">
+          <Item name="Crawler Meat"/>
+		</Item>
+		<Item name="Food Can" amount="9">
+          <Item name="Snailfish Meat"/>
+        </Item>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Some food supplies have been sitting in a warehouse for days. Anyone interested in delivering the supplies to [location2] will receive 400 credits."
+   commonness="5"
+   reward="400"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Food Can" amount="19">
+          <Item name="Mantis Meat"/>
+        </Item>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Some food supplies have been sitting in a warehouse for days. Anyone interested in delivering the supplies to [location2] will receive 500 credits."
+   commonness="5"
+   reward="500"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="35">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Food Can" amount="19">
+          <Item name="Thresher Meat"/>
+        </Item>
+      </Item>
+	  <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Food Can" amount="19">
+          <Item name="Thresher Meat"/>
+        </Item>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Local hunters are offering 600 credits to anyone heading to [location2]. They recently caught and butchered a Mantis that needs to get there for canning before it rots."
+   commonness="4"
+   reward="600"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Mantis Meat" amount="18"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Local hunters are offering 800 credits to anyone heading to [location2]. They recently caught and butchered a Tiger Thresher that needs to get there for canning before it rots."
+   commonness="4"
+   reward="800"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="35">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Thresher Meat" amount="18"/>
+      </Item>
+	  <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Thresher Meat" amount="18"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Steel Bars -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 250 credits."
+   commonness="4"
+   reward="250"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Workshop Shipping Box">
+        <Item name="Steel Bar" amount="20"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Cooper Bars -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 250 credits."
+   commonness="4"
+   reward="250"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Workshop Shipping Box">
+        <Item name="Copper Bar" amount="20"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Medical Supplies -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 250 credits."
+   commonness="4"
+   reward="250"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Medical Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Bandage" amount="10"/>
+		<Item name="Medical Syringe" amount="9"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Crewmember Clothing -->
+  <CargoMission
+   name="Special Delivery"
+   description="A couple of crates have been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 300 credits."
+   commonness="3"
+   reward="300"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="14">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Crewmember Beret" amount="2"/>
+		<Item name="Crewmember Cap A" amount="4"/>
+		<Item name="Crewmember Beanie" amount="2"/>
+      </Item>
+	  <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Crewmember Vest" amount="2"/>
+		<Item name="Crewmember Sweater A" amount="2"/>
+		<Item name="Crewmember Jumper A" amount="2"/>
+		<Item name="Crewmember Trousers B" amount="2"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Prison Supplies -->
+  <CargoMission
+   name="Special Delivery"
+   description="A couple of crates have been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 250 credits."
+   commonness="3"
+   reward="250"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="14">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Prisoner Jumpsuit A" amount="4"/>
+		<Item name="Handcuffs" amount="4"/> 
+      </Item>
+	  <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Prisoner Jumpsuit B" amount="4"/>
+		<Item name="Stun Baton" amount="4"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Engineer and Mechanic Clothing -->
+  <CargoMission
+   name="Special Delivery"
+   description="A couple of crates have been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 300 credits."
+   commonness="3"
+   reward="300"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="17">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Safety Helmet" amount="4"/>
+        <Item name="Utility Vest" amount="4"/>        
+      </Item>
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Utility Jumpsuit" amount="4"/>
+		<Item name="Crewmember Cargo Trousers B" amount="4"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Aluminium Bats -->
+  <CargoMission
+   name="Special Delivery"
+   description="A shipment has been sitting in a warehouse for days. Anyone interested in delivering the supplies to [location2] will receive 300 credits."
+   commonness="3"
+   reward="300"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="14">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Aluminium Bat" amount="8"/>       
+      </Item>
+	  <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Aluminium Bat" amount="8"/>       
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Random Stuff -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 400 credits."
+   commonness="3"
+   reward="400"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="5">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+	    <Item name="Screwdriver" amount="1"/>
+		<Item name="Wrench" amount="1"/>
+		<Item name="Crewmember Vest" amount="1"/>
+		<Item name="Aluminium Bat" amount="1"/>
+		<Item name="Food Can" amount="3"/>
+		<Item name="Propellant Charge" amount="1"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Random Stuff plus Volatile Explosive -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 400 credits."
+   commonness="3"
+   reward="400"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="5">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+	    <Item name="Screwdriver" amount="1"/>
+		<Item name="Wrench" amount="1"/>
+		<Item name="Utility Vest" amount="1"/>
+		<Item name="Handcuffs" amount="1"/> 
+		<Item name="Medical Syringe" amount="1"/>
+		<Item name="Thermite Powder" amount="1"/>
+		<Item name="Food Can" amount="1"/>
+		<Item name="Nitroglycerin" amount="1"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Beer Shipment -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 400 credits."
+   commonness="2"
+   reward="400"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="14">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+		<Item name="Beer" amount="18"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Creature Hunter Stuff -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 400 credits."
+   commonness="2"
+   reward="400"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="14">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+		<Item name="Sonar Blaster" amount="1">
+		  <Item name="Fulgurium Battery Cell" amount="1"/>
+        </Item> 
+	    <Item name="Dart Gun" amount="1">
+		  <Item name="Tranquilizer Dart" amount="1"/>
+        </Item> 
+		<Item name="Tranquilizer Dart" amount="10"/>
+		<Item name="Diving Knife" amount="1"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <!-- Captain from Earth Stuff -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 400 credits."
+   commonness="2"
+   reward="400"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="3">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+	    <Item name="Revolver" amount="1">
+		  <Item name="Revolver Round" amount="6"/>
+        </Item> 
+		<Item name="Revolver Round" amount="2"/>
+		<Item name="Captain's Cap" amount="1"/>
+		<Item name="Red Wine" amount="1"/>
+      </Item>
+    </Items>
+  </CargoMission>
+
+  <CargoMission
+   name="Praise the Honkmother"
+   description="A local clown syndicate is offering 100 credits for delivering a shipment of clowning supplies to [location2]."
+   commonness="2"
+   reward="100"
+   failuremessage="Cargo delivery failed."
+   successmessage="The clown gear has been successfully delivered."
+   requireddeliveryamount="35">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Clown Mask" amount="9"/>
+        <Item name="Clown Costume" amount="9"/>        
+      </Item>
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="2"/>
+        <Item name="Bike Horn" amount="18"/>
+      </Item>
+    </Items>
+  </CargoMission> 
+  
+  <CargoMission
+   name="Praise the Honkarmy"
+   description="A local clown militia is offering 2000 credits for delivering a shipment of clowning gear to [location2]."
+   commonness="1"
+   reward="2000"
+   failuremessage="The clowns are unhappy."
+   successmessage="The clown militia is pleased with your success."
+   requireddeliveryamount="20">
+    <Items >
+      <Item name="Standard Shipping Box">
+        <Item name="Clown Mask" amount="5"/>
+        <Item name="Clown Costume" amount="5"/>
+		<Item name="Bike Horn" amount="5"/>
+		<Item name="Clown Shotgun" amount="5">
+			<Item name="Shotgun Clown Round" amount="8"/>
+		</Item>
+      </Item>
+    </Items>
+  </CargoMission> 
+  
+  <CombatMission
+    name="Search and Destroy"
+    
+    descriptionneutral="A Coalition vessel has been dispatched from [location1] to destroy a renegade vessel at the outskirts of [location2]."
+    description1="A renegade vessel has been detected at the outskirts of [location2]. Treason against the Europa Coalition is punishable by death - eliminate the renegades and return to [location1]!"
+    description2="You're a member of a renegade group opposing the Europa Coalition. According to your informants at [location1], a Coalition ship has just been dispatched on a mission to take down your vessel. Eliminate their crew and return to [location2]."    
+    
+    teamname1="Coalition"
+    teamname2="Renegade"
+    
+    multiplayeronly="true"
+    commonness="20"
+    reward="5000"
+    
+    successmessage="The [loser] vessel has been defeated by the [winner] crew!"
+	failuremessage="Both crews have perished.">
+    
+    <message header="Crew eliminated" text="The renegade crew has been defeated! The Coalition vessel has to make its way back to [location1]."/>
+    <message header="Crew eliminated" text="The Coalition crew has been defeated! The renegade vessel has to make its way back to [location2]."/>
+  </CombatMission>
+</Missions>
