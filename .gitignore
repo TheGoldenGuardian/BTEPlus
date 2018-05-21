@@ -1,0 +1,5 @@
+$ cat .gitignore
+    # exclude everything except BTEPlus.xml and BTEPlus directory
+    /*
+    !/Data/ContentPackages/BTEPlus.xml
+    !/Mods/BTEPlus/*
