@@ -258,7 +258,7 @@
   
   <Item
     name="Ballistic Leggings"
-	aliases="Ballistic Leggings,Armor Legs"
+	aliases="Leg Armor,Armor Legs"
     category="Equipment"
     tags="meditem,clothing"
     description="While a pair ballistic leggings won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">

@@ -780,11 +780,11 @@
   </Item>
   
   <Item
-    name="HTM Grenade"
+    name="Tactical Grenade"
 	aliases="Nade,Grenade"
     category="Equipment"
 	tags="smallitem,weapon"
-	description="HTM or Hand Thrown Munition, is an empty steel casing with a screw-off cap and a trigger mechanism that ignites the containing payload after a certain amount of time."
+	description="The tactical grenade is an empty steel casing with a screw-off cap and a trigger mechanism that ignites the containing payload after a certain amount of time."
     canuseonself="true"
 	impacttolerance="3"
 	cargocontainername="Explosives Shipping Box"
@@ -796,7 +796,8 @@
     </Deconstruct>
 
     <Sprite texture="weapons.png" sourcerect="117,68,11,21" depth="0.55"/>
-
+	<BrokenSprite texture="weapons.png" sourcerect="104,68,11,21" depth="0.55" maxcondition="0"/>
+	
     <Body width="11" height="24" density="20" friction="0.95"/>
 	
 	<ItemContainer capacity="1" hideitems="true">
@@ -809,9 +810,62 @@
 	
 	<ItemComponent>
 	  <StatusEffect type="OnUse" target="This">
-	    <sound file="Mods/BTE/Items/Weapons/GrenadePrimer.ogg"/>
+	    <RequiredItem name="explosive" type="Contained"/>
+		<sound file="Mods/BTE/Items/Weapons/GrenadePrimer.ogg"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse" target="Contained" delay="5">
+	    <RequiredItem name="explosive" type="Contained"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-100" delay="5" setvalue="true">
+	    <RequiredItem name="explosive" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GrenadeHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="HTM"
+	aliases="HTM Grenade"
+    category="Equipment"
+	tags="smallitem,weapon"
+	description="HTM or Hand Thrown Munition, is an enhanced grenade with an electronic priming mechanism that ignites the containing payload after a certain amount of time."
+	canuseonself="true"
+	impacttolerance="3"
+	cargocontainername="Explosives Shipping Box"
+	price="300">
+	
+	<Deconstruct time="5">      
+      <Item name="Steel Bar"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="weapons.png" sourcerect="115,53,13,14" depth="0.55"/>
+
+    <Body radius="6" density="20" friction="0.95"/>
+	
+	<ItemContainer capacity="1" hideitems="true">
+	  <Containable name="explosive"/>
+    </ItemContainer>
+	
+	<Projectile launchimpulse="18" sticktocharacters="false">
+      <Attack damage="8" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="1.5" damagetype="Blunt"/>
+    </Projectile>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="This">
+	    <sound file="Content/Items/Button/switch.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" delay="3.5">
+        <RequiredItem name="explosive" type="Contained"/>
+		<sound file="Mods/BTE/Items/Weapons/HTMgren.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" delay="7">
 	    <RequiredItem name="explosive" type="Contained"/>
 		<Use/>
 	  </StatusEffect>

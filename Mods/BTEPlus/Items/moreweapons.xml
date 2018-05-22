@@ -383,11 +383,13 @@
     <Body width="67" height="29" density="30"/>
 	
 	<ItemContainer capacity="1" itempos="27,9" iteminterval="0,-4" hideitems="true">
-      <Containable name="HTM Grenade"/>
+      <Containable name="HTM"/>
+	  <Containable name="Tactical Grenade"/>
 	  <Containable name="Glowstick"/>
 	  <Containable name="Stun Grenade"/>
 	  <Containable name="IM Grenade"/>
 	  <Containable name="Rubber Bullet"/>
+	  <Containable name="Buoy Grenade"/>
     </ItemContainer>
 
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
@@ -395,7 +397,7 @@
     
     <RangedWeapon barrelpos="46,11" spread="1" unskilledspread="5">
       <Sound file="grenadelauncher.ogg" type="OnUse"/>
-      <RequiredItems name="HTM Grenade,Glowstick,Stun Grenade,IM Grenade,Rubber Bullet" type="Contained" msg="The loaded object is broken/incompatible, notify the developer"/>
+      <RequiredItems name="HTM,Tactical Grenade,Glowstick,Stun Grenade,IM Grenade,Rubber Bullet,Buoy Grenade" type="Contained" msg="The loaded object is broken/incompatible, notify the developer"/>
       <RequiredSkill name="Weapons" level="30"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="1" force="7.5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>

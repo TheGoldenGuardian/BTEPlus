@@ -17,12 +17,53 @@
   </Item>
   
   <Item
+    name="Exosuit Locker"
+	Tags="cntnr"
+    linkable="true"
+    pickdistance ="150">
+    
+    <Sprite texture="Mods/BTE/Items/Containers/ExosuitLocker.png" depth="0.85" sourcerect="0,0,72,166"/>
+	
+	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="35,-94">
+      <Containable name="Exosuit,Assault Exosuit,Derelict Exosuit,Heavy Assault Suit,OCU Suit"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Artifact Container"
+	aliases="Artefact Container"
+	Tags="cntnr"
+    linkable="true"
+    pickdistance="150">
+    
+    <Sprite texture="Mods/BTE/Items/Containers/ArtifactContainer.png" depth="0.85" sourcerect="0,0,100,128"/>
+	
+	<Powered powerconsumption="1500" currpowerconsumption="1500" minvoltage="0.5" isactive="true">
+	  <RequiredItem item="rtfct"/>
+      <StatusEffect type="OnActive" target="Contained" targetnames="Skyholder Artifact" Condition="100" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Thermal Artifact" Condition="0" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Faraday Artifact" Condition="100" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Grinder Artifact" Condition="100" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Flopper Artifact" Condition="100" setvalue="true"/>
+    </Powered>
+	
+	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="50,-80">
+      <Containable name="rtfct"/>
+    </ItemContainer>
+	
+	<ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
     name="Steel Locker"
 	Tags="cntnr"
     linkable="true"
     pickdistance ="150">
     
-    <Sprite texture ="Containers.png" depth="0.78" sourcerect="0,186,45,128"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="0,186,45,128"/>
 	
 	<Controller direction="None" canbepicked="true">
       <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
@@ -39,7 +80,7 @@
     linkable="true"
     pickdistance ="150">
     
-    <Sprite texture ="Containers.png" depth="0.78" sourcerect="95,186,71,135"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="95,186,71,135"/>
 	
 	<Controller direction="None" canbepicked="true">
       <sound file="Mods/BTE/Items/Containers/Fridge.ogg" type="OnUse" range="750"/>
@@ -82,7 +123,7 @@
     linkable="true"
     pickdistance ="150">
 
-    <Sprite texture ="Containers.png" depth="0.78" sourcerect="46,186,48,64" canflipx="false"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="46,186,48,64" canflipx="false"/>
 	
 	<Controller direction="None" canbepicked="true">
       <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
@@ -139,7 +180,7 @@
       <Item name="Steel Block"/>
     </Deconstruct>
 
-    <Sprite texture ="Containers.png" depth="0.54" sourcerect="357,282,56,51"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="357,282,56,51"/>
 
     <Body width="54" height="49" density="50"/>
 
@@ -225,7 +266,7 @@
     linkable="true"
     pickdistance ="50">
     
-    <Sprite texture ="Containers.png" depth="0.79" sourcerect="0,0,413,185"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.79" sourcerect="0,0,413,185"/>
 	
 	<Controller direction="None" canbepicked="true">
       <sound file="Mods/BTE/Items/Containers/CargoContainer.ogg" type="OnUse" range="1250"/>
@@ -240,7 +281,7 @@
     linkable="true"
     pickdistance ="150">
     
-    <Sprite texture ="Containers.png" depth="0.78" sourcerect="310,186,103,95"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="310,186,103,95"/>
 
     <ItemContainer capacity="3" canbeselected="true" hideitems="false" itempos="52,-16" iteminterval="0,-31">
       
@@ -260,6 +301,9 @@
 	  <Containable name="Clown Shotgun"/>
 	  <Containable name="PDW"/>
 	  <Containable name="Clown Machinegun"/>
+	  <Containable name="Makeshift Rifle"/>
+	  <Containable name="Makeshift Suppressed Pistol"/>
+	  <Containable name="Gravity Gun"/>
     </ItemContainer>
   </Item>
   
@@ -269,7 +313,7 @@
     linkable="true"
     pickdistance ="150">
     
-    <Sprite texture ="Containers.png" depth="0.78" sourcerect="319,282,25,61"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="319,282,25,61"/>
 
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="13,-25">
       <Containable name="Fire Extinguisher"/>
@@ -295,7 +339,7 @@
       <Attack damage="60" bleedingdamage="0.3" stun="10" structuredamage="15" targetforce="150" damagetype="Blunt"/>
     </Projectile>
 
-    <Sprite texture="Containers.png" depth="0.53" sourcerect="172,186,131,85"/>
+    <Sprite texture="Mods/BTE/Items/Containers/Containers.png" depth="0.53" sourcerect="172,186,131,85"/>
 	
 	<Body width="130" height="84" density="18"/>
 	
@@ -328,7 +372,7 @@
       <Attack damage="40" bleedingdamage="0.5" stun="10" structuredamage="30" targetforce="120" damagetype="Blunt"/>
     </Projectile>
 
-    <Sprite texture="Containers.png" depth="0.54" sourcerect="237,278,53,98"/>
+    <Sprite texture="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="237,278,53,98"/>
 	
 	<Body width="52" height="97" density="14"/>
 	
@@ -358,7 +402,7 @@
 	  <Item name="FPGA Circuit"/>
     </Deconstruct>
 
-    <Sprite texture ="Containers.png" depth="0.54" sourcerect="0,328,90,48"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="0,328,90,48"/>
 
     <Body width="88" height="44" density="10.01"/>
 
@@ -380,7 +424,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="0,0,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="0,0,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -402,7 +446,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="122,122,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="122,122,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -424,7 +468,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="61,0,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="61,0,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -446,7 +490,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="61,122,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="61,122,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -468,7 +512,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="122,0,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="122,0,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -490,7 +534,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="0,61,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="0,61,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -512,7 +556,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="61,61,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="61,61,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -534,7 +578,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="122,61,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="122,61,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -556,7 +600,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="PlasticBox.png" depth="0.54" sourcerect="0,122,60,60"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="0,122,60,60"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 

@@ -1102,6 +1102,11 @@
 		<RequiredSkill name="Cooking" level="10"/>
       </fabricableitem>
 	  
+	  <fabricableitem name="Cotton Candy" requiredtime="15">
+		<Item name="Sugar" mincondition="0.3" usecondition="true"/>
+		<RequiredSkill name="Cooking" level="15"/>
+      </fabricableitem>
+	  
 	  <fabricableitem name="Candy Apple" requiredtime="15">
 		<Item name="Apple" mincondition="0.2" usecondition="false"/>
 		<Item name="Sugar" mincondition="0.2" usecondition="true"/>

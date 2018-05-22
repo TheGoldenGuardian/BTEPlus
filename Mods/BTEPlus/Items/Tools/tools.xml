@@ -536,7 +536,7 @@
 	
 	<RepairTool extinquishamount="60" range="500" barrelpos="21,25">
       <ParticleEmitter particle="extinguisher" velocitymin="500" velocitymax="650" particlespersecond="50"/>
-      <StatusEffect type="OnUse" target="This" Condition="-1.5"/>
+      <StatusEffect type="OnUse" target="This" Condition="-1.5" oxygen="-2050"/>
       <sound file="Content/Items/Tools/extinguisher.ogg" type="OnUse" range="500" loop="true"/>
     </RepairTool>
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 5.8 Plus 0.7" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 5.9 Plus 0.8 DEV" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml" /> -->
   <!-- <Item file="Content/Items/itemlabel.xml" /> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml" /> -->
@@ -134,7 +134,8 @@
   <Character file="Mods/BTE/Characters/Watcher/watcher.xml" />
   <Structure file="Mods/BTE/Map/StructurePrefabs.xml" />
   <RuinConfig file="Mods/BTE/Map/RuinConfig.xml" />
-  <Particles file="Mods/BTE/Particles/ParticlePrefabs.xml"/>
+  <!-- <Particles file="Mods/BTE/Particles/ParticlePrefabs.xml"/> -->
+  <Particles file="Mods/BTEPlus/Particles/ParticlePrefabs.xml"/>
   <RandomEvents file="Mods/BTE/randomevents.xml" />
   <LocationTypes file="Mods/BTE/Map/locationTypes.xml" />
   <!-- <Missions file="Mods/BTE/Missions.xml" /> -->
@@ -157,6 +158,7 @@
   <Item file="Mods/BTEPlus/Items/traitorweapons.xml" />
   <Item file="Mods/BTEPlus/Items/specialweapons.xml" />
   <Item file="Mods/BTEPlus/Items/Documents/bonusDocs.xml" />
+  <Item file="Mods/BTEPlus/Items/Machines/moremachines.xml" />
   
   <Executable file="Barotrauma.exe" />
 </contentpackage>

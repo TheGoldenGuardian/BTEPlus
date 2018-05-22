@@ -13,7 +13,7 @@
 	  <Item name="Spare Parts"/>
     </Deconstruct>
   
-    <Sprite texture="gravgun.png" sourcerect="0,0,62,40" depth="0.55"/>
+    <Sprite texture="specialweapons.png" sourcerect="0,0,62,40" depth="0.55"/>
 
     <Body width="62" height="40" density="50"/>
 
@@ -42,5 +42,145 @@
 	<ItemContainer capacity="1" itempos="45,0" iteminterval="0,-4" hideitems="false">
       <Containable name="Steel Chair,Steel Table"/>
     </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Rocket Launcher"
+	aliases="RL,RPG-7,RPG"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A rocket-propelled grenade launcher."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="specialweapons.png" sourcerect="0,40,86,19" depth="0.55"/>
+
+    <Body width="86" height="19" density="40"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="42,-10" holdangle="0" aimpos="48,10" handle1="28,-2" handle2="14,-5">
+	</Holdable>
+    
+    <RangedWeapon barrelpos="76,5.5" spread="1" unskilledspread="18" reload="8">
+      <Sound file="Mods/BTEPlus/Items/SingleShotgun.ogg" type="OnUse"/>
+      <RequiredItems name="Rocket" type="Contained" msg="The loaded rocket is too damaged"/>
+      <RequiredSkill name="Weapons" level="80"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="220" force="8" shockwave="true" flames="false" smoke="true" sparks="false" camerashake="10"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+	<ItemContainer capacity="1" itempos="80,-5.5" hideitems="false">
+      <Containable name="Rocket"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Rocket"
+	aliases="RPG Round"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A rocket-propelled grenade."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	>
+
+    <Sprite texture="specialweapons.png" sourcerect="62,0,42,4" depth="0.55"/>
+
+    <Body width="42" height="4" density="20"/>
+
+    <Projectile launchimpulse="40" removeonhit="true">
+      <Attack damage="60" bleedingdamage="0" stun="3" structuredamage="50" targetforce="800" damagetype="Blunt"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <Explosion range="500" structuredamage="200" force="20" shockwave="true" flames="true" smoke="true" flash="false" sparks="false" camerashake="12.0"/>
+	  </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Laser Rifle"
+	aliases="Las-Rifle,LasRifle,Laser"
+    category="Equipment"
+	tags="bigitem,weapon"
+    description="A weapon that fires a constant beam of condensed energy"
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="0,0,120,35" depth="0.55"/>
+
+    <Body width="118" height="33" density="45"/>
+	
+	<ItemContainer capacity="1" itempos="-8,-10" hideitems="false">
+      <Containable name="Laser Rifle Magazine"/>
+    </ItemContainer>
+	
+	<RepairTool structurefixamount="-1" limbfixamount="-1" range="4000" barrelpos="62,3" particles="plasma">
+	  <ParticleEmitter particle="laser" particlespersecond="100"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-0.25"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="900"/>
+	  <RequiredItems name="Laser Rifle Magazine" type="Contained" msg="The loaded magazine is depleted"/>
+      <RequiredSkill name="Weapons" level="60"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="120" force="0.4" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.8"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.1" disabledeltatime="true">
+	    <RequiredItems name="Laser Rifle Magazine" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Laser Rifle Magazine"
+	aliases="Laser Rifle Mag,Laser Ammo,Laser Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description="A battery cell for the Laser Rifle."
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTE/Items/Weapons/GaussGuns.png" sourcerect="104,74,14,14" depth="0.55"/>
+
+    <Body width="12" height="12" density="18" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
   </Item>
 </Items>

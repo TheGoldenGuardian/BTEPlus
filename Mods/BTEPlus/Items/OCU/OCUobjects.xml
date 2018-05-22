@@ -9,13 +9,16 @@
     <Sprite texture="Mods/BTEPlus/Items/OCU/OCUmount.png" depth="0.8" sourcerect="0,0,64,64"/>
 
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="32,-32">
-      <Containable name="alien"/>
+      <Containable name="rtfct"/>
     </ItemContainer>
 	
 	<Powered powerconsumption="1500" currpowerconsumption="1500" minvoltage="0.5" isactive="true">
-	  <RequiredItem item="Skyholder Artifact,Thermal Artifact"/>
-      <StatusEffect type="OnActive" target="Contained" targetnames="Skyholder Artifact" Condition="100"/>
+	  <RequiredItem item="rtfct"/>
+      <StatusEffect type="OnActive" target="Contained" targetnames="Skyholder Artifact" Condition="100" setvalue="true"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Thermal Artifact" Condition="0" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Faraday Artifact" Condition="100" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Grinder Artifact" Condition="100" setvalue="true"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Flopper Artifact" Condition="100" setvalue="true"/>
     </Powered>
 
     <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">

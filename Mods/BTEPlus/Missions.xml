@@ -12,6 +12,19 @@
     itemname="Skyholder Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
+  
+  <SalvageMission 
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Flopper Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
 
   <SalvageMission
     name="Salvaging an artifact"
@@ -25,6 +38,19 @@
     itemname="Thermal Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="4000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Grinder Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
 
   <SalvageMission
     name="Salvaging an artifact"
@@ -36,19 +62,6 @@
     successmessage="The artifact has been succesfully retrieved."
     spawntype="cave"
     itemname="Thermal Artifact">
-    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
-  </SalvageMission>
-  
-  <SalvageMission
-    name="Salvaging an artifact"
-    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
-    commonness="5"
-    reward="3500"
-    radarlabel="Infrasonic signal"
-    failuremessage="Retrieving the artifact failed."
-    successmessage="The artifact has been succesfully retrieved."
-    spawntype="ruin"
-    itemname="Claret Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
   
@@ -78,6 +91,19 @@
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
   
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Claret Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+
   <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
@@ -271,43 +297,6 @@
   </CargoMission>
   
   <CargoMission
-    name="Nuclear cargo"
-    description="A local arms dealer is offering 10,000 credits in exchange for delivering 4 extremely dangerous explosives to a company stationed in [location2]."
-    commonness="1"
-    reward="10000"
-	failuremessage="Cargo delivery failed."
-    successmessage="The nuclear explosives have been successfully delivered. Whew...">
-    <Items>
-      <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="4"/>
-      </Item>
-    </Items>
-  </CargoMission>
-  
-  <CargoMission
-    name="Oh no..."
-    description="Get to [location2]."
-    commonness="1"
-    reward="100000000000000000"
-	failuremessage="I'm not surprised at all."
-    successmessage="I'm surprised you didn't manage to fuck that up.">
-    <Items>
-      <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-	  <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-	  <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-	  <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-    </Items>
-  </CargoMission>
-  
-  <CargoMission
     name="Diesel shipment"
     description="A shipment of diesel cans in [location1] needs to be delivered to [location2] for a reward of 350 credits."
     commonness="10"
@@ -388,6 +377,22 @@
 	    <Item name="Plastic Bag" amount="2"/>
         <Item name="Potato" amount="10"/>
 		<Item name="Carrot" amount="8"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+   name="Food Shipment"
+   description="Some food supplies have been sitting in a warehouse for weeks. Anyone interested in delivering the supplies to [location2] will receive 200 credits."
+   commonness="5"
+   reward="200"
+   failuremessage="Shipment delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="15">
+    <Items >
+      <Item name="Standard Shipping Box">
+	    <Item name="Plastic Bag" amount="1"/>
+        <Item name="Protein Bar" amount="19"/>
       </Item>
     </Items>
   </CargoMission>
@@ -763,6 +768,43 @@
       </Item>
     </Items>
   </CargoMission> 
+  
+  <CargoMission
+    name="Nuclear cargo"
+    description="A local arms dealer is offering 10,000 credits in exchange for delivering 4 extremely dangerous explosives to a company stationed in [location2]."
+    commonness="1"
+    reward="10000"
+	failuremessage="Cargo delivery failed."
+    successmessage="The nuclear explosives have been successfully delivered. Whew...">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="4"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
+  <CargoMission
+    name="Oh no..."
+    description="Get to [location2]."
+    commonness="1"
+    reward="100000000000000000"
+	failuremessage="I'm not surprised at all."
+    successmessage="I'm surprised you didn't manage to fuck that up.">
+    <Items>
+      <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+	  <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+	  <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+	  <Item name="Explosives Shipping Box">
+        <Item name="Nuclear Charge" amount="20"/>
+      </Item>
+    </Items>
+  </CargoMission>
   
   <CargoMission
    name="Praise the Honkarmy"

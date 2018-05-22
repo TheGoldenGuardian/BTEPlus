@@ -3,7 +3,7 @@
   <Item
     name="Skyholder Artifact"
     category="Alien"
-    Tags="alien">
+    Tags="alien,rtfct">
 
     <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="58,0,60,60"/>
 
@@ -26,7 +26,7 @@
   <Item
     name="Thermal Artifact"
     category="Alien"
-    Tags="alien">
+    Tags="alien,rtfct">
 
     <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="1,0,57,56"/>
 
@@ -46,14 +46,14 @@
       <StatusEffect type="InWater" target="This" Condition="-40">
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
       </StatusEffect>
-      <StatusEffect type="OnBroken" target="This" Condition="100" delay="15"/>
+      <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="15"/>
 	</Holdable>
   </Item>
 
   <Item
     name="Faraday Artifact"
     category="Alien"
-	Tags="alien">
+	Tags="alien,rtfct">
 
     <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="0,56,60,49"/>
 
@@ -66,7 +66,13 @@
 
     <Body radius="25" density="50" friction="0.95"/>
 
-    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10"/>
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="Always" target="This" Condition="-60"/>
+	  <StatusEffect type="InWater" target="This" Condition="-30"/>
+      <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
+        <Explosion range="500" force="1.5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.2"/>
+      </StatusEffect>
+	</Holdable>
   </Item>
   
   <Item
@@ -95,7 +101,7 @@
   <Item
     name="Claret Artifact"
     category="Alien"
-    Tags="alien"
+    Tags="alien,rtfct"
     pickdistance="150"
     indestructible="true">
 
@@ -113,9 +119,59 @@
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 		<StatusEffect type="OnActive" target="Character" bleeding="0.25"/>
 	</Holdable>
-	
+  </Item>
+  
+  <Item
+    name="Grinder Artifact"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="Mods/BTE/Items/Artifacts/artifact.png" depth="0.7" sourcerect="1,0,57,56"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+        
+    <Body radius="26" density="10.01" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" Condition="-60"/>
+	  <StatusEffect type="InWater" target="This" Condition="90"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
+        <Explosion range="250" structuredamage="2.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="4.5"/>
+      </StatusEffect>
+    </Holdable>
   </Item>
 
+  <Item
+    name="Flopper Artifact"
+    category="Alien"
+    Tags="alien,rtfct"
+	impacttolerance="4">
+
+    <Sprite texture="Mods/BTE/Items/Artifacts/artifact.png" depth="0.7" sourcerect="60,0,57,56"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+        
+    <Body radius="24" density="10" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" Condition="-50"/>
+	  <StatusEffect type="OnImpact" target="This" Condition="-25"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="20" setvalue="true">
+        <Explosion range="350" stun="5" force="0.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="4.5"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
   <Item
     name="Oxygenite Shard"
     category="Alien"
@@ -242,7 +298,7 @@
       </LightComponent>
     </RepairTool>
     
-    <Propulsion force="-10" usablein="both"/>
+    <Propulsion force="-15" usablein="both"/>
 	
 	<Projectile launchimpulse="80.0">
       <Attack damage="1000" bleedingdamage="10" structuredamage="500" damagetype="Blunt"/>

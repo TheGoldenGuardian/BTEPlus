@@ -1,0 +1,13 @@
+<Items>
+  <Item
+    name="Miniature Vent"
+    category="Machine"
+    linkable="true">
+
+    <Sprite texture="minivent.png" depth="0.95" sourcerect="0,0,32,32"/>
+
+    <Vent canbeselected="false">
+      <sound file="Content/Items/OxygenGenerator/ventilation.ogg" type="OnActive" range="450" volume="OxygenFlow" volumemultiplier="0.001f" loop="true"/>
+    </Vent>
+  </Item>
+</Items>

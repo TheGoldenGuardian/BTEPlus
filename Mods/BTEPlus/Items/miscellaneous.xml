@@ -265,6 +265,26 @@
   </Item>
   
   <Item
+    name="t1/2 Glasses"
+	aliases="Gorbnob Fredmun's Glasses"
+    category="Equipment"
+	description="An oddly familiar pair of specs."
+	Tags="smallitem">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" depth="0.55" sourcerect="111,89,17,7"/>
+
+    <Body height="17" width="7" density="6"/>
+	
+	<Wearable slots="Any,Face">
+      <sprite texture="miscellaneous.png" limb="Head" sourcerect="98,75,37,38" origin="0.5,0.5"/>
+    </Wearable>
+  </Item>
+  
+  <Item
     name="PDW Ammo Crate"
     category="Equipment"
     Tags="cntnr,meditem"
