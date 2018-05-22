@@ -304,17 +304,14 @@
 	  <Item name="Light Ballistic Vest" equip="true"/>
 	  <Item name="Armoured Gasmask" equip="true"/>
 	  <Item name="Ballistic Leggings" equip="true"/>
+	  <Item name="Underwater Pistol" equip="true">
+		<Item name="Water Dart"/>
+		<Item name="Water Dart"/>
+		<Item name="Water Dart"/>
+		<Item name="Water Dart"/>
+	  </Item>
 	  <Item name="Radio" equip="true">
 		<Item name="Battery Cell"/>
-	  </Item>
-	  <Item name="Diving Revolver">
-		<Item name="Revolver HL Round"/>
-		<Item name="Revolver HL Round"/>
-		<Item name="Revolver HL Round"/>
-		<Item name="Revolver HL Round"/>
-		<Item name="Revolver HL Round"/>
-		<Item name="Revolver HL Round"/>
-		<Item name="Revolver HL Round"/>
 	  </Item>
     </Items>
   </Job>

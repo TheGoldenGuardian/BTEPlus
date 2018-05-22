@@ -276,6 +276,41 @@
   </Item>
   
   <Item
+    name="Refrigerated Cargo Container"
+	Tags="cntnr"
+    linkable="true"
+    pickdistance ="50">
+	
+	<Sprite texture ="CargoFridge.png" depth="0.79" sourcerect="0,0,413,185"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/CargoContainer.ogg" type="OnUse" range="1250"/>
+    </Controller>
+
+    <ItemContainer capacity="60" canbeselected="true" hideitems="true"/>
+	
+	<Powered powerconsumption="1000" currpowerconsumption="1000" minvoltage="0.5" isactive="true">
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Fries,Apple Pie,Carrot Pie" Condition="0.02"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Crawler Pie,Thresher Pie" Condition="0.03"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Baked Potato" Condition="0.04"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Fried Mantis" Condition="0.12"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Mantcrawl Cocktail,Thresher Stew,Mantcrawl CocktaiI" Condition="0.13"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Glazed Thresher,Seared Snailfish,Seared Crawler,Seared Mantis" Condition="0.14"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Seared Thresher,Fried Thresher" Condition="0.15"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Crew Steak" Condition="0.16"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Snailfish Meat,Crawler Meat,Mantis Meat" Condition="0.17"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Thresher Meat" Condition="0.18"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Human Meat" Condition="0.19"/>
+      <sound file="Mods/BTE/Items/Containers/FridgeHum.ogg" type="OnActive" range="800" loop="true"/>
+    </Powered>
+	
+	<ConnectionPanel selectkey="Action" canbeselected = "true" msg="Rewire [Screwdriver]">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
     name="Wall Rack"
 	Tags="cntnr"
     linkable="true"

@@ -302,10 +302,15 @@
     commonness="10"
     reward="350"
 	failuremessage="Shipment delivery failed."
-    successmessage="The diesel cans been successfully delivered."
-    requireddeliveryamount="12">
+    successmessage="The diesel cans have been successfully delivered."
+    requireddeliveryamount="4">
     <Items>
-      <Item name="Diesel Can" amount="15"/>
+      <Item name="Diesel Can"/>
+	  <Item name="Diesel Can"/>
+	  <Item name="Diesel Can"/>
+	  <Item name="Diesel Can"/>
+	  <Item name="Diesel Can"/>
+	  <Item name="Diesel Can"/>
     </Items>
   </CargoMission>
 
