@@ -106,7 +106,7 @@
     </LightComponent>
     
     <RangedWeapon barrelpos="74,13" spread="1" unskilledspread="100" reload="0.25">
-      <Sound file="Mods/BTEPlus/Items/SingleShotgun.ogg" type="OnUse"/>
+      <Sound file="Mods/BTEPlus/Items/AKM.ogg" type="OnUse"/>
       <RequiredItems name="Rifle Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="60"/>
 	  <StatusEffect type="OnUse">

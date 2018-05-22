@@ -266,7 +266,7 @@
   
   <Item
     name="t1/2 Glasses"
-	aliases="Gorbnob Fredmun's Glasses"
+	aliases="Gorbnob Fredmun's Glasses,Glasses,Spectacles,Specs"
     category="Equipment"
 	description="An oddly familiar pair of specs."
 	Tags="smallitem">

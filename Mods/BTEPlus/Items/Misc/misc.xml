@@ -1059,9 +1059,12 @@
 
     <RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="0,0" particles="bubbles">
       <ParticleEmitter particle="bubbles" particlespersecond="25"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Superstitious.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Slam.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/DoubleNeck1.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - DoubleNeck1.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Echoes of the Past.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Last Light.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Slam.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Superstitious.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Prodigy.ogg" type="OnUse" range="600" loop="true"/>
 	  <StatusEffect type="InWater" target="This" Condition="-75"/>
 	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
 	  <StatusEffect type="Always" target="This" Condition="15"/>
@@ -1071,7 +1074,75 @@
     </RepairTool>
 	
 	<Holdable slots="RightHand+LeftHand" controlpose="true"
-              aimpos="50,0" handle1="-2,0" handle2="10,50"/>
+              aimpos="50,0" handle1="-2,-12" handle2="9,47"/>
+  </Item>
+  
+  <Item
+    name="Music Radio"
+	aliases="Radio A"
+    category="Misc"
+    Tags="smallitem"
+	description="A dinky little radio. Appears to be water-proof."
+    price="60">
+	
+	<Deconstruct time="10">
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/Misc/radio.png" sourcerect="0,0,30,23" depth="0.55"/>
+
+    <Body width="30" height="23" density="10"/>
+
+    <RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="0,0" particles="bubbles">
+      <ParticleEmitter particle="bubbles" particlespersecond="25"/>
+	  <StatusEffect type="InWater" target="This" Condition="-0"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="35" force="0.35" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0"/>
+      </StatusEffect>
+    </RepairTool>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              aimpos="19,20" handle1="0,5" handle2="0,5" holdangle="90">
+			  <sound file="Radio - Yellow Submarine.ogg" type="OnActive" range="600" loop="true"/>
+			  <sound file="Radio - Tower of Babel.ogg" type="OnActive" range="600" loop="true"/>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Bandit Radio"
+	aliases="Radio B"
+    category="Misc"
+    Tags="smallitem"
+	description="A dinky little radio that smells oddly of alcohol. Appears to be vodka-proof."
+    price="120">
+	
+	<Deconstruct time="10">
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/Misc/radioB.png" sourcerect="0,0,30,23" depth="0.55"/>
+
+    <Body width="30" height="23" density="10"/>
+
+    <RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="0,0" particles="bubbles">
+      <ParticleEmitter particle="bubbles" particlespersecond="25"/>
+	  <StatusEffect type="InWater" target="This" Condition="-0"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="35" force="0.35" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0"/>
+      </StatusEffect>
+    </RepairTool>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              aimpos="19,20" handle1="0,5" handle2="0,5" holdangle="90">
+			  <sound file="Radio B - CS Bandit Radio.ogg" type="OnActive" range="600" loop="true"/>
+			  <sound file="Radio B - Snakes in Tracksuits.ogg" type="OnActive" range="600" loop="true"/>
+	</Holdable>
   </Item>
   
   <Item

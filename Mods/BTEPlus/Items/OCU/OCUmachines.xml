@@ -27,8 +27,16 @@
 		<Item name="Claret Artifact" mincondition="0" usecondition="true"/>
         <RequiredSkill name="Science" level="60"/>
       </fabricableitem>
+	  <fabricableitem name="Analysis Report: Faraday" requiredtime="90">
+		<Item name="Faraday Artifact" mincondition="0" usecondition="true"/>
+        <RequiredSkill name="Science" level="60"/>
+      </fabricableitem>
 	  <fabricableitem name="Analysis Report: Thermal" requiredtime="120">
 		<Item name="Thermal Artifact" mincondition="0" usecondition="true"/>
+        <RequiredSkill name="Science" level="60"/>
+      </fabricableitem>
+	  <fabricableitem name="Analysis Report: Grinder" requiredtime="150">
+		<Item name="Grinder Artifact" mincondition="0" usecondition="true"/>
         <RequiredSkill name="Science" level="60"/>
       </fabricableitem>
     </Fabricator>

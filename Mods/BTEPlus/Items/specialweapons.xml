@@ -23,7 +23,7 @@
 	</Holdable>
     
     <RangedWeapon barrelpos="70,17" spread="1" unskilledspread="10" reload="3">
-      <Sound file="Mods/BTEPlus/Items/gravgun4.ogg" type="OnUse"/>
+      <Sound file="Mods/BTEPlus/Items/gravgun.ogg" type="OnUse"/>
       <RequiredItems name="Steel Chair,Steel Table" type="Contained" msg="The loaded object won't fire"/>
       <RequiredSkill name="Science" level="40"/>
 	  <StatusEffect type="OnUse">
@@ -49,7 +49,7 @@
 	aliases="RL,RPG-7,RPG"
     category="Equipment"
 	tags="bigitem,weapon"
-	description="A rocket-propelled grenade launcher."
+	description="A rocket-propelled grenade launcher. [Incomplete]"
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3">
 
@@ -88,7 +88,7 @@
 	aliases="RPG Round"
     category="Equipment"
 	tags="bigitem,weapon"
-	description="A rocket-propelled grenade."
+	description="A rocket-propelled grenade. [Incomplete]"
     interactthroughwalls="true"
 	cargocontainername="Weapons Shipping Box"
 	>
@@ -98,9 +98,9 @@
     <Body width="42" height="4" density="20"/>
 
     <Projectile launchimpulse="40" removeonhit="true">
-      <Attack damage="60" bleedingdamage="0" stun="3" structuredamage="50" targetforce="800" damagetype="Blunt"/>
+      <Attack damage="200" bleedingdamage="0" stun="3" structuredamage="50" targetforce="800" damagetype="Blunt" severlimbsprobability="1"/>
 	  <StatusEffect type="OnImpact" target="This">
-	    <Explosion range="500" structuredamage="200" force="20" shockwave="true" flames="true" smoke="true" flash="false" sparks="false" camerashake="12.0"/>
+	    <Explosion range="800" damage="100" structuredamage="1200" stun="10" force="60" shockwave="true" flames="true" smoke="true" flash="false" sparks="false" camerashake="12.0" severlimbsprobability="1"/>
 	  </StatusEffect>
     </Projectile>
   </Item>
@@ -110,7 +110,7 @@
 	aliases="Las-Rifle,LasRifle,Laser"
     category="Equipment"
 	tags="bigitem,weapon"
-    description="A weapon that fires a constant beam of condensed energy"
+    description="A weapon that fires a constant beam of condensed energy. [Incomplete but mostly functional.]"
     impacttolerance="3">
 
     <Deconstruct time="20">      
@@ -129,7 +129,7 @@
       <Containable name="Laser Rifle Magazine"/>
     </ItemContainer>
 	
-	<RepairTool structurefixamount="-1" limbfixamount="-1" range="4000" barrelpos="62,3" particles="plasma">
+	<RepairTool structurefixamount="-0.5" limbfixamount="-0.5" range="4000" barrelpos="62,3" particles="laser">
 	  <ParticleEmitter particle="laser" particlespersecond="100"/>
 	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
       <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
@@ -138,14 +138,14 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-0.25"/>
-      <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="900"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-1" Condition="-0.5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="900"/>
 	  <RequiredItems name="Laser Rifle Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="60"/>
 	  <StatusEffect type="OnUse" target="This">
 	    <Explosion range="120" force="0.4" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="0.8"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" Condition="-0.1" disabledeltatime="true">
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.0125" disabledeltatime="true">
 	    <RequiredItems name="Laser Rifle Magazine" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnFailure" target="Contained" Condition="-0.1" disabledeltatime="true"/>

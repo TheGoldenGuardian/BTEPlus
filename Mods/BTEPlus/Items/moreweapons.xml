@@ -20,7 +20,7 @@
     <Body width="47" height="20" density="25"/>
 
     <RangedWeapon barrelpos="37,6" spread="0" unskilledspread="2" reload="0.3">
-      <Sound file="Mods/BTEPlus/Items/Weapons/Revolver.ogg" type="OnUse"/>
+      <Sound file="Mods/BTEPlus/Items/Revolver.ogg" type="OnUse"/>
       <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="40"/>
       <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
@@ -44,7 +44,7 @@
 			
 	<ItemComponent>
 	  <StatusEffect type="OnUse" target="Character" Health="-50">
-	    <sound file="Mods/BTEPlus/Items/Weapons/Revolver.ogg"/>
+	    <sound file="Mods/BTEPlus/Items/Revolver.ogg"/>
 		<Use/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
@@ -74,7 +74,7 @@
     <Body width="47" height="19" density="25"/>
 
     <RangedWeapon barrelpos="37,6" spread="0" unskilledspread="2" reload="0.3">
-      <Sound file="Mods/BTEPlus/Items/Weapons/Revolver.ogg" type="OnUse"/>
+      <Sound file="Mods/BTEPlus/Items/Revolver.ogg" type="OnUse"/>
       <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="40"/>
       <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
@@ -102,7 +102,7 @@
 			
 	<ItemComponent>
 	  <StatusEffect type="OnUse" target="Character" Health="-50">
-	    <sound file="Mods/BTEPlus/Items/Weapons/Revolver.ogg"/>
+	    <sound file="Mods/BTEPlus/Items/Revolver.ogg"/>
 		<Use/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">

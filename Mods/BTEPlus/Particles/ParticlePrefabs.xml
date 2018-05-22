@@ -672,11 +672,11 @@
     startsizemin="1,1" startsizemax="1,1"
     sizechangemin="0,0" sizechangemax="0,0"
     startcolor="1.0, 1.0, 1.0" startalpha="1.0"
-    colorchange="0.0, 0.0, 0.0, -0.5"
-    lifetime="1"
+    colorchange="0.0, 0.0, 0.0, -1"
+    lifetime="0.25"
     drawtarget="both"
     blendstate="additive"
-    velocitychange="1.0, 0.0">
-    <animatedsprite texture="Mods/BTEPlus/Particles/laser.png" sourcerect="0,0,800,100" columns="8" rows="1" origin="0,0.5"/>
+    velocitychange="0.0, 0.0">
+    <animatedsprite texture="Mods/BTEPlus/Particles/laser.png" sourcerect="0,0,800,100" columns="1" rows="1" origin="0,0.5"/>
   </laser>
 </prefabs>
