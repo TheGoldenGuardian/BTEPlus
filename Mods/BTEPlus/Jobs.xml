@@ -12,6 +12,22 @@
     </Skills>
     <Items>
       <Item name="Captain ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp D"/>
+		<Item name="Ration Stamp E"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Top Secret Cover"/>
 		<Item name="Coalition Captain"/>
@@ -53,6 +69,18 @@
     </Skills>
     <Items>
       <Item name="Assistant ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp D"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Top Secret Cover"/>
 		<Item name="Coalition Assistant"/>
@@ -85,6 +113,17 @@
     </Skills>
     <Items>
       <Item name="Security ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp E"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Top Secret Cover"/>
 		<Item name="Coalition Security"/>
@@ -120,6 +159,16 @@
     </Skills>
     <Items>
       <Item name="Doctor ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp D"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Coalition Doctor"/>
 		<Item name="Basic Emergency Protocol"/>
@@ -149,6 +198,14 @@
     </Skills>
     <Items>
       <Item name="Engineer ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+		<Item name="Ration Stamp C"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Coalition Engineer"/>
 		<Item name="Basic Emergency Protocol"/>
@@ -177,6 +234,13 @@
     </Skills>
     <Items>
       <Item name="Mechanic ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Coalition Mechanic"/>
 		<Item name="Basic Emergency Protocol"/>
@@ -205,6 +269,13 @@
     </Skills>
     <Items>
       <Item name="Scientist ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+      </Item>
 	  <Item name="Clipboard">
 		<Item name="Basic Emergency Protocol"/>
       </Item> 
@@ -229,13 +300,19 @@
     </Skills>
     <Items>
       <Item name="Cook ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Coalition Cook"/>
 		<Item name="Basic Emergency Protocol"/>
       </Item> 
 	  <Item name="Frying Pan"/>
-	  <Item name="Crewmember Cap B" equip="true"/>
-	  <Item name="Crewmember Jumper B"/>
+	  <Item name="Crewmember Toque Blanche"/>
 	  <Item name="Crewmember Trousers A" equip="true"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
@@ -255,6 +332,12 @@
     </Skills>
     <Items>
       <Item name="Seaman ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+      </Item>
 	  <Item name="Clipboard">
         <Item name="Coalition Seamen"/>
 		<Item name="Basic Emergency Protocol"/>
@@ -285,6 +368,9 @@
     <Items>
       <Item name="Prisoner ID Card" equip="true"/>
 	  <Item name="Prisoner Jumpsuit A" equip="true"/>
+	  <Item name="Ration Stamp A"/>
+	  <Item name="Ration Stamp A"/>
+	  <Item name="Ration Stamp A"/>
 	  <!-- <Item name="Handcuffs" equip="true"/> -->
     </Items>
   </Job>
@@ -300,7 +386,19 @@
 	  <Skill name="Science" level="5,30"/>
     </Skills>
     <Items>
-      <Item name="Seaman ID Card" equip="true"/>
+      <Item name="Mercenary ID Card" equip="true"/>
+	  <Item name="Wallet">
+        <Item name="Ration Stamp A"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp B"/>
+		<Item name="Ration Stamp C"/>
+      </Item>
+	  <Item name="Dart Holder">
+		<Item name="Water Dart"/>
+		<Item name="Water Dart"/>
+		<Item name="Water Dart"/>
+		<Item name="Water Dart"/>
+	  </Item>
 	  <Item name="Light Ballistic Vest" equip="true"/>
 	  <Item name="Armoured Gasmask" equip="true"/>
 	  <Item name="Ballistic Leggings" equip="true"/>

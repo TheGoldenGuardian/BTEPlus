@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Character name="Red Robot" humanoid="true" health="250" doesbleed="false" usebloodparticles="false">
+  
+  <name firstname="Content/Characters/Human/firstnames.txt" lastname="Content/Characters/Human/lastnames.txt"/>
+  
+  <ai 
+    combatstrength="90"
+    attackpriorityhumans="0.0"
+	attackpriorityrooms="0.0"
+    attackpriorityweaker="500"
+    attackprioritystronger="100"
+    sight="1.5"
+    hearing="1.5"
+    attackcooldown="5"/>
+  
+  <ragdoll headposition="154" torsoposition="115" 
+           stepsize="42.0, 12.0"
+           walkanimspeed="4.58"
+           movementlerp="0.4"
+           legtorque="15.0"
+           thightorque="-5.0"
+           walkspeed="1" swimspeed="1.7"
+           runspeedmultiplier="2.5" swimspeedmultiplier="1"
+           colliderheightfromfloor="55"
+           impacttolerance="120">
+
+    <collider height="55" radius="15"/>
+    <collider height="40" radius="15"/>
+    
+    <!-- head -->
+    <limb id="0" radius="13" mass = "6" type="Head" attackpriority="2">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/head.png" sourcerect="1,1,37,38" depth="0.04" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedhead.png" sourcerect="1,1,37,38" origin="0.5,0.5"/>
+	  <attack range="70" damagerange="35" duration="0.1" bleedingdamage="0.1" damage="5" stun="2.5" damagetype="Blunt"
+			  targetforce="500" force="10" applyforceonlimbs="0" torque="-10">
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="50" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="50" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="5" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="5" stun="-2.5" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+      </attack>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+	
+	<!-- face -->
+    <limb id="13" radius="1" type="Tail">
+	  <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="0,0,1,1" depth="0.038" origin="0.5,0.5"/>
+    </limb>
+
+    <!-- body -->
+    <limb id="1" radius="14" height="21" mass="20" type="torso" attackpriority="3">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/torso.png" sourcerect="0,0,29,58" depth="0.05" origin="0.5,0.6"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedtorso.png" sourcerect="0,0,29,58" origin="0.5,0.6"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="12" radius="13" mass="20" type="Waist">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="0,0,32,29" depth="0.045" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="0,0,32,29" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+
+    <!-- left arm -->
+    <limb id="2" radius="8" height="20" mass="3" type="LeftArm">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/torso.png" sourcerect="30,2,17,39" depth="0.15" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedtorso.png" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="3" radius="6" height="26" mass="3" type="LeftHand" pullpos="0.0,-18.0">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/torso.png" sourcerect="49,2,13,47" depth="0.16" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedtorso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+
+    <!-- right arm -->
+    <limb id="4" radius="8" height="20" mass="3" type="RightArm">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/torso.png" sourcerect="30,2,17,39" depth="0.01" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedtorso.png" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="5" radius="6" height="26" mass="3" type="RightHand" pullpos="0.0,-18.0">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/torso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedtorso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+
+    <!-- left leg -->
+    <limb id="6" radius="10" height="30" mass="8" type="LeftThigh">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="0,32,26,48" depth="0.15" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="7" radius="6" height="39" mass="5" type="LeftLeg">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="32,0,22,50" depth="0.16" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="8" radius="5" height="13" mass="2" type ="LeftFoot" flip="true" pullpos="-5.0,0.0">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="35,53,16,25" depth="0.17" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="35,53,16,25" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <sound tag="footstep_gear"/>
+    </limb>
+  
+    <!-- right leg -->
+    <limb id="9" radius="10" height="30" mass="8" type="RightThigh">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="0,32,26,48" depth="0.11" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="10" radius="6" height="39" mass="5" type="RightLeg">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="32,0,22,50" depth="0.12" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </limb>
+    <limb id="11" radius="5" height="13" mass="2" type ="RightFoot" flip="true" pullpos="-5.0,0.0">
+      <sprite texture="Mods/BTEPlus/Characters/RedRobot/legs.png" sourcerect="35,53,16,25" depth="0.13" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RedRobot/damagedlegs.png" sourcerect="35,53,16,25" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <sound tag="footstep_gear"/>
+    </limb>
+
+    <!-- head to body -->
+    <joint limb1="0" limb1anchor="0,-7" limb2="1" limb2anchor="-1,26" lowerlimit="-90" upperlimit="45" canbesevered="true"/>
+    <joint limb1="1" limb1anchor="0,-17" limb2="12" limb2anchor="0,7" lowerlimit="-10" upperlimit="10" canbesevered="false"/>
+
+    <!-- body to left arm -->
+    <joint limb1="1" limb1anchor="-3,14" limb2="2" limb2anchor="0,12"/>
+    <joint limb1="2" limb1anchor="0,-16" limb2="3" limb2anchor="-2,19" lowerlimit="5" upperlimit="170" canbesevered="true"/>
+    <!-- body to right arm -->
+    <joint limb1="1" limb1anchor="-3,14" limb2="4" limb2anchor="0,12"/>
+    <joint limb1="4" limb1anchor="0,-16" limb2="5" limb2anchor="-2,19" lowerlimit="5" upperlimit="170" canbesevered="true"/>
+
+    <!-- body to left leg -->
+    <joint limb1="12" limb1anchor="0,-1" limb2="6" limb2anchor="0,14" lowerlimit="-30" upperlimit="120" canbesevered="true"/>
+    <joint limb1="6" limb1anchor="0,-15" limb2="7" limb2anchor="0,20" lowerlimit="-120" upperlimit="0" canbesevered="true"/>
+    <joint limb1="7" limb1anchor="-3,-21" limb2="8" limb2anchor="5,7" lowerlimit="20" upperlimit="90" canbesevered="true"/>
+
+    <!-- body to right leg -->
+    <joint limb1="12" limb1anchor="0,-1" limb2="9" limb2anchor="0,14" lowerlimit="-30" upperlimit="120" canbesevered="true"/>
+    <joint limb1="9" limb1anchor="0,-15" limb2="10" limb2anchor="0,20" lowerlimit="-120" upperlimit="0" canbesevered="true"/>
+    <joint limb1="10" limb1anchor="-3,-21" limb2="11" limb2anchor="5,7" lowerlimit="20" upperlimit="90" canbesevered="true"/>
+
+  </ragdoll>
+</Character>
+

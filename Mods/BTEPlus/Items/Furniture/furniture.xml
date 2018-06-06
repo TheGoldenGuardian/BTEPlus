@@ -1,0 +1,10 @@
+<Items>
+	<Item
+    name="Bed"
+	category="Structure"
+    linkable="true"
+    pickdistance ="150">
+    
+    <sprite texture="furniture.png" sourcerect="0,0,173,64" depth = "0.9"/>
+  </Item>
+</Items>

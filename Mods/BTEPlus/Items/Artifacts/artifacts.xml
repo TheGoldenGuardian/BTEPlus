@@ -122,6 +122,56 @@
   </Item>
   
   <Item
+    name="Calyxion Artifact"
+    category="Alien"
+    Tags="alien,rtfct"
+    pickdistance="150"
+    indestructible="true">
+
+    <Sprite texture="calyxion.png" depth="0.7" sourcerect="0,0,65,54"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+	  <Item name="Aluminum Bar"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+    
+    <Body width="65" height="54" density="20" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="OnActive" target="Character" HuskInfectionState="0.05">
+		<Conditional HuskInfectionState="gt 0.01"/>
+		<sound file="Calyxion.ogg" type="OnActive" range="600" loop="true"/>
+      </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Inficiat Artifact"
+    category="Alien"
+    Tags="alien,rtfct"
+    pickdistance="150"
+    indestructible="true">
+
+    <Sprite texture="inficiat.png" depth="0.7" sourcerect="0,0,53,52"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Velonaceps Caylx Eggs"/>
+      <Item name="Biomass"/>
+	  <Item name="Biomass"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+    
+    <Body width="53" height="52" density="17" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="OnActive" target="Character" HuskInfectionState="0.01"/>
+	  <sound file="Inficiat.ogg" type="OnActive" range="600" loop="true"/>
+	</Holdable>
+  </Item>
+  
+  <Item
     name="Grinder Artifact"
     category="Alien"
     Tags="alien,rtfct">

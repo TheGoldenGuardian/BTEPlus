@@ -901,6 +901,33 @@
   </Item>
   
   <Item
+    name="A drawing of an Scorpion"
+    category="Misc"
+    tags="smallitem,docs"
+    description="A piece of paper from a notebook containing a drawing of an Scorpion."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Paper Boat"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Misc/Documents.png" sourcerect="58,0,24,40" depth="0.81"/>
+
+    <Body width="23" height="33" density="10.02"/>
+	
+	<Radar range="0" powerconsumption="10" drawhudwhenequipped="true" displaybordersize="0.2">
+	  <GuiFrame rect="0,0,0.5,0.7" alignment="Center" style="ItemUI" color="0.0,0.0,0.0,0.0"/>
+      <PingCircle texture="Content/Items/Engine/pingCircle.png" origin="0.5,0.5"/>
+      <ScreenOverlay texture="Mods/BTE/Items/Misc/drawScorpionBoi.png" origin="0.65,0.45"/>
+	  <Blip texture="Content/Items/Engine/radarBlip.png" origin="0.5,0.5"/>
+    </Radar>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true" holdpos="50,0" aimpos="50,0" handle1="-5,0"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="50,0" handle1="-5,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
     name="A note for the Captain"
     category="Misc"
     tags="smallitem,docs"
@@ -1037,6 +1064,119 @@
 	
 	<Holdable slots="RightHand+LeftHand" controlpose="true"
               aimpos="50,0" handle1="-2,0" handle2="10,50"/>
+  </Item>
+  
+  <Item
+    name="Wallet"
+    category="Equipment"
+    tags="smallitem"
+    description="A soft polycarbonate case used to carry personal items such as food stamps, pictures and identification documents."
+	>
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver" outcondition="0.25"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Misc/Money.png" sourcerect="75,14,21,16" depth="0.83"/>
+
+    <Body width="18" height="12" density="10.3"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+	
+	<ItemContainer capacity="18" hideitems="true">
+      <Containable name="wllt"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+	name="Ration Stamp A"
+    category="Equipment"
+	description="A ration card issued by the Coalition to be used in Vending Machines to obtain a Protein Bar."
+	Tags="smallitem,wllt,docs">
+	
+	<Deconstruct time="25">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Fulgurium Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Misc/Money.png" sourcerect="16,17,16,10" depth="0.82"/>
+
+	<Body width="13" height="6" density="10.1"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+	name="Ration Stamp B"
+    category="Equipment"
+	description="A ration card issued by the Coalition to be used in Vending Machines to obtain a bags of Chips."
+	Tags="smallitem,wllt,docs">
+	
+	<Deconstruct time="25">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Fulgurium Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Misc/Money.png" sourcerect="32,17,16,10" depth="0.82"/>
+
+	<Body width="13" height="6" density="10.1"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+	name="Ration Stamp C"
+    category="Equipment"
+	description="A ration card issued by the Coalition to be used in Vending Machines to obtain an Energy Drink."
+	Tags="smallitem,wllt,docs">
+	
+	<Deconstruct time="25">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Fulgurium Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Misc/Money.png" sourcerect="0,3,16,10" depth="0.82"/>
+
+	<Body width="13" height="6" density="10.1"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+	name="Ration Stamp D"
+    category="Equipment"
+	description="A ration card issued by the Coalition to be used in Vending Machines to obtain a bar of Chocolate."
+	Tags="smallitem,wllt,docs">
+	
+	<Deconstruct time="25">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Fulgurium Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Misc/Money.png" sourcerect="16,3,16,10" depth="0.82"/>
+
+	<Body width="13" height="6" density="10.1"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+	name="Ration Stamp E"
+    category="Equipment"
+	description="A ration card issued by the Coalition to be used in Vending Machines to obtain a single cigarette."
+	Tags="smallitem,wllt,docs">
+	
+	<Deconstruct time="25">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Fulgurium Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Misc/Money.png" sourcerect="32,3,16,10" depth="0.82"/>
+
+	<Body width="13" height="6" density="10.1"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
   </Item>
   
   <Item

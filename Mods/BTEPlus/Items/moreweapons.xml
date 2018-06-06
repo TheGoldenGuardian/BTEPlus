@@ -522,7 +522,7 @@
     <Body width="18" height="1" density="30"/>
 
 	<Pickable slots="Any"/>
-    <Projectile hitscan="true" removeonhit="true">
+    <Projectile hitscan="true" removeonhit="false" sticktocharacters="true">
       <Attack damage="25" bleedingdamage="3" stun="0.5" targetforce="10" damagetype="Slash"/>
     </Projectile>
   </Item>

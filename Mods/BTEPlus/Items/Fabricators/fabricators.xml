@@ -195,6 +195,9 @@
       </fabricableitem>
 	  
 	  <fabricableitem name="Oxygen Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
+	  <fabricableitem name="Oxygen Bottle" requireditems="Aluminium Sliver" outcondition="0.0" requiredtime="7.5"/>
+	  
+	  <fabricableitem name="Breaching Kit" requireditems="Polycarbonate Bar, Steel Sliver" outcondition="0.0" requiredtime="12"/>
 	  
 	  <fabricableitem name="Radio" requireditems="Polycarbonate Sliver, FPGA Circuit" requiredtime="10">
 	    <RequiredSkill name="Electrical Engineering" level="15"/>
@@ -757,16 +760,16 @@
 	  <fabricableitem name="Crewmember Cargo Trousers A" requireditems="Crewmember Cargo Trousers B" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Cargo Trousers B" requireditems="Crewmember Cargo Trousers A" requiredtime="2"/>
 	  
-	  <fabricableitem name="German Cap" requireditems="Captain's Cap A" requiredtime="2"/>
-	  <fabricableitem name="German Cap" requireditems="Captain's Cap B" requiredtime="2"/>
-	  <fabricableitem name="German Uniform A" requireditems="Captain's Uniform A" requiredtime="2"/>
-	  <fabricableitem name="German Uniform B" requireditems="Captain's Uniform B" requiredtime="2"/>
-	  <fabricableitem name="German Uniform A" requireditems="German Uniform B" requiredtime="2"/>
-	  <fabricableitem name="German Uniform B" requireditems="German Uniform A" requiredtime="2"/>
+	  <fabricableitem name="German Officer Cap" requireditems="Captain's Cap A" requiredtime="2"/>
+	  <fabricableitem name="German Officer Cap" requireditems="Captain's Cap B" requiredtime="2"/>
+	  <fabricableitem name="German Officer Uniform A" requireditems="Captain's Uniform A" requiredtime="2"/>
+	  <fabricableitem name="German Officer Uniform B" requireditems="Captain's Uniform B" requiredtime="2"/>
+	  <fabricableitem name="German Officer Uniform A" requireditems="German Officer Uniform B" requiredtime="2"/>
+	  <fabricableitem name="German Officer Uniform B" requireditems="German Officer Uniform A" requiredtime="2"/>
 	  
-	  <fabricableitem name="Captain's Cap A" requireditems="German Cap" requiredtime="2"/>
-	  <fabricableitem name="Captain's Uniform A" requireditems="German Uniform A" requiredtime="2"/>
-	  <fabricableitem name="Captain's Uniform A" requireditems="German Uniform B" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap A" requireditems="German Officer Cap" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="German Officer Uniform A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="German Officer Uniform B" requiredtime="2"/>
 	  
 	  <fabricableitem name="Ragged Beanie" requireditems="Crewmember Beanie" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Beanie" requireditems="Ragged Beanie" requiredtime="2"/>
@@ -831,14 +834,15 @@
 		<RequiredSkill name="Construction" level="30"/>
 		<RequiredSkill name="Weapons" level="30"/>
 	  </fabricableitem>
-	  <fabricableitem name="Glowstick Headlight" requireditems="Copper Coil, Glowstick" requiredtime="5"/>
-    </Fabricator>
+	    <fabricableitem name="Glowstick Headlight" requireditems="Copper Coil, Glowstick" requiredtime="5"/>
+	    <fabricableitem name="t1/2 Glasses" requireditems="Polycarbonate Sliver" requiredtime="5"/>
+      </Fabricator>
 
     <ItemContainer capacity="2" canbeselected="true" hideitems="true" hudpos="0.15, 0.6" slotsperrow="1">
-	  <Containable name="clothing,Food Can"/>
+	  <Containable name="clothing,Food Can,Glowstick,Copper Coil,Shiv,Polycarbonate Sliver"/>
 	</ItemContainer>
     <ItemContainer capacity="2" canbeselected="true" hideitems="true" hudpos="0.85, 0.6" slotsperrow="1">
-	  <Containable name="clothing,Shiv,Glowstick,Copper Coil"/>
+	  <Containable name="clothing,Food Can,Glowstick,Copper Coil,Shiv,Polycarbonate Sliver"/>
 	</ItemContainer>
   </Item>
 
@@ -892,6 +896,10 @@
         <Item name="Polycarbonate Sliver" mincondition="0.5" usecondition="true"/>
 		<Item name="Ethanol" mincondition="0.25" usecondition="true"/>
 		<RequiredSkill name="Medical" level="20"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Sugar" requireditems="Biomass" outcondition="0.5" requiredtime="15">
+        <RequiredSkill name="Medical" level="20"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Ethanol" requireditems="Sugar" outcondition="0.5" requiredtime="15">
@@ -1207,6 +1215,10 @@
 		<Item name="Beer" mincondition="0.75" usecondition="true"/>
 		<RequiredSkill name="Cooking" level="50"/>
       </fabricableitem>
+	  
+	  <fabricableitem name="Ethanol" requireditems="Sugar" outcondition="0.4" requiredtime="20">
+        <RequiredSkill name="Cooking" level="30"/>
+      </fabricableitem>
     </Fabricator>
 
     <ConnectionPanel selectkey="Action" canbeselected = "true">
@@ -1217,6 +1229,41 @@
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
   </Item>
+  
+  <Item
+		name="Vending Machine"
+		category="Machine"
+		Tags="cntnr"
+		linkable="true">
+    
+      <Sprite texture="Fabricators.png" depth="0.8" sourcerect="130,129,73,95"/>
+	  
+	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+      <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="130,129,73,95" alpha="1.0"/>
+	  <StatusEffect type="Always" target="This" IsOn="true"/>
+    </LightComponent>
+
+	  <Fabricator canbeselected="true" powerconsumption="200">
+
+      <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
+
+      <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
+
+	  <fabricableitem name="Protein Bar" requireditems="Ration Stamp A" requiredtime="2"/>
+	  <fabricableitem name="Chips" requireditems="Ration Stamp B" requiredtime="2"/>
+	  <fabricableitem name="Energy Drink" requireditems="Ration Stamp C" requiredtime="2"/>
+	  <fabricableitem name="Chocolate" requireditems="Ration Stamp D" requiredtime="2"/>
+	  <fabricableitem name="Cigarette" requireditems="Ration Stamp E" requiredtime="2"/>
+    </Fabricator>
+		
+		<ConnectionPanel selectkey="Action" canbeselected="true">
+			<requireditem name="Screwdriver" type="Equipped"/>
+			<output name="power_in"/>
+		</ConnectionPanel>
+
+		<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.15, 0.7" slotsperrow="1"/>
+		<ItemContainer capacity="5" canbeselected="true" hideitems="true" hudpos="0.85, 0.7" slotsperrow="1"/>
+	</Item>
 
   <Item
     name="Deconstructor"

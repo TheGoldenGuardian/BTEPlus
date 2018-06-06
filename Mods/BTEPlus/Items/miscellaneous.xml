@@ -17,7 +17,7 @@
     <Body width="18" height="6" density="15"/>
 	
 	<WifiComponent range="25000.0" LinkToChat="true">
-      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>
     </WifiComponent>
 
     <ItemContainer capacity="1" hideitems="true">
@@ -59,6 +59,63 @@
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
     </Wearable> 
+  </Item>
+  
+  <Item
+    name="Crewmember Toque Blanche"
+	aliases="Chef's Hat,Chef Hat,Cook Hat"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Assistant's undeniable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="chefHat.png" depth="0.6" sourcerect="0,0,30,27"/>
+
+    <Body width="29" height="26" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="chefHat.png" limb="Head" depthlimb="Tail" origin="0.55,1.15" sourcerect="0,0,30,27"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.95" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.95" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Apron"
+	description="[Incomplete]"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="8">
+	  <Item name="Polycarbonate Sliver"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="chefApron.png" sourcerect="16,63,46,14" depth="0.6"/>
+
+    <Body width="45" height="13" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="chefApron.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
+	  
+      <sprite texture="chefApron.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+      <sprite texture="chefApron.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.01" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.95"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.95" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.85" deflectprojectiles="false"/>
+    </Wearable>
+  	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
   </Item>
   
   <Item
@@ -130,6 +187,7 @@
     <Holdable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,5" handle2="0,-5">
     </Holdable>
   </Item>
+  
   <Item
     name="Baguette"
 	aliases="Longbread,Long Bread,Coolbread, Cool Bread"
@@ -305,6 +363,111 @@
 	
 	<ItemContainer capacity="50" canbeselected="true" hideitems="true">
       <Containable name="PDW Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Dart Holder"
+    category="Equipment"
+    Tags="cntnr,meditem"
+    description="A small polycarbonate dart holder"
+    canbepicked="true">
+   
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/miscellaneous.png" sourcerect="156,53,16,20" depth="0.55"/>
+
+    <Body width="16" height="20" density="12.5"/>
+
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,8.5" handle2="0,8.5" holdangle="90"/>
+	
+	<ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="0,4.5" iteminterval="0,-4">
+      <Containable name="Medical Dart,Water Dart"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Lantern"
+	aliases="Hand Lamp"
+    category="Equipment"
+    Tags="smallitem,tool"
+	description="A portable hand-held electric light source."
+	cargocontainername="Electronics Shipping Box"
+    price="200">
+
+    <Deconstruct time="18">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Copper Coil"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="139,52,16,43" depth="0.55"/>
+
+    <Body width="15" height="40" density="11.5"/>
+
+    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0" range="600" powerconsumption="10" IsOn="true">
+      <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0"/>
+    </LightComponent>
+    
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell, Fulgurium Battery Cell">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="0,19" handle2="0,19">
+      <StatusEffect type="OnActive" target="Contained" Condition="-0.1"/>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Black Tracksuit"
+	aliases="Tracksuit A"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="Cheeki breeki, comrade!">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture ="tracksuitBlackLegs.png" sourcerect="0,71,52,13" depth="0.6"/>
+
+    <Body width="50" height="12" density="12"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="tracksuitBlackTop.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="tracksuitBlackTop.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="tracksuitBlackTop.png" limb="LeftHand" sourcerect="47,45,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="tracksuitBlackTop.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="tracksuitBlackTop.png" limb="LeftArm" sourcerect="30,45,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="tracksuitBlackLegs.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="tracksuitBlackLegs.png" limb="RightThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="tracksuitBlackLegs.png" limb="LeftThigh" sourcerect="53,49,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="tracksuitBlackLegs.png" limb="RightLeg" sourcerect="86,0,21,50" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="tracksuitBlackLegs.png" limb="LeftLeg" sourcerect="86,50,21,50" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="trackShoes.png" limb="RightFoot" sound="footstep_metal" sourcerect="0,0,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="trackShoes.png" limb="LeftFoot" sound="footstep_metal" sourcerect="17,0,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
     </ItemContainer>
   </Item>
 </Items>

@@ -172,6 +172,7 @@
     name="Metal Crate"
 	Tags="cntnr"
     linkable="true"
+	fireproof="true"
     pickdistance ="150"
 	price="250">
 	
@@ -180,9 +181,9 @@
       <Item name="Steel Block"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="357,282,56,51"/>
+    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="348,283,65,60"/>
 
-    <Body width="54" height="49" density="50"/>
+    <Body width="60" height="55" density="50"/>
 
     <Holdable slots="RightHand+LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-25,14" handle2="25,14"/>
 
@@ -195,6 +196,7 @@
     name="Metal Footlocker"
 	Tags="cntnr"
     linkable="true"
+	fireproof="true"
     pickdistance ="150"
 	price="250">
 	
@@ -264,6 +266,7 @@
     name="Cargo Container"
 	Tags="cntnr"
     linkable="true"
+	fireproof="true"
     pickdistance ="50">
     
     <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.79" sourcerect="0,0,413,185"/>
@@ -279,6 +282,7 @@
     name="Refrigerated Cargo Container"
 	Tags="cntnr"
     linkable="true"
+	fireproof="true"
     pickdistance ="50">
 	
 	<Sprite texture ="CargoFridge.png" depth="0.79" sourcerect="0,0,413,185"/>
@@ -417,6 +421,33 @@
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/BatHit.ogg"/>
         <Explosion range="70" damage="2" stun="3.4" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="Steel Сhair"
+	linkable="true"
+    pickdistance="150"
+    description="A sturdy but uncomfortable steel chair."
+	impacttolerance="4"
+	price="150">
+	
+	<Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="183,278,53,98"/>
+	
+	<Body width="52" height="97" density="14"/>
+	
+	<Holdable slots="RightHand+LeftHand" holdpos="40,-30" aimpos="45,-20" handle1="-30,14" handle2="30,-7"/>
+	
+	<Throwable slots="RightHand+LeftHand" throwforce="3.0">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/BatHit.ogg"/>
+        <Explosion range="70" damage="1" stun="2" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
     </Throwable>
   </Item>

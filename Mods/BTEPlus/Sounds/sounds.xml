@@ -144,6 +144,11 @@
   <footstep_gear file="Mods/BTEPlus/Sounds/Step/Gear/gear4.ogg"/>
   <footstep_gear file="Mods/BTEPlus/Sounds/Step/Gear/gear5.ogg"/>
   <footstep_gear file="Mods/BTEPlus/Sounds/Step/Gear/gear6.ogg"/>
+  
+  <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal1a.ogg"/>
+  <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal1b.ogg"/>
+  <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal2a.ogg"/>
+  <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal2b.ogg"/>
 
   <footstep_armor file="Content/Sounds/Footsteps/Armor/armor-01.ogg"/>
   <footstep_armor file="Content/Sounds/Footsteps/Armor/armor-02.ogg"/>
@@ -183,7 +188,7 @@
   <music file="Mods/BTEPlus/Sounds/Music/DocksCombat1.ogg" type="monster" priorityrange="30,90"/>
   
   <music file="Content/Sounds/Music/amb_JD_drone_clattering_machine.ogg" type="deep"/>
-  <music file="Mods/BTEPlus/Sounds/Music/DocksCombat1.ogg" type="deep"/>
+  <music file="Mods/BTEPlus/Sounds/Music/Gemini.ogg" type="deep"/>
   <music file="Content/Sounds/Music/Controlled Chaos.ogg" type="ruins"/>
   <music file="Content/Sounds/Music/Controlled Chaos 2.ogg" type="ruins"/>
 </sounds>

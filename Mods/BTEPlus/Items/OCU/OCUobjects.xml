@@ -26,4 +26,36 @@
       <output name="power_in"/>
     </ConnectionPanel>
 	</Item>
+	
+  <Item
+    name="Science Counter Short"
+	Tags="cntnr"
+	linkable="true"
+	category="Misc"
+    pickdistance="150">
+
+    <Sprite texture="ScienceTables.png" depth="0.53" sourcerect="0,0,136,85"/>
+	
+	<Body width="136" height="85" density="18"/>
+	
+	<ItemContainer capacity="4" canbeselected="true" hideitems="true">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Science Counter Long"
+	Tags="cntnr"
+	linkable="true"
+	Category="Misc"
+    pickdistance="150">
+
+    <Sprite texture="ScienceTables.png" depth="0.53" sourcerect="0,85,260,85"/>
+	
+	<Body width="260" height="85" density="18"/>
+	
+	<ItemContainer capacity="4" canbeselected="true" hideitems="true">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
 </Items>

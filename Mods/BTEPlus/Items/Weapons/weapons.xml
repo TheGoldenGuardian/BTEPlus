@@ -15,7 +15,7 @@
       <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Knives.png" sourcerect="0,0,52,10" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/Knives.png" sourcerect="0,0,52,10" depth="0.55"/>
     
     <Body width="42" height="8" density="25"/>
 	
@@ -61,7 +61,7 @@
       <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="Knives.png" sourcerect="0,14,40,8" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/Knives.png" sourcerect="0,14,40,8" depth="0.55"/>
     
     <Body width="38" height="6" density="15"/>
 	
@@ -112,7 +112,7 @@
 	  <Item name="Aluminium Sliver" outcondition="0.5"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="31,78,25,8" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="31,78,25,8" depth="0.55"/>
 
     <Body width="23" height="6" density="10.1"/>
 
@@ -146,7 +146,7 @@
       <Item name="Spare Parts"/>
     </Deconstruct>
   
-    <Sprite texture="weapons.png" sourcerect="0,0,98,33" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="0,0,98,33" depth="0.55"/>
 
     <Body width="90" height="30" density="40"/>
     
@@ -182,7 +182,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,26,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,26,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="9.8"/>
 
@@ -223,7 +223,7 @@
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,34,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,34,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="16"/>
 
@@ -264,7 +264,7 @@
       <Item name="Copper Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,42,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,42,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="18"/>
 
@@ -305,7 +305,7 @@
       <Item name="Bronze Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,34,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,34,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="18"/>
 
@@ -348,7 +348,7 @@
       <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,50,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,50,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="20"/>
 
@@ -388,7 +388,7 @@
       <Item name="Uranium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,66,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,66,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="28"/>
 
@@ -428,7 +428,7 @@
       <Item name="Fulgurium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,58,65,7" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,58,65,7" depth="0.55"/>
 
     <Body width="64" height="5" density="10"/>
 
@@ -461,7 +461,7 @@
 	  <Item name="Copper Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="SpearGun.png" sourcerect="0,73,65,9" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,73,65,9" depth="0.55"/>
 
     <Body width="64" height="5" density="10.2"/>
 
@@ -522,7 +522,7 @@
   
   <Item
     name="Spear Gun"
-	aliases="Speargun"
+	aliases="Mods/BTE/Items/Weapons/SpearGun"
     category="Equipment"
 	tags="bigitem,weapon"
 	description="A military pneumatic weapon used by security. It can hold up to three spears and it can be deadly in the right, or wrong hands."
@@ -536,7 +536,7 @@
 	  <Item name="Spare Parts"/>
     </Deconstruct>
   
-    <Sprite texture="SpearGun.png" sourcerect="0,0,98,25" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SpearGun.png" sourcerect="0,0,98,25" depth="0.55"/>
 
     <Body width="90" height="30" density="50"/>
 	
@@ -573,7 +573,7 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="0,44,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="0,44,33,34" depth="0.55"/>
 
     <Body radius="12" density="9.7" friction="0.95"/>
 
@@ -599,7 +599,7 @@
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="34,44,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="34,44,33,34" depth="0.55"/>
 
     <Body radius="12" density="16" friction="0.95"/>
 
@@ -624,7 +624,7 @@
       <Item name="Copper Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="0,78,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="0,78,33,34" depth="0.55"/>
 
     <Body radius="12" density="17" friction="0.95"/>
 
@@ -650,7 +650,7 @@
       <Item name="Bronze Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="34,44,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="34,44,33,34" depth="0.55"/>
 
     <Body radius="12" density="17" friction="0.95"/>
 
@@ -677,7 +677,7 @@
       <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="34,78,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="34,78,33,34" depth="0.55"/>
 
     <Body radius="12" density="18" friction="0.95"/>
 
@@ -702,7 +702,7 @@
       <Item name="Uranium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="34,112,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="34,112,33,34" depth="0.55"/>
 
     <Body radius="12" density="20" friction="0.95"/>
 
@@ -727,7 +727,7 @@
       <Item name="Fulgurium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="SawGun.png" sourcerect="0,112,33,34" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="0,112,33,34" depth="0.55"/>
 
     <Body radius="12" density="10" friction="0.1"/>
 
@@ -754,7 +754,7 @@
 	  <Item name="Spare Parts"/>
     </Deconstruct>
   
-    <Sprite texture ="SawGun.png" sourcerect="0,0,66,41" depth="0.55"/>
+    <Sprite texture ="Mods/BTE/Items/Weapons/SawGun.png" sourcerect="0,0,66,41" depth="0.55"/>
 
     <Body width="74" height="48" density="50"/>
     
@@ -783,7 +783,7 @@
     name="Tactical Grenade"
 	aliases="Nade,Grenade"
     category="Equipment"
-	tags="smallitem,weapon"
+	tags="smallitem,weapon,grenade"
 	description="The tactical grenade is an empty steel casing with a screw-off cap and a trigger mechanism that ignites the containing payload after a certain amount of time."
     canuseonself="true"
 	impacttolerance="3"
@@ -795,8 +795,8 @@
 	  <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="117,68,11,21" depth="0.55"/>
-	<BrokenSprite texture="weapons.png" sourcerect="104,68,11,21" depth="0.55" maxcondition="0"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="117,68,11,21" depth="0.55"/>
+	<BrokenSprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="104,68,11,21" depth="0.55" maxcondition="0"/>
 	
     <Body width="11" height="24" density="20" friction="0.95"/>
 	
@@ -833,7 +833,7 @@
     name="HTM"
 	aliases="HTM Grenade"
     category="Equipment"
-	tags="smallitem,weapon"
+	tags="smallitem,weapon,grenade"
 	description="HTM or Hand Thrown Munition, is an enhanced grenade with an electronic priming mechanism that ignites the containing payload after a certain amount of time."
 	canuseonself="true"
 	impacttolerance="3"
@@ -845,7 +845,7 @@
 	  <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="115,53,13,14" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="115,53,13,14" depth="0.55"/>
 
     <Body radius="6" density="20" friction="0.95"/>
 	
@@ -882,7 +882,7 @@
     name="Molotov Cocktail"
 	aliases="Incendium Grenade,Molotov"
     category="Equipment"
-    tags="smallitem,weapon"
+    tags="smallitem,weapon,grenade"
 	description="This crude incendiary bomb uses thermite for an easy ignition method, making it really unstable."
 	impacttolerance="4">
 	
@@ -896,7 +896,7 @@
 	  <Item name="Thermite Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="0,139,10,45" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="0,139,10,45" depth="0.55"/>
 
     <Body width="18" height="28" density="18"/>
 
@@ -929,8 +929,8 @@
 	  <Item name="Thermite Powder" mincondition="0.99" outcondition="0.25"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="108,100,20,28" depth="0.55"/>
-	<BrokenSprite texture="weapons.png" sourcerect="108,129,20,28" depth="0.55" maxcondition="0" fadein="true"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="108,100,20,28" depth="0.55"/>
+	<BrokenSprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="108,129,20,28" depth="0.55" maxcondition="0" fadein="true"/>
 
     <Body width="16" height="22" density="18" friction="0.95"/>
 	
@@ -1172,7 +1172,7 @@
 	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
     </Deconstruct>
 
-    <Sprite texture="BallisticGuns.png" sourcerect="94,5,10,4" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="94,5,10,4" depth="0.55"/>
 
     <Body width="6" height="2" density="20"/>
 
@@ -1200,7 +1200,7 @@
 	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
     </Deconstruct>
 
-    <Sprite texture="BallisticGuns.png" sourcerect="94,0,10,4" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="94,0,10,4" depth="0.55"/>
 
     <Body width="6" height="2" density="20"/>
 
@@ -1211,8 +1211,23 @@
 	    <Explosion range="50" structuredamage="5" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="5.0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
-		  <Conditional SpeciesName="robot"/>
-		</StatusEffect>
+		<Conditional SpeciesName="robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
+		<Conditional SpeciesName="walker"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
+		<Conditional SpeciesName="carrier"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
+		<Conditional SpeciesName="fractalguardian"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
+		<Conditional SpeciesName="fractalguardian2"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-14" disabledeltatime="true">
+		<Conditional SpeciesName="endworm"/>
+	  </StatusEffect>
     </Projectile>
   </Item>
   
@@ -1232,7 +1247,7 @@
 	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
     </Deconstruct>
 
-    <Sprite texture="BallisticGuns.png" sourcerect="94,10,10,4" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="94,10,10,4" depth="0.55"/>
 
     <Body width="6" height="2" density="20"/>
 
@@ -1270,6 +1285,9 @@
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
 	    <Conditional SpeciesName="fractalguardian2"/>     
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="walker"/>       
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="Character" stun="-40" health="-40" disabledeltatime="true">
 	    <Conditional SpeciesName="carrier"/>       
@@ -1372,7 +1390,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Gauss Pistol Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="20"/>
@@ -1452,7 +1470,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyLoop.ogg" type="OnUse" range="800" loop="true"/>
 	  <RequiredItems name="Gauss Carbine Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
@@ -1535,7 +1553,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="900"/>
 	  <RequiredItems name="Gauss Rifle Magazine" type="Contained" msg="The loaded bar is depleted"/>
       <RequiredSkill name="Weapons" level="60"/>
@@ -1574,7 +1592,7 @@
 	  <Item name="Copper Sliver"/>
     </Deconstruct>
   
-    <Sprite texture="weapons.png" sourcerect="36,160,48,24" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="36,160,48,24" depth="0.55"/>
 
     <Body width="42" height="20" density="25"/>
 	
@@ -1591,7 +1609,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Aluminium Powder,Copper Powder,Bronze Powder,Iron Powder,Uranium Powder,Fulgurium Powder" type="Contained" msg="The loaded powder is depleted"/>
       <RequiredSkill name="Electrical Engineering" level="60"/>
@@ -1629,7 +1647,7 @@
 	  <Item name="Copper Bar"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="0,96,70,13" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="0,96,70,13" depth="0.55"/>
     
     <Body width="68" height="11" density="15"/>
 
@@ -1970,7 +1988,7 @@
 	  <Item name="Steel Block"/>
     </Deconstruct>
     
-    <Sprite texture ="weapons.png" sourcerect="0,35,80,16" depth="0.55"/>
+    <Sprite texture ="Mods/BTE/Items/Weapons/weapons.png" sourcerect="0,35,80,16" depth="0.55"/>
 
     <Body width="76" height="16" density="40"/>
 
@@ -2023,7 +2041,7 @@
       <Item name="Aluminium Block"/>
     </Deconstruct>
 
-    <Sprite texture="weapons.png" sourcerect="0,118,90,8" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/weapons.png" sourcerect="0,118,90,8" depth="0.55"/>
     
     <Body width="95" height="6" density="16"/>
 
@@ -2063,7 +2081,7 @@
       <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="FireAxe.png" depth="0.55" sourcerect="0,0,97,27"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/FireAxe.png" depth="0.55" sourcerect="0,0,97,27"/>
     
     <Body width="95" height="6" density="20"/>
 
@@ -2103,7 +2121,7 @@
 	  <Item name="Spare Parts"/>
     </Deconstruct>
   
-    <Sprite texture="SMSG.png" sourcerect="0,0,90,21" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Weapons/SMSG.png" sourcerect="0,0,90,21" depth="0.55"/>
 
     <Body width="86" height="16" density="40"/>
 	

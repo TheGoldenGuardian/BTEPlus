@@ -6,7 +6,7 @@
 	aliases="HEV Helmet,Power Helmet"
     category="Equipment"
     Tags="meditem,diving"
-	description="A helmet designed to go with the OHU suit, with a reinforced visor and full head protection. Includes a short-range comms device."
+	description="A helmet designed to go with the OCU suit, with a reinforced visor and full head protection. Includes a short-range comms device."
 	cargocontainername="Standard Shipping Box">
 
     <!-- <Deconstruct time="15">
@@ -34,9 +34,16 @@
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
       </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
 	    <Conditional HuskInfectionState="lt 1.0"/>
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
@@ -73,6 +80,7 @@
       <Containable name="Oxygenite Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
     </ItemContainer>  
   </Item>
   
@@ -82,7 +90,7 @@
     category="Equipment"
     tags="diving"
 	fireproof="true"
-	description="A specially crafted suit with titanium plating made for handling artifacts and surviving in harsh Europan conditions."
+	description="A specially crafted suit with titanium plating made for handling artefacts and surviving in harsh Europan conditions."
     price="2750">
 	
 	<!-- <Deconstruct time="30">
@@ -110,20 +118,21 @@
       <sprite texture="OCUsuit.png" limb="RightLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="OCUsuit.png" limb="LeftLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
 
-      <sprite texture="OCUsuit.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="OCUsuit.png" limb="LeftFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="OCUsuit.png" limb="RightFoot" sound="footstep_metalb" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="OCUsuit.png" limb="LeftFoot" sound="footstep_metalb" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
       
-      <StatusEffect type="OnWearing" target="Character" PressureProtection="100" SpeedMultiplier="-0.1" LowPassMultiplier="0.2" disabledeltatime="true"/>
+      <StatusEffect type="OnWearing" target="Character" PressureProtection="100" SpeedMultiplier="-0.2" LowPassMultiplier="0.2" disabledeltatime="true"/>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.125">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.125" disabledeltatime="true">
+	  <StatusEffect type="OnWearing" target="Character" bleeding="-0.125" disabledeltatime="true">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" bleeding="-0.1"/>
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.2" damagesound="DamageMetalBlunt" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.85" bleedingmultiplier="0.15" damagesound="DamageMetalSlash" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="DamageMetalBlunt" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.85" bleedingmultiplier="0.25" damagesound="DamageMetalSlash" deflectprojectiles="true"/>
     </Wearable>
 
     <ItemContainer capacity="1" hideitems="true">
@@ -188,8 +197,6 @@
 	<Deconstruct time="15">
 	  <Item name="Polycarbonate Block"/>
       <Item name="Polycarbonate Sliver"/>
-	  <Item name="Tactical Boot"/>
-	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
     <Sprite texture ="scientistCoat.png" sourcerect="11,61,52,16" depth="0.6"/>

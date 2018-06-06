@@ -12,7 +12,7 @@
   <!-- <Item file="Content/Items/Jobgear/securitygear.xml" /> -->
   <!-- <Item file="Content/Items/Diving/divinggear.xml" /> -->
   <!-- <Item file="Content/Items/Door/doors.xml" /> -->
-  <Item file="Content/Items/Electricity/lights.xml" />
+  <!-- <Item file="Content/Items/Electricity/lights.xml" /> -->
   <!-- <Item file="Content/Items/Electricity/monitors.xml" /> -->
   <!-- <Item file="Content/Items/Electricity/poweritems.xml" /> -->
   <!-- <Item file="Content/Items/Electricity/signalitems.xml" /> -->
@@ -75,8 +75,10 @@
   <Item file="Mods/BTEPlus/Items/Jobgear/crewgear.xml" />
   <!-- <Item file="Mods/BTE/Items/Jobgear/miscgear.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Jobgear/miscgear.xml" />
-  <Item file="Mods/BTE/Items/Diving/divinggear.xml" />
+  <!-- <Item file="Mods/BTE/Items/Diving/divinggear.xml" /> -->
+  <Item file="Mods/BTEPlus/Items/Diving/divinggear.xml" />
   <Item file="Mods/BTE/Items/Door/doors.xml" />
+  <Item file="Mods/BTE/Items/Electricity/lights.xml" />
   <Item file="Mods/BTE/Items/Electricity/monitors.xml" />
   <Item file="Mods/BTE/Items/Electricity/poweritems.xml" />
   <Item file="Mods/BTE/Items/Electricity/signalitems.xml" />
@@ -107,6 +109,7 @@
   <Character file="Mods/BTE/Characters/Endworm/endworm.xml" />
   <Character file="Mods/BTE/Characters/Fractalguardian/fractalguardian.xml" />
   <Character file="Mods/BTE/Characters/Fractalguardian2/fractalguardian2.xml" />
+  <Character file="Mods/BTE/Characters/Walker/walker.xml" />
   <Character file="Mods/BTE/Characters/Teleglitch/teleglitch.xml" />
   <Character file="Mods/BTE/Characters/Teleglitchboss/teleglitchboss.xml" />
   <Character file="Mods/BTE/Characters/GuardDog/guarddog.xml" />
@@ -147,9 +150,10 @@
   <Item file="Mods/BTEPlus/Items/exoskeleton.xml" />
   <Item file="Mods/BTEPlus/Items/miscellaneous.xml" />
   <Item file="Mods/BTEPlus/Items/moregear.xml" />
-  <Item file="Mods/BTEPlus/Items/heavyassaultsuit.xml" />
+  <Item file="Mods/BTEPlus/Items/Diving/heavyassaultsuit.xml" />
   <Item file="Mods/BTEPlus/Items/clowngear.xml" />
   <Character file="Mods/BTEPlus/Characters/Replica/replica.xml" />
+  <Character file="Mods/BTEPlus/Characters/RedRobot/redrobot.xml" />
   <!-- <Item file="Mods/BTEPlus/Items/Turrets/gunturrets.xml" /> -->
   <Item file="Mods/BTEPlus/Items/moreweapons.xml" />
   <Item file="Mods/BTEPlus/Items/OCU/OCUgear.xml" />
@@ -159,6 +163,10 @@
   <Item file="Mods/BTEPlus/Items/specialweapons.xml" />
   <Item file="Mods/BTEPlus/Items/Documents/bonusDocs.xml" />
   <Item file="Mods/BTEPlus/Items/Machines/moremachines.xml" />
+  <Item file="Mods/BTEPlus/Items/Furniture/furniture.xml" />
+  <Item file="Mods/BTEPlus/Items/Medical/morefood.xml" />
+  <Item file="Mods/BTEPlus/Items/Medical/moremedical.xml" />
+  <Item file="Mods/BTEPlus/Items/Diving/moredivinggear.xml" />
   
   <Executable file="Barotrauma.exe" />
 </contentpackage>

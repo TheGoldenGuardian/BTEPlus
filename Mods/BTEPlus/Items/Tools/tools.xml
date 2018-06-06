@@ -231,6 +231,9 @@
 		<StatusEffect type="OnUse" target="Character" Health="12" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
 		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="17" stun="-0.5" disabledeltatime="true">
+		  <Conditional SpeciesName="robot"/>
+		</StatusEffect>
     </MeleeWeapon>
   </Item>
   
@@ -269,6 +272,50 @@
 		<StatusEffect type="OnUse" target="Character" Health="15" stun="-0.7" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
 		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Red Crowbar"
+	aliases="t1/2 Crowbar,Raising the Bar"
+    category="Equipment"
+    Tags="meditem,tool"
+	description="A small crowbar used to force open doors in emergencies. This one looks oddly familiar."
+    cargocontainername="Standard Shipping Box">
+	
+	<Deconstruct time="5">
+	  <Item name="Steel Bar"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="t1/2 Glasses"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="156,22,64,12" depth="0.55"/>
+
+    <Body width="60" height="10" density="50"/>
+
+    <MeleeWeapon slots="RightHand+LeftHand,Any"
+          controlpose="true" aimpos="50,0" handle1="-5,0" handle2="-3,5" holdangle="30" reload="2.4">
+      <Attack damage="15" bleedingdamage="0.15" structuredamage="10" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTEPlus/Items/Tools/CrowbarHit1.ogg"/>
+	  <Sound file="Mods/BTEPlus/Items/Tools/CrowbarSwing.ogg" type="OnUse"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="15" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="15" stun="-0.7" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTEPlus/Items/Tools/CrowbarHit1.ogg"/>
+		<sound file="Mods/BTEPlus/Items/Tools/CrowbarHit2.ogg"/>
+	  </StatusEffect>
     </MeleeWeapon>
   </Item>
   
@@ -382,12 +429,13 @@
       <ParticleEmitterHitItem particle="weldsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
-      <RequiredItems name="Thermite Tank,Sulphurite Tank,Oxygen Tank,Oxygenite Tank" type="Contained" msg="Welding fuel depleted"/>
+      <RequiredItems name="Thermite Tank,Sulphurite Tank,Oxygen Tank,Oxygenite Tank,Oxygen Bottle" type="Contained" msg="Welding fuel depleted"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Bottle" Condition="-8"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-1" oxygen="-2500"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-0.5"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block" Stuck="20" Condition="5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block" Stuck="20" Condition="5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="20"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>
@@ -404,6 +452,7 @@
 	  <Containable name="Oxygenite Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
@@ -442,7 +491,7 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-0.8"/>
       <StatusEffect type="OnUse" target="Contained" targetnames="Battery Cell" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Fulgurium Battery Cell" Condition="-1"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="40"/>
       <StatusEffect type="OnFailure" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-2.0"/>
@@ -488,12 +537,13 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <sound file="Content/Items/Tools/plasmaCutter.ogg" type="OnUse" range="500" loop="true"/>
-	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Sulphurite Tank,Thermite Tank" type="Contained" msg="Gas tank depleted"/>
+	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Sulphurite Tank,Thermite Tank,Oxygen Bottle" type="Contained" msg="Gas tank depleted"/>
       <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-1"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Bottle" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-0.5"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-2" oxygen="-2750"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-4"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="30"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>
@@ -510,6 +560,7 @@
 	  <Containable name="Oxygenite Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
@@ -646,8 +697,8 @@
 
     <Body width="27" height="8" density="10.1"/>
 
-    <LightComponent LightColor="0.0,1.0,0.0,1.0" Flicker="0.1" range="240" powerconsumption="10" IsOn="true">
-      <LightTexture texture="Content/Lights/lightcone.png" origin="0.5,0.5" size="1.0,1.0"/>
+    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" powerconsumption="10" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.05,0.5" size="2.0,1.0"/>
     </LightComponent>
     
     <ItemContainer capacity="1" hideitems="true">

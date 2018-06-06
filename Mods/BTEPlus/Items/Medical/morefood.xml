@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Coalition Ration Packet"
+	aliases="CRP"
+    category="Misc"
+    Tags="smallitem,food"
+    canuseonself="true"
+    description="A watertight resealable ration pack made for EVA. Can be placed into the dive suit for carrying. Definitely better than the ration bars.">
+   
+    <Deconstruct time="5">
+	  <Item name="Biomass" outcondition="1" mincondition="0.9"/>
+	  <Item name="Polycarbonate Sliver" outcondition="0.25"/>
+    </Deconstruct>
+
+    <Sprite texture ="CRP.png" sourcerect="0,0,24,31" depth="0.6"/>
+
+    <Body width="23" height="31" density="11.5"/>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.05" Health="0.02" disabledeltatime="true" duration="150"/>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-20" disabledeltatime="true">
+	    <sound file="Mods/BTEPlus/Items/Medical/MREmunch.ogg"/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <Holdable slots="Any,RightHand,LeftHand"/>
+  </Item>
+</Items>

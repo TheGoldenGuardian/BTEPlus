@@ -4,7 +4,7 @@
   <Item
 	name="Access Card"
     category="Equipment"
-	Tags="smallitem,docs,ID Card">
+	Tags="smallitem,docs,ID Card,wllt">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -22,7 +22,7 @@
 	name="Captain ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,cap,com,sci,ID Card">
+	Tags="smallitem,docs,cap,com,sci,ID Card,wllt">
 	
 	<Deconstruct time="100">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -40,7 +40,7 @@
 	name="Assistant ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,ast,com,sci,ID Card">
+	Tags="smallitem,docs,ast,com,sci,ID Card,wllt">
 	
 	<Deconstruct time="90">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -58,7 +58,7 @@
 	name="Security ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,sec,ID Card">
+	Tags="smallitem,docs,sec,ID Card,wllt">
 	
 	<Deconstruct time="80">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -76,7 +76,7 @@
 	name="Doctor ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,med,ID Card">
+	Tags="smallitem,docs,med,ID Card,wllt">
 	
 	<Deconstruct time="70">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -94,14 +94,14 @@
 	name="Scientist ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,med,sci,ocu,ID Card">
+	Tags="smallitem,docs,med,sci,ocu,ID Card,wllt">
 	
 	<Deconstruct time="70">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
 	  <Item name="Iron Powder" outcondition="0.5"/>
     </Deconstruct>
 
-	<Sprite texture ="Mods/BTEPlus/Items/idcard.png" sourcerect="80,14,16,16" depth="0.82"/>
+	<Sprite texture ="Mods/BTEPlus/Items/idcard.png" sourcerect="0,28,16,16" depth="0.82"/>
 
 	<Body width="16" height="16" density="10.1"/>
 
@@ -112,7 +112,7 @@
 	name="Engineer ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,eng,ID Card">
+	Tags="smallitem,docs,eng,ID Card,wllt">
 	
 	<Deconstruct time="60">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -130,7 +130,7 @@
 	name="Mechanic ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,mec,ID Card">
+	Tags="smallitem,docs,mec,ID Card,wllt">
 	
 	<Deconstruct time="50">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -148,7 +148,7 @@
 	name="Cook ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,cul,ID Card">
+	Tags="smallitem,docs,cul,ID Card,wllt">
 	
 	<Deconstruct time="40">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -163,10 +163,28 @@
   </Item>
   
   <Item
+	name="Mercenary ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,docs,nov,ID Card,wllt">
+	
+	<Deconstruct time="30">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.5"/>
+    </Deconstruct>
+
+	<Sprite texture ="Mods/BTEPlus/Items/idcard.png" sourcerect="16,28,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
 	name="Seaman ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,nov,ID Card">
+	Tags="smallitem,docs,nov,ID Card,wllt">
 	
 	<Deconstruct time="30">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -184,7 +202,7 @@
 	name="Prisoner ID Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,docs,pri">
+	Tags="smallitem,docs,pri,wllt">
 	
 	<Deconstruct time="20">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -202,7 +220,7 @@
 	name="Master Key Card"
 	aliases="Master ID Card,Mastercard"
     category="Equipment"
-	Tags="smallitem,docs,admin,com,cap,ast,sec,med,eng,mec,cul,nov,pri,clw,stg,sci,P1,P2,P3,P4,ID Card">
+	Tags="smallitem,docs,admin,com,cap,ast,sec,med,eng,mec,cul,nov,pri,clw,stg,sci,P1,P2,P3,P4,ID Card,wllt">
 	
 	<Deconstruct time="15">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Dozitaminophine"
+	aliases="God Drug"
+    category="Material"
+    Tags="smallitem,chem,medical"
+    description="A highly potent chemical that is known to turn users into a walking tank for a very short duration. Lasts approximately 10 seconds. The effects do not stack with any reasonable effect."
+	cargocontainername="Medical Shipping Box">
+	
+	<Deconstruct time="5">
+      <Item name="Corrigodone" mincondition="0.99"/>
+	  <Item name="Erythrozine" mincondition="0.99"/>
+	  <Item name="Fibrinozine" mincondition="0.99"/>
+	  <Item name="Flash Powder" mincondition="0.99"/>
+	  <Item name="Auxiliorizine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/Medical/moreMedical.png" sourcerect="0,0,10,18" depth="0.6"/>
+
+    <Body width="10" height="18" density="10.4"/>
+	
+	<Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.0" aimpos="35,-10">
+      <StatusEffect tags="medical" type="OnUse" target="Character" Health="100" PressureProtection="100" Oxygen="100" Bleeding="-10" stun="-15" duration="10">
+        <RequiredItem name="Medical Syringe" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect tags="medical" type="OnUse" target="Character" Health="100" PressureProtection="100" Oxygen="100" Bleeding="-10" stun="-15" duration="20">
+        <RequiredItem name="Medical Dart" type="Container"/>
+      </StatusEffect>
+	  <StatusEffect tags="medical" type="OnUse" target="Character" Health="-100" Oxygen="0" duration="0.1">
+        <RequiredItem name="Medical Inhaler" type="Container"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+</Items>

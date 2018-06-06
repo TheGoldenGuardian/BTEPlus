@@ -94,6 +94,58 @@
   <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="4"
+    reward="4500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Inficiat Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="5000"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Inficiat Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="8"
+    reward="4000"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Calyxion Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Calyxion Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
     commonness="5"
     reward="3500"
     radarlabel="Infrasonic signal"
@@ -108,7 +160,7 @@
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
     commonness="5"
-    reward="4500"
+    reward="4000"
     radarlabel="Infrasonic signal"
     failuremessage="Retrieving the artifact failed."
     successmessage="The artifact has been succesfully retrieved."
