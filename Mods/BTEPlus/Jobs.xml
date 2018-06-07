@@ -313,6 +313,7 @@
       </Item> 
 	  <Item name="Frying Pan"/>
 	  <Item name="Crewmember Toque Blanche"/>
+	  <Item name="Crewmember Apron" equip="true"/>
 	  <Item name="Crewmember Trousers A" equip="true"/>
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>

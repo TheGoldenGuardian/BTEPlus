@@ -526,4 +526,41 @@
       <Attack damage="25" bleedingdamage="3" stun="0.5" targetforce="10" damagetype="Slash"/>
     </Projectile>
   </Item>
+  
+    <Item
+    name="Automatic Dart Gun"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="This is a scoped pneumatic rifle that can propel darts containing different drugs. This is a modified version with a makeshift magazine and automatic firing mechanism."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Dart Gun"/>
+      <Item name="Spare Parts"/>
+	  <Item name="Aluminum Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+  
+    <Sprite texture="autodartgun.png" sourcerect="0,0,98,33" depth="0.55"/>
+
+    <Body width="90" height="30" density="40"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="4" unskilledspread="16" reload="0.8">
+      <Sound file="Mods/BTE/Items/Weapons/DartGun1.ogg" type="OnUse"/>
+      <Sound file="Mods/BTE/Items/Weapons/DartGun2.ogg" type="OnUse"/>
+      <RequiredItems name="Medical Dart" type="Contained" msg="The loaded dart is too damaged"/>
+      <RequiredSkill name="Weapons" level="60"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="false" itempos="6,0" iteminterval="0,-3">
+      <Containable name="Medical Dart"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
+  </Item>
 </Items>

@@ -231,7 +231,10 @@
 		<StatusEffect type="OnUse" target="Character" Health="12" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
 		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="17" stun="-0.5" disabledeltatime="true">
+		<StatusEffect type="OnUse" target="Character" Health="16" stun="-0.5" disabledeltatime="true">
+		  <Conditional SpeciesName="robot"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="16" stun="-0.5" disabledeltatime="true">
 		  <Conditional SpeciesName="robot"/>
 		</StatusEffect>
     </MeleeWeapon>
@@ -295,8 +298,8 @@
 
     <MeleeWeapon slots="RightHand+LeftHand,Any"
           controlpose="true" aimpos="50,0" handle1="-5,0" handle2="-3,5" holdangle="30" reload="2.4">
-      <Attack damage="15" bleedingdamage="0.15" structuredamage="10" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTEPlus/Items/Tools/CrowbarHit1.ogg"/>
-	  <Sound file="Mods/BTEPlus/Items/Tools/CrowbarSwing.ogg" type="OnUse"/>
+      <Attack damage="15" bleedingdamage="0.15" structuredamage="10" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
+	  <!-- <Sound file="Mods/BTEPlus/Items/Tools/CrowbarSwing.ogg" type="OnUse"/> -->
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>

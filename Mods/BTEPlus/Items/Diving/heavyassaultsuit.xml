@@ -32,7 +32,7 @@
 		  <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
             <Conditional IsDead="false"/>
           </StatusEffect>
-          <sprite texture="Mods/BTEPlus/Items/HeavyAssaultSuitlight.png" depth="0.025" origin="0.1,0.82" alpha="5.0"/>
+          <sprite texture="Mods/BTEPlus/Items/Diving/HeavyAssaultSuitlight.png" depth="0.025" origin="0.1,0.82" alpha="5.0"/>
         </LightComponent>
       </sprite>
 

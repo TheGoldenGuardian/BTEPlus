@@ -459,6 +459,11 @@
 	    <RequiredSkill name="Electrical Engineering" level="60"/>
       </fabricableitem>
 	  
+	  <fabricableitem name="Automatic Dart Gun" requireditems="Dart Gun, Spare Parts, Aluminium Sliver, Polycarbonate Sliver" requiredtime="30">
+        <RequiredSkill name="Construction" level="60"/>
+		<RequiredSkill name="Weapons" level="25"/>
+      </fabricableitem>
+	  
 	  <fabricableitem name="Sonar Blaster" requireditems="Handheld Sonar, Copper Coil" requiredtime="40">
 	    <RequiredSkill name="Electrical Engineering" level="50"/>
       </fabricableitem>
@@ -1236,7 +1241,7 @@
 		Tags="cntnr"
 		linkable="true">
     
-      <Sprite texture="Fabricators.png" depth="0.8" sourcerect="130,129,73,95"/>
+      <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" depth="0.8" sourcerect="130,129,73,95"/>
 	  
 	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
       <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="130,129,73,95" alpha="1.0"/>

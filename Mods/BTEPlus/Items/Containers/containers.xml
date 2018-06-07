@@ -25,7 +25,7 @@
     <Sprite texture="Mods/BTE/Items/Containers/ExosuitLocker.png" depth="0.85" sourcerect="0,0,72,166"/>
 	
 	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="35,-94">
-      <Containable name="Exosuit,Assault Exosuit,Derelict Exosuit,Heavy Assault Suit,OCU Suit"/>
+      <Containable name="Exosuit,Assault Exosuit,Derelict Exosuit,Heavy Assault Suit,OCU Suit,Heavy Exoarmor"/>
     </ItemContainer>
   </Item>
   
