@@ -235,7 +235,7 @@
 		  <Conditional SpeciesName="robot"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="16" stun="-0.5" disabledeltatime="true">
-		  <Conditional SpeciesName="robot"/>
+		  <Conditional SpeciesName="redrobot"/>
 		</StatusEffect>
     </MeleeWeapon>
   </Item>
