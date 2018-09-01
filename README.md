@@ -2,6 +2,7 @@
 An Extension mod of Chiko's Barotrauma Extended mod for the game Barotrauma.
 
 This mod requires that you have the latest version of Barotrauma Extended installed in order for it to work, since it loads content from BTE. Latest as of writing is 6.1.
+**The mod is currently being updated to work with the latest BTE (7.0c)!**
 
 **Barotrauma Game:** http://undertowgames.com/barotrauma/
 
