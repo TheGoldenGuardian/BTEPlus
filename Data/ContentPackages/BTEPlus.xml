@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 6.1 Plus 0.9b" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 7.0d Plus 1.0" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml" /> -->
   <!-- <Item file="Content/Items/itemlabel.xml" /> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml" /> -->
@@ -23,7 +23,7 @@
   <!-- <Item file="Content/Items/Medical/medical.xml" /> -->
   <!-- <Item file="Content/Items/MiniMap/item.xml" /> -->
   <!-- <Item file="Content/Items/OxygenGenerator/oxygengenerator.xml" /> -->
-  <Item file="Content/Items/Pump/pump.xml" />
+  <!-- <Item file="Content/Items/Pump/pump.xml" /> -->
   <Item file="Content/Items/SearchLight/searchlight.xml" />
   <!-- <Item file="Content/Items/Reactor/reactor.xml" /> -->
   <!-- <Item file="Content/Items/Tools/tools.xml" /> -->
@@ -58,15 +58,14 @@
   <!-- <Jobs file="Content/Jobs.xml" /> -->
   <!-- <Sounds file="Content/Sounds/sounds.xml" /> -->
   
+  <Item file="Mods/BTE/Items/itemlabel.xml" />
   <!-- <Item file="Mods/BTE/Items/idcard.xml" /> -->
-  <Item file="Mods/BTEPlus/Items/idcard.xml" />
+  <Item file="Mods/BTEPlus/Items/Jobgear/idcard.xml"/>
   <Item file="Mods/BTE/Items/itemlabel.xml" />
   <!-- <Item file="Mods/BTE/Items/Artifacts/artifacts.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Artifacts/artifacts.xml" />
-  <Item file="Mods/BTE/Items/Button/button.xml" />
   <!-- <Item file="Mods/BTE/Items/Containers/containers.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Containers/containers.xml" />
-  <!-- <Item file="Mods/BTE/Items/Jobgear/captaingear.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Jobgear/captaingear.xml" />
   <Item file="Mods/BTE/Items/Jobgear/securitygear.xml" />
   <Item file="Mods/BTE/Items/Jobgear/doctorgear.xml" />
@@ -78,6 +77,7 @@
   <!-- <Item file="Mods/BTE/Items/Diving/divinggear.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Diving/divinggear.xml" />
   <Item file="Mods/BTE/Items/Door/doors.xml" />
+  <Item file="Mods/BTE/Items/Electricity/buttons.xml" />
   <Item file="Mods/BTE/Items/Electricity/lights.xml" />
   <Item file="Mods/BTE/Items/Electricity/monitors.xml" />
   <Item file="Mods/BTE/Items/Electricity/poweritems.xml" />
@@ -85,31 +85,33 @@
   <Item file="Mods/BTE/Items/Engine/engine.xml" />
   <!-- <Item file="Mods/BTE/Items/Fabricators/fabricators.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Fabricators/fabricators.xml" />
-  <!-- <Item file="Mods/BTE/Items/Fabricators/materials.xml" /> -->
-  <Item file="Mods/BTEPlus/Items/Fabricators/materials.xml" />
+  <Item file="Mods/BTEPlus/Items/Fabricators/crafters.xml" />
+  <Item file="Mods/BTE/Items/Fabricators/materials.xml" />
   <Item file="Mods/BTE/Items/Medical/medical.xml" />
+  <Item file="Mods/BTE/Items/Medical/chems.xml"/>
   <Item file="Mods/BTE/Items/Medical/food.xml" />
   <Item file="Mods/BTE/Items/Terminals/terminals.xml" />
-  <Item file="Mods/BTE/Items/OxygenGenerator/oxygengenerator.xml" />
+  <!-- <Item file="Mods/BTE/Items/OxygenGenerator/oxygengenerator.xml" /> -->
+  <Item file="Mods/BTEPlus/Items/OxygenGenerator/oxygengenerator.xml" />
   <Item file="Mods/BTE/Items/Pump/pump.xml" />
   <Item file="Mods/BTE/Items/Reactor/reactor.xml" />
   <!-- <Item file="Mods/BTE/Items/Tools/tools.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Tools/tools.xml" />
-  <!-- <Item file="Mods/BTE/Items/Misc/misc.xml" /> -->
-  <Item file="Mods/BTEPlus/Items/Misc/misc.xml" />
+  <Item file="Mods/BTE/Items/Misc/misc.xml" />
   <Item file="Mods/BTE/Items/Weapons/depthcharge.xml" />
   <Item file="Mods/BTE/Items/Weapons/explosives.xml" />
   <Item file="Mods/BTE/Items/Weapons/railgun.xml" />
   <!-- <Item file="Mods/BTE/Items/Weapons/weapons.xml" /> -->
   <Item file="Mods/BTEPlus/Items/Weapons/weapons.xml" />
-  <Character file="Mods/BTE/Characters/Carrier/carrier.xml" />
   <Character file="Mods/BTE/Characters/Charybdis/charybdis.xml" />
   <Character file="Mods/BTE/Characters/Coelanth/coelanth.xml" />
   <Character file="Mods/BTE/Characters/Crawler/crawler.xml" />
+  <Character file="Mods/BTE/Characters/Crawlerghost/crawlerghost.xml" />
   <Character file="Mods/BTE/Characters/Endworm/endworm.xml" />
   <Character file="Mods/BTE/Characters/Fractalguardian/fractalguardian.xml" />
   <Character file="Mods/BTE/Characters/Fractalguardian2/fractalguardian2.xml" />
-  <Character file="Mods/BTE/Characters/Walker/walker.xml" />
+  <Character file="Mods/BTE/Characters/FractalWalker/fractalwalker.xml" />
+  <Character file="Mods/BTE/Characters/Carrier/carrier.xml" />
   <Character file="Mods/BTE/Characters/Teleglitch/teleglitch.xml" />
   <Character file="Mods/BTE/Characters/Teleglitchboss/teleglitchboss.xml" />
   <Character file="Mods/BTE/Characters/GuardDog/guarddog.xml" />
@@ -151,22 +153,14 @@
   <Item file="Mods/BTEPlus/Items/miscellaneous.xml" />
   <Item file="Mods/BTEPlus/Items/moregear.xml" />
   <Item file="Mods/BTEPlus/Items/Diving/heavyassaultsuit.xml" />
-  <Item file="Mods/BTEPlus/Items/clowngear.xml" />
-  <Character file="Mods/BTEPlus/Characters/Replica/replica.xml" />
-  <Character file="Mods/BTEPlus/Characters/RedRobot/redrobot.xml" />
   <!-- <Item file="Mods/BTEPlus/Items/Turrets/gunturrets.xml" /> -->
   <Item file="Mods/BTEPlus/Items/moreweapons.xml" />
   <Item file="Mods/BTEPlus/Items/OCU/OCUgear.xml" />
-  <Item file="Mods/BTEPlus/Items/OCU/OCUobjects.xml" />
-  <Item file="Mods/BTEPlus/Items/OCU/OCUmachines.xml" />
   <Item file="Mods/BTEPlus/Items/traitorweapons.xml" />
-  <Item file="Mods/BTEPlus/Items/specialweapons.xml" />
-  <Item file="Mods/BTEPlus/Items/Documents/bonusDocs.xml" />
   <Item file="Mods/BTEPlus/Items/Machines/moremachines.xml" />
   <Item file="Mods/BTEPlus/Items/Furniture/furniture.xml" />
   <Item file="Mods/BTEPlus/Items/Medical/morefood.xml" />
-  <Item file="Mods/BTEPlus/Items/Medical/moremedical.xml" />
-  <Item file="Mods/BTEPlus/Items/Diving/moredivinggear.xml" />
+  <Item file="Mods/BTEPlus/Items/Misc/miscmisc.xml" />
   
   <Executable file="Barotrauma.exe" />
 </contentpackage>

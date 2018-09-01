@@ -78,9 +78,7 @@
   <Item
     name="Nasonov Artifact"
     category="Alien"
-    Tags="alien"
-    pickdistance="150"
-    indestructible="true">
+    Tags="alien,rtfct">
 
     <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="60,61,63,67"/>
 
@@ -90,10 +88,10 @@
       <Item name="Fulgurium Bar"/>
       <Item name="Fulgurium Bar"/>
     </Deconstruct>
-
-    <AiTarget sightrange="10000.0" soundrange="10000"/>
     
     <Body width="55" height="55" density="30" friction="0.95"/>
+	
+	<AiTarget sightrange="10000.0" soundrange="10000"/>
 
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10"/>
   </Item>
@@ -141,7 +139,7 @@
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 	  <StatusEffect type="OnActive" target="Character" HuskInfectionState="0.05">
 		<Conditional HuskInfectionState="gt 0.01"/>
-		<sound file="Calyxion.ogg" type="OnActive" range="600" loop="true"/>
+		<sound file="Mods/BTEPlus/Items/Artifacts/Calyxion.ogg" type="OnActive" range="600" loop="true"/>
       </StatusEffect>
 	</Holdable>
   </Item>
@@ -167,7 +165,7 @@
 
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 	  <StatusEffect type="OnActive" target="Character" HuskInfectionState="0.01"/>
-	  <sound file="Inficiat.ogg" type="OnActive" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Artifacts/Inficiat.ogg" type="OnActive" range="600" loop="true"/>
 	</Holdable>
   </Item>
   
@@ -338,7 +336,7 @@
 	  <Fixable name="structure"/>
       <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800.0" loop="true"/>
 	  <RequiredItems name="Oxygenite Shard,Sulphurite Shard,Thermite Shard" type="Contained" msg="The shard inside is depleted"/>
-      <RequiredSkill name="Weapons" level="25"/>
+      <RequiredSkill name="Weapons" level="30"/>
 	  <StatusEffect type="OnFailure" target="Contained" targetnames="Oxygenite Shard,Sulphurite Shard,Thermite Shard" Condition="-2.0"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Shard" Condition="-1.2" oxygen="-20000.0"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Shard" Condition="-0.4"/>
@@ -348,7 +346,7 @@
       </LightComponent>
     </RepairTool>
     
-    <Propulsion force="-15" usablein="both"/>
+    <Propulsion force="-20" usablein="both"/>
 	
 	<Projectile launchimpulse="80.0">
       <Attack damage="1000" bleedingdamage="10" structuredamage="500" damagetype="Blunt"/>
@@ -436,31 +434,24 @@
 
   <Item
    name="Artifact Holder"
-   linkable="true"
    category="Alien"
-   Tags="alien">
+   Tags="alien"
+   linkable="true">
 
     <Sprite texture="Content/Items/Artifacts/artifactholder.png" depth="0.8" sourcerect="0,0,256,256"/>
 
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="128,-128">
       <Containable name="Alien"/>
       <Containable name="Thermal Artifact">
-        <StatusEffect type="OnContaining" target="This" Charge="1000.0"/>        
+        <StatusEffect type="OnContaining" target="This" Charge="1000"/>        
       </Containable>
       <Containable name="Faraday Artifact">
-        <StatusEffect type="OnContaining" target="This" Charge="10.0"/>
+        <StatusEffect type="OnContaining" target="This" Charge="10"/>
       </Containable>
     </ItemContainer>
 
-    <LightComponent lightcolor="0.6,0.8,1.0,1.0" canbeselected="false" range="800.0" IsOn="true"/>
-
-    <PowerContainer capacity="20000.0" canbeselected="false" maxrechargespeed="10000.0" maxoutput="10000.0">
+    <LightComponent lightcolor="0.6,0.8,1.0,1.0" canbeselected="false" range="800" IsOn="true">
 	  <StatusEffect type="Always" target="Contained" targetnames="Oxygenite Shard,Sulphurite Shard,Thermite Shard" Condition="2.0"/>
-    </PowerContainer>
-
-    <ConnectionPanel selectkey="Action" canbeselected = "true" msg="Rewire [Screwdriver]">
-      <requireditem name="Screwdriver,Wire" type="Equipped"/>
-      <output name="power_out"/>
-    </ConnectionPanel>
+	</LightComponent>
   </Item>
 </Items>

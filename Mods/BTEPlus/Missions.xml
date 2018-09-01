@@ -91,7 +91,7 @@
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
   
-  <SalvageMission
+    <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
     commonness="4"
@@ -203,6 +203,30 @@
     successmessage="The Mantis has been killed."
     monsterfile="Mods/BTE/Characters/Mantisboss/mantisboss.xml">
     <message header="Target terminated" text="The Mantis is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Killing a Watcher"
+    description="A seafood processing plant in [location2] is offering a reward of 1500 credits to anyone who can slay a Watcher spotted between [location1] and [location2], no questions asked. They will handle the transport once the creature is dead."
+    commonness="10"
+    reward="1500"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Watcher."
+    successmessage="As soon as you got to [location2] and leave your vessel, a man aproaches and hands you the credits as he walks past you."
+    monsterfile="Mods/BTE/Characters/Watcher/watcher.xml">
+    <message header="Target terminated" text="The Watcher is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Killing a Charybdis"
+    description="A Charybdis has left the Abyss and has been terrorizing vessels traveling between [location1] and [location2]. A reward of 2,750 credits has been promised to those who kill the creature."
+    commonness="5"
+    reward="2750"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Charybdis."
+    successmessage="The Charybdis has been killed."
+    monsterfile="Mods/BTE/Characters/Charybdis/charybdis.xml">
+    <message header="Target terminated" text="The Charybdis is dead. Navigate the submarine out of the cavern to claim the reward."/>
   </MonsterMission>
   
   <MonsterMission
@@ -775,9 +799,9 @@
 		  <Item name="Fulgurium Battery Cell" amount="1"/>
         </Item> 
 	    <Item name="Dart Gun" amount="1">
-		  <Item name="Tranquilizer Dart" amount="1"/>
+		  <Item name="Medical Dart" amount="1"/>
         </Item> 
-		<Item name="Tranquilizer Dart" amount="10"/>
+		<Item name="Medical Dart" amount="10"/>
 		<Item name="Diving Knife" amount="1"/>
       </Item>
     </Items>
@@ -831,7 +855,7 @@
     description="A local arms dealer is offering 10,000 credits in exchange for delivering 4 extremely dangerous explosives to a company stationed in [location2]."
     commonness="1"
     reward="10000"
-	failuremessage="Cargo delivery failed."
+	failuremessage="Cargo delivery failed. Not surprising..."
     successmessage="The nuclear explosives have been successfully delivered. Whew...">
     <Items>
       <Item name="Explosives Shipping Box">
@@ -839,49 +863,6 @@
       </Item>
     </Items>
   </CargoMission>
-  
-  <CargoMission
-    name="Oh no..."
-    description="Get to [location2]."
-    commonness="1"
-    reward="100000000000000000"
-	failuremessage="I'm not surprised at all."
-    successmessage="I'm surprised you didn't manage to fuck that up.">
-    <Items>
-      <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-	  <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-	  <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-	  <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="20"/>
-      </Item>
-    </Items>
-  </CargoMission>
-  
-  <CargoMission
-   name="Praise the Honkarmy"
-   description="A local clown militia is offering 2000 credits for delivering a shipment of clowning gear to [location2]."
-   commonness="1"
-   reward="2000"
-   failuremessage="The clowns are unhappy."
-   successmessage="The clown militia is pleased with your success."
-   requireddeliveryamount="20">
-    <Items >
-      <Item name="Standard Shipping Box">
-        <Item name="Clown Mask" amount="5"/>
-        <Item name="Clown Costume" amount="5"/>
-		<Item name="Bike Horn" amount="5"/>
-		<Item name="Clown Shotgun" amount="5">
-			<Item name="Shotgun Clown Round" amount="8"/>
-		</Item>
-      </Item>
-    </Items>
-  </CargoMission> 
   
   <CombatMission
     name="Search and Destroy"

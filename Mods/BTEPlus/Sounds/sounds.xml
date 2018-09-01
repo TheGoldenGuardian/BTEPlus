@@ -46,18 +46,6 @@
   <damagesound file="Content/Sounds/Damage/HitClown3.ogg" damagerange="25.0,75.0" damagesoundtype="LimbClown"/>  
   <damagesound file="Content/Sounds/Damage/HitClown4.ogg" damagerange="50.0,100.0" damagesoundtype="LimbClown"/>
   
-  <!-- <damagesound file="Mods/BTEPlus/Sounds/ReplicaHit1.ogg" damagerange="10.0,50.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/ReplicaHit2.ogg" damagerange="50.0,80.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/ReplicaHit3.ogg" damagerange="80.0,90.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/ReplicaHit4.ogg" damagerange="90.0,120.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/ReplicaDeath1.ogg" damagerange="120.0,250.0" damagesoundtype="DamageReplica"/> -->
-  
-  <damagesound file="Mods/BTEPlus/Sounds/Replica/ReplicaHit1.ogg" damagerange="5.0,30.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/Replica/ReplicaHit2.ogg" damagerange="10.0,50.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/Replica/ReplicaHit3.ogg" damagerange="20.0,90.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/Replica/ReplicaHit4.ogg" damagerange="30.0,120.0" damagesoundtype="DamageReplica"/>
-  <damagesound file="Mods/BTEPlus/Sounds/Replica/ReplicaDeath1.ogg" damagerange="50.0,250.0" damagesoundtype="DamageReplica"/>
-  
   <damagesound file="Mods/BTEPlus/Sounds/DamageMetalBlunt/metal_solid_impact_soft1.ogg" damagerange="1.0,30.0" damagesoundtype="DamageMetalBlunt"/>
   <damagesound file="Mods/BTEPlus/Sounds/DamageMetalBlunt/metal_solid_impact_soft2.ogg" damagerange="1.0,40.0" damagesoundtype="DamageMetalBlunt"/>
   <damagesound file="Mods/BTEPlus/Sounds/DamageMetalBlunt/metal_solid_impact_soft3.ogg" damagerange="1.0,35.0" damagesoundtype="DamageMetalBlunt"/>
@@ -122,21 +110,6 @@
   <footstep_metal file="Content/Sounds/Footsteps/Metal/metal-05.ogg"/>
   <footstep_metal file="Content/Sounds/Footsteps/Metal/metal-06.ogg"/>
   <footstep_metal file="Content/Sounds/Footsteps/Metal/metal-07.ogg"/>
-  
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_1a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_1b.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_2a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_2b.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_3a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_3b.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_4a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_4b.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_5a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_5b.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_6a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_6b.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_7a.ogg"/>
-  <footstep_replica file="Mods/BTEPlus/Sounds/Step/Replica/footstep_multiplayer_concrete_7b.ogg"/>
   
   <footstep_gear file="Mods/BTEPlus/Sounds/Step/Gear/gear1.ogg"/>
   <footstep_gear file="Mods/BTEPlus/Sounds/Step/Gear/gear2.ogg"/>

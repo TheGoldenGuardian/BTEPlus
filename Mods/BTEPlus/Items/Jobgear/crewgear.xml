@@ -9,7 +9,7 @@
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Sliver"/>
-	  <Item name="FPGA Circuit"/>
+	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
     <Sprite texture="securitygear.png" depth="0.6" sourcerect="117,92,11,36"/>
@@ -25,11 +25,8 @@
         <Containable name="Fulgurium Battery Cell"/>
       </ItemContainer>
 	
-	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16" holdpos="9,6">
+	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16">
 	  <StatusEffect type="OnActive" target="Contained" Condition="-0.05"/>
-	  <StatusEffect type="InWater" target="This" Condition="-75"/>
-	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
-	  <StatusEffect type="Always" target="This" Condition="15"/>
     </Holdable>
   </Item>
   
@@ -43,10 +40,10 @@
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
-	  <Item name="FPGA Circuit"/>
+	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture ="securitygear.png" depth="0.6" sourcerect="100,112,16,16"/>
+    <Sprite texture="securitygear.png" depth="0.6" sourcerect="100,112,16,16"/>
 
     <Body radius="8" density="10.1"/>
 
@@ -61,7 +58,7 @@
     
     <Wearable limbtype="Head" slots="Any,Face">
       <StatusEffect type="OnWearing" target="Contained" Condition="-0.1"/>
-      <sprite texture="securitygear.png" limb="Head" origin="0.5,0.5" sourcerect="100,112,16,16"/>
+      <sprite texture="securitygear.png" limb="Head" origin="0.5,0.5" sourcerect="100,112,16,16" depth="0.04" inheritlimbdepth="false"/>
     </Wearable>
   </Item>
   
@@ -78,12 +75,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="FlatHat.png" depth="0.6" sourcerect="0,0,32,32"/>
+    <Sprite texture="FlatHat.png" depth="0.6" sourcerect="0,0,32,32"/>
 
     <Body width="14" height="6" radius="8" density="10.1"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="FlatHat.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,0,32,32"/>
+      <sprite texture="FlatHat.png" limb="Head" origin="0.5,0.9" sourcerect="0,0,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.001" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
@@ -104,12 +101,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="BeanieHat.png" depth="0.6" sourcerect="0,0,32,32"/>
+    <Sprite texture="BeanieHat.png" depth="0.6" sourcerect="0,0,32,32"/>
 
     <Body width="14" height="6" radius="8" density="10.1"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="BeanieHat.png" limb="Head" depthlimb="Tail" origin="0.6,0.7" sourcerect="0,0,32,32"/>
+      <sprite texture="BeanieHat.png" limb="Head" origin="0.6,0.7" sourcerect="0,0,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
@@ -130,12 +127,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="CowboyHat.png" depth="0.6" sourcerect="0,0,43,17"/>
+    <Sprite texture="CowboyHat.png" depth="0.6" sourcerect="0,0,43,17"/>
 
     <Body width="42" height="15" density="10.1"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="CowboyHat.png" limb="Head" depthlimb="Tail" origin="0.5,1.15" sourcerect="0,0,43,17"/>
+      <sprite texture="CowboyHat.png" limb="Head" origin="0.5,1.15" sourcerect="0,0,43,17" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
@@ -156,12 +153,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="CapHat.png" sourcerect="0,0,32,16" depth="0.6"/>
+    <Sprite texture="CapHat.png" sourcerect="0,0,32,16" depth="0.6"/>
 
     <Body width="14" height="6" radius="8" density="10.2"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="CapHat.png" limb="Head" depthlimb="Tail" sourcerect="0,0,32,16" origin="0.4,1.2"/>
+      <sprite texture="CapHat.png" limb="Head" sourcerect="0,0,32,16" origin="0.4,1.2" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
@@ -173,19 +170,18 @@
     name="Crewmember Cap B"
     category="Equipment"
 	tags="smallitem,clothing"
-	description="A synthetic soft kepi with a stiff, rounded visor."
-	>
+	description="A synthetic soft kepi with a stiff, rounded visor.">
 	
 	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="CapHat.png" sourcerect="0,16,32,18" depth="0.6"/>
+    <Sprite texture="CapHat.png" sourcerect="0,16,32,18" depth="0.6"/>
 
     <Body width="14" height="6" radius="8" density="10.2"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="CapHat.png" limb="Head" depthlimb="Tail" sourcerect="0,16,32,16" origin="0.65,1.2"/>
+      <sprite texture="CapHat.png" limb="Head" sourcerect="0,16,32,16" origin="0.65,1.2" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
@@ -206,12 +202,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="securitygear.png" depth="0.6" sourcerect="0,82,32,32"/>
+    <Sprite texture="securitygear.png" depth="0.6" sourcerect="0,82,32,32"/>
 
     <Body width="14" height="6" radius="8" density="10.1"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="securitygear.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,82,32,32"/>
+      <sprite texture="securitygear.png" limb="Head" origin="0.5,0.9" sourcerect="0,82,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.002" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.9" deflectprojectiles="false"/>
@@ -232,12 +228,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="UshankaHat.png" sourcerect="26,0,25,16" depth="0.6"/>
+    <Sprite texture="UshankaHat.png" sourcerect="26,0,25,16" depth="0.6"/>
 
     <Body width="21" height="13" radius="8" density="10.2"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="UshankaHat.png" limb="Head" depthlimb="Tail" sourcerect="26,0,25,16" origin="0.55,1.2"/>
+      <sprite texture="UshankaHat.png" limb="Head" sourcerect="26,0,25,16" origin="0.55,1.2" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -249,19 +245,18 @@
     name="Crewmember Ushanka B"
     category="Equipment"
 	tags="smallitem,clothing"
-	description="A synthetic fur cap with ear flaps designed to provide warmth in cold environments."
-	>
+	description="A synthetic fur cap with ear flaps designed to provide warmth in cold environments.">
 	
 	<Deconstruct time="5">
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="UshankaHat.png" sourcerect="26,0,25,16" depth="0.6"/>
+    <Sprite texture="UshankaHat.png" sourcerect="26,0,25,16" depth="0.6"/>
 
     <Body width="21" height="13" radius="8" density="10.2"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="UshankaHat.png" limb="Head" depthlimb="Tail" sourcerect="0,0,23,34" origin="0.55,0.6"/>
+      <sprite texture="UshankaHat.png" limb="Head" sourcerect="0,0,23,34" origin="0.55,0.6" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -281,12 +276,12 @@
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-	<Sprite texture = "Sweater.png" sourcerect="0,50,50,13" depth="0.6"/>
+	<Sprite texture= "Sweater.png" sourcerect="0,50,50,13" depth="0.6"/>
 
     <Body width="50" height="17" density="11"/>
 
     <Wearable slots="Any,Torso">
-      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="50,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
 	  
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
 	  
@@ -308,7 +303,7 @@
 	  <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-	<Sprite texture = "Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
+	<Sprite texture= "Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
 
     <Body width="50" height="17" density="11"/>
 
@@ -332,15 +327,14 @@
     name="Crewmember Sweater B"
     category="Equipment"
 	tags="meditem,clothing"
-	description="A garment covering the torso and arms, intended to provide warmth in cold environments."
-	>
+	description="A garment covering the torso and arms, intended to provide warmth in cold environments.">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
 	  <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-	<Sprite texture = "Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
+	<Sprite texture= "Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
 
     <Body width="50" height="17" density="11"/>
 
@@ -370,7 +364,7 @@
 	  <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-	<Sprite texture ="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
+	<Sprite texture="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
 
     <Body width="50" height="17" density="11"/>
 
@@ -398,15 +392,14 @@
     name="Crewmember Jumper B"
     category="Equipment"
 	tags="meditem,clothing"
-	description="A garment covering the torso and arms with a muff sewn onto the lower front."
-	>
+	description="A garment covering the torso and arms with a muff sewn onto the lower front.">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
 	  <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-	<Sprite texture ="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
+	<Sprite texture="captainLegs.png" sourcerect="0,71,51,12" depth="0.6"/>
 
     <Body width="50" height="17" density="11"/>
 
@@ -442,7 +435,7 @@
 	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
-    <Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+    <Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
 
     <Body width="51" height="13" density="12"/>
 
@@ -472,8 +465,7 @@
     name="Crewmember Trousers B"
     category="Equipment"
 	tags="meditem,clothing"
-	description="A standard issue pairs of synthetic fiber trousers."
-    >
+	description="A standard issue pairs of synthetic fiber trousers.">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Bar"/>
@@ -481,7 +473,7 @@
 	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
-    <Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+    <Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
 
     <Body width="51" height="13" density="12"/>
 
@@ -521,7 +513,7 @@
 	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
-	<Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+	<Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
 
     <Body width="51" height="13" density="15"/>
 
@@ -551,8 +543,7 @@
     name="Crewmember Cargo Trousers B"
     category="Equipment"
 	tags="meditem,clothing"
-	description="A pair of loosely cut trousers with cargo pockets, convenient for carrying extra items."
-	>
+	description="A pair of loosely cut trousers with cargo pockets, convenient for carrying extra items.">
 	
 	<Deconstruct time="15">
 	  <Item name="Polycarbonate Bar"/>
@@ -560,7 +551,7 @@
 	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
-	<Sprite texture ="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+	<Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
 
     <Body width="51" height="13" density="15"/>
 

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Items> 
+  <Item
+	name="Access Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,ID Card">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="64,14,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+
+  <Item
+	name="Captain ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,cap,com,ID Card">
+	
+	<Deconstruct time="100">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="0,0,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Officer ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,ast,com,ID Card">
+	
+	<Deconstruct time="90">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="16,0,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Enforcer ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,sec,ID Card">
+	
+	<Deconstruct time="80">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="32,0,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Scientist ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,sct,ID Card">
+	
+	<Deconstruct time="70">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="48,0,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Doctor ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,med,ID Card">
+	
+	<Deconstruct time="70">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="64,0,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Engineer ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,eng,ID Card">
+	
+	<Deconstruct time="60">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="80,0,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Mechanic ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,mec,ID Card">
+	
+	<Deconstruct time="50">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="0,14,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Cook ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,cul,ID Card">
+	
+	<Deconstruct time="40">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="16,14,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Seaman ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,nov,ID Card">
+	
+	<Deconstruct time="30">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="32,14,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Prisoner ID Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,pri">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="48,14,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+
+  <Item
+	name="Master Key Card"
+	aliases="Master ID Card,Mastercard"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,admin,com,cap,ast,sec,sct,med,eng,mec,cul,nov,pri,clw,stg,P1,P2,P3,P4,ID Card">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.5"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTE/Items/Jobgear/idcard.png" sourcerect="80,14,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+</Items>

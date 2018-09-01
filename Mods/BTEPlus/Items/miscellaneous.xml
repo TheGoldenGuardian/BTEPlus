@@ -200,9 +200,9 @@
       <Item name="Bread"/>
     </Deconstruct>
 
-    <Sprite  texture ="miscellaneous.png" sourcerect="75,2,61,37" depth="0.55"/>
+    <Sprite  texture ="miscellaneous.png" sourcerect="0,107,69,9" depth="0.55"/>
 
-    <Body width="61" height="37" density="48"/>
+    <Body width="66" height="7" density="48"/>
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="10,8" handle1="-7,-8" handle2="-7,-8" holdangle="30" reload="1.0">
@@ -213,7 +213,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
     </MeleeWeapon>
 	
@@ -422,7 +422,7 @@
     </Holdable>
   </Item>
   
-  <Item
+  <!-- <Item
     name="Black Tracksuit"
 	aliases="Tracksuit A"
     category="Equipment"
@@ -459,7 +459,7 @@
 	  <sprite texture="trackShoes.png" limb="RightFoot" sound="footstep_metal" sourcerect="0,0,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="trackShoes.png" limb="LeftFoot" sound="footstep_metal" sourcerect="17,0,16,25" origin="0.5,0.5" hidelimb="true"/>
 	  
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/>
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
@@ -468,5 +468,5 @@
 	<ItemContainer capacity="3">
       <Containable name="smallitem"/>
     </ItemContainer>
-  </Item>
+  </Item> -->
 </Items>

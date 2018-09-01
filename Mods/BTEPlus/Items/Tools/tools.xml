@@ -26,7 +26,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -62,7 +62,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -109,7 +109,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -146,7 +146,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -183,7 +183,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -222,7 +222,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -266,7 +266,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -306,7 +306,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -347,7 +347,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -372,7 +372,20 @@
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="52,31,12,33" depth="0.55"/>
+    <Sprite texture ="sulphuritetank.png" sourcerect="0,0,12,33" depth="0.55"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="12,0,12,33" depth="0.55" maxcondition="92.5"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="24,0,12,33" depth="0.55" maxcondition="85"/>
+    <BrokenSprite texture="sulphuritetank.png" sourcerect="36,0,12,33" depth="0.55" maxcondition="77.5"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="48,0,12,33" depth="0.55" maxcondition="70"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="60,0,12,33" depth="0.55" maxcondition="62.5"/>
+    <BrokenSprite texture="sulphuritetank.png" sourcerect="72,0,12,33" depth="0.55" maxcondition="55"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="0,33,12,33" depth="0.55" maxcondition="47.5"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="12,33,12,33" depth="0.55" maxcondition="40"/>
+    <BrokenSprite texture="sulphuritetank.png" sourcerect="24,33,12,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="36,33,12,33" depth="0.55" maxcondition="17.5"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="48,33,12,33" depth="0.55" maxcondition="10"/>
+    <BrokenSprite texture="sulphuritetank.png" sourcerect="60,33,12,33" depth="0.55" maxcondition="2.5"/>
+	<BrokenSprite texture="sulphuritetank.png" sourcerect="72,33,12,33" depth="0.55" maxcondition="0"/>
 
     <Body width="12" height="33" density="8"/>
 
@@ -394,7 +407,20 @@
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="52,31,12,33" depth="0.55"/>
+    <Sprite texture ="thermitetank.png" sourcerect="0,0,12,33" depth="0.55"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="12,0,12,33" depth="0.55" maxcondition="92.5"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="24,0,12,33" depth="0.55" maxcondition="85"/>
+    <BrokenSprite texture="thermitetank.png" sourcerect="36,0,12,33" depth="0.55" maxcondition="77.5"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="48,0,12,33" depth="0.55" maxcondition="70"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="60,0,12,33" depth="0.55" maxcondition="62.5"/>
+    <BrokenSprite texture="thermitetank.png" sourcerect="72,0,12,33" depth="0.55" maxcondition="55"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="0,33,12,33" depth="0.55" maxcondition="47.5"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="12,33,12,33" depth="0.55" maxcondition="40"/>
+    <BrokenSprite texture="thermitetank.png" sourcerect="24,33,12,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="36,33,12,33" depth="0.55" maxcondition="17.5"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="48,33,12,33" depth="0.55" maxcondition="10"/>
+    <BrokenSprite texture="thermitetank.png" sourcerect="60,33,12,33" depth="0.55" maxcondition="2.5"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="72,33,12,33" depth="0.55" maxcondition="0"/>
 
     <Body width="12" height="33" density="8"/>
 
@@ -734,6 +760,10 @@
     <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="0,38,21,7" depth="0.55"/>
 
     <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
 	
 	<LightComponent LightColor="1.0,0.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">

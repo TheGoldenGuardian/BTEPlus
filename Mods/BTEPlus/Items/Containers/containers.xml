@@ -1,69 +1,24 @@
 ﻿<Items>
   <Item
     name="Steel Cabinet"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
+	Tags="cntnr">
     
-    <Sprite texture ="Content/Items/Containers/locker.png" sourcerect="0,0,128,128" depth="0.79"/>
+    <Sprite texture="Content/Items/Containers/locker.png" sourcerect="0,0,128,128" depth="0.79"/>
 	
 	<Controller direction="None" canbepicked="true">
-      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+	  <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
     </Controller>
 
     <ItemContainer capacity="20" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,meditem"/>
+	  <Containable name="smallitem,meditem,sawammo"/>
     </ItemContainer>
-  </Item>
-  
-  <Item
-    name="Exosuit Locker"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
-    
-    <Sprite texture="Mods/BTE/Items/Containers/ExosuitLocker.png" depth="0.85" sourcerect="0,0,72,166"/>
-	
-	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="35,-94">
-      <Containable name="Exosuit,Assault Exosuit,Derelict Exosuit,Heavy Assault Suit,OCU Suit,Heavy Exoarmor"/>
-    </ItemContainer>
-  </Item>
-  
-  <Item
-    name="Artifact Container"
-	aliases="Artefact Container"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance="150">
-    
-    <Sprite texture="Mods/BTE/Items/Containers/ArtifactContainer.png" depth="0.85" sourcerect="0,0,100,128"/>
-	
-	<Powered powerconsumption="1500" currpowerconsumption="1500" minvoltage="0.5" isactive="true">
-	  <RequiredItem item="rtfct"/>
-      <StatusEffect type="OnActive" target="Contained" targetnames="Skyholder Artifact" Condition="100" setvalue="true"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Thermal Artifact" Condition="0" setvalue="true"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Faraday Artifact" Condition="100" setvalue="true"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Grinder Artifact" Condition="100" setvalue="true"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Flopper Artifact" Condition="100" setvalue="true"/>
-    </Powered>
-	
-	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="50,-80">
-      <Containable name="rtfct"/>
-    </ItemContainer>
-	
-	<ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
-      <requireditem name="Screwdriver" type="Equipped"/>
-      <output name="power_in"/>
-    </ConnectionPanel>
   </Item>
   
   <Item
     name="Steel Locker"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
+	Tags="cntnr">
     
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="0,186,45,128"/>
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="0,188,45,128" depth="0.78"/>
 	
 	<Controller direction="None" canbepicked="true">
       <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
@@ -75,22 +30,126 @@
   </Item>
   
   <Item
-    name="Refrigerator"
+    name="Secure Locker"
 	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
+	waterproof="true"
+	fireproof="true">
     
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="95,186,71,135"/>
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="46,188,45,128" depth="0.78"/>
 	
 	<Controller direction="None" canbepicked="true">
-      <sound file="Mods/BTE/Items/Containers/Fridge.ogg" type="OnUse" range="750"/>
+      <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
     </Controller>
+	
+	<ItemContainer capacity="10" canbeselected="true" hideitems="true">
+      <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable name="smallitem,meditem,bigitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Top Cabinet"
+	aliases="Medicine Cabinet,Toxic Cabinet"
+	Tags="cntnr">
+
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="92,186,48,64" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+    </Controller>
+
+    <ItemContainer capacity="20" canbeselected="true" hideitems="true">
+      <Containable name="smallitem,medical,chem,Flour,Food Can,Frying Pan"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Secure Top Cabinet"
+	Tags="cntnr"
+	waterproof="true"
+	fireproof="true">
+
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="92,251,48,64" depth="0.78"/>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
+    </Controller>
+
+    <ItemContainer capacity="20" canbeselected="true" hideitems="true">
+      <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable name="smallitem,medical,chem,Flour,Food Can,Frying Pan"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Exosuit Locker"
+	Tags="cntnr">
+    
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="213,186,72,166" depth="0.85"/>
+	
+	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="35,-94">
+      <Containable name="Exosuit,Assault Exosuit,Derelict Exosuit,Heavy Assault Suit,OCU Suit"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Artifact Container"
+	aliases="Artefact Container"
+	Tags="cntnr">
+    
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="286,186,100,128" depth="0.85"/>
+	
+	<Powered powerconsumption="1500" currpowerconsumption="1500" minvoltage="0.5" isactive="true">
+	  <StatusEffect type="OnActive" target="Contained" targetnames="rtfct" Condition="100"/>
+    </Powered>
+	
+	<ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <output name="power_in"/>
+    </ConnectionPanel>
+	
+	<ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="50,-80">
+      <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable name="rtfct"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Railgun Ammo Rack"
+	aliases="Railgun Shell Rack"
+    Tags="cntnr">
+
+    <Sprite texture="Content/Items/Weapons/railgunetc2.png" sourcerect="57,97,72,110" depth="0.84"/>
+
+    <ItemContainer hideitems="false" drawinventory="true" capacity="3" slotsperrow="3" itempos="17,-49.5" iteminterval="19,0" itemrotation="90" canbeselected="true">
+      <Containable name="Railgun Polycarbonate Spear"/>
+	  <Containable name="Railgun Aluminium Spear"/>
+	  <Containable name="Railgun Copper Spear"/>
+	  <Containable name="Railgun Bronze Spear"/>
+	  <Containable name="Railgun Steel Spear"/>
+	  <Containable name="Railgun Uranium Spear"/>
+	  <Containable name="Railgun Fulgurium Spear"/>
+	  <Containable name="Railgun Shell"/>
+      <Containable name="Railgun Fusion Shell"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Refrigerator"
+	Tags="cntnr"
+	waterproof="true">
+    
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="141,186,71,135" depth="0.78"/>
 	
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
       <sprite texture="Mods/BTE/Items/Containers/FridgeLights.png" sourcerect="0,0,71,135" alpha="1.0"/>
 	  <StatusEffect type="Always" target="This" IsOn="true"/>
 	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
     </LightComponent>
+	
+	<Controller direction="None" canbepicked="true">
+      <sound file="Mods/BTE/Items/Containers/Fridge.ogg" type="OnUse" range="750"/>
+    </Controller>
 	
 	<Powered powerconsumption="50" currpowerconsumption="50" minvoltage="0.5" isactive="true">
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Fries,Apple Pie,Carrot Pie" Condition="0.02"/>
@@ -107,73 +166,22 @@
       <sound file="Mods/BTE/Items/Containers/FridgeHum.ogg" type="OnActive" range="500" loop="true"/>
     </Powered>
 	
-	<ItemContainer capacity="15" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,food,drink"/>
-    </ItemContainer>
-	
-	<ConnectionPanel selectkey="Action" canbeselected = "true" msg="Rewire [Screwdriver]">
-      <requireditem name="Screwdriver" type="Equipped"/>
+	<ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
       <output name="power_in"/>
     </ConnectionPanel>
-  </Item>
-  
-  <Item
-    name="Top Cabinet"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
-
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="46,186,48,64" canflipx="false"/>
 	
-	<Controller direction="None" canbepicked="true">
-      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
-    </Controller>
-
-    <ItemContainer capacity="20" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,Flour,Food Can,Frying Pan"/>
-    </ItemContainer>
-  </Item>
-
-  <Item
-    name="Medicine Cabinet"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
-
-    <Sprite texture ="Content/Items/Containers/cabinets.png" depth="0.78" sourcerect="0,0,48,64" canflipx="false"/>
-	
-	<Controller direction="None" canbepicked="true">
-      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
-    </Controller>
-
-    <ItemContainer capacity="20" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,medical,chem"/>
-    </ItemContainer>
-  </Item>
-
-  <Item
-   name="Toxic Cabinet"
-   Tags="cntnr"
-   linkable="true"
-   pickdistance ="150">
-
-    <Sprite texture ="Content/Items/Containers/cabinets.png" depth="0.78" sourcerect="0,64,48,64" canflipx="false"/>
-	
-	<Controller direction="None" canbepicked="true">
-      <sound file="Mods/BTE/Items/Containers/Cabinet.ogg" type="OnUse" range="500"/>
-    </Controller>
-
-    <ItemContainer capacity="20" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,chem,medical"/>
+	<ItemContainer capacity="15" canbeselected="true" hideitems="true">
+      <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
+	  <Containable name="smallitem,food,drink"/>
     </ItemContainer>
   </Item>
 
   <Item
     name="Metal Crate"
 	Tags="cntnr"
-    linkable="true"
+	waterproof="true"
 	fireproof="true"
-    pickdistance ="150"
 	price="250">
 	
 	<Deconstruct time="10">
@@ -181,7 +189,7 @@
       <Item name="Steel Block"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="348,283,65,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="0,185,65,60" depth="0.54"/>
 
     <Body width="60" height="55" density="50"/>
 
@@ -195,9 +203,8 @@
   <Item
     name="Metal Footlocker"
 	Tags="cntnr"
-    linkable="true"
+	waterproof="true"
 	fireproof="true"
-    pickdistance ="150"
 	price="250">
 	
 	<Deconstruct time="10">
@@ -205,7 +212,7 @@
       <Item name="Steel Block"/>
     </Deconstruct>
 
-    <Sprite texture ="Content/Items/Containers/crates.png" depth="0.54" sourcerect="0,0,79,35"/>
+    <Sprite texture="Content/Items/Containers/crates.png" sourcerect="0,0,79,35" depth="0.54"/>
 
     <Body width="77" height="33" density="50"/>
 
@@ -215,61 +222,14 @@
       <Containable name="smallitem,meditem,bigitem"/>
     </ItemContainer>
   </Item>
-
-  <Item
-    name="Explosive Crate"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	price="250">
-	
-	<Deconstruct time="10">
-      <Item name="Steel Block"/>
-      <Item name="Steel Block"/>
-    </Deconstruct>
-
-    <Sprite texture ="Content/Items/Containers/crates.png" depth="0.54" sourcerect="81,0,47,42"/>
-
-    <Body width="45" height="41" density="50"/>
-    
-    <Holdable slots="RightHand+LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-20,14" handle2="20,14"/>
-
-    <ItemContainer capacity="10" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,explosive"/>
-    </ItemContainer>
-  </Item>
-
-  <Item
-    name="Chemical Crate"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	price="250">
-	
-	<Deconstruct time="10">
-      <Item name="Steel Block"/>
-      <Item name="Steel Block"/>
-    </Deconstruct>
-
-    <Sprite texture ="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,36,47,42"/>
-
-    <Body width="45" height="41" density="50"/>
-
-	<Holdable slots="RightHand+LeftHand" holdpos="0,-70" aimpos="15,-50" handle1="-20,14" handle2="20,14"/>
-
-    <ItemContainer capacity="10" canbeselected="true" hideitems="true">
-      <Containable name="smallitem,chem,medical"/>
-    </ItemContainer>
-  </Item>
   
   <Item
     name="Cargo Container"
 	Tags="cntnr"
-    linkable="true"
-	fireproof="true"
-    pickdistance ="50">
+	waterproof="true"
+	fireproof="true">
     
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.79" sourcerect="0,0,413,185"/>
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="0,0,413,185" depth="0.79"/>
 	
 	<Controller direction="None" canbepicked="true">
       <sound file="Mods/BTE/Items/Containers/CargoContainer.ogg" type="OnUse" range="1250"/>
@@ -315,44 +275,40 @@
   </Item>
   
   <Item
-    name="Wall Rack"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
+    name="Weapon Rack"
+	aliases="Wall Rack"
+	Tags="cntnr">
     
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="310,186,103,95"/>
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="0,316,103,95" depth="0.78"/>
 
     <ItemContainer capacity="3" canbeselected="true" hideitems="false" itempos="52,-16" iteminterval="0,-31">
       
 	  <Containable name="Gauss Pistol"/>
 	  <Containable name="Gauss Carbine"/>
 	  <Containable name="Gauss Rifle"/>
-	  <Containable name="Antique Revolver"/>
+	  <Containable name="Revolver"/>
 	  <Containable name="Diving Revolver"/>
-	  <Containable name="Captain's Revolver"/>
 	  <Containable name="Diving Shotgun"/>
-	  <Containable name="Flashlight Shotgun"/>
 	  <Containable name="Harpoon Gun"/>
 	  <Containable name="Spear Gun"/>
 	  <Containable name="Dart Gun"/>
+	  <Containable name="Captain's Revolver"/>
+	  <Containable name="Flashlight Shotgun"/>
 	  <Containable name="Single Shotgun"/>
 	  <Containable name="Grenade Launcher"/>
 	  <Containable name="Clown Shotgun"/>
 	  <Containable name="PDW"/>
 	  <Containable name="Clown Machinegun"/>
-	  <Containable name="Makeshift Rifle"/>
-	  <Containable name="Makeshift Suppressed Pistol"/>
 	  <Containable name="Gravity Gun"/>
+	  <Containable name="Makeshift Suppressed Pistol"/>
     </ItemContainer>
   </Item>
   
   <Item
     name="Fire Extinguisher Bracket"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150">
+	Tags="cntnr">
     
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.78" sourcerect="319,282,25,61"/>
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="387,186,25,61" depth="0.78"/>
 
     <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="13,-25">
       <Containable name="Fire Extinguisher"/>
@@ -362,9 +318,7 @@
   <Item
     name="Steel Table"
 	Tags="cntnr"
-	linkable="true"
-    pickdistance="150"
-    description="A sturdy steel table with a drawer. Sometimes used as a dining table."
+    description="A sturdy steel table with a drawer."
 	impacttolerance="4"
 	price="230">
 	
@@ -373,19 +327,15 @@
       <Item name="Steel Bar"/>
 	  <Item name="Steel Bar"/>
     </Deconstruct>
-	
-	<Projectile launchimpulse="24">
-      <Attack damage="60" bleedingdamage="0.3" stun="10" structuredamage="15" targetforce="150" damagetype="Blunt"/>
-    </Projectile>
 
-    <Sprite texture="Mods/BTE/Items/Containers/Containers.png" depth="0.53" sourcerect="172,186,131,85"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="183,0,131,85" depth="0.53"/>
 	
 	<Body width="130" height="84" density="18"/>
 	
 	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" aimpos="40,-20" handle1="-40,14" handle2="40,14" aimable="false" controlpose="false">
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/BatHit.ogg"/>
-        <Explosion range="75" damage="4" stun="3.8" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
+        <Explosion range="75" damage="2" stun="3.8" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
 	</Holdable>
 	
@@ -396,8 +346,6 @@
   
   <Item
     name="Steel Chair"
-	linkable="true"
-    pickdistance="150"
     description="A sturdy but uncomfortable steel chair."
 	impacttolerance="4"
 	price="150">
@@ -406,12 +354,8 @@
       <Item name="Steel Bar"/>
 	  <Item name="Steel Bar"/>
     </Deconstruct>
-	
-	<Projectile launchimpulse="24">
-      <Attack damage="40" bleedingdamage="0.5" stun="10" structuredamage="30" targetforce="120" damagetype="Blunt"/>
-    </Projectile>
 
-    <Sprite texture="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="237,278,53,98"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="237,86,53,98" depth="0.54"/>
 	
 	<Body width="52" height="97" density="14"/>
 	
@@ -420,15 +364,13 @@
 	<Throwable slots="RightHand+LeftHand" throwforce="3.0">
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/BatHit.ogg"/>
-        <Explosion range="70" damage="2" stun="3.4" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
+        <Explosion range="70" damage="1" stun="2" force="10" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
       </StatusEffect>
     </Throwable>
   </Item>
   
   <Item
     name="Steel Сhair"
-	linkable="true"
-    pickdistance="150"
     description="A sturdy but uncomfortable steel chair."
 	impacttolerance="4"
 	price="150">
@@ -438,7 +380,7 @@
 	  <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="183,278,53,98"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="183,86,53,98" depth="0.54"/>
 	
 	<Body width="52" height="97" density="14"/>
 	
@@ -454,11 +396,11 @@
   
   <Item
     name="Diving Chest"
-	Tags="cntnr"
 	category="Equipment"
-    linkable="true"
-    pickdistance ="150"
-    description="A neutrally buoyant underwater chest that can be used as a toolbox for hull repairs outside a sub or in object retrieval operations."
+	Tags="cntnr"
+	description="A neutrally buoyant underwater chest that can be used as a toolbox for hull repairs outside a sub or in object retrieval operations."
+	waterproof="true"
+	fireproof="true"
 	price="500">
 	
 	<Deconstruct time="10">
@@ -468,7 +410,7 @@
 	  <Item name="FPGA Circuit"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/Containers.png" depth="0.54" sourcerect="0,328,90,48"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="114,185,90,48" depth="0.54"/>
 
     <Body width="88" height="44" density="10.01"/>
 
@@ -481,16 +423,13 @@
   
   <Item
     name="Standard Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="0,0,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="0,2,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -503,16 +442,13 @@
   
   <Item
     name="Workshop Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="122,122,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="122,124,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -525,16 +461,13 @@
   
   <Item
     name="Electronics Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="61,0,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="61,2,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -547,16 +480,13 @@
   
   <Item
     name="Weapons Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="61,122,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="61,124,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -569,16 +499,14 @@
   
   <Item
     name="Explosives Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	aliases="Explosive Crate"
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="122,0,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="122,2,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -591,16 +519,13 @@
   
   <Item
     name="Medical Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="0,61,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="0,63,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -613,16 +538,13 @@
   
   <Item
     name="Biohazard Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="61,61,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="61,63,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -635,16 +557,14 @@
   
   <Item
     name="Chemical Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	aliases="Chemical Crate"
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="122,61,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="122,63,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -657,16 +577,13 @@
   
   <Item
     name="Radiation Shipping Box"
-	Tags="cntnr"
-    linkable="true"
-    pickdistance ="150"
-	>
+	Tags="cntnr">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Containers/PlasticBox.png" depth="0.54" sourcerect="0,122,60,60"/>
+    <Sprite texture="Mods/BTE/Items/Containers/dynamicContainers.png" sourcerect="0,124,60,60" depth="0.54"/>
 
     <Body width="56" height="56" density="15" friction="0.95"/>
 
@@ -687,10 +604,10 @@
    
     <Deconstruct time="5">
       <Item name="Aluminium Sliver"/>
-      <Item name="Polycarbonate Sliver"/>
+      <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Tools/Tools.png" sourcerect="31,130,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Tools/Tools.png" sourcerect="31,130,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
@@ -711,10 +628,10 @@
    
     <Deconstruct time="5">
       <Item name="Aluminium Sliver"/>
-      <Item name="Polycarbonate Sliver"/>
+      <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Tools/Tools.png" sourcerect="62,130,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Tools/Tools.png" sourcerect="62,130,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
@@ -735,17 +652,17 @@
    
     <Deconstruct time="5">
       <Item name="Aluminium Sliver"/>
-      <Item name="Polycarbonate Sliver"/>
+      <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTE/Items/Tools/Tools.png" sourcerect="62,99,29,30" depth="0.55"/>
+    <Sprite texture="Mods/BTE/Items/Tools/Tools.png" sourcerect="62,99,29,30" depth="0.55"/>
 
     <Body width="27" height="28" density="12.5"/>
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
 	
 	<ItemContainer capacity="10" canbeselected="true" hideitems="true">
-      <Containable name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Clown Round"/>
+      <Containable name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round"/>
     </ItemContainer>
   </Item>
 </Items>

@@ -26,4 +26,46 @@
 
     <Holdable slots="Any,RightHand,LeftHand"/>
   </Item>
+  
+  <Item
+    name="Water Bottle"
+	aliases="Water"
+    category="Misc"
+    Tags="meditem,drink"
+    canuseonself="true"
+    description="Safely consumable death."
+	impacttolerance="2"
+	cargocontainername="Standard Shipping Box"
+    price="16">
+    
+    <Deconstruct time="5">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="waterbottle.png" sourcerect="0,0,10,34" depth="0.6"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="10,0,10,34" depth="0.6" maxcondition="90"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="20,0,10,34" depth="0.6" maxcondition="80"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="30,0,10,34" depth="0.6" maxcondition="70"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="40,0,10,34" depth="0.6" maxcondition="30"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="50,0,10,34" depth="0.6" maxcondition="20"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="60,0,10,34" depth="0.6" maxcondition="10"/>
+	<BrokenSprite texture="waterbottle.png" sourcerect="70,0,10,34" depth="0.6" maxcondition="0"/>
+
+	
+
+    <Body width="8" height="32" radius="8" density="11"/>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character">
+	    <sound file="Mods/BTE/Items/Medical/FoodDrink.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-10" disabledeltatime="true"/>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" canBeCombined="true" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/PlasticHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
 </Items>

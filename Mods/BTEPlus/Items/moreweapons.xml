@@ -178,7 +178,8 @@
 	tags="bigitem,weapon"
 	description="A lightweight underwater firearm. Standard issue gun for security."
 	cargocontainername="Weapons Shipping Box"
-	impacttolerance="3">
+	impacttolerance="3"
+    price="3750">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -357,10 +358,7 @@
 
 	<Pickable slots="Any"/>
     <Projectile hitscan="true" removeonhit="true">
-      <Attack damage="35" bleedingdamage="4" stun="0.4" targetforce="12" damagetype="Blunt"/>
-	  <StatusEffect type="OnImpact" target="This">
-	    <Explosion range="50" structuredamage="50" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="5.0"/>
-	  </StatusEffect>
+      <Attack damage="35" bleedingdamage="4" structuredamage="50" stun="0.4" targetforce="12" damagetype="Blunt"/>
     </Projectile>
   </Item>
   
@@ -436,7 +434,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
@@ -446,121 +444,5 @@
 		  <Conditional SpeciesName="endworm"/>
 		</StatusEffect>
     </MeleeWeapon>
-  </Item>
-  
-  <Item
-    name="Underwater Pistol"
-	aliases="Diving Pistol,SPP-1"
-    category="Equipment"
-    tags="meditem,weapon"
-    description="A small handgun that fires darts designed primarily for underwater combat."
-    cargocontainername="Weapons Shipping Box"
-    impacttolerance="3"
-    price="1500"
-	canuseonself="true">
-
-    <Deconstruct time="10">
-      <Item name="Spare Parts"/>
-    </Deconstruct>
-
-    <Sprite texture="moregear.png" sourcerect="61,109,34,19" depth="0.55"/>
-
-    <Body width="34" height="19" density="20"/>
-
-    <RangedWeapon barrelpos="22,3" spread="0" unskilledspread="2" reload="0.6">
-      <Sound file="Mods/BTEPlus/Items/silencedShot.ogg" type="OnUse"/>
-      <RequiredItems name="Water Dart" type="Contained" msg="The loaded ammunition is too damaged"/>
-      <RequiredSkill name="Weapons" level="40"/>
-      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
-      <StatusEffect type="Always" target="This" Condition="15"/>
-      <StatusEffect type="OnUse">
-        <Explosion range="80" force="2" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>
-      </StatusEffect>
-      <StatusEffect type="OnImpact" target="This">
-        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
-      </StatusEffect>
-    </RangedWeapon>
-
-    <ItemContainer capacity="4" hideitems="true">
-      <Containable name="Water Dart"/>
-    </ItemContainer>
-
-    <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
-            holdpos="36,-23" aimpos="75,18" handle1="-7,0" handle2="-7,0" holdangle="18"/>
-			
-	<ItemComponent>
-	  <StatusEffect type="OnUse" target="Character" Health="-25">
-	    <sound file="Mods/BTEPlus/Items/silencedShot.ogg"/>
-		<Use/>
-	  </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" bleeding="3" duration="1">
-		<Use/>
-	  </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" stun="8">
-		<Use/>
-	  </StatusEffect>
-    </ItemComponent>
-  </Item>
-  
-  <Item
-    name="Water Dart"
-	aliases="SPP-1 Round,Dart,Underwater Pistol Round"
-    category="Equipment"
-	Tags="smallitem,weapon"
-	description="A small sloped dart designed to travel short distances underwater."
-    interactthroughwalls="true"
-	cargocontainername="Weapons Shipping Box"
-	price="20">
-	
-	<Deconstruct time="5">      
-      <Item name="Polycarbonate Sliver" outcondition="0.25"/>
-	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.25"/>
-    </Deconstruct>
-
-    <Sprite texture="moregear.png" sourcerect="61,128,18,3" depth="0.55"/>
-
-    <Body width="18" height="1" density="30"/>
-
-	<Pickable slots="Any"/>
-    <Projectile hitscan="true" removeonhit="false" sticktocharacters="true">
-      <Attack damage="25" bleedingdamage="3" stun="0.5" targetforce="10" damagetype="Slash"/>
-    </Projectile>
-  </Item>
-  
-    <Item
-    name="Automatic Dart Gun"
-    category="Equipment"
-	tags="bigitem,weapon"
-	description="This is a scoped pneumatic rifle that can propel darts containing different drugs. This is a modified version with a makeshift magazine and automatic firing mechanism."
-	cargocontainername="Weapons Shipping Box"
-	impacttolerance="3">
-
-    <Deconstruct time="10">      
-      <Item name="Dart Gun"/>
-      <Item name="Spare Parts"/>
-	  <Item name="Aluminum Sliver"/>
-	  <Item name="Polycarbonate Sliver"/>
-    </Deconstruct>
-  
-    <Sprite texture="autodartgun.png" sourcerect="0,0,98,33" depth="0.55"/>
-
-    <Body width="90" height="30" density="40"/>
-    
-    <RangedWeapon barrelpos="49,10" spread="4" unskilledspread="16" reload="0.8">
-      <Sound file="Mods/BTE/Items/Weapons/DartGun1.ogg" type="OnUse"/>
-      <Sound file="Mods/BTE/Items/Weapons/DartGun2.ogg" type="OnUse"/>
-      <RequiredItems name="Medical Dart" type="Contained" msg="The loaded dart is too damaged"/>
-      <RequiredSkill name="Weapons" level="60"/>
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
-	  </StatusEffect>
-    </RangedWeapon>
-
-    <ItemContainer capacity="6" hideitems="false" itempos="6,0" iteminterval="0,-3">
-      <Containable name="Medical Dart"/>
-    </ItemContainer>
-	
-	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-              holdpos="35,-10" aimpos="60,5" handle1="-15,-6" handle2="26,7"/>
   </Item>
 </Items>

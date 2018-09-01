@@ -64,43 +64,6 @@
   </Item>
   
   <Item
-    name="Diving Radio"
-	aliases="Underwater Radio"
-    category="Equipment"
-    tags="smallitem"
-	description="Allows long-range communication between the crew and works underwater."
-	cargocontainername="Electronics Shipping Box"
-	price="250">
-	
-	<Deconstruct time="10">
-      <Item name="Polycarbonate Sliver"/>
-	  <Item name="Polycarbonate Sliver"/>
-	  <Item name="FPGA Circuit"/>
-    </Deconstruct>
-
-    <Sprite texture="moregear.png" depth="0.6" sourcerect="69,68,11,36"/>
-
-    <Body width="9" height="30" density="9.9"/>
-
-    <WifiComponent range="50000" LinkToChat="true">
-      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
-    </WifiComponent>
-	
-	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16" holdpos="9,6">
-	  <StatusEffect type="OnActive" target="Contained" Condition="-0.05"/>
-    </Holdable>
-	
-    <LightComponent LightColor="1.0,1.0,0.0,0.4" Flicker="0.1" range="4" powerconsumption="0" IsOn="true">
-    </LightComponent>
-	
-	<ItemContainer capacity="1" hideitems="true">
-		<Containable name="Battery Cell, Fulgurium Battery Cell">
-			<StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
-		</Containable>
-    </ItemContainer>
-  </Item>
-  
-  <Item
     name="Glowstick"
 	aliases="Glowrod"
 	category="Equipment"
@@ -140,7 +103,7 @@
 	aliases="Underwater Grenade,Floating Grenade,Water Grenade"
     category="Equipment"
 	tags="smallitem,weapon,grenade"
-	description="A buoyant variant of the HTM Grenade. HTM or Hand Thrown Munition, is an empty steel casing with a screw-off cap and a trigger mechanism that ignites the containing payload after a certain amount of time."
+	description="A buoyant variant of the HTM Grenade."
     canuseonself="true"
 	impacttolerance="3"
 	cargocontainername="Explosives Shipping Box"
@@ -150,6 +113,7 @@
       <Item name="Steel Bar"/>
 	  <Item name="Aluminium Sliver"/>
 	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="FPGA Circuit"/>
     </Deconstruct>
 
     <Sprite texture="moregear.png" sourcerect="44,0,11,21" depth="0.55"/>
@@ -255,47 +219,7 @@
       <Attack damage="30" bleedingdamage="0" stun="30" structuredamage="0" targetforce="1000" damagetype="Blunt"/>
     </Projectile>
   </Item>
-  
-  <Item
-    name="Ballistic Leggings"
-	aliases="Leg Armor,Armor Legs"
-    category="Equipment"
-    tags="meditem,clothing"
-    description="While a pair ballistic leggings won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
-	
-	<Deconstruct time="15">
-      <Item name="Polycarbonate Bar"/>
-	  <Item name="Polycarbonate Sliver"/>
-	  <Item name="Steel Bar"/>
-    </Deconstruct>
 
-	<Sprite texture="ballisticlegs.png" sourcerect="0,87,51,13" depth="0.6"/>
-
-    <Body width="51" height="13" density="19"/>
-
-    <Wearable slots="Any,Legs">
-      <sprite texture="ballisticlegs.png" limb="Waist" sourcerect="0,0,32,29" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="ballisticlegs.png" limb="RightThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
-      <sprite texture="ballisticlegs.png" limb="LeftThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
-
-      <sprite texture="ballisticlegs.png" limb="RightLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
-      <sprite texture="ballisticlegs.png" limb="LeftLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
-	  
-	  <sprite texture="ballisticlegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
-      <sprite texture="ballisticlegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
-	  
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.1" /> -->
-	  
-	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
-    </Wearable>
-
-    <ItemContainer capacity="2">
-      <Containable name="smallitem"/>
-    </ItemContainer>
-  </Item>
-  
   <Item
     name="Diving Kit"
 	aliases="Divekit,Scooterchest"
@@ -323,7 +247,7 @@
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Fulgurium Battery Cell" Condition="-0.5"/>
       <sound file="Content/Items/Diving/scooter.ogg" type="OnUse" range="500.0" loop="true"/>
       <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.2" range="800">
-        <LightTexture texture="Content/Lights/lightcone.png" origin="0.05, 0.5" size="2.0,1.0"/>
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.05, 0.5" size="2.0,1.0" IsOn="true"/>
       </LightComponent>
     </Propulsion>
 
@@ -333,9 +257,6 @@
 	  </Containable>
 	  <Containable name="smallitem,meditem,bigitem"/>
     </ItemContainer>
-	
-	<LightComponent LightColor="1.0,1.0,0.0,0.4" Flicker="0.1" range="30" powerconsumption="0" IsOn="true">
-    </LightComponent>
   </Item>
   
   <Item
@@ -398,6 +319,9 @@
     <Wearable limbtype="Head" slots="Any,Face">
       <sprite texture="moregear.png" limb="Head" sourcerect="91,59,37,30" origin="0.45,0.6"/>
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.03" disabledeltatime="true" inheritlimbdepth="true"/> <!-- oxygen="-0.03" /> -->
+	  <StatusEffect type="OnWearing" target="Character" PressureProtection="10">
+	    <Conditional hasstatustag="wetsuit"/>
+	  </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
       </StatusEffect>
@@ -479,16 +403,72 @@
       <Item name="Aluminium Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="moregear.png" sourcerect="122,26,6,33" depth="0.55"/>
+    <Sprite texture ="oxygenbottle.png" sourcerect="0,0,6,33" depth="0.55"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="6,0,6,33" depth="0.55" maxcondition="92.5"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="12,0,6,33" depth="0.55" maxcondition="85"/>
+    <BrokenSprite texture="oxygenbottle.png" sourcerect="18,0,6,33" depth="0.55" maxcondition="77.5"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="24,0,6,33" depth="0.55" maxcondition="70"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="30,0,6,33" depth="0.55" maxcondition="62.5"/>
+    <BrokenSprite texture="oxygenbottle.png" sourcerect="36,0,6,33" depth="0.55" maxcondition="55"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="0,33,6,33" depth="0.55" maxcondition="47.5"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="6,33,6,33" depth="0.55" maxcondition="40"/>
+    <BrokenSprite texture="oxygenbottle.png" sourcerect="12,33,6,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="18,33,6,33" depth="0.55" maxcondition="17.5"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="24,33,6,33" depth="0.55" maxcondition="10"/>
+    <BrokenSprite texture="oxygenbottle.png" sourcerect="30,33,6,33" depth="0.55" maxcondition="2.5"/>
+	<BrokenSprite texture="oxygenbottle.png" sourcerect="36,33,6,33" depth="0.55" maxcondition="0"/>
 
     <Body width="6" height="33" density="5"/>
 
-    <Pickable holdpos="30,-15" handle1="0,1" slots="RightHand,LeftHand,Any">
+    <Holdable holdpos="30,-15" handle1="0,1" slots="RightHand,LeftHand,Any">
       <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Weapons/BlastExplosionSmall.ogg"/>
         <Explosion range="125" structuredamage="5" damage="10" stun="2.5" force="1.5"/>
       </StatusEffect>
-    </Pickable>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Flare Gun"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="A lightweight polycarbonate flare launching device."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+    price="1000">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEPlus/Items/moregear.png" sourcerect="69,141,29,21" depth="0.55"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/moregear.png" sourcerect="98,141,29,21" depth="0.55" maxcondition="99.9999"/>
+
+    <Body width="28" height="20" density="9"/>
+
+    <RangedWeapon barrelpos="27,6.5" spread="1" unskilledspread="2" reload="1">
+      <Sound file="Mods/BTEPlus/Items/FlareGun.ogg" type="OnUse"/>
+      <RequiredItems name="Flare" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="30"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+	  </StatusEffect>
+      <StatusEffect type="Always" target="This" Condition="100" setvalue="true">
+		<RequiredItem type="Contained" name="Flare"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse">
+        <Explosion range="80" force="1" shockwave="false" flames="false" smoke="false" sparks="true" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Flare"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+            aimpos="75,18" handle1="-5,-3" handle2="-5,-3" holdangle="0"/>
   </Item>
 
   <Item
@@ -507,7 +487,7 @@
     <Body width="25" height="15" density="10.3"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="germanTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+      <sprite texture="germanTorso.png" limb="Head" depth="0.038" inheritlimbdepth="false" origin="0.5,0.9" sourcerect="32,48,32,32"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -608,52 +588,6 @@
 	
 	<ItemContainer capacity="3">
       <Containable name="smallitem"/>
-    </ItemContainer>
-  </Item>
- 
- <!-- Cheat Weapon! -->
-  <Item
-    name="UBER Shotgun"
-	aliases="UBER,UBER Shotty,UBER Boomstick"
-    category="Equipment"
-	tags="bigitem,weapon"
-	description="Let's take a shotgun, and have its ammunition stored in a miniature pocket dimension!"
-	cargocontainername="Weapons Shipping Box"
-	impacttolerance="3">
-
-    <Deconstruct time="10">      
-      <Item name="Diving Shotgun"/>
-	  <Item name="Flashlight"/>
-	  <Item name="Steel Sliver"/>
-    </Deconstruct>
-  
-    <Sprite texture="moregear.png" sourcerect="0,89,93,19" depth="0.55"/>
-
-    <Body width="90" height="16" density="50"/>
-
-    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-			holdpos="35,-10" holdangle="-6" aimpos="45,-3" handle1="-18,-5" handle2="26,4.5"/>
-    
-    <RangedWeapon barrelpos="49,10" spread="1" unskilledspread="3" reload="0.06">
-      <Sound file="Mods/BTEPlus/Items/xm1014.ogg" type="OnUse"/>
-      <RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round" type="Contained" msg="The loaded ammunition is too damaged"/>
-      <RequiredSkill name="Weapons" level="40"/>
-	  <StatusEffect type="OnUse">
-	    <Explosion range="100" force="2.5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1.0"/>
-      </StatusEffect>
-	  <StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
-	  </StatusEffect>
-    </RangedWeapon>
-	
-	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
-      <LightTexture texture="Content/Lights/lightcone.png" origin="0.03,0.5" size="2.0,1.0"/>
-    </LightComponent>
-
-    <ItemContainer capacity="50" hideitems="true">
-      <Containable name="Shotgun Slug Round"/>
-	  <Containable name="Shotgun Beanbag Round"/>
-	  <Containable name="Shotgun Taser Round"/>
     </ItemContainer>
   </Item>
 </Items>

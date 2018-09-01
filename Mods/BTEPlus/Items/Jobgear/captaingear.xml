@@ -14,7 +14,7 @@
     <Body width="25" height="15" density="10.3"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="captainTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+      <sprite texture="captainTorso.png" limb="Head" origin="0.5,0.9" sourcerect="32,48,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -37,7 +37,7 @@
     <Body width="25" height="15" density="10.3"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="captainTorsoB.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+      <sprite texture="captainTorsoB.png" limb="Head" origin="0.5,0.9" sourcerect="32,48,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -46,11 +46,11 @@
   </Item>
   
   <Item
-    name="Assistant's Cap A"
-	aliases="Asscap A,Asshat A"
+    name="Officer's Cap A"
+	aliases="Asscap A,Asshat A,Assistant's Cap,Assistant's Cap A"
     category="Equipment"
     tags="meditem,clothing"
-    description="A token of the Assistant's questionable authority.">
+    description="A token of the Officers's questionable authority.">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Sliver"/>
@@ -61,7 +61,7 @@
     <Body width="25" height="15" density="10.3"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="assistantTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="32,48,32,32"/>
+      <sprite texture="assistantTorso.png" limb="Head" origin="0.5,0.9" sourcerect="32,48,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -69,11 +69,11 @@
     </Wearable>
   </Item>
   <Item
-    name="Assistant's Cap B"
-	aliases="Asscap B,Asshat B"
+    name="Officer's Cap B"
+	aliases="Asscap B,Asshat B,Assistant's Cap B"
     category="Equipment"
     tags="meditem,clothing"
-    description="A token of the Assistant's even more questionable authority.">
+    description="A token of the Officer's very questionable authority.">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Sliver"/>
@@ -84,7 +84,7 @@
     <Body width="25" height="15" density="10.3"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="assistantTorso.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="64,48,32,32"/>
+      <sprite texture="assistantTorso.png" limb="Head" origin="0.5,0.9" sourcerect="64,48,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -93,11 +93,11 @@
   </Item>
   
   <Item
-    name="Assistant's Beret"
-	aliases="Assberet,Asshat C"
+    name="Officer's Beret"
+	aliases="Assberet,Asshat C,Assistant's Beret"
     category="Equipment"
     tags="meditem,clothing"
-    description="A token of the Assistant's undeniable authority.">
+    description="A token of the Officer's undeniable authority.">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Sliver"/>
@@ -108,7 +108,7 @@
     <Body width="25" height="15" density="10.3"/>
 
     <Wearable limbtype="Head" slots="Any,Head">
-      <sprite texture="assistantBeret.png" limb="Head" depthlimb="Tail" origin="0.5,0.9" sourcerect="0,0,32,32"/>
+      <sprite texture="assistantBeret.png" limb="Head" origin="0.5,0.9" sourcerect="0,0,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -209,8 +209,8 @@
   </Item>
 
   <Item
-    name="Assistant's Jacket"
-	aliases="Captain's Jacket"
+    name="Officer's Jacket"
+	aliases="Captain's Jacket,Assistant's Jacket"
     category="Equipment"
     tags="meditem,clothing">
 	
@@ -244,8 +244,8 @@
   </Item>
 
   <Item
-    name="Assistant's Trousers A"
-	aliases="Captain's Trousers A"
+    name="Officer's Trousers A"
+	aliases="Captain's Trousers A,Assistant's Trousers A"
     category="Equipment"
     tags="meditem,clothing">
 	
@@ -282,8 +282,8 @@
   </Item>
   
   <Item
-    name="Assistant's Trousers B"
-	aliases="Captain's Trousers B"
+    name="Officer's Trousers B"
+	aliases="Captain's Trousers B,Assistant's Trousers B"
     category="Equipment"
     tags="meditem,clothing">
 	

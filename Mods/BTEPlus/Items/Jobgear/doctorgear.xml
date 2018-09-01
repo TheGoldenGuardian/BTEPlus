@@ -3,21 +3,20 @@
     name="Health Scanner HUD"
 	aliases="Doctor Headset,Medical Headset"
     category="Equipment"
-    tags="smallitem"
 	description="A heads-up headset that displays information of the vital signs and status of nearby humans."
-    >
+    tags="smallitem">
 	
 	<Deconstruct time="15">
       <Item name="Aluminium Sliver"/>
       <Item name="FPGA Circuit"/>
     </Deconstruct>
 
-    <Sprite texture ="doctorgear.png" sourcerect="0,120,20,8" depth="0.6"/>
+    <Sprite texture="doctorgear.png" sourcerect="0,120,20,8" depth="0.6"/>
 
     <Body width="18" height="6" density="11"/>
 
     <Wearable limbtype="Head" slots="Any,Face">
-      <sprite texture ="doctorgear.png" limb="Head" sourcerect="0,120,20,8" origin="0.45,0.9"/>
+      <sprite texture="doctorgear.png" limb="Head" sourcerect="0,120,20,8" origin="0.45,0.9"/>
     </Wearable>
 
     <StatusHUD drawhudwhenequipped="true"/>
@@ -27,16 +26,15 @@
     name="Doctor's Coat A"
 	aliases="Doctor's Coat"
     category="Equipment"
-	tags="meditem,clothing"
 	description="A standard issued garment given to Medical Doctors."
-    >
+	tags="meditem,clothing">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Bar"/>
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="doctorgear.png" sourcerect="75,0,53,18" depth="0.6"/>
+    <Sprite texture="doctorgear.png" sourcerect="75,0,53,18" depth="0.6"/>
 
     <Body width="52" height="17" density="11.5"/>
 
@@ -62,16 +60,15 @@
   <Item
     name="Doctor's Coat B"
     category="Equipment"
-	tags="meditem,clothing"
 	description="A standard issued garment given to Medical Doctors."
-    >
+	tags="meditem,clothing">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Bar"/>
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="doctorgear.png" sourcerect="75,0,53,18" depth="0.6"/>
+    <Sprite texture="doctorgear.png" sourcerect="75,0,53,18" depth="0.6"/>
 
     <Body width="52" height="17" density="11.5"/>
 
@@ -95,12 +92,104 @@
   </Item>
   
   <Item
+    name="Scientist's Uniform A"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture="scientistgear.png" sourcerect="0,88,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="16"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="scientistgear.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="scientistgear.png" limb="RightHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="LeftHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
+
+      <sprite texture="scientistgear.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="scientistgear.png" limb="Waist" sourcerect="30,60,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="doctorgear.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Scientist's Uniform B"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture="scientistgear.png" sourcerect="0,88,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="16"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="scientistgear.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="scientistgear.png" limb="RightHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="LeftHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
+
+      <sprite texture="scientistgear.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="scientistgear.png" limb="Waist" sourcerect="30,60,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgear.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="doctorgear.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgear.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
     name="Bodybag"
     category="Equipment"
 	cargocontainername="Biohazard Shipping Box"
-	price="85"
     tags="meditem,clothing"
-    description="A specially designed large polycarbonate bag which is used in the transportation or as a temporary storage of a corpse.">
+    description="A specially designed large polycarbonate bag which is used in the transportation or as a temporary storage of a corpse."
+	price="85">
 	
 	<Deconstruct time="15">
       <Item name="Polycarbonate Block"/>

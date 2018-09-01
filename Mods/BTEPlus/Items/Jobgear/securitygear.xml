@@ -11,16 +11,16 @@
       <Item name="Steel Bar"/>
     </Deconstruct>
     
-    <Sprite texture ="securitygear.png" sourcerect="39,31,29,22" depth="0.6"/>
+    <Sprite texture="securitygear.png" sourcerect="39,31,29,22" depth="0.6"/>
 
     <Body radius="12" density="30"/>
 
     <Wearable slots="Any,Head">
-      <sprite texture="securitygear.png" limb="Head" depthlimb="Tail" sourcerect="39,31,29,22" origin="0.51,0.9"/>
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.1" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
+      <sprite texture="securitygear.png" limb="Head" depth="0.038" inheritlimbdepth="false" sourcerect="39,31,29,22" origin="0.51,0.9"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.09" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
 	  
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -35,17 +35,17 @@
       <Item name="Steel Bar"/>
     </Deconstruct>
     
-    <Sprite texture ="securitygear.png" sourcerect="53,76,29,38" depth="0.6"/>
+    <Sprite texture="securitygear.png" sourcerect="53,76,29,38" depth="0.6"/>
 
     <Body height="35" radius="2" density="30"/>
 
     <Wearable slots="Any,Head">
-      <sprite texture="securitygear.png" limb="Head" depthlimb="Tail" sourcerect="53,76,29,38" origin="0.51,0.5"/>
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.12" ObstructVision="true" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+      <sprite texture="securitygear.png" limb="Head" depth="0.038" inheritlimbdepth="false" sourcerect="53,76,29,38" origin="0.51,0.5"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.11" ObstructVision="true" HideFace="true" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -75,8 +75,8 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.13" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -109,9 +109,49 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
+  </Item>
+  
+  <Item
+    name="Ballistic Trousers"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A standard issue pairs of synthetic fiber trousers with a ballistic mesh layer and knee pads."
+	>
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="15"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="doctorgear.png" limb="Waist" sourcerect="0,0,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="RightThigh" sourcerect="133,0,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="LeftThigh" sourcerect="161,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="securitygear.png" limb="RightLeg" sourcerect="135,52,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="LeftLeg" sourcerect="135,52,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.12" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
   </Item>
 
   <Item
@@ -173,7 +213,7 @@
       <Item name="Polycarbonate Block"/>
     </Deconstruct>
 
-	<Sprite texture = "prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
+	<Sprite texture="prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
 
     <Body width="50" height="17" density="14"/>
 
@@ -214,7 +254,7 @@
       <Item name="Polycarbonate Block"/>
     </Deconstruct>
 
-	<Sprite texture = "prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
+	<Sprite texture="prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
 
     <Body width="50" height="17" density="14"/>
 
@@ -252,7 +292,7 @@
       <Item name="Polycarbonate Block"/>
     </Deconstruct>
 
-	<Sprite texture = "prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
+	<Sprite texture="prisonergear.png" sourcerect="0,52,50,25" depth="0.6"/>
 
     <Body width="50" height="17" density="14"/>
 
