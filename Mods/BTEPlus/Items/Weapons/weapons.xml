@@ -1097,7 +1097,7 @@
 	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTE/Items/Weapons/BallisticGuns.png" sourcerect="94,0,10,4" depth="0.55"/>
+    <Sprite texture="BallisticGuns.png" sourcerect="94,0,10,4" depth="0.55"/>
 
     <Body width="6" height="2" density="20"/>
 

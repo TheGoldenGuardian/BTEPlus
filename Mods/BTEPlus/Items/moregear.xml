@@ -70,7 +70,8 @@
     Tags="smallitem,grenade"
 	description="A small glowing stick. Don't eat it..."
 	cargocontainername="Standard Shipping Box"
-    price="200">
+    price="200"
+	canuseonself="true">
 
     <Deconstruct time="1">
       <Item name="Polycarbonate Sliver"/>
@@ -82,7 +83,7 @@
 
     <Holdable handle1="0,0" handle2="0,0" slots="RightHand,LeftHand,Any" holdpos="8,4" holdangle="0"/>
 	
-	<Throwable slots="RightHand,LeftHand,Any" canBeCombined="true" throwforce="3.5" aimpos="35,-10" aimangle="15">
+	<Throwable slots="RightHand,LeftHand,Any" throwforce="3.5" aimpos="35,-10" aimangle="15">
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Tools/PlasticHit.ogg"/>
 	  </StatusEffect>
@@ -92,9 +93,16 @@
       <Attack damage="1" bleedingdamage="0" stun="0.25" structuredamage="0" targetforce="1" damagetype="Blunt"/>
     </Projectile>
 	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="This" IsOn="true">
+	    <sound file="Mods/BTEPlus/Items/glowstick.ogg"/>
+	  </StatusEffect>
+	</ItemComponent>
+	
 	<LightComponent LightColor="0.0,1.0,0.0,1.0" Flicker="0" range="120" IsOn="false">
-      <StatusEffect type="Always" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-0.25"/>
       <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+	  <!-- <StatusEffect type="OnUse" target="This" IsOn="true"/> -->
     </LightComponent>
   </Item>
 
@@ -193,32 +201,6 @@
 	  </StatusEffect>
     </Throwable>
   </Item>
-  
-  <Item
-    name="Rubber Bullet"
-	aliases="Rubber Grenade"
-    category="Equipment"
-	tags="smallitem,weapon,grenade"
-	description="A 40mm bullet made entirely out of rubber and designed to be fired from a grenade launcher. Is useful for stunning targets without causing lethal damage."
-	impacttolerance="3"
-	cargocontainername="Explosives Shipping Box"
-	price="300">
-	
-	<Deconstruct time="6">      
-      <Item name="Steel Sliver"/>
-	  <Item name="Aluminium Sliver"/>
-	  <Item name="Polycarbonate Bar"/>
-    </Deconstruct>
-
-    <Sprite texture="moregear.png" sourcerect="103,0,19,8" depth="0.55"/>
-
-    <Body width="19" height="8" density="10" friction="0.95"/>
-	
-	<Pickable slots="Any"/>
-	<Projectile launchimpulse="20" sticktocharacters="false">
-      <Attack damage="30" bleedingdamage="0" stun="30" structuredamage="0" targetforce="1000" damagetype="Blunt"/>
-    </Projectile>
-  </Item>
 
   <Item
     name="Diving Kit"
@@ -314,7 +296,7 @@
     
     <Sprite texture ="moregear.png" depth="0.6" sourcerect="91,59,37,30"/>
   
-    <Body height="35" radius="30" density="12.5"/>
+    <Body height="25" width="25" density="12.5"/>
 
     <Wearable limbtype="Head" slots="Any,Face">
       <sprite texture="moregear.png" limb="Head" sourcerect="91,59,37,30" origin="0.45,0.6"/>
@@ -371,7 +353,7 @@
     name="Breaching Kit"
     category="Equipment"
     Tags="cntnr,meditem"
-    description="A small kit used to carry meds and chems."
+    description="A small polycarbonate toolkit designed to hold to hold extra oxygen and equipment for assaulting and breaching other submarines."
     canbepicked="true"
     price="175">
    

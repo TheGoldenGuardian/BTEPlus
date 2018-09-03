@@ -206,7 +206,7 @@
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="10,8" handle1="-7,-8" handle2="-7,-8" holdangle="30" reload="1.0">
-      <Attack damage="1" bleedingdamage="0" structuredamage="0" damagetype="Blunt" stun="1.0" targetforce="11" sound="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+      <Attack damage="1" bleedingdamage="0" structuredamage="0" damagetype="Blunt" stun="0.25" targetforce="11" sound="Mods/BTE/Items/Medical/FoodEat.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -295,33 +295,6 @@
   </Item>
   
   <Item
-    name="Makeshift Headlight"
-	aliases="Glowstick Headlight"
-    category="Equipment"
-	description="A very cheap form of headlight made out of a glowstick and a copper coil."
-	Tags="smallitem">
-
-    <Deconstruct time="5">
-      <Item name="Glowstick"/>
-	  <Item name="Copper Coil"/>
-    </Deconstruct>
-
-    <Sprite texture ="miscellaneous.png" depth="0.55" sourcerect="138,40,29,11"/>
-
-    <Body height="20" width="11" density="8"/>
-	
-	<Wearable slots="Any,Head,Face">
-      <sprite texture="miscellaneous.png" limb="Head" sourcerect="153,1,37,38" origin="0.5,0.5"/>
-		<LightComponent range="120" lightcolor="0.0,1.0,0.0,1.0" powerconsumption="0" IsOn="true">
-		  <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
-			<Conditional IsDead="false"/>
-		  </StatusEffect>
-          <sprite texture="Content/Lights/light.png" depth="0.025" alpha="5.0"/>
-        </LightComponent>
-    </Wearable>
-  </Item>
-  
-  <Item
     name="t1/2 Glasses"
 	aliases="Gorbnob Fredmun's Glasses,Glasses,Spectacles,Specs"
     category="Equipment"
@@ -362,28 +335,6 @@
 	
 	<ItemContainer capacity="50" canbeselected="true" hideitems="true">
       <Containable name="PDW Round"/>
-    </ItemContainer>
-  </Item>
-  
-  <Item
-    name="Dart Holder"
-    category="Equipment"
-    Tags="cntnr,meditem"
-    description="A small polycarbonate dart holder"
-    canbepicked="true">
-   
-    <Deconstruct time="10">
-      <Item name="Polycarbonate Sliver"/>
-    </Deconstruct>
-
-    <Sprite texture ="Mods/BTEPlus/Items/miscellaneous.png" sourcerect="156,53,16,20" depth="0.55"/>
-
-    <Body width="16" height="20" density="12.5"/>
-
-    <Holdable slots="Any,RightHand,LeftHand" handle1="0,8.5" handle2="0,8.5" holdangle="90"/>
-	
-	<ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="0,4.5" iteminterval="0,-4">
-      <Containable name="Medical Dart,Water Dart"/>
     </ItemContainer>
   </Item>
   

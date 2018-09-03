@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Items>
+    <Item
+    name="Diving Revolver"
+	aliases="Underwater Revolver"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="[CR2] The Coalition Revolver 2 is still in testing. In fact, it may never leave testing, but for raw power in a pocket sized package, there is no other choice. Standard issue for high-ranking officers."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+    price="2000"
+	canuseonself="true">
+
+    <Deconstruct time="10">
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="52,26,39,24" depth="0.55"/>
+
+    <Body width="39" height="24" density="25"/>
+
+    <RangedWeapon barrelpos="38,4" spread="0" unskilledspread="2" reload="0.3">
+      <Sound file="Mods/BTEPlus/Items/Weapons/revolverfire.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+      <StatusEffect type="Always" target="This" Condition="15"/>
+      <StatusEffect type="OnUse">
+        <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Revolver Round"/>
+      <Containable name="Revolver HL Round"/>
+      <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+            holdpos="31,-23" aimpos="75,18" handle1="-12,-3" handle2="-1,-7" holdangle="36"/>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/revolverfire.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+
+  <Item
+    name="Flashlight Revolver"
+	aliases="Captain's Gun,Captain's Revolver"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="[CR2] The Coalition Revolver 2 is still in testing. In fact, it may never leave testing, but for raw power in a pocket sized package, there is no other choice. Standard issue for high-ranking officers. This one has an attached self-powered flashlight."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+	canuseonself="true">
+
+    <Deconstruct time="3">      
+      <Item name="Diving Revolver"/>
+	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Copper Wire"/>
+    </Deconstruct>
+
+    <Sprite texture="FlashlightGuns.png" sourcerect="56,27,39,24" depth="0.55"/>
+
+    <Body width="39" height="24" density="25"/>
+
+    <RangedWeapon barrelpos="38,4" spread="0" unskilledspread="2" reload="0.3">
+      <sound file="Mods/BTEPlus/Items/Weapons/revolverfire.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+      <StatusEffect type="Always" target="This" Condition="15"/>
+      <StatusEffect type="OnUse">
+        <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.05,0.5" size="2.0,0.5"/>
+    </LightComponent>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Revolver Round"/>
+      <Containable name="Revolver HL Round"/>
+      <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+            holdpos="36,-21" aimpos="75,18" handle1="-12,-3" handle2="-1,-7" holdangle="1"/>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/revolverfire.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Old Revolver"
+	aliases="Revolver,Antique Revolver"
+    category="Equipment"
+	tags="meditem,weapon"
+    description="It belongs in a museum! This old handgun still packs a punch, though."
+    impacttolerance="3"
+	canuseonself="true">
+
+    <Deconstruct time="10">      
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="4,31,37,19" depth="0.55"/>
+
+    <Body width="37" height="19" density="35"/>
+    
+    <RangedWeapon barrelpos="35,3" spread="2" unskilledspread="12" reload="1">
+      <Sound file="Mods/BTEPlus/Items/Weapons/oldrevolverfire.ogg" type="OnUse"/>
+	  <StatusEffect type="InWater" target="This" Condition="-75"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" Condition="-5">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="31,-23" aimpos="75,18" handle1="-12,-3" handle2="-1,-7" holdangle="36"/>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/oldrevolverfire.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Diving Shotgun"
+	aliases="Shotgun,Shotty,Boomstick,DS-M2"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="[DS-M2] The diving shotgun was an aging design, still used among a large majority of the Coalition. This is the upgraded variant, standard issue for security-heavy ships."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+    price="3750">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="0,0,93,21" depth="0.55"/>
+
+    <Body width="93" height="21" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="35,-10" holdangle="-6" aimpos="39,-3" handle1="-2,-1.5" handle2="28,-0.5"/>
+    
+    <RangedWeapon barrelpos="93,6" spread="1" unskilledspread="3">
+      <Sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg" type="OnUse"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="8" hideitems="true">
+      <Containable name="Shotgun Slug Round"/>
+	  <Containable name="Shotgun Beanbag Round"/>
+	  <Containable name="Shotgun Taser Round"/>
+	  <Containable name="Shotgun Flechette Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Flashlight Shotgun"
+	aliases="Flashlight Shotgun,Flashlight Shotty,Flashlight Boomstick,Flashlight DS-M2"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="[DS-M2] The diving shotgun was an aging design, still used among a large majority of the Coalition. This is the upgraded variant, standard issue for security-heavy ships. This one has an attached self-powered flashlight."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="3">
+      <Item name="Diving Shotgun"/>
+	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Copper Wire"/>
+    </Deconstruct>
+  
+    <Sprite texture="FlashlightGuns.png" sourcerect="0,0,93,21" depth="0.55"/>
+
+    <Body width="93" height="21" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="50,-10" holdangle="0" aimpos="63,-3" handle1="-36,-3" handle2="10,0"/>
+    
+    <RangedWeapon barrelpos="93,6" spread="1" unskilledspread="3">
+      <Sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg" type="OnUse"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+	
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.03,0.5" size="2.0,0.5"/>
+    </LightComponent>
+
+    <ItemContainer capacity="8" hideitems="true">
+      <Containable name="Shotgun Slug Round"/>
+	  <Containable name="Shotgun Beanbag Round"/>
+	  <Containable name="Shotgun Taser Round"/>
+	  <Containable name="Shotgun Flechette Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Automatic Shotgun"
+	aliases="Auto Shotgun,Auto-Shotty,ASG,AS-M1"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="[AS-M1] This rather standard semi-automatic shotgun is mainly used among prison ships, but only holds 6 shells. It can not load less than lethal, due to their low power."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+    price="4000">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="0,88,87,18" depth="0.55"/>
+
+    <Body width="87" height="17.5" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="50,-10" holdangle="-6" aimpos="45,-3" handle1="-12,-1.5" handle2="20,4"/>
+    
+    <RangedWeapon barrelpos="93,6" spread="3" unskilledspread="10" reload="0.35">
+      <Sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg" type="OnUse"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="45"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Shotgun Slug Round"/>
+	  <Containable name="Shotgun Beanbag Round"/>
+	  <Containable name="Shotgun Taser Round"/>
+	  <Containable name="Shotgun Flechette Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Flashlight Auto-Shotgun"
+	aliases="Flashlight Auto Shotgun,Flashlight Auto-Shotty,FASG,Flashlight AS-M1"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="[AS-M1] This rather standard semi-automatic shotgun is mainly used among prison ships, but only holds 6 shells. It can not load less than lethal, due to their low power. This one has an attached self-powered flashlight."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+    price="4000">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="0,88,87,18" depth="0.55"/>
+
+    <Body width="87" height="17.5" density="50"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="50,-10" holdangle="0" aimpos="45,-3" handle1="-12,-1.5" handle2="20,4"/>
+    
+    <RangedWeapon barrelpos="93,6" spread="3" unskilledspread="10" reload="0.35">
+      <Sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg" type="OnUse"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="45"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+	
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.03,0.5" size="2.0,0.5"/>
+    </LightComponent>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Shotgun Slug Round"/>
+	  <Containable name="Shotgun Beanbag Round"/>
+	  <Containable name="Shotgun Taser Round"/>
+	  <Containable name="Shotgun Flechette Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Shotgun Flechette Round"
+	aliases="Flechette Round,Flechette"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="A shell containing a self-propelled slug."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="100">
+	
+	<Deconstruct time="5">      
+      <Item name="Steel Sliver" outcondition="0.5"/>
+	  <Item name="Steel Sliver" outcondition="0.5"/>
+	  <Item name="Steel Sliver" outcondition="0.5"/>
+	  <Item name="Steel Sliver" outcondition="0.5"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.75"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,15,10,4" depth="0.55"/>
+
+    <Body width="6" height="2" density="20"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="35" bleedingdamage="12" stun="0.5" structuredamage="45" targetforce="455" severlimbsprobability="0.1" damagetype="Slash"/>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Flashlight Spear Gun"
+	aliases="Flashlight Speargun"
+    category="Equipment"
+	tags="bigitem,weapon"
+	description="A military pneumatic weapon used by security. It can hold up to three spears and it can be deadly in the right, or wrong hands. This one has an attached self-powered flashlight."
+    cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="3">      
+      <Item name="Spear Gun"/>
+	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Copper Wire"/>
+    </Deconstruct>
+  
+    <Sprite texture="FlashlightGuns.png" sourcerect="0,147,98,25" depth="0.55"/>
+
+    <Body width="90" height="30" density="50"/>
+	
+	<ItemContainer capacity="3" itempos="27,9" iteminterval="0,-4" hideitems="false">
+      <Containable name="spearammo"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1"/>
+    
+    <RangedWeapon barrelpos="49,10" spread="2" unskilledspread="10">
+      <Sound file="Content/Items/Weapons/harpoon1.ogg" type="OnUse"/>
+      <Sound file="Content/Items/Weapons/harpoon2.ogg" type="OnUse"/>
+      <RequiredItems name="spearammo" type="Contained" msg="The loaded spear is too damaged"/>
+      <RequiredSkill name="Weapons" level="30"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="1" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+	
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.02,0.5" size="2.0,0.5"/>
+    </LightComponent>
+  </Item>
+  
+  <Item
+    name="Grenade Launcher"
+	aliases="GL"
+    category="Equipment"
+	tags="meditem,weapon"
+	description="[CW40M] A 40mm grenade launcher used mostly for non-lethal incapacitation and riot control purposes."
+    cargocontainername="Weapons Shipping Box"
+	impacttolerance="3"
+	price="1200">
+
+    <Deconstruct time="10">      
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>+
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="30,135,74,35" depth="0.55"/>
+
+    <Body width="74" height="35" density="30"/>
+	
+	<ItemContainer capacity="1" hideitems="true">
+      <Containable name="GL Gas Round"/>
+	  <Containable name="GL Rubber Round"/>
+	  <Containable name="GL Stun Round"/>
+	  <Containable name="GL Fragmentation Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="43,-10" holdangle="-16" aimpos="40,-8" handle1="16,-7" handle2="-5,-5"/>
+    
+    <RangedWeapon barrelpos="60,10" spread="1" unskilledspread="5">
+      <Sound file="grenadelaunch.ogg" type="OnUse"/>
+      <RequiredItems name="glammo" type="Contained" msg="The loaded object is broken/incompatible, notify the developer"/>
+      <RequiredSkill name="Weapons" level="30"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="1" force="7.5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+  </Item>
+  
+  <Item
+    name="GL Rubber Round"
+	aliases="Rubber Grenade,Rubber Bullet"
+    category="Equipment"
+	tags="smallitem,weapon,glammo"
+	description="A large rubber projectile made to discombobulate whoever or whatever it hits."
+	impacttolerance="3"
+	cargocontainername="Explosives Shipping Box"
+	price="300">
+	
+	<Deconstruct time="6">      
+      <Item name="Steel Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,117,10,4" depth="0.55"/>
+
+    <Body width="10" height="4" density="10" friction="0.95"/>
+	
+	<Pickable slots="Any"/>
+	<Projectile launchimpulse="20" sticktocharacters="false">
+      <Attack damage="30" bleedingdamage="0" stun="30" structuredamage="0" targetforce="1000" damagetype="Blunt"/>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Makeshift Suppressed Pistol"
+	aliases="Traitor Handgun,Silenced Pistol,Colt SCAMP,MSP"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="A small, unreliably made pistol with a suppressor attached. Quite clearly a traitor's weapon."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+	canuseonself="true">
+
+    <Deconstruct time="10">
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="0,115,47,20" depth="0.55"/>
+
+    <Body width="47" height="20" density="25"/>
+
+    <RangedWeapon barrelpos="33,5" spread="1" unskilledspread="8" reload="0.8">
+      <Sound file="Mods/BTEPlus/Items/Weapons/silencedfire.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="45"/>
+      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+      <StatusEffect type="Always" target="This" Condition="15"/>
+      <StatusEffect type="OnUse">
+        <Explosion range="150" force="1" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+            holdpos="31,-23" aimpos="90,18" handle1="-14,0" handle2="-14,0" holdangle="36"/>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-45">
+	    <sound file="Mods/BTEPlus/Items/Weapons/silencedfire.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Flashlight Suppressed Pistol"
+	aliases="Flashlight Traitor Handgun,Flashlight Silenced Pistol,Flashlight Colt SCAMP,Flashlight Makeshift Pistol,FMP,FSP"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="A small, unreliably made pistol with a suppressor attached. Quite clearly a traitor's weapon. Features a crudely-attached Flashlight."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+	canuseonself="true">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Bar"/>
+	  <Item name="Bandage"/>
+	  <Item name="Oxygen Bottle"/>
+    </Deconstruct>
+
+    <Sprite texture="FlashlightGuns.png" sourcerect="0,115,47,20" depth="0.55"/>
+
+    <Body width="47" height="20" density="25"/>
+
+    <RangedWeapon barrelpos="33,5" spread="1" unskilledspread="8" reload="0.8">
+      <Sound file="Mods/BTEPlus/Items/Weapons/silencedfire.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="45"/>
+      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+      <StatusEffect type="Always" target="This" Condition="15"/>
+      <StatusEffect type="OnUse">
+        <Explosion range="150" force="1" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+            holdpos="31,-23" aimpos="90,18" handle1="-14,0" handle2="-14,0" holdangle="0"/>
+			
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.6" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.03,0.5" size="2.0,1.0"/>
+    </LightComponent>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-45">
+	    <sound file="Mods/BTEPlus/Items/Weapons/silencedfire.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Diving Machete"
+	aliases="Machete"
+    category="Equipment"
+    Tags="meditem,weapon"
+	description="A razor-sharp long blade machete, for cutting the Europan flora or fauna."
+    canuseonself="true"
+	cargocontainername="Weapons Shipping Box"
+	price="350">
+
+    <Deconstruct time="5">
+	  <Item name="Polycarbonate Sliver"/>
+      <Item name="Steel Bar"/>
+	  <Item name="Steel Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="moreweapons.png" sourcerect="0,31,86,11" depth="0.55"/>
+    
+    <Body width="86" height="11" density="45"/>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-4.2">
+	    <sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="1.2" duration="5">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <MeleeWeapon slots="RightHand+LeftHand,Any"
+          aimpos="50,0" handle1="-38,3" handle2="-24,-1" holdangle="68" aimangle="18" reload="1.2">
+      <Attack damage="14" bleedingdamage="5" stun="0.5" targetforce="15" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="8" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Scrap Machete"
+	aliases="Scrap Sword,Scrap Blade"
+    category="Equipment"
+    Tags="bigitem,weapon"
+	description="A poorly made metal machete.">
+
+    <Deconstruct time="15">
+      <Item name="Shiv"/>
+	  <Item name="Steel Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="moreweapons.png" sourcerect="0,21,100,10" depth="0.55"/>
+    
+    <Body width="100" height="10" density="23"/>
+
+    <MeleeWeapon slots="RightHand+LeftHand,Any"
+              aimpos="50,0" handle2="-41,-2" handle1="-33,2" holdpos="0,0" holdangle="-60" aimangle="40" reload="4">
+      <Attack damage="19" bleedingdamage="12" stun="0.8" damagetype="Slash" structuredamage="5" targetforce="20" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="14" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="14" stun="-5.0" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+</Items>
+
+  
+  <!-- <Item
+    name="Personal Defense Weapon"
+	aliases="P90,SMG,57mmAR,PDW"
+    category="Equipment"
+	tags="meditem,weapon"
+	description="A compact submachinegun firing pistol caliber bullets. Lightweight plastic."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct>
+  
+    <Sprite texture="BallisticGuns.png" sourcerect="0,55,64,27" depth="0.55"/>
+
+    <Body width="64" height="27" density="28"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="18,-10" holdangle="-19" aimpos="28,2" handle1="0,6" handle2="0,10"/>
+    
+    <RangedWeapon barrelpos="60,10" spread="10" unskilledspread="60" reload="0.1">
+      <Sound file="Mods/BTEPlus/Items/Weapons/pdwfire.ogg" type="OnUse"/>
+      <RequiredItems name="PDW Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="60"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="180" force="1" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="8"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+	
+	<ItemContainer capacity="30" hideitems="true">
+      <Containable name="PDW Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Flashlight PDW"
+	aliases="Flashlight P90,Flashlight SMG,Flashlight 57mmAR,Flashlight Personal Defense Weapon"
+    category="Equipment"
+	tags="meditem,weapon"
+	description="A compact submachinegun firing pistol caliber bullets. Lightweight plastic."
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="3">      
+      <Item name="Personal Defense Weapon"/>
+	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Copper Wire"/>
+    </Deconstruct>
+  
+    <Sprite texture="FlashlightGuns.png" sourcerect="0,57,64,27" depth="0.55"/>
+
+    <Body width="64" height="27" density="28"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              holdpos="30,-10" holdangle="0" aimpos="23,7" handle1="9,1" handle2="10,10"/>
+    
+    <RangedWeapon barrelpos="60,10" spread="10" unskilledspread="60" reload="0.1">
+      <Sound file="Mods/BTEPlus/Items/Weapons/pdwfire.ogg" type="OnUse"/>
+      <RequiredItems name="PDW Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="60"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="180" force="1" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="8"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+	
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.03,0.5" size="2.0,0.5"/>
+    </LightComponent>
+	
+	<ItemContainer capacity="30" hideitems="true">
+      <Containable name="PDW Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="PDW Round"
+	aliases="SMG Round,P90 Round"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="A tiny, high velocity bullet encased in a full metal jacket."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="100">
+	
+	<Deconstruct time="5">      
+      <Item name="Steel Sliver" outcondition="0.50"/>
+	  <Item name="Propellant Powder" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="90,21,14,4" depth="0.55"/>
+
+    <Body width="14" height="4" density="30"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="35" bleedingdamage="4" structuredamage="50" stun="0.4" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+  </Item> -->
