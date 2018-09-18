@@ -216,6 +216,30 @@
   </Item>
   
   <Item
+    name="Security Beret"
+	aliases="Enforcer Beret"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A fancy beret worn by both submarine and outpost Security Enforcers.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="securityBeret.png" depth="0.6" sourcerect="0,0,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="securityBeret.png" limb="Head" origin="0.5,0.9" sourcerect="0,0,32,32" depth="0.038" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
     name="Crewmember Ushanka A"
 	aliases="Ushanka"
     category="Equipment"

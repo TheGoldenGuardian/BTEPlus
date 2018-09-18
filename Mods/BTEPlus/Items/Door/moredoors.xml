@@ -1,0 +1,314 @@
+﻿<Items>
+  <Item
+    name="Thick Door"
+	health="500"
+	linkable="true">
+
+    <Sprite texture="thiccdoor.png" sourcerect="0,0,96,208" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="20">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="thiccdoor.png" sourcerect="97,0,68,208" depth="0.05" origin="0.5,0.0"/>
+      <WeldedSprite texture="thiccdoor.png" sourcerect="166,0,70,188" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="thiccdoor.png" sourcerect="237,0,108,208" depth="0.051" origin="0.5,0.0" scale="true"/>
+      <sound file="Mods/BTEPlus/Items/Door/thickdoor2.ogg" type="OnUse" range="800"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="6000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak2.ogg" range="3000"/>
+	    <Explosion range="500" stun="0.35" force="12" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="8.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="800"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="80"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+  
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
+    name="Tall Door"
+	health="350"
+	linkable="true">
+
+    <Sprite texture="talldoor.png" sourcerect="0,0,48,416" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="15">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="talldoor.png" sourcerect="80,0,19,416" depth="0.05" origin="0.5,0.0"/>
+      <WeldedSprite texture="talldoor.png" sourcerect="99,0,32,319" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="talldoor.png" sourcerect="133,0,58,416" depth="0.051" origin="0.5,0.0" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="800"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="3000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak2.ogg" range="4500"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="600"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="50"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+  
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <!-- Wide Hatch will remain commented out until the "teleporting through it when walking up stairs" issue is fixed
+  <Item
+    name="Wide Hatch"
+	maxhealth="350"
+	linkable="true">
+
+    <Sprite texture="widehatch.png" sourcerect="0,0,256,46" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" horizontal="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="10">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="widehatch.png" sourcerect="0,49,256,19" depth="0.05" origin="0.0,0.5"/>
+      <WeldedSprite texture="widehatch.png" sourcerect="0,69,236,33" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="widehatch.png" sourcerect="0,101,256,58" depth="0.051" origin="0.0,0.5" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="700"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2750"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak1.ogg" range="4000"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="550"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="50"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item> -->
+  
+  <Item
+    name="Wall Door"
+	health="100"
+	linkable="true">
+
+    <Sprite texture="walldoor.png" sourcerect="0,0,32,208" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="10">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="walldoor.png" sourcerect="33,0,33,208" depth="0.05" origin="0.5,0.0"/>
+      <WeldedSprite texture="walldoor.png" sourcerect="66,0,32,208" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="walldoor.png" sourcerect="99,0,32,208" depth="0.051" origin="0.5,0.0" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak2.ogg" range="3000"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="120"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="20"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+  
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+
+  <Item
+    name="Wall Hatch"
+	maxhealth="100"
+	linkable="true">
+
+    <Sprite texture="wallhatch.png" sourcerect="0,0,128,32" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" horizontal="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="10">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="wallhatch.png" sourcerect="128,0,128,32" depth="0.05" origin="0.0,0.5"/>
+      <WeldedSprite texture="wallhatch.png" sourcerect="0,33,128,32" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="wallhatch.png" sourcerect="128,33,128,32" depth="0.051" origin="0.0,0.5" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak1.ogg" range="3000"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="100"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="20"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
+    name="Thin Door"
+	health="200"
+	linkable="true">
+
+    <Sprite texture="thindoor.png" sourcerect="0,0,32,208" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="10">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="Content/Items/Door/door.png" sourcerect="80,0,19,208" depth="0.05" origin="0.5,0.0"/>
+      <WeldedSprite texture="thindoor.png" sourcerect="99,0,24,188" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="Content/Items/Door/door.png" sourcerect="133,0,58,208" depth="0.051" origin="0.5,0.0" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak2.ogg" range="3000"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="500"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="40"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+  
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
+    name="Thin Windowed Door"
+	health="150"
+	linkable="true">
+
+    <Sprite texture="thindoor.png" sourcerect="0,0,32,208" depth="0.01" origin="0.5,0.5"/>
+
+    <Door window="0,-32,10,85" canbeselected="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="10">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="Content/Items/Door/door.png" sourcerect="56,0,19,208" depth="0.05" origin="0.5,0.0"/>
+      <WeldedSprite texture="thindoor.png" sourcerect="99,0,24,188" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="Content/Items/Door/door.png" sourcerect="192,0,40,208" depth="0.051" origin="0.5,0.0" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak1.ogg" range="3000"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="500"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="40"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
+    name="Thin Hatch"
+	maxhealth="200"
+	linkable="true">
+
+    <Sprite texture="thinhatch.png" sourcerect="0,0,128,32" depth="0.01" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" horizontal="true" pickkey="Action" msg="Force Open [Crowbar]" PickingTime="10">
+	  <requireditem name="Crowbar" type="Equipped"/>
+      <Sprite texture="Content/Items/Door/hatch.png" sourcerect="128,0,128,19" depth="0.05" origin="0.0,0.5"/>
+      <WeldedSprite texture="thinhatch.png" sourcerect="0,56,108,32" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="Content/Items/Door/hatch.png" sourcerect="128,21,128,58" depth="0.051" origin="0.0,0.5" scale="true"/>
+      <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
+	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Door/doorBreak1.ogg" range="3000"/>
+	    <Explosion range="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="500"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="40"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <!-- <Item
+    name="Glass Hatch"
+	linkable="true">
+
+    <Sprite texture="glasshatch.png" sourcerect="0,0,128,46" depth="0.01" origin="0.5,0.5"/>
+
+    <Door window="17,0,77,19" canbeselected="true" horizontal="true">
+      <Sprite texture="glasshatch.png" sourcerect="128,0,128,19" depth="0.05" origin="0.0,0.5"/>
+      <WeldedSprite texture="Content/Items/Door/hatch.png" sourcerect="0,56,108,33" depth="0.0" origin="0.5,0.5"/>
+      <BrokenSprite texture="glasshatch.png" sourcerect="128,21,128,58" depth="0.051" origin="0.0,0.5" scale="true"/>
+      <sound file="Mods/BTE/Items/Door/GlassDoor.ogg" type="OnUse" range="500"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Mods/BTE/Items/Door/GlassDoorBreak.ogg" range="3000"/>
+	    <Explosion range="200" stun="0.2" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false"/>
+      </StatusEffect>
+    </Door>
+
+    <AiTarget sightrange="500"/>
+
+    <fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="20"/>
+      <item name="Welding Tool"/>
+    </fixrequirement>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item> -->
+</Items>

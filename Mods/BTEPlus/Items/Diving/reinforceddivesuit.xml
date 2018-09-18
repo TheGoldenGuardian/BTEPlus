@@ -1,41 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Items>
-
   <Item
-    name="OCU Helmet"
-	aliases="HEV Helmet,Power Helmet"
+    name="Reinforced Diving Helmet"
+	aliases="RDH"
     category="Equipment"
     Tags="meditem,diving"
-	description="A helmet designed to go with the OCU suit, with a reinforced visor and full head protection. Includes a short-range comms device."
-	cargocontainername="Standard Shipping Box">
+	description="A lead and titanium reinforced helmet fitted with the ability to take oxygen tanks. Fitted with a built-in communications system. Designed to be used with the Reinforced Divesuit"
+	cargocontainername="Standard Shipping Box"
+    price="50">
 
-    <!-- <Deconstruct time="15">
-      <Item name="Polycarbonate Bar"/>
-	  <Item name="Steel Bar"/>
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
 	  <Item name="Aluminium Sliver"/>
-    </Deconstruct> -->
+    </Deconstruct>
     
-    <Sprite texture ="OCUhelm.png" depth="0.6" sourcerect="5,0,24,28"/>
+    <sprite texture="reinforceddivesuit.png" depth="0.6" sourcerect="3,81,26,28"/>
   
-    <Body height="28" radius="14" density="12.5"/>
+    <Body height="26" width="28" density="18"/>
 	
-	<WifiComponent range="20000" LinkToChat="true"/>     
+	<WifiComponent range="25000" LinkToChat="true"/>
 
     <Wearable limbtype="Head" slots="Any,Head+Face">
-      <sprite texture="OCUhelm.png" limb="Head" sourcerect="0,0,37,30" origin="0.45,0.6">
-	    <LightComponent range="100" lightcolor="1.0,1.0,1.0,0.1" powerconsumption="10" IsOn="true">
-		  <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
-            <Conditional IsDead="false"/>
-          </StatusEffect>
-          <sprite texture="Mods/BTEPlus/Items/OCU/OCUhelmlight.png" depth="0.025" origin="0.45,0.6" alpha="5.0"/>
-        </LightComponent>
-      </sprite>
-      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" SpeedMultiplier="-0.03" disabledeltatime="true" inheritlimbdepth="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="3,81,26,28" origin="0.5,0.6"/>
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.05" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" PressureProtection="100">
+	    <Conditional hasstatustag="rds"/>
+	  </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -45,8 +42,17 @@
 	    <Conditional HuskInfectionState="lt 1.0"/>
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
       </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -54,6 +60,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
         <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -70,9 +77,9 @@
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
       </StatusEffect>
 	  
-	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.5" damagesound="DamageMetalBlunt" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.65" bleedingmultiplier="0.25" damagesound="DamageMetalSlash" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
 
     <ItemContainer capacity="1" hideitems="true">
@@ -81,56 +88,53 @@
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
 	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>  
   </Item>
   
   <Item
-    name="OCU Suit"
-	aliases="Power Suit,HEV,HEV Suit"
-    category="Equipment"
-    tags="diving"
-	fireproof="true"
-	description="A specially crafted suit with titanium plating made for handling artefacts and surviving in harsh Europan conditions."
-    price="2750">
-	
-	<!-- <Deconstruct time="30">
-      <Item name="Spare Parts"/>
-	  <Item name="Spare Parts"/>
-      <Item name="Spare Parts"/>
-    </Deconstruct> -->
+    name="Reinforced Divesuit"
+	aliases="RDS,HEV"
+    category="Equipment"    
+    tags="meditem,diving"
+    fireproof="true"
+    cargocontainername="Metal Crate"
+    description="A utility diving suit with metal reinforcements within the high strength-fabric and plastics. Protects against the crushing depths, but only when sealed with the appropriate helmet. Requires a battery to power the built-in auto-injectors filled with Fibrinozine.">
 
-    <Sprite texture ="OCUsuit.png" sourcerect="85,0,43,128" depth="0.55"/>
+    <Sprite texture = "reinforceddivesuit.png" sourcerect="0,52,50,25" depth="0.6"/>
 
-    <Body width="37" height="113" density="20"/>
+    <Body width="50" height="17" density="34"/>
 
-    <Wearable slots="Torso+Legs">
-	  <sprite texture="OCUsuit.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" depthlimb="Head" hidelimb="true"/>
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="reinforceddivesuit.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.5" depth="0.0041" inheritlimbdepth="false"/>
+	  
+	  <sprite texture="reinforceddivesuit.png" limb="RightHand" sourcerect="105,54,13,47" origin="0.4,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftHand" sourcerect="105,54,13,47" origin="0.4,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
 
-      <sprite texture="OCUsuit.png" limb="RightHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="OCUsuit.png" limb="LeftHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="RightArm" sourcerect="86,56,17,39" origin="0.4,0.35" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftArm" sourcerect="86,56,17,39" origin="0.4,0.35" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
 
-      <sprite texture="OCUsuit.png" limb="RightArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="OCUsuit.png" limb="LeftArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="Waist" sourcerect="81,0,30,26" origin="0.5,0.45" depth="0.004" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="RightThigh" sourcerect="53,0,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftThigh" sourcerect="53,0,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
 
-      <sprite texture="OCUsuit.png" limb="RightThigh" sourcerect="22,0,18,44" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="OCUsuit.png" limb="LeftThigh" sourcerect="22,0,18,44" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
-
-      <sprite texture="OCUsuit.png" limb="RightLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="OCUsuit.png" limb="LeftLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
-
-      <sprite texture="OCUsuit.png" limb="RightFoot" sound="footstep_metalb" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="OCUsuit.png" limb="LeftFoot" sound="footstep_metalb" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      
-      <StatusEffect type="OnWearing" target="Character" PressureProtection="100" SpeedMultiplier="-0.2" LowPassMultiplier="0.2" disabledeltatime="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="RightLeg" sourcerect="33,0,20,51" origin="0.5,0.5" depth="0.013" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftLeg" sourcerect="33,0,20,51" origin="0.5,0.5" depth="0.013" hidelimb="true"/>
+	  
+	  <sprite texture="reinforceddivesuit.png" limb="RightFoot" sound="footstep_metalb" sourcerect="61,55,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftFoot" sound="footstep_metalb" sourcerect="61,55,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.2" LowPassMultiplier="0.2" disabledeltatime="true"/>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.125">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" bleeding="-0.125" disabledeltatime="true">
+	  <StatusEffect type="OnWearing" target="Character" bleeding="-0.251" disabledeltatime="true">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" bleeding="-0.1"/>
 	  
-	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
+	  <StatusEffect tags="rds" type="OnWearing" target="Character" duration="6"/>
+
+      <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="DamageMetalBlunt" deflectprojectiles="true"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.85" bleedingmultiplier="0.25" damagesound="DamageMetalSlash" deflectprojectiles="true"/>
     </Wearable>
@@ -139,53 +143,6 @@
 	  <Containable name="Battery Cell,Fulgurium Battery Cell">
         <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
       </Containable>
-    </ItemContainer>
-  </Item>
-  
-  <Item
-    name="OCU Jumpsuit"
-    category="Equipment"
-    tags="meditem,clothing">
-	
-	<Deconstruct time="15">
-	  <Item name="Polycarbonate Block"/>
-      <Item name="Polycarbonate Sliver"/>
-	  <Item name="Tactical Boot"/>
-	  <Item name="Tactical Boot"/>
-    </Deconstruct>
-
-    <Sprite texture ="OCUlegs.png" sourcerect="2,62,50,13" depth="0.6"/>
-
-    <Body width="50" height="13" density="16"/>
-
-    <Wearable slots="Any,Torso+Legs">
-      <sprite texture="OCUtorso.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
-
-      <sprite texture="OCUtorso.png" limb="RightHand" sourcerect="47,0,16,50" origin="0.45,0.5" hidelimb="true"/>
-      <sprite texture="OCUtorso.png" limb="LeftHand" sourcerect="47,0,16,50" origin="0.45,0.5" hidelimb="true"/>
-
-      <sprite texture="OCUtorso.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="OCUtorso.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
-	  
-	  <sprite texture="OCUlegs.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="OCUlegs.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="OCUlegs.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
-
-      <sprite texture="OCUlegs.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="OCUlegs.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
-	  
-	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
-	  
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.09" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
-	  
-	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
-    </Wearable>
-	
-	<ItemContainer capacity="3">
-      <Containable name="smallitem"/>
     </ItemContainer>
   </Item>
 </Items>

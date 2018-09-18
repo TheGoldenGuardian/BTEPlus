@@ -49,7 +49,7 @@
     
     <Sprite texture ="miscellaneous.png" depth="0.65" sourcerect="6,18,21,16"/>
   
-    <Body height="10.5" radius="8" density="10.02"/>
+    <Body height="10.5" width="19.5" density="10.02"/>
 
     <Wearable limbtype="Head" slots="Any,Face">
       <sprite texture="miscellaneous.png" limb="Head" sourcerect="0,0,32,42" origin="0.45,0.5"/>
@@ -176,7 +176,10 @@
 
     <Deconstruct time="5">
       <Item name="Polycarbonate Sliver"/>
-	  <Item name="Corrigodone"/>
+	  <Item name="Corrigodone" mincondition="0.999"/>
+	  <Item name="Corrigodone" mincondition="0.749" maxcondition="0.998" outcondition="0.75"/>
+	  <Item name="Corrigodone" mincondition="0.499" maxcondition="0.748" outcondition="0.5"/>
+	  <Item name="Corrigodone" mincondition="0.249" maxcondition="0.498" outcondition="0.25"/>
     </Deconstruct>
 
     <Sprite texture ="miscellaneous.png" sourcerect="55,8,16,32" depth="0.53"/>
@@ -189,7 +192,7 @@
   
   <Item
     name="Baguette"
-	aliases="Longbread,Long Bread,Coolbread, Cool Bread"
+	aliases="Longbread,Long Bread,Coolbread,Cool Bread"
     category="Misc"
     Tags="meditem,food"
 	canuseonself="true"
@@ -205,7 +208,7 @@
     <Body width="66" height="7" density="48"/>
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
-          aimpos="10,8" handle1="-7,-8" handle2="-7,-8" holdangle="30" reload="1.0">
+          aimpos="10,8" handle1="-7,0" handle2="-7,0" holdangle="30" reload="1.0">
       <Attack damage="1" bleedingdamage="0" structuredamage="0" damagetype="Blunt" stun="0.25" targetforce="11" sound="Mods/BTE/Items/Medical/FoodEat.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
@@ -260,11 +263,11 @@
       <StatusEffect type="OnUse" target="This" Condition="-100"/>
     </ItemComponent>
 
-    <Pickable slots="LeftHand+RightHand,Any">
+    <Pickable slots="LeftHand+RightHand">
 	  <StatusEffect type="OnFire" target="This" Condition="-10"/>
 	  <StatusEffect type="OnImpact" target="This" Condition="-12.5" setvalue="true"/>
       <StatusEffect type="OnBroken" target="This">
-	  <sound file="Mods/BTEPlus/Items/Weapons/BlastExplosionBig.ogg"/>
+	  <sound file="Mods/BTE/Items/Weapons/BlastExplosionBig.ogg"/>
         <Explosion range="5000" structuredamage="2000" damage="1500" bleedingdamage="20.0" stun="50" force="100" severlimbsprobability="2.0" camerashake="36.0" decal="explosion" decalsize="3"/>
 		<Remove/>
       </StatusEffect>
@@ -274,7 +277,8 @@
   <Item
     name="Duct Tape"
     category="Misc"
-	Tags="smallitem">
+	Tags="smallitem"
+	description="Sticky, try not to get the roll stuck to your hands.">
 
     <Deconstruct time="5">
       <Item name="Polycarbonate Sliver"/>
@@ -314,7 +318,7 @@
     </Wearable>
   </Item>
   
-  <Item
+  <!-- <Item
     name="PDW Ammo Crate"
     category="Equipment"
     Tags="cntnr,meditem"
@@ -336,7 +340,7 @@
 	<ItemContainer capacity="50" canbeselected="true" hideitems="true">
       <Containable name="PDW Round"/>
     </ItemContainer>
-  </Item>
+  </Item> -->
   
   <Item
     name="Lantern"

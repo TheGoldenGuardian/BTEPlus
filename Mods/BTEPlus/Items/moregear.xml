@@ -4,8 +4,7 @@
 	aliases="Light Armor,Light Armour"
     category="Equipment"
     tags="meditem,clothing"
-	description="While a light ballistic vest won't offer any protection against most of the inhabitants of the subsurface ocean, it can be somewhat useful if there are traitors on board."
-    >
+	description="While a light ballistic vest won't offer any protection against most of the inhabitants of the subsurface ocean, it can be somewhat useful if there are traitors on board.">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
@@ -33,8 +32,7 @@
 	aliases="Medical Vest,Vest with Pouch"
     category="Equipment"
     tags="meditem,clothing"
-	description="While a light ballistic vest won't offer any protection against most of the inhabitants of the subsurface ocean, it can be somewhat useful if there are traitors on board. This vest has an attached leather pouch and is designed to be worn by Medical Officers."
-    >
+	description="While a light ballistic vest won't offer any protection against most of the inhabitants of the subsurface ocean, it can be somewhat useful if there are traitors on board. This vest has an attached leather pouch and is designed to be worn by Medical Officers.">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
@@ -47,7 +45,7 @@
     <Body width="41" height="10" density="10"/>
 
     <Wearable slots="Any,Torso">
-      <sprite texture="moregear.png" limb="Torso" sourcerect="71,0,32,48" depthlimb="Head" origin="0.6,0.48"/>
+      <sprite texture="moregear.png" limb="Torso" sourcerect="71,0,32,49" depthlimb="Head" origin="0.56,0.48"/>
 	  
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
 	  
@@ -68,7 +66,7 @@
 	aliases="Glowrod"
 	category="Equipment"
     Tags="smallitem,grenade"
-	description="A small glowing stick. Don't eat it..."
+	description="A self-contained, short-term light-source consisting of a translucent plastic tube containing isolated substances that, when combined, make light through chemiluminescence, so it does not require an external energy source."
 	cargocontainername="Standard Shipping Box"
     price="200"
 	canuseonself="true">
@@ -77,9 +75,12 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="moregear.png" depth="0.55" sourcerect="39,0,5,28"/>
+    <Sprite texture ="moregear.png" depth="0.55" sourcerect="40,0,3,27"/>
 
-    <Body radius="5" height="28" density="10"/>
+    <Body radius="3" height="27" density="10"/>
+	<!-- <Sprite texture ="moregear.png" depth="0.55" sourcerect="39,0,5,28"/>
+
+    <Body radius="5" height="28" density="10"/> -->
 
     <Holdable handle1="0,0" handle2="0,0" slots="RightHand,LeftHand,Any" holdpos="8,4" holdangle="0"/>
 	
@@ -158,7 +159,7 @@
     </LightComponent>
   </Item>
   
-  <Item
+  <!-- <Item
     name="IM Grenade"
 	aliases="Impact Grenade,Impact Nade"
     category="Equipment"
@@ -200,7 +201,7 @@
 	    <sound file="Mods/BTE/Items/Weapons/GrenadeHit.ogg"/>
 	  </StatusEffect>
     </Throwable>
-  </Item>
+  </Item> -->
 
   <Item
     name="Diving Kit"
@@ -280,18 +281,19 @@
   </Item>
   
   <Item
-    name="Armoured Gasmask"
-	aliases="Security Gasmask,Armored Gasmask"
+    name="Ballistic Diving Mask"
+	aliases="Security Gasmask,Armored Gasmask,Armoured Gasmask,Ballistic Mask"
     category="Equipment"
     Tags="meditem,diving"
-	description="Type 1 certified gas mask fitted with a rebreather and hood. Face area is protected by kevlar backed by polymer plates. Once standard issue, now one of Europa's valuables."
+	description="Type 1 certified gas mask fitted with a rebreather and hood. Face area is protected by kevlar backed by polymer plates. Once standard issue, now one of Europa's valuables. Featurs an built-in system to identify any non-oxygen fuel tanks to protect the wearer."
 	cargocontainername="Standard Shipping Box"
-    price="50">
+    price="500">
 
     <Deconstruct time="15">
       <Item name="Polycarbonate Bar"/>
 	  <Item name="Steel Bar"/>
 	  <Item name="Aluminium Sliver"/>
+	  <Item name="Spare Electronics"/>
     </Deconstruct>
     
     <Sprite texture ="moregear.png" depth="0.6" sourcerect="91,59,37,30"/>
@@ -306,27 +308,15 @@
 	  </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
 	    <Conditional HuskInfectionState="lt 1.0"/>
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
       </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
-        <RequiredItem type="Contained" name="Sulphurite Tank"/>
-      </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
-	    <Conditional HuskInfectionState="lt 1.0"/>
-        <RequiredItem type="Contained" name="Sulphurite Tank"/>
-      </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
-        <RequiredItem type="Contained" name="Thermite Tank"/>
-      </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
-	    <Conditional HuskInfectionState="lt 1.0"/>
-        <RequiredItem type="Contained" name="Thermite Tank"/>
-      </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -334,6 +324,14 @@
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
       </StatusEffect>
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
@@ -346,6 +344,7 @@
       <Containable name="Oxygenite Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
     </ItemContainer>  
   </Item>
   
@@ -451,6 +450,97 @@
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
             aimpos="75,18" handle1="-5,-3" handle2="-5,-3" holdangle="0"/>
+  </Item>
+  
+  <Item
+    name="Stasis Mask"
+	aliases="Breathing apparatus."
+    category="Equipment"
+    Tags="smallitem,medical"
+	description="A special breathing apparatus designed to keep the subject from dying due to lack of oxygen. It can only fit Oxygen Bottles and cannot be used to help conscious individuals stay conscious."
+	cargocontainername="Standard Shipping Box"
+    price="150">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+    
+    <Sprite texture="moregear.png" depth="0.6" sourcerect="112,14,14,11"/>
+  
+    <Body height="14" width="11" density="7"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="moregear.png" limb="Head" sourcerect="110,0,18,30" origin="0.1,0.5" depth="0.04" inheritlimbdepth="false"/>
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="15" Condition="-0.5" checkconditionalalways="true">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional Oxygen="lt -50"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-15" checkconditionalalways="true">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional Oxygen="gt -60"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.99"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Bottle"/>
+    </ItemContainer>  
+  </Item>
+  
+  <Item
+    name="White Wetsuit"
+    category="Equipment"
+    tags="bigitem,diving,clothing"
+	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed. This one is white so it works well with color tinting.">
+	
+	<Deconstruct time="30">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Block"/>
+    </Deconstruct>
+
+    <Sprite texture="WhiteWetsuit.png" sourcerect="0,86,59,26" depth="0.55"/>
+
+    <Body width="56" height="23" density="12"/>
+
+    <Wearable slots="Torso+Legs,Any">
+	  <sprite texture="WhiteWetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="32,58,22,28" origin="0.55,0.6"/>
+	  
+	  <sprite texture="WhiteWetsuit.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true">
+      </sprite>
+
+      <sprite texture="WhiteWetsuit.png" limb="RightHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="WhiteWetsuit.png" limb="LeftHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="WhiteWetsuit.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="WhiteWetsuit.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="WhiteWetsuit.png" limb="RightThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="WhiteWetsuit.png" limb="LeftThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="WhiteWetsuit.png" limb="RightLeg" sourcerect="75,56,22,50" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="WhiteWetsuit.png" limb="LeftLeg" sourcerect="75,56,22,50" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="WhiteWetsuit.png" limb="RightFoot" sourcerect="59,59,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="WhiteWetsuit.png" limb="LeftFoot" sourcerect="59,59,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
   </Item>
 
   <Item

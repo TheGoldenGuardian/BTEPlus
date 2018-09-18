@@ -1,0 +1,17 @@
+<prefabs>
+  <!-- <PowerWall description="A horizontal wall with collision detection"
+    width="32" height="32" resizehorizontal="true" resizevertical="true" body="true" castshadow="true" health="50000" maxhealth="50000">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="0,0,32,32" depth="0.055"/>
+    <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="0,0,32,32" depth="0.85"/>    
+  </PowerWall> -->
+  
+  <ff_x_wall description="A horizontal wall with collision detection"
+    width="512" height="48" resizehorizontal="true" body="true" castshadow="true" health="750">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" depth="0.05" sourcerect="49,0,512,48" />
+  </ff_x_wall>
+
+  <ff_y_wall description="A vertical wall with collision detection"
+    width = "48" height ="512" resizevertical="true" body="true" castshadow="true" health="750">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" depth="0.06" sourcerect="0,0,48,512"/>
+  </ff_y_wall>
+</prefabs>

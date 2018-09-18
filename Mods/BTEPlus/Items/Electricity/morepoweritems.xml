@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Super Cell"
+    category="Electrical"
+	description="Advanced battery capable of storing and outputting a large amount of power as well as generating its own.">
+
+    <Sprite texture="superbattery.png" sourcerect="0,0,58,77" depth="0.8"/>
+
+    <PowerContainer capacity="5000" maxrechargespeed="2000" maxoutput="2500" canbeselected="true">
+      <GuiFrame rect="0,-100,350,160" alignment="Center" style="ItemUI"/>
+	  <StatusEffect type="Always" target="This" charge="1500"/>
+      <StatusEffect type="OnActive" target="Contained" targetnames="Battery Cell" Condition="5.0"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Fulgurium Battery Cell" Condition="2.5"/>
+    </PowerContainer>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <StatusEffect type="OnFailure" target="Character">
+        <Explosion range="100" damage="15" stun="10" force="3.0" flames="false" shockwave="false" sparks="true"/>
+      </StatusEffect>
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="power_out"/>
+      <input name="power_in"/>      
+    </ConnectionPanel>
+
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true">
+      <Containable name="loadable"/>
+    </ItemContainer>
+  </Item>
+</Items>

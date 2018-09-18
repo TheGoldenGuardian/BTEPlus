@@ -39,10 +39,9 @@
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
       </Item>
-	  <Item name="Captain's Revolver" equip="false">
+	  <Item name="Flashlight Revolver">
         <Item name="Revolver Round"/>
         <Item name="Revolver Round"/>
-		<Item name="Revolver Round"/>
 		<Item name="Revolver Round"/>
 		<Item name="Revolver Round"/>
 		<Item name="Revolver Round"/>
@@ -126,6 +125,7 @@
 		<Item name="Classified Protocol A"/>
 		<Item name="Classified Protocol B"/>
       </Item> 
+	  <Item name="Security Beret" equip="true"/>
 	  <Item name="Light Ballistic Vest" equip="true"/>
 	  <Item name="Ballistic Trousers" equip="true"/>
 	  <Item name="Handcuffs"/>
@@ -135,8 +135,7 @@
       <Item name="Headset" equip="true">
         <Item name="Battery Cell"/>
       </Item>
-	  <Item name="Armoured Gasmask">
-      </Item>
+	  <Item name="Armoured Gasmask"/>
     </Items>
   </Job>
   

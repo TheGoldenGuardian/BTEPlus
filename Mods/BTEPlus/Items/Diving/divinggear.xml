@@ -110,9 +110,11 @@
 	  </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -122,8 +124,17 @@
 	    <Conditional HuskInfectionState="lt 1.0"/>
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
       </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -131,6 +142,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
         <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -138,6 +150,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -158,6 +171,7 @@
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
 	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>  
   </Item>
   
@@ -254,9 +268,11 @@
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" PressureProtection="100" SpeedMultiplier="-0.4" LowPassMultiplier="0.2" disabledeltatime="true"/>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygen Tank" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1500">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
 	    <Conditional HuskInfectionState="lt 1.0"/>
@@ -264,6 +280,7 @@
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygen Bottle" Condition="-1">
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1500">
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
@@ -272,8 +289,17 @@
 	    <Conditional HuskInfectionState="lt 1.0"/>
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
       </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Sulphurite Tank" Condition="-0.25">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
@@ -284,6 +310,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Thermite Tank" Condition="-0.5">
         <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3">
         <RequiredItem type="Contained" name="Thermite Tank"/>
@@ -294,6 +321,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygenite Tank" Condition="-0.1">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000" PressureProtection="1">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
@@ -325,6 +353,7 @@
       </Containable>
 	  <Containable name="Coalition Ration Packet"/>
 	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>
   </Item>
   
@@ -374,6 +403,7 @@
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" PressureProtection="100" SpeedMultiplier="-0.6" LowPassMultiplier="0.2" disabledeltatime="true"/>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygen Tank" Condition="-0.5">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1500">
 	    <RequiredItem type="Contained" name="Oxygen Tank"/>
@@ -384,6 +414,7 @@
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygen Bottle" Condition="-1">
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1500">
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
@@ -392,8 +423,17 @@
 	    <Conditional HuskInfectionState="lt 1.0"/>
 	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
       </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Sulphurite Tank" Condition="-0.25">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2">
         <RequiredItem type="Contained" name="Sulphurite Tank"/>
@@ -404,6 +444,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Thermite Tank" Condition="-0.5">
         <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3">
         <RequiredItem type="Contained" name="Thermite Tank"/>
@@ -414,6 +455,7 @@
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" targetnames="Oxygenite Tank" Condition="-0.1">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
+		<Conditional IsDead="false"/>
       </StatusEffect>
 	  <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000" PressureProtection="1">
         <RequiredItem type="Contained" name="Oxygenite Tank"/>
@@ -448,6 +490,7 @@
       </Containable>
 	  <Containable name="Coalition Ration Packet"/>
 	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>
   </Item>
   
@@ -505,6 +548,7 @@
 	  <Containable name="Battery Cell, Fulgurium Battery Cell"/>
 	  <Containable name="Coalition Ration Packet"/>
 	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>
   </Item>
 

@@ -473,7 +473,7 @@
     </ItemContainer>
 
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-              holdpos="35,-10" aimpos="50,-3" handle1="-15,-6" handle2="26,1"/>
+              holdpos="35,-10" holdangle="-8" aimpos="50,-3" handle1="-15,-6" handle2="26,1"/>
     
     <RangedWeapon barrelpos="49,10" spread="2" unskilledspread="10">
       <Sound file="Content/Items/Weapons/harpoon1.ogg" type="OnUse"/>

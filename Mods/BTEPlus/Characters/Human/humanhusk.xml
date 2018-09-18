@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Character name="husk" humanoid="true" doesbleed="false" needsair="false" genders="true" maleheadid="1,24" femaleheadid="1,15">
 
-    <name firstname="Content/Characters/Human/[GENDER]firstnames.txt" lastname="Content/Characters/Human/lastnames.txt" />
+    <name firstname="Mods/BTEPlus/Characters/Human/[GENDER]firstnames.txt" lastname="Content/Characters/Human/lastnames.txt" />
 
     <ai combatstrength="100"
 	  attackhumans="500"
@@ -29,6 +29,8 @@
     <limb id="0" radius="13" mass="6" type="Head" attackpriority="2">
       <sprite texture="Mods/BTEPlus/Characters/Human/[GENDER]head[HEADID].png" sourcerect="1,1,37,38" depth="0.04" origin="0.5,0.5"/>
       <damagedsprite texture="Content/Characters/Human/damagedhead.png" sourcerect="1,1,37,38" origin="0.5,0.5"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="1.2" damagesound="LimbArmor"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="1.2" damagesound="LimbArmor"/>
     </limb>
 	
     <!-- body -->
@@ -67,7 +69,7 @@
       <damagedsprite texture="Content/Characters/Human/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
     </limb>
     <limb id="7" radius="6" height="39" mass="5" type="LeftLeg">
-      <sprite texture="Mods/BTEPlus/Cahracters/Human/[GENDER]legs.png" sourcerect="32,0,22,50" depth="0.16" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Chracters/Human/[GENDER]legs.png" sourcerect="32,0,22,50" depth="0.16" origin="0.5,0.5"/>
       <damagedsprite texture="Content/Characters/Human/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
     </limb>
     <limb id="8" radius="5" height="13" mass="2" type ="LeftFoot" flip="true" pullpos="-5.0,0.0">

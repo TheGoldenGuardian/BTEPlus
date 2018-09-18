@@ -82,6 +82,18 @@
   </Item>
   
   <Item
+    name="Trash Bin"
+	aliases="Trash Can"
+	Tags="cntnr">
+
+    <Sprite texture="Mods/BTE/Items/Containers/staticContainers.png" sourcerect="104,323,40,47" depth="0.78"/>
+
+    <ItemContainer capacity="10" canbeselected="true" hideitems="true">
+      <Containable name="smallitem,meditem"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
     name="Exosuit Locker"
 	Tags="cntnr">
     
@@ -143,8 +155,6 @@
 	
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
       <sprite texture="Mods/BTE/Items/Containers/FridgeLights.png" sourcerect="0,0,71,135" alpha="1.0"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
-	  <StatusEffect type="OnBroken" target="This" IsOn="false"/>
     </LightComponent>
 	
 	<Controller direction="None" canbepicked="true">
@@ -160,7 +170,7 @@
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Glazed Thresher,Seared Snailfish,Seared Crawler,Seared Mantis" Condition="0.14"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Seared Thresher,Fried Thresher" Condition="0.15"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Crew Steak" Condition="0.16"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Snailfish Meat,Crawler Meat,Mantis Meat" Condition="0.17"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Snailfish Meat,Crawler Meat,Mantis Meat.Mantis Eggs" Condition="0.17"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Thresher Meat" Condition="0.18"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Human Meat" Condition="0.19"/>
       <sound file="Mods/BTE/Items/Containers/FridgeHum.ogg" type="OnActive" range="500" loop="true"/>
@@ -262,7 +272,7 @@
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Glazed Thresher,Seared Snailfish,Seared Crawler,Seared Mantis" Condition="0.14"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Seared Thresher,Fried Thresher" Condition="0.15"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Crew Steak" Condition="0.16"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Snailfish Meat,Crawler Meat,Mantis Meat" Condition="0.17"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Snailfish Meat,Crawler Meat,Mantis Meat,Mantis Eggs" Condition="0.17"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Thresher Meat" Condition="0.18"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Human Meat" Condition="0.19"/>
       <sound file="Mods/BTE/Items/Containers/FridgeHum.ogg" type="OnActive" range="800" loop="true"/>
@@ -301,6 +311,7 @@
 	  <Containable name="Clown Machinegun"/>
 	  <Containable name="Gravity Gun"/>
 	  <Containable name="Makeshift Suppressed Pistol"/>
+	  <Containable name="Utility Axe"/>
     </ItemContainer>
   </Item>
   

@@ -175,6 +175,66 @@
   </Item>
   
   <Item
+    name="Flashlight Old Revolver"
+	aliases="Flashlight Antique Revolver"
+    category="Equipment"
+	tags="meditem,weapon"
+    description="A prime example of why Engineering is never given access to weaponry."
+    impacttolerance="3"
+	canuseonself="true">
+
+    <Deconstruct time="3">      
+      <Item name="Old Revolver"/>
+	  <Item name="Flashlight"/>
+    </Deconstruct>
+  
+    <Sprite texture="FlashlightGuns.png" sourcerect="1,31,49,19" depth="0.55"/>
+
+    <Body width="49" height="19" density="35"/>
+    
+    <RangedWeapon barrelpos="35,3" spread="2" unskilledspread="12" reload="1">
+      <Sound file="Mods/BTEPlus/Items/Weapons/oldrevolverfire.ogg" type="OnUse"/>
+	  <StatusEffect type="InWater" target="This" Condition="-75"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+	  <StatusEffect type="Always" target="This" Condition="15"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" Condition="-5">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="6" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="36,-23" aimpos="75,18" handle1="-17,-3" handle2="-6,-7" holdangle="0"/>
+			
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.05,0.5" size="2.0,0.5"/>
+    </LightComponent>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/oldrevolverfire.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
     name="Diving Shotgun"
 	aliases="Shotgun,Shotty,Boomstick,DS-M2"
     category="Equipment"
@@ -194,7 +254,7 @@
     <Body width="93" height="21" density="50"/>
 
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-			holdpos="35,-10" holdangle="-6" aimpos="39,-3" handle1="-2,-1.5" handle2="28,-0.5"/>
+			holdpos="50,-10" holdangle="-6" aimpos="63,-3" handle1="-36,-3" handle2="10,4"/>
     
     <RangedWeapon barrelpos="93,6" spread="1" unskilledspread="3">
       <Sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg" type="OnUse"/>
@@ -237,7 +297,7 @@
     <Body width="93" height="21" density="50"/>
 
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-			holdpos="50,-10" holdangle="0" aimpos="63,-3" handle1="-36,-3" handle2="10,0"/>
+			holdpos="50,-10" holdangle="0" aimpos="63,-3" handle1="-36,-3" handle2="10,4"/>
     
     <RangedWeapon barrelpos="93,6" spread="1" unskilledspread="3">
       <Sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg" type="OnUse"/>
@@ -356,7 +416,7 @@
 	aliases="Flechette Round,Flechette"
     category="Equipment"
 	Tags="smallitem,weapon"
-	description="A shell containing a self-propelled slug."
+	description="A burst-shell that disperses needle-like darts in close proximity, effective at piercing flesh and bone."
     interactthroughwalls="true"
 	cargocontainername="Weapons Shipping Box"
 	price="100">
@@ -375,7 +435,7 @@
 
 	<Pickable slots="Any"/>
     <Projectile hitscan="true" removeonhit="true">
-      <Attack damage="35" bleedingdamage="12" stun="0.5" structuredamage="45" targetforce="455" severlimbsprobability="0.1" damagetype="Slash"/>
+      <Attack damage="20" bleedingdamage="20" stun="0.5" structuredamage="45" targetforce="455" severlimbsprobability="1" damagetype="Slash"/>
     </Projectile>
   </Item>
   
@@ -437,7 +497,7 @@
     <Deconstruct time="10">      
       <Item name="Steel Bar"/>
 	  <Item name="Steel Sliver"/>
-	  <Item name="Polycarbonate Sliver"/>+
+	  <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
   
     <Sprite texture="BallisticGuns.png" sourcerect="30,135,74,35" depth="0.55"/>
@@ -452,7 +512,7 @@
     </ItemContainer>
 
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
-              holdpos="43,-10" holdangle="-16" aimpos="40,-8" handle1="16,-7" handle2="-5,-5"/>
+              holdpos="39,-8" holdangle="-34" aimpos="40,-8" handle1="16,-7" handle2="-5,-5"/>
     
     <RangedWeapon barrelpos="60,10" spread="1" unskilledspread="5">
       <Sound file="grenadelaunch.ogg" type="OnUse"/>
@@ -468,8 +528,54 @@
   </Item>
   
   <Item
+    name="GL Gas Round"
+	aliases="GL Gas,GL Gas Grenade,GL Chemgas,GL Chemgas Grenade"
+    category="Equipment"
+	tags="smallitem,weapon,glammo"
+	description="The original Chemgas charge now retrofitted into the form of a grenade-like projectile. Still as illegal as ever."
+	impacttolerance="3"
+	cargocontainername="Explosives Shipping Box"
+	price="300">
+	
+	<Deconstruct time="6">      
+      <Item name="Steel Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Polycarbonate Sliver"/>
+      <Item name="Sulphuric Acid" mincondition="0.99"/>
+	  <Item name="Chlorine" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,112,10,4" depth="0.55"/>
+
+    <Body width="10" height="4" density="10" friction="0.95"/>
+	
+	<Projectile launchimpulse="18" sticktocharacters="false">
+      <Attack damage="10" bleedingdamage="0" stun="1" structuredamage="0" targetforce="750" damagetype="Blunt"/>
+    </Projectile>
+	
+	<ItemComponent characterusable="false">
+	  <StatusEffect type="OnUse" target="This" IsOn="true" delay="2"/>
+    </ItemComponent>
+	
+	<LightComponent LightColor="0.0,0.0,0.0,0.0" Flicker="0.0" range="0" IsOn="false">
+	  <StatusEffect type="OnActive" target="Hull" oxygen="-40000"/>
+      <StatusEffect type="OnActive" target="This" Condition="-2">
+		<ParticleEmitter particle="bubbles" particlespersecond="20"/>
+      </StatusEffect>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false">
+	    <Remove/>
+      </StatusEffect>
+    </LightComponent>
+
+    <Pickable slots="Any">
+	  <StatusEffect type="OnFire" target="This" IsOn="true" Condition="-5"/>
+    </Pickable>
+  </Item>
+  
+  <Item
     name="GL Rubber Round"
-	aliases="Rubber Grenade,Rubber Bullet"
+	aliases="GL Rubber,Rubber Grenade,Rubber Bullet"
     category="Equipment"
 	tags="smallitem,weapon,glammo"
 	description="A large rubber projectile made to discombobulate whoever or whatever it hits."
@@ -491,6 +597,90 @@
 	<Projectile launchimpulse="20" sticktocharacters="false">
       <Attack damage="30" bleedingdamage="0" stun="30" structuredamage="0" targetforce="1000" damagetype="Blunt"/>
     </Projectile>
+  </Item>
+  
+  <Item
+    name="GL Stun Round"
+	aliases="GL Stun Grenade,GL Stun"
+    category="Equipment"
+	tags="smallitem,weapon,glammo"
+	description="A large rubber projectile made to discombobulate whoever or whatever it hits."
+	impacttolerance="3"
+	cargocontainername="Explosives Shipping Box"
+	price="300">
+	
+	<Deconstruct time="6"> 
+	  <Item name="Steel Sliver"/>
+	  <Item name="Polycarbonate Sliver" maxcondition="0.0" outcondition="0.25"/>
+	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+      <Item name="Flash Powder" mincondition="0.99"/>
+	  <Item name="Flash Powder" mincondition="0.99"/>
+	  <Item name="Flash Powder" mincondition="0.99"/>
+	  <Item name="Flash Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,122,10,4" depth="0.55"/>
+
+    <Body width="10" height="4" density="10" friction="0.95"/>
+	
+	<Projectile launchimpulse="18" sticktocharacters="false">
+      <Attack damage="10" bleedingdamage="0" stun="1" structuredamage="0" targetforce="750" damagetype="Blunt"/>
+    </Projectile>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100" delay="4"/>
+    </ItemComponent>
+
+    <Pickable slots="Any">
+	  <StatusEffect type="OnFire" target="This" Condition="-25"/>
+      <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Weapons/stungrenade.ogg"/>
+        <Explosion range="450" damage="5" stun="50" force="0.1" flames="false" smoke="false" camerashake="2.5"/>
+		<Remove/>
+      </StatusEffect>
+    </Pickable>
+  </Item>
+  
+  <Item
+    name="GL Fragmentation Round"
+	aliases="GL Fragmentation,GL Frag,GL Frag Round,GL Frag Grenade,GL Fragmentation Grenade"
+    category="Equipment"
+	tags="smallitem,weapon,glammo"
+	description="The standard round type for usage with grenade launchers, the round detonates into shrapnel effective at neutralizing enemy personnel."
+	impacttolerance="3"
+	cargocontainername="Explosives Shipping Box"
+	price="300">
+	
+	<Deconstruct time="6">      
+      <Item name="Steel Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="94,127,10,4" depth="0.55"/>
+
+    <Body width="10" height="4" density="10" friction="0.95"/>
+	
+	<Projectile launchimpulse="18" sticktocharacters="false">
+      <Attack damage="10" bleedingdamage="0" stun="1" structuredamage="0" targetforce="750" damagetype="Blunt"/>
+    </Projectile>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100" delay="5"/>
+    </ItemComponent>
+
+    <Pickable slots="Any">
+	  <StatusEffect type="OnFire" target="This" Condition="-25"/>
+      <StatusEffect type="OnBroken" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/BlastExplosionSmall.ogg"/>
+        <Explosion range="500" structuredamage="60" damage="190" bleedingdamage="10" stun="7" force="12" camerashake="4.0" decal="explosion" decalsize="0.5"/>
+		<ParticleEmitter particle="weldspark" particlespersecond="100" velocitymin="600" velocitymax="800" anglemax="360"/>
+		<Remove/>
+      </StatusEffect>
+    </Pickable>
   </Item>
   
   <Item

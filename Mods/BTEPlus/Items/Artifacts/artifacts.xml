@@ -116,6 +116,7 @@
 
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 		<StatusEffect type="OnActive" target="Character" bleeding="0.25"/>
+		<StatusEffect tags="claret" type="OnActive" target="Character" duration="1"/>
 	</Holdable>
   </Item>
   
