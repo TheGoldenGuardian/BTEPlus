@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+	name="Renegade Access Unit"
+	aliases="RAU,Spoofer,Multitool"
+    category="Misc"
+	Tags="meditem,com,cap,ast,sec,sct,med,eng,mec,cul,nov,pri,stg,P1,P2,P3,P4,ID Card"
+	description="Some strange device fabricated by the Renegades to give them access to parts of a submarine they wouldn't have access to otherwise. This device appears very unstable, it may explode if impacted too hard. Overrides requirements when held up to an access panel."
+	impacttolerance="6">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+	<Sprite texture="renegadegear.png" sourcerect="147,44,37,17" depth="0.82"/>
+
+	<Body width="37" height="15" density="14"/>
+
+	<Holdable slots="RightHand,LeftHand" holdangle="90" aimpos="60,0" aimangle="45">
+		<StatusEffect type="OnImpact" target="This" Condition="-100" setvalue="true">
+        <sound file="Content/Items/Reactor/explosion.ogg" range="3000"/>
+        <Explosion range="300" structuredamage="100" damage="60" stun="8" force="20" severlimbsprobability="0.1" camerashake="8" decal="explosion" decalsize="0.4"/>
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
+        <sound file="Content/Items/Reactor/explosion.ogg" range="3000"/>
+        <Explosion range="300" structuredamage="100" damage="60" stun="8" force="20" severlimbsprobability="0.1" camerashake="8" decal="explosion" decalsize="0.4"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+		<Remove/>
+      </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Renegade Wetsuit"
+    category="Misc"
+    tags="bigitem,diving,clothing"
+	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed.">
+	
+	<Deconstruct time="30">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Block"/>
+    </Deconstruct>
+
+    <Sprite texture="RenegadeWetsuit.png" sourcerect="0,86,59,26" depth="0.6"/>
+
+    <Body width="56" height="23" density="52"/>
+
+    <Wearable slots="Torso+Legs,Any">
+	  <sprite texture="RenegadeWetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="32,58,22,28" origin="0.55,0.6"/>
+	  
+	  <sprite texture="RenegadeWetsuit.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightLeg" sourcerect="75,56,22,50" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftLeg" sourcerect="75,56,22,50" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightFoot" sourcerect="59,59,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftFoot" sourcerect="59,59,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+        <Containable name="Renegade Access Unit"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Renegade Vest"
+	aliases="Renegade Ballistic Vest"
+    category="Misc"
+    tags="bigitem,clothing"
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="renegadegear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="renegadegear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="renegadegear.png" limb="RightArm" sourcerect="41,0,21,21" origin="0.5,1.1"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.13" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Renegade Ballistic Wetsuit"
+    category="Misc"
+    tags="bigitem,diving,clothing"
+	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed.">
+	
+	<Deconstruct time="40">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="renegadegear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="56" height="23" density="52"/>
+
+    <Wearable slots="Torso+Legs,Any">
+	  <sprite texture="RenegadeWetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="32,58,22,28" origin="0.55,0.6"/>
+	  
+	  <!-- <sprite texture="RenegadeWetsuit.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true"/> -->
+	  <sprite texture="renegadegear.png" limb="Torso" sourcerect="0,0,38,58" depth="0.0039" origin="0.52,0.48" inheritlimbdepth="false"/>
+	  
+	  <sprite texture="renegadegear.png" limb="RightArm" sourcerect="41,0,21,21" origin="0.5,1.1" depth="0.0009" inheritlimbdepth="false"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightLeg" sourcerect="97,56,22,50" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftLeg" sourcerect="97,56,22,50" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="RenegadeWetsuit.png" limb="RightFoot" sound="footstep_gear" sourcerect="102,28,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="RenegadeWetsuit.png" limb="LeftFoot" sound="footstep_gear" sourcerect="102,28,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/>
+	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+        <Containable name="Renegade Access Unit"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Renegade Radio Helmet"
+	aliases="Renegade Ballistic Helmet,Renegade Helmet"
+    category="Misc"
+    tags="meditem,clothing"
+    description="While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Steel Bar"/>
+	  <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+    
+    <Sprite texture="renegadegear.png" sourcerect="39,31,29,22" depth="0.6"/>
+
+    <Body radius="12" density="30"/>
+	
+	<WifiComponent range="30000" LinkToChat="true">
+      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+    </WifiComponent>
+	
+	  <ItemContainer capacity="1" hideitems="true">
+        <Containable name="Battery Cell"/>
+        <Containable name="Fulgurium Battery Cell"/>
+      </ItemContainer>
+
+    <Wearable slots="Any,Head">
+      <sprite texture="renegadegear.png" limb="Head" depth="0.038" inheritlimbdepth="false" sourcerect="39,31,29,22" origin="0.51,0.9"/>
+	  <sprite texture="securitygear.png" limb="Head" origin="0.5,0.5" sourcerect="100,112,16,16" depth="0.04" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.09" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
+	  <StatusEffect type="OnWearing" target="Contained" Condition="-0.1"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+	name="Renegade Bandanna"
+	aliases="Renegade Facemask,Renegade Mask"
+	category="Misc"
+	tags="smallitem,clothing"
+	description="A bandana that fits snugly to the wearer's face, concealing their identity without obstructing their vision."
+	cargocontainername="Standard Shipping Box">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+    
+    <Sprite texture ="renegadegear.png" depth="0.65" sourcerect="136,18,21,16"/>
+  
+    <Body height="10.5" width="19.5" density="10.02"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="renegadegear.png" limb="Head" sourcerect="130,0,32,42" origin="0.45,0.5"/>
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" SpeedMultiplier="-0.001" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.99"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+    </Wearable> 
+  </Item>
+  
+  <Item
+    name="Bandit Wetsuit"
+    category="Misc"
+    tags="bigitem,diving,clothing"
+	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed.">
+	
+	<Deconstruct time="30">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Block"/>
+    </Deconstruct>
+
+    <Sprite texture="BanditWetsuit.png" sourcerect="0,86,59,26" depth="0.55"/>
+
+    <Body width="56" height="23" density="12"/>
+
+    <Wearable slots="Torso+Legs,Any">
+	  <sprite texture="BanditWetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="32,58,22,28" origin="0.55,0.6"/>
+	  
+	  <sprite texture="BanditWetsuit.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="BanditWetsuit.png" limb="RightHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="BanditWetsuit.png" limb="LeftHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="BanditWetsuit.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="BanditWetsuit.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="BanditWetsuit.png" limb="RightThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="BanditWetsuit.png" limb="LeftThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="BanditWetsuit.png" limb="RightLeg" sourcerect="75,56,22,50" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="BanditWetsuit.png" limb="LeftLeg" sourcerect="75,56,22,50" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="BanditWetsuit.png" limb="RightFoot" sound="footstep_gear" sourcerect="59,59,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="BanditWetsuit.png" limb="LeftFoot" sound="footstep_gear" sourcerect="59,59,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.03" disabledeltatime="true"/>
+	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
+  </Item>
+</Items>

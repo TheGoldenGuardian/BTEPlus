@@ -116,7 +116,7 @@
 	  <requireditem name="Crowbar" type="Equipped"/>
       <Sprite texture="walldoor.png" sourcerect="33,0,33,208" depth="0.05" origin="0.5,0.0"/>
       <WeldedSprite texture="walldoor.png" sourcerect="66,0,32,208" depth="0.0" origin="0.5,0.5"/>
-      <BrokenSprite texture="walldoor.png" sourcerect="99,0,32,208" depth="0.051" origin="0.5,0.0" scale="true"/>
+      <BrokenSprite texture="walldoor.png" sourcerect="99,0,32,208" depth="0.84" origin="0.5,0.0" scale="true"/>
       <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
 	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
 	  <StatusEffect type="OnBroken" target="This">
@@ -151,7 +151,7 @@
 	  <requireditem name="Crowbar" type="Equipped"/>
       <Sprite texture="wallhatch.png" sourcerect="128,0,128,32" depth="0.05" origin="0.0,0.5"/>
       <WeldedSprite texture="wallhatch.png" sourcerect="0,33,128,32" depth="0.0" origin="0.5,0.5"/>
-      <BrokenSprite texture="wallhatch.png" sourcerect="128,33,128,32" depth="0.051" origin="0.0,0.5" scale="true"/>
+      <BrokenSprite texture="wallhatch.png" sourcerect="128,33,128,32" depth="0.84" origin="0.0,0.5" scale="true"/>
       <sound file="Content/Items/Door/door.ogg" type="OnUse" range="500"/>
 	  <sound file="Content/Items/Tools/crowbar.ogg" type="OnPicked" range="2000"/>
 	  <StatusEffect type="OnBroken" target="This">

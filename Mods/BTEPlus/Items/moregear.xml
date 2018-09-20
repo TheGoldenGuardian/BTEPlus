@@ -542,6 +542,87 @@
 	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
     </Wearable>
   </Item>
+  
+  <Item
+	name="Diving Bag"
+	aliases="Backpack,Divebag"
+	category="Equipment"
+	tags="meditem,clothing"
+	description="A heavy backpack designed to be used with a wetsuit to assist in the recovery of items in water.">
+
+  <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="divebag.png" sourcerect="71,0,57,26" depth="0.55"/>
+
+    <Body width="56" height="24" density="10"/>
+
+    <Wearable limbtype="Torso" slots="Head">
+      <sprite texture="divebag.png" limb="Torso" origin="0.66,0.5" sourcerect="0,0,54,65"/>
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" SwimMultiplier="-100" disabledeltatime="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="4">
+      <Containable name="smallitem,meditem"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Ballistic Wetsuit"
+    category="Equipment"
+    tags="bigitem,diving,clothing"
+	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed.">
+	
+	<Deconstruct time="40">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEPlus/Items/Jobgear/securitygear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="56" height="23" density="52"/>
+
+    <Wearable slots="Torso+Legs,Any">
+	  <sprite texture="Diving/Wetsuit.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="32,58,22,28" origin="0.55,0.6"/>
+	  
+	  <!-- <sprite texture="RenegadeWetsuit.png" limb="Torso" sourcerect="0,0,29,58" origin="0.5,0.55" depth="0.004" inheritlimbdepth="false" hidelimb="true"/> -->
+	  <sprite texture="Jobgear/securitygear.png" limb="Torso" sourcerect="0,0,38,58" depth="0.0039" origin="0.52,0.48" inheritlimbdepth="false"/>
+	  
+	  <sprite texture="Jobgear/securitygear.png" limb="RightArm" sourcerect="41,0,21,21" origin="0.5,1.1" depth="0.0009" inheritlimbdepth="false"/>
+
+      <sprite texture="Diving/Wetsuit.png" limb="RightHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="Diving/Wetsuit.png" limb="LeftHand" sourcerect="51,0,13,47" origin="0.45,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="Diving/Wetsuit.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="Diving/Wetsuit.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.4" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="Diving/Wetsuit.png" limb="RightThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="Diving/Wetsuit.png" limb="LeftThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="Diving/Wetsuit.png" limb="RightLeg" sourcerect="97,56,22,50" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="Diving/Wetsuit.png" limb="LeftLeg" sourcerect="97,56,22,50" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+
+      <sprite texture="Diving/Wetsuit.png" limb="RightFoot" sound="footstep_gear" sourcerect="102,28,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="Diving/Wetsuit.png" limb="LeftFoot" sound="footstep_gear" sourcerect="102,28,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/>
+	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+        <Containable name="Renegade Access Unit"/>
+    </ItemContainer>
+  </Item>
 
   <Item
     name="German Officer Cap"

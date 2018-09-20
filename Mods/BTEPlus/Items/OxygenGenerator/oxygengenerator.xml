@@ -1,11 +1,11 @@
 ﻿<Items>
   <Item
-    name="Oxygen Generator"
+    name="Hydrogen Generator"
     category="Machine"
     linkable="true">
 
-    <Sprite texture="OxygenGenerator.png" depth="0.8" sourcerect="0,0,128,128"/>
-	<BrokenSprite texture="OxygenGeneratorBroken.png" depth="0.8" sourcerect="0,0,128,128" maxcondition="0"/>
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGenerator.png" depth="0.8" sourcerect="0,0,118,123"/>
+	<BrokenSprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGeneratorBroken.png" depth="0.8" sourcerect="0,0,118,123" maxcondition="0"/>
 	
 	<fixrequirement name="Mechanical repairs">
       <skill name="Construction" level="50"/>
@@ -13,18 +13,62 @@
       <item name="Wrench"/>
     </fixrequirement>
 	
-	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
+      <sprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGeneratorLights.png" sourcerect="0,0,118,123" alpha="1.0"/>
+	  <StatusEffect type="OnBroken" target="This">
+        <Explosion range="200" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.5"/>
+      </StatusEffect>
+    </LightComponent>
+	
+	<Powered powerconsumption="750" currpowerconsumption="750" minvoltage="0.5" isactive="true">
+      <GuiFrame rect="0,-100,350,160" alignment="Center" style="ItemUI"/>
+      <StatusEffect type="OnActive" target="Contained" targetnames="Hydrogen Tank" Condition="0.1"/>
+      <sound file="Content/Items/OxygenGenerator/oxygengenerator.ogg" type="OnActive" range="1000" volume="CurrFlow" volumemultiplier="0.001f" loop="true"/>
+	  
+	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
+	    <sound file="Content/Items/Reactor/explosion.ogg"/>
+        <Explosion range="800" damage="150" structuredamage="100" stun="12" force="5.0" flash="false" shockwave="false" sparks="false"/>
+		<Fire size="500"/>
+      </StatusEffect>
+    </Powered>
+  
+    <trigger/>
+
+    <ItemContainer capacity="3" canbeselected="true" msg="Insert hydrogen tanks to refill them">
+      <Containable name="Hydrogen Tank"/>
+    </ItemContainer>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="power_in"/>
+    </ConnectionPanel>
+  </Item>
+  
+  <Item
+    name="Oxygen Generator"
+    category="Machine"
+    linkable="true">
+
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGenerator.png" depth="0.8" sourcerect="0,0,128,128"/>
+	<BrokenSprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGeneratorBroken.png" depth="0.8" sourcerect="0,0,128,128" maxcondition="0"/>
+	
+	<fixrequirement name="Mechanical repairs">
+      <skill name="Construction" level="50"/>
+      <item name="Welding Tool"/>
+      <item name="Wrench"/>
+    </fixrequirement>
+	
+	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGeneratorLights.png" sourcerect="0,0,128,128" alpha="1.0"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
-	  <StatusEffect type="OnBroken" target="This" IsOn="false">
+	  <StatusEffect type="OnBroken" target="This">
         <Explosion range="200" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.5"/>
       </StatusEffect>
     </LightComponent>
 
     <OxygenGenerator powerconsumption="1000" minvoltage="0.5" canbeselected="true">
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="0.4"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Bottle" Condition="0.8"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygenite Tank" Condition="0.0"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="0.8"/>
       <sound file="Content/Items/OxygenGenerator/oxygengenerator.ogg" type="OnActive" range="1000" volume="CurrFlow" volumemultiplier="0.001f" loop="true"/>
 	  
 	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
@@ -53,8 +97,8 @@
     category="Machine"
     linkable="true">
 
-    <Sprite texture="OxygenModule.png" depth="0.79" sourcerect="0,0,107,100"/>
-	<BrokenSprite texture="OxygenModuleBroken.png" depth="0.79" sourcerect="0,0,107,100" maxcondition="0"/>
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModule.png" depth="0.79" sourcerect="0,0,107,100"/>
+	<BrokenSprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModuleBroken.png" depth="0.79" sourcerect="0,0,107,100" maxcondition="0"/>
 	
 	<fixrequirement name="Mechanical repairs">
       <skill name="Construction" level="40"/>
@@ -62,10 +106,9 @@
       <item name="Wrench"/>
     </fixrequirement>
 	
-	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModuleLights.png" sourcerect="0,0,107,100" alpha="1.0"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
-	  <StatusEffect type="OnBroken" target="This" IsOn="false">
+	  <StatusEffect type="OnBroken" target="This">
         <Explosion range="100" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.4"/>
       </StatusEffect>
     </LightComponent>
@@ -98,13 +141,12 @@
 	<Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
       <GuiFrame rect="0,-100,350,160" alignment="Center" style="ItemUI"/>
       <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="1.2"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Bottle" Condition="2.4"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="2.4"/>
     </Powered>
 	
-	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="750" powerconsumption="1">
+	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="750" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/RefillDockLights.png" sourcerect="0,0,74,44" alpha="1.0"/>
-	  <StatusEffect type="Always" target="This" IsOn="true"/>
-	  <StatusEffect type="OnBroken" target="This" IsOn="false">
+	  <StatusEffect type="OnBroken" target="This">
         <Explosion range="100" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.4"/>
       </StatusEffect>
     </LightComponent>
@@ -131,6 +173,16 @@
     <Vent canbeselected="false">
       <sound file="Content/Items/OxygenGenerator/ventilation.ogg" type="OnActive" range="600" volume="OxygenFlow" volumemultiplier="0.001f" loop="true"/>
     </Vent>
+	
+	<Controller direction="None" canbepicked="true">
+	  <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="500"/>
+	  <requireditem name="Screwdriver" type="Equipped"/>
+    </Controller>
+	
+	<ItemContainer capacity="1" canbeselected="true" hideitems="true">
+      <Containable name="smallitem,meditem"/>
+	  <requireditem name="Screwdriver" type="Equipped"/>
+    </ItemContainer>
   </Item>
   
   <Item

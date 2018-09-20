@@ -95,6 +95,10 @@
 	  <fabricableitem name="Spare Parts" requireditems="Polycarbonate Bar,Aluminium Bar,Steel Bar" requiredtime="15">
 	    <RequiredSkill name="Construction" level="50"/>
       </fabricableitem>
+	  
+	  <fabricableitem name="Duct Tape" requiredtime="3">
+		<Item name="Biomass" mincondition="0.99"/>
+	  </fabricableitem>
 
 	  <fabricableitem name="Polycarbonate Sliver" requireditems="Biomass" requiredtime="15">
 	    <RequiredSkill name="Construction" level="40"/>

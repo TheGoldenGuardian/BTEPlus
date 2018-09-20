@@ -14,4 +14,190 @@
     width = "48" height ="512" resizevertical="true" body="true" castshadow="true" health="750">
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" depth="0.06" sourcerect="0,0,48,512"/>
   </ff_y_wall>
+  
+  <horizontalresizablewindow3 width="128" height ="48" body="true" health="90" tags="glass" resizehorizontal="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="147,256,128,48" depth ="0.06"/>
+    <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="147,305,128,48" depth ="0.85"/>    
+  </horizontalresizablewindow3>
+
+  <verticalresizablewindow3 width = "48" height ="128" body="true" health="90" tags="glass" resizevertical="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,256,48,128" depth ="0.06"/>
+    <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="98,256,48,128" depth ="0.85"/>    
+  </verticalresizablewindow3>
+  
+  <bed width="173" height="64">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,191,173,64" depth="0.8"/>
+  </bed>
+  
+  <letterA width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="223,191,20,20" depth="0.89"/>
+  </letterA>
+  
+  <letterB width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="244,191,20,20" depth="0.89"/>
+  </letterB>
+  
+  <letterC width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="265,191,20,20" depth="0.89"/>
+  </letterC>
+  
+  <letterD width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="286,191,20,20" depth="0.89"/>
+  </letterD>
+  
+  <letterE width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="307,191,20,20" depth="0.89"/>
+  </letterE>
+  
+  <letterF width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="328,191,20,20" depth="0.89"/>
+  </letterF>
+  
+  <letterG width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="349,191,20,20" depth="0.89"/>
+  </letterG>
+  
+  <letterH width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="370,191,20,20" depth="0.89"/>
+  </letterH>
+  
+  <letterI width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="391,191,20,20" depth="0.89"/>
+  </letterI>
+  
+  <letterJ width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="412,191,20,20" depth="0.89"/>
+  </letterJ>
+  
+  <letterK width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="433,191,20,20" depth="0.89"/>
+  </letterK>
+  
+  <letterL width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="454,191,20,20" depth="0.89"/>
+  </letterL>
+  
+  <letterM width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="475,191,20,20" depth="0.89"/>
+  </letterM>
+  
+  <letterN width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="496,191,20,20" depth="0.89"/>
+  </letterN>
+  
+  <letterO width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="517,191,20,20" depth="0.89"/>
+  </letterO>
+  
+  <letterP width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="223,212,20,20" depth="0.89"/>
+  </letterP>
+  
+  <letterQ width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="244,212,20,20" depth="0.89"/>
+  </letterQ>
+  
+  <letterR width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="265,212,20,20" depth="0.89"/>
+  </letterR>
+  
+  <letterS width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="286,212,20,20" depth="0.89"/>
+  </letterS>
+  
+  <letterT width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="307,212,20,20" depth="0.89"/>
+  </letterT>
+  
+  <letterU width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="328,212,20,20" depth="0.89"/>
+  </letterU>
+  
+  <letterV width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="349,212,20,20" depth="0.89"/>
+  </letterV>
+  
+  <letterW width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="370,212,20,20" depth="0.89"/>
+  </letterW>
+  
+  <letterX width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="391,212,20,20" depth="0.89"/>
+  </letterX>
+  
+  <letterY width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="412,212,20,20" depth="0.89"/>
+  </letterY>
+  
+  <letterZ width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="433,212,20,20" depth="0.89"/>
+  </letterZ>
+  
+  <letterAt width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="454,212,20,20" depth="0.89"/>
+  </letterAt>
+  
+  <letterPound width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="475,212,20,20" depth="0.89"/>
+  </letterPound>
+  
+  <letterHyphen width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="496,212,20,20" depth="0.89"/>
+  </letterHyphen>
+  
+  <letter0 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="517,212,20,20" depth="0.89"/>
+  </letter0>
+  
+  <letter1 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="223,233,20,20" depth="0.89"/>
+  </letter1>
+  
+  <letter2 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="244,233,20,20" depth="0.89"/>
+  </letter2>
+  
+  <letter3 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="265,233,20,20" depth="0.89"/>
+  </letter3>
+  
+  <letter4 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="286,233,20,20" depth="0.89"/>
+  </letter4>
+  
+  <letter5 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="307,233,20,20" depth="0.89"/>
+  </letter5>
+  
+  <letter6 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="328,233,20,20" depth="0.89"/>
+  </letter6>
+  
+  <letter7 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="349,233,20,20" depth="0.89"/>
+  </letter7>
+  
+  <letter8 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="370,233,20,20" depth="0.89"/>
+  </letter8>
+  
+  <letter9 width="20" height="20">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="391,233,20,20" depth="0.89"/>
+  </letter9>
+  
+  <coalitionLogo width="121" height="141">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,49,121,141" depth="0.97" canflipx="false"/>
+  </coalitionLogo>
+  
+  <coalitionLogoVandalized width="121" height="141">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="171,49,121,141" depth="0.97" canflipx="false"/>
+  </coalitionLogoVandalized>
+  
+  <renegadeLogo width="121" height="141">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="293,49,121,141" depth="0.97" canflipx="false"/>
+  </renegadeLogo>
+  
+  <renegadeLogoVandalized width="121" height="141">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="415,49,121,141" depth="0.97" canflipx="false"/>
+  </renegadeLogoVandalized>
 </prefabs>

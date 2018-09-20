@@ -121,8 +121,8 @@
       <sprite texture="reinforceddivesuit.png" limb="RightLeg" sourcerect="33,0,20,51" origin="0.5,0.5" depth="0.013" hidelimb="true"/>
       <sprite texture="reinforceddivesuit.png" limb="LeftLeg" sourcerect="33,0,20,51" origin="0.5,0.5" depth="0.013" hidelimb="true"/>
 	  
-	  <sprite texture="reinforceddivesuit.png" limb="RightFoot" sound="footstep_metalb" sourcerect="61,55,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
-      <sprite texture="reinforceddivesuit.png" limb="LeftFoot" sound="footstep_metalb" sourcerect="61,55,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  <sprite texture="reinforceddivesuit.png" limb="RightFoot" sound="footstep_gear" sourcerect="61,55,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftFoot" sound="footstep_gear" sourcerect="61,55,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
 	  
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.2" LowPassMultiplier="0.2" disabledeltatime="true"/>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.125">

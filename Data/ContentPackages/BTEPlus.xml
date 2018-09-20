@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 7.3 Plus 1.0" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 7.3 Plus 1.1" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml"/> -->
   <!-- <Item file="Content/Items/itemlabel.xml"/> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml"/> -->
@@ -108,7 +108,9 @@
   <Character file="Mods/BTE/Characters/Charybdis/charybdis.xml"/>
   <Character file="Mods/BTE/Characters/Coelanth/coelanth.xml"/>
   <Character file="Mods/BTE/Characters/Crawler/crawler.xml"/>
+  <Character file="Mods/BTE/Characters/Crawlersmall/crawlersmall.xml"/>
   <Character file="Mods/BTE/Characters/Crawlerghost/crawlerghost.xml"/>
+  <Character file="Mods/BTE/Characters/Crawlerghostsmall/crawlerghostsmall.xml"/>
   <Character file="Mods/BTE/Characters/Endworm/endworm.xml"/>
   <Character file="Mods/BTE/Characters/Fractalguardian/fractalguardian.xml"/>
   <Character file="Mods/BTE/Characters/Fractalguardian2/fractalguardian2.xml"/>
@@ -127,6 +129,7 @@
   <Character file="Mods/BTE/Characters/Huskweak/huskweak.xml"/>
   <Character file="Mods/BTE/Characters/Husk/husk.xml"/>
   <Character file="Mods/BTE/Characters/Huskcrawler/huskcrawler.xml"/>
+  <Character file="Mods/BTE/Characters/Huskcrawlersmall/huskcrawlersmall.xml"/>
   <Character file="Mods/BTE/Characters/Mantispet/mantispet.xml"/>
   <Character file="Mods/BTE/Characters/Mantissmall/mantissmall.xml"/>
   <Character file="Mods/BTE/Characters/Mantis/mantis.xml"/>
@@ -160,9 +163,10 @@
   <!-- <Item file="Mods/BTEPlus/Items/Turrets/gunturrets.xml"/> -->
   <Item file="Mods/BTEPlus/Items/Weapons/moreweapons.xml"/>
   <Item file="Mods/BTEPlus/Items/Machines/moremachines.xml"/>
-  <Item file="Mods/BTEPlus/Items/Furniture/furniture.xml"/>
   <Item file="Mods/BTEPlus/Items/Medical/morefood.xml"/>
   <Item file="Mods/BTEPlus/Items/Misc/miscmisc.xml"/>
+  <Item file="Mods/BTEPlus/Items/Jobgear/renegadegear.xml"/>
+  <Character file="Mods/BTEPlus/Characters/Human/renegade.xml"/>
   
   <Executable file="Barotrauma.exe"/>
 </contentpackage>

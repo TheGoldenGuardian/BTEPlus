@@ -231,11 +231,8 @@
 		<StatusEffect type="OnUse" target="Character" Health="12" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
 		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="16" stun="-0.5" disabledeltatime="true">
+		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
 		  <Conditional SpeciesName="robot"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="16" stun="-0.5" disabledeltatime="true">
-		  <Conditional SpeciesName="redrobot"/>
 		</StatusEffect>
     </MeleeWeapon>
   </Item>
@@ -278,7 +275,7 @@
     </MeleeWeapon>
   </Item>
   
-  <Item
+  <!-- <Item
     name="Red Crowbar"
 	aliases="t1/2 Crowbar,Raising the Bar"
     category="Equipment"
@@ -299,7 +296,7 @@
     <MeleeWeapon slots="RightHand+LeftHand,Any"
           controlpose="true" aimpos="50,0" handle1="-5,0" handle2="-3,5" holdangle="30" reload="2.4">
       <Attack damage="15" bleedingdamage="0.15" structuredamage="10" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
-	  <!-- <Sound file="Mods/BTEPlus/Items/Tools/CrowbarSwing.ogg" type="OnUse"/> -->
+	  <Sound file="Mods/BTEPlus/Items/Tools/CrowbarSwing.ogg" type="OnUse"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -320,7 +317,7 @@
 		<sound file="Mods/BTEPlus/Items/Tools/CrowbarHit2.ogg"/>
 	  </StatusEffect>
     </MeleeWeapon>
-  </Item>
+  </Item> -->
   
   <Item
     name="Frying Pan"
@@ -407,7 +404,20 @@
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
-    <Sprite texture="Tools.png" sourcerect="202,34,12,33" depth="0.55"/>
+    <Sprite texture ="hydrogentank.png" sourcerect="0,0,12,33" depth="0.55"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="12,0,12,33" depth="0.55" maxcondition="92.5"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="24,0,12,33" depth="0.55" maxcondition="85"/>
+    <BrokenSprite texture="hydrogentank.png" sourcerect="36,0,12,33" depth="0.55" maxcondition="77.5"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="48,0,12,33" depth="0.55" maxcondition="70"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="60,0,12,33" depth="0.55" maxcondition="62.5"/>
+    <BrokenSprite texture="hydrogentank.png" sourcerect="72,0,12,33" depth="0.55" maxcondition="55"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="0,33,12,33" depth="0.55" maxcondition="47.5"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="12,33,12,33" depth="0.55" maxcondition="40"/>
+    <BrokenSprite texture="hydrogentank.png" sourcerect="24,33,12,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="36,33,12,33" depth="0.55" maxcondition="17.5"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="48,33,12,33" depth="0.55" maxcondition="10"/>
+    <BrokenSprite texture="hydrogentank.png" sourcerect="60,33,12,33" depth="0.55" maxcondition="2.5"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="72,33,12,33" depth="0.55" maxcondition="0"/>
 
     <Body width="12" height="33" density="8"/>
 

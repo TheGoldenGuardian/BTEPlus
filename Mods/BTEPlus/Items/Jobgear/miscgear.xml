@@ -670,8 +670,8 @@
       <sprite texture="scientistgearRagged.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="scientistgearRagged.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="false"/>
 
-      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
-      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="false"/>
+      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.15" hidelimb="false"/>
 	  
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
@@ -716,8 +716,8 @@
       <sprite texture="scientistgearRagged.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="scientistgearRagged.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="false"/>
 
-      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
-      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="false"/>
+      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="false"/>
 	  
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
@@ -1230,6 +1230,8 @@
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
 	<Sprite texture="jumpsuit.png" sourcerect="0,52,50,25" depth="0.6"/>
@@ -1276,6 +1278,8 @@
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
 	<Sprite texture="jumpsuit.png" sourcerect="0,52,50,25" depth="0.6"/>
@@ -1319,6 +1323,8 @@
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
 	<Sprite texture="jumpsuit.png" sourcerect="0,52,50,25" depth="0.6"/>

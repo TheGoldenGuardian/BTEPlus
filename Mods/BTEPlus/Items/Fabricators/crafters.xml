@@ -795,9 +795,9 @@
 	  
 	 <fabricableitem name="Makeshift Suppressed Pistol" requireditems="Steel Bar, Steel Bar, Bandage, Oxygen Bottle" requiredtime="15">
 	    <RequiredSkill name="Construction" level="50"/>
-		<RequiredSkill name="Weapons" level="40"/>
+		<RequiredSkill name="Weapons" level="30"/>
 	  </fabricableitem>
-	  <fabricableitem name="Flashlight Suppressed Pistol" requireditems="Makeshift Suppressed Pistol, Flashlight, Battery" requiredtime="5">
+	  <fabricableitem name="Flashlight Suppressed Pistol" requireditems="Makeshift Suppressed Pistol, Flashlight, Battery, Steel Sliver" requiredtime="5">
 		<Item name="Duct Tape" mincondition="0.5" usecondition="true"/>
 	  </fabricableitem>
     </Fabricator>
