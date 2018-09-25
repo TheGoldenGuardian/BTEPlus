@@ -12,7 +12,7 @@
     </Skills>
     <Items>
       <Item name="Captain ID Card" equip="true"/>
-	  <Item name="Wallet">
+	  <Item name="Captain's Wallet">
         <Item name="Ration Stamp A"/>
 		<Item name="Ration Stamp A"/>
 		<Item name="Ration Stamp A"/>

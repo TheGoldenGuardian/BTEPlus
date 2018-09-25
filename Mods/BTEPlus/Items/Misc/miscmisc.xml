@@ -20,12 +20,12 @@
 
     <RepairTool structurefixamount="0" limbfixamount="0" range="0" barrelpos="0,0" particles="bubbles">
       <ParticleEmitter particle="bubbles" particlespersecond="25"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Harp - DoubleNeck1.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Echoes of the Past.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Last Light.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Slam.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Superstitious.ogg" type="OnUse" range="600" loop="true"/>
-	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Prodigy.ogg" type="OnUse" range="600" loop="true"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - DoubleNeck1.ogg" type="OnUse" range="600" loop="true" msg="Playing: DoubleNeck1"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Echoes of the Past.ogg" type="OnUse" range="600" loop="true" msg="Playing: Echoes of the Past"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Last Light.ogg" type="OnUse" range="600" loop="true" msg="Playing: Last Light"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Slam.ogg" type="OnUse" range="600" loop="true" msg="Playing: Slam"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Superstitious.ogg" type="OnUse" range="600" loop="true" msg="Playing: Superstitious"/>
+	  <sound file="Mods/BTEPlus/Items/Misc/Harp - Prodigy.ogg" type="OnUse" range="600" loop="true" msg="Playing: Prodigy"/>
 	  <StatusEffect type="InWater" target="This" Condition="-75"/>
 	  <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
 	  <StatusEffect type="Always" target="This" Condition="15"/>
@@ -67,8 +67,8 @@
 	
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
               aimpos="19,20" handle1="0,5" handle2="0,5" holdangle="90">
-			  <sound file="Radio - Yellow Submarine.ogg" type="OnActive" range="600" loop="true"/>
-			  <sound file="Radio - Tower of Babel.ogg" type="OnActive" range="600" loop="true"/>
+			  <sound file="Radio - Yellow Submarine.ogg" type="OnActive" range="600" loop="true" msg="Playing: Yellow Submarine"/>
+			  <sound file="Radio - Tower of Babel.ogg" type="OnActive" range="600" loop="true" msg="Playing: Tower of Babel"/>
 	</Holdable>
   </Item>
   
@@ -101,8 +101,66 @@
 	
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
               aimpos="19,20" handle1="0,5" handle2="0,5" holdangle="90">
-			  <sound file="Radio B - CS Bandit Radio.ogg" type="OnActive" range="600" loop="true"/>
-			  <sound file="Radio B - Snakes in Tracksuits.ogg" type="OnActive" range="600" loop="true"/>
+			  <sound file="Radio B - CS Bandit Radio.ogg" type="OnActive" range="600" loop="true" msg="Playing: Clear Sky Bandit Radio"/>
+			  <sound file="Radio B - Snakes in Tracksuits.ogg" type="OnActive" range="600" loop="true" msg="Playing: Snakes in Tracksuits"/>
 	</Holdable>
+  </Item>
+  
+  <Item
+    name="Captain's Wallet"
+    category="Equipment"
+    tags="smallitem"
+    description="A soft polycarbonate case with a bronze design used to carry personal items such as food stamps, pictures and identification documents.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Bronze Sliver" outcondition="0.25"/>
+    </Deconstruct>
+
+    <Sprite texture="MoreMoney.png" sourcerect="75,14,21,16" depth="0.83"/>
+
+    <Body width="18" height="12" density="10.3"/>
+	
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+	
+	<ItemContainer capacity="18" hideitems="true">
+      <Containable name="wllt"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+	name="Basic Ration Stamp"
+    category="Equipment"
+	description="A ration card issued by the Coalition to be used in Vending Machines to obtain a standard bottled water or Coalition Ration Packet."
+	Tags="smallitem,wllt,docs">
+	
+	<Deconstruct time="25">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Aluminum Sliver" outcondition="0.5"/>
+    </Deconstruct>
+
+	<Sprite texture="MoreMoney.png" sourcerect="0,3,16,10" depth="0.82"/>
+
+	<Body width="13" height="6" density="10.1"/>
+
+	<Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="1" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Hazard Alarm"
+    description="Something's off about this one."
+	category="Electrical">
+
+    <Sprite texture="Mods/BTE/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="43,56,23,16"/>
+
+    <ItemComponent>
+      <sound file="Mods/BTEPlus/Sounds/Alarms/Hazard.ogg" type="OnActive" range="3000" loop="true"/>
+    </ItemComponent>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="Rewire [Screwdriver]">
+      <requireditem name="Pliers,Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+    </ConnectionPanel>
   </Item>
 </Items>

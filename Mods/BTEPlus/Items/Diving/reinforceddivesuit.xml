@@ -95,7 +95,7 @@
   <Item
     name="Reinforced Divesuit"
 	aliases="RDS,HEV"
-    category="Equipment"    
+    category="Equipment"
     tags="meditem,diving"
     fireproof="true"
     cargocontainername="Metal Crate"

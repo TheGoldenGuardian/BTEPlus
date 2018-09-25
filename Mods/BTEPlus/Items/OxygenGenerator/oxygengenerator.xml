@@ -16,7 +16,7 @@
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGeneratorLights.png" sourcerect="0,0,118,123" alpha="1.0"/>
 	  <StatusEffect type="OnBroken" target="This">
-        <Explosion range="200" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.5"/>
+        <Explosion range="200" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
       </StatusEffect>
     </LightComponent>
 	
@@ -27,7 +27,7 @@
 	  
 	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
 	    <sound file="Content/Items/Reactor/explosion.ogg"/>
-        <Explosion range="800" damage="150" structuredamage="100" stun="12" force="5.0" flash="false" shockwave="false" sparks="false"/>
+        <Explosion range="800" damage="150" structuredamage="100" stun="12" force="5.0" flash="false" shockwave="false" sparks="false" decal="explosion" decalsize="0.4"/>
 		<Fire size="500"/>
       </StatusEffect>
     </Powered>
@@ -61,19 +61,19 @@
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGeneratorLights.png" sourcerect="0,0,128,128" alpha="1.0"/>
 	  <StatusEffect type="OnBroken" target="This">
-        <Explosion range="200" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.5"/>
+        <Explosion range="200" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
       </StatusEffect>
     </LightComponent>
 
     <OxygenGenerator powerconsumption="1000" minvoltage="0.5" canbeselected="true">
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="0.4"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygenite Tank" Condition="0.0"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="0.8"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Bottle" Condition="0.8"/>
       <sound file="Content/Items/OxygenGenerator/oxygengenerator.ogg" type="OnActive" range="1000" volume="CurrFlow" volumemultiplier="0.001f" loop="true"/>
 	  
 	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
 	    <sound file="Content/Items/Reactor/explosion.ogg"/>
-        <Explosion range="700" damage="100" structuredamage="100" stun="9" force="4.0" flash="false" shockwave="false" sparks="false"/>
+        <Explosion range="700" damage="100" structuredamage="100" stun="9" force="4.0" flash="false" shockwave="false" sparks="false" decal="explosion" decalsize="0.5"/>
 		<Fire size="500"/>
       </StatusEffect>
     </OxygenGenerator>
@@ -109,7 +109,7 @@
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModuleLights.png" sourcerect="0,0,107,100" alpha="1.0"/>
 	  <StatusEffect type="OnBroken" target="This">
-        <Explosion range="100" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.4"/>
+        <Explosion range="100" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
       </StatusEffect>
     </LightComponent>
 
@@ -119,7 +119,7 @@
 	  
 	  <StatusEffect type="OnFire" target="This" Condition="-100" setvalue="true">
 	    <sound file="Content/Items/Reactor/explosion.ogg"/>
-        <Explosion range="600" damage="75" structuredamage="75" stun="6" force="2.0" flash="false" shockwave="false" sparks="false"/>
+        <Explosion range="600" damage="75" structuredamage="75" stun="6" force="2.0" flash="false" shockwave="false" sparks="false" decal="explosion" decalsize="0.3"/>
 		<Fire size="400"/>
       </StatusEffect>
     </OxygenGenerator>
@@ -141,7 +141,7 @@
 	<Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
       <GuiFrame rect="0,-100,350,160" alignment="Center" style="ItemUI"/>
       <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="1.2"/>
-	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="2.4"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Bottle" Condition="2.4"/>
     </Powered>
 	
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="750" powerconsumption="1" IsOn="true">
@@ -175,7 +175,7 @@
     </Vent>
 	
 	<Controller direction="None" canbepicked="true">
-	  <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="500"/>
+	  <sound file="Mods/BTE/Items/Containers/Locker.ogg" type="OnUse" range="750"/>
 	  <requireditem name="Screwdriver" type="Equipped"/>
     </Controller>
 	

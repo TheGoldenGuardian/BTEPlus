@@ -189,6 +189,10 @@
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,49,121,141" depth="0.97" canflipx="false"/>
   </coalitionLogo>
   
+  <coalitionAnchor width="200" height="200">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="562,0,200,200" depth="0.97" canflipx="false"/>
+  </coalitionAnchor>
+  
   <coalitionLogoVandalized width="121" height="141">
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="171,49,121,141" depth="0.97" canflipx="false"/>
   </coalitionLogoVandalized>

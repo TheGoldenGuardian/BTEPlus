@@ -280,7 +280,7 @@
     </ConnectionPanel>
   </Item>
   
-  <!-- <Item
+  <Item
     name="Glass Hatch"
 	linkable="true">
 
@@ -310,5 +310,5 @@
       <input name="set_state"/>
       <output name="state_out"/>
     </ConnectionPanel>
-  </Item> -->
+  </Item>
 </Items>

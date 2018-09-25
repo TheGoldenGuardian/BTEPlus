@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Randomevents>
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Crawler/crawler.xml" 
+    mineventcount="1" maxeventcount="3"
+    minamount="2" maxamount="3"
+    spawntype="mainpath"
+    musictype="monster">
+	<OverrideEventCount leveltype="Ridge" min="3" max="5"/>
+    <OverrideEventCount leveltype="Open" min="-5" max="1"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Crawler/crawler.xml" 
+    mineventcount="0" maxeventcount="2"
+    minamount="4" maxamount="6"
+    spawntype="cave"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Crawlersmall/crawlersmall.xml" 
+    mineventcount="1" maxeventcount="2"
+    minamount="4" maxamount="6"
+    spawntype="cave"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Crawlerghost/crawlerghost.xml" 
+    mineventcount="1" maxeventcount="3"
+    minamount="2" maxamount="3"
+    spawndeep="true"
+	spawntype="mainpath,deep"
+    musictype="monster">
+	<OverrideEventCount leveltype="Ridge" min="2" max="4"/>
+    <OverrideEventCount leveltype="Open" min="4" max="5"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Crawlerghost/crawlerghost.xml" 
+    mineventcount="1" maxeventcount="1"
+    minamount="2" maxamount="3"
+	spawntype="cave"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Crawlerghostsmall/crawlerghostsmall.xml" 
+    mineventcount="1" maxeventcount="1"
+    minamount="3" maxamount="6"
+	spawntype="cave"
+    musictype="monster">
+  </MonsterEvent>
+	
+  <MonsterEvent name="Under attack" description=""  
+    characterfile="Mods/BTE/Characters/Scorpion/scorpion.xml" 
+    mineventcount="1" maxeventcount="2"
+    minamount="6" maxamount="8"
+    spawntype="mainpath,cave"
+    musictype="monster"/>
+	
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Tigersmall/tigersmall.xml"
+    mineventcount="1" maxeventcount="2"
+    minamount="2" maxamount="3"
+    spawntype="mainpath"
+    musictype="monster">
+    <OverrideEventCount leveltype="Open" min="-5" max="1"/>
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Tigerthresher/tigerthresher.xml"
+    mineventcount="1" maxeventcount="2"
+    spawntype="mainpath"
+    musictype="monster">
+    <OverrideEventCount leveltype="Open" min="-5" max="1"/>
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Moloch/moloch.xml"
+    mineventcount="-1" maxeventcount="2"
+    spawntype="mainpath"
+    musictype="monster">
+    <OverrideEventCount leveltype="Ridge" min="-5" max="1"/>
+    <OverrideEventCount leveltype="Open" min="1" max="5"/>
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Mantissmall/mantissmall.xml"
+    mineventcount="0" maxeventcount="1"
+	minamount="2" maxamount="4"
+    spawntype="mainpath,cave"
+    musictype="monster">
+    <OverrideEventCount leveltype="Ridge" min="3" max="5"/>
+    <OverrideEventCount leveltype="Open" min="-5" max="1"/>
+  </MonsterEvent>
+	
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Mantis/mantis.xml"
+    mineventcount="0" maxeventcount="2"
+	minamount="1" maxamount="2"
+    spawntype="mainpath,cave"
+    musictype="monster">
+    <OverrideEventCount leveltype="Ridge" min="4" max="5"/>
+    <OverrideEventCount leveltype="Open" min="-5" max="1"/>
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Coelanth/coelanth.xml"
+	mineventcount="0" maxeventcount="3"
+	spawndeep="true"
+    spawntype="mainpath"
+    musictype="monster">
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Content/Characters/Charybdis/charybdis.xml"
+	mineventcount="-5" maxeventcount="2"
+    minamount="1" maxamount="1"
+	spawndeep="true"
+    spawntype="deep"
+    musictype="monster">
+    <OverrideEventCount leveltype="Ridge" max="0"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Content/Characters/Charybdis/charybdis.xml"
+    maxamount="0"
+    spawntype="deep"
+    musictype="monster">
+    <OverrideEventCount leveltype="Open" min="0" max="3"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Content/Characters/Endworm/endworm.xml"
+	mineventcount="-5" maxeventcount="1"
+	spawndeep="true"
+    spawntype="mainpath"
+    musictype="deep">
+    <OverrideEventCount leveltype="Ridge" max="0"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Content/Characters/Endworm/endworm.xml"
+    maxeventcount="0"
+    spawntype="mainpath"
+    musictype="deep">
+    <OverrideEventCount leveltype="Open" min="-1" max="2"/>
+  </MonsterEvent> 
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Watcher/watcher.xml"
+    mineventcount="-2" maxeventcount="1"
+    spawntype="mainpath,cave"
+    minamount="1" maxamount="1">
+    <OverrideEventCount leveltype="Ridge" max="0"/>
+    <OverrideEventCount leveltype="Wastes" max="0"/>    
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Husk/husk.xml"
+    mineventcount="-2" maxeventcount="3"
+    minamount="2" maxamount="3"
+    repeat="true"
+    spawntype="mainpath"
+    musictype="monster">
+    <OverrideEventCount leveltype="Wastes" min="1" max="3"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Husk/husk.xml"
+    mineventcount="-1" maxeventcount="1"
+    minamount="2" maxamount="6"
+    spawntype="cave"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Huskweak/huskweak.xml"
+    mineventcount="-2" maxeventcount="3"
+    minamount="2" maxamount="4"
+    repeat="true"
+    spawntype="mainpath"
+    musictype="monster">
+    <OverrideEventCount leveltype="Wastes" min="1" max="3"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Huskweak/huskweak.xml"
+    mineventcount="-1" maxeventcount="1"
+    minamount="3" maxamount="6"
+    spawntype="cave"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Huskcrawler/huskcrawler.xml" 
+    mineventcount="-1" maxeventcount="3"
+    minamount="2" maxamount="3"
+    spawntype="mainpath,cave"
+    musictype="monster">
+	<OverrideEventCount leveltype="Wastes" min="1" max="3"/>
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Teleglitch/teleglitch.xml"
+    mineventcount="-1" maxeventcount="1"
+    minamount="2" maxamount="4"
+    spawntype="mainpath,deep"
+    musictype="monster">
+	<OverrideEventCount leveltype="Wastes" min="1" max="1"/>
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Teleglitch/teleglitch.xml"
+    mineventcount="0" maxeventcount="1"
+    minamount="2" maxamount="4"
+	spawndeep="true"
+    spawntype="mainpath,deep"
+    musictype="monster">
+	<OverrideEventCount leveltype="Wastes" max="2"/>
+	<OverrideEventCount leveltype="Ridge" max="2"/>
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Fractalguardian/fractalguardian.xml"
+    mineventcount="1" maxeventcount="2"
+    minamount="1" maxamount="1"
+    spawntype="ruin"
+    musictype="monster">
+  </MonsterEvent>
+
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Fractalguardian2/fractalguardian2.xml"
+    mineventcount="1" maxeventcount="2"
+    minamount="1" maxamount="1"
+    spawntype="ruin"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/FractalWalker/fractalwalker.xml"
+    mineventcount="0" maxeventcount="1"
+    minamount="1" maxamount="2"
+    spawntype="ruin"
+    musictype="monster">
+  </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/FractalWalker/fractalwalker.xml"
+    mineventcount="0" maxeventcount="1"
+    minamount="1" maxamount="1"
+    spawntype="mainpath"
+    musictype="monster">
+  </MonsterEvent>
+
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="3" maxeventcount="9"
+    itemname="Iron Ore"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="3"
+    itemname="Fulgurium Ore"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="2" maxeventcount="6"
+    itemname="Human Skull"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="2" maxeventcount="5"
+    itemname="Tactical Boot"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="6" maxeventcount="9"
+    itemname="Plastic Bag"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Derelict Exosuit"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="25" maxeventcount="50"
+    itemname="Kelp"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="2"
+    itemname="Velonaceps Calyx Egg Sac"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="3" maxeventcount="6"
+    itemname="Oxygenite Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="2" maxeventcount="4"
+    itemname="Sulphurite Shard"/>
+  
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="2"
+    itemname="Thermite Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="3"
+    itemname="Zrbite Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="2"
+    itemname="Nitrous Zrbite Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="2"
+    itemname="Uranium Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="1"
+    itemname="Materium Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Claret Artifact"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Calyxion Artifact"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Inficiat Artifact"/>
+  
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Skyholder Artifact"/>
+
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Thermal Artifact"/>
+
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Faraday Artifact"/>
+
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Nasonov Artifact"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Grinder Artifact"/>
+  
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Flopper Artifact"/>
+</Randomevents>

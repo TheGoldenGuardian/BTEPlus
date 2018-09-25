@@ -122,6 +122,11 @@
   <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal1b.ogg"/>
   <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal2a.ogg"/>
   <footstep_metalb file="Mods/BTEPlus/Sounds/Step/MetalBoots/footstep_multiplayer_metal2b.ogg"/>
+  
+  <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau1.ogg"/>
+  <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau2.ogg"/>
+  <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau3.ogg"/>
+  <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau4.ogg"/>
 
   <footstep_armor file="Content/Sounds/Footsteps/Armor/armor-01.ogg"/>
   <footstep_armor file="Content/Sounds/Footsteps/Armor/armor-02.ogg"/>

@@ -1,5 +1,16 @@
 ﻿<Items>
   <Item
+    name="Crate Rack"
+	Tags="cntnr">
+    
+    <Sprite texture="morecontainers.png" sourcerect="0,0,85,44" depth="0.78"/>
+	
+	<ItemContainer capacity="1" canbeselected="true" itempos="42.5,-22" hideitems="false">
+      <Containable name="Tool Kit,Metal Footlocker"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
     name="Steel Cabinet"
 	Tags="cntnr">
     

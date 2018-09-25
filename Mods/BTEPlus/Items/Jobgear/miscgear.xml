@@ -1,7 +1,7 @@
 ﻿<Items> 
   <Item
     name="Ragged Flat Hat"
-    category="Equipment"
+    category="Misc"
 	tags="smallitem,clothing"
 	description="A soft, round, flat-crowned hat made of synthetic fiber.">
 	
@@ -47,7 +47,7 @@
   
   <Item
     name="Ragged Cowboy Hat"
-    category="Equipment"
+    category="Misc"
 	tags="smallitem,clothing"
 	description="A synthetic fiber cowboy hat.">
 	
@@ -257,7 +257,7 @@
   <Item
     name="Ragged Officer's Beret"
 	aliases="Ragged Assberet,Ragged Asshat C,Ragged Assistant's Beret"
-    category="Equipment"
+    category="Misc"
     tags="meditem,clothing"
     description="A token of the Officer's undeniable authority.">
 	
@@ -271,6 +271,30 @@
 
     <Wearable limbtype="Head" slots="Any,Head">
       <sprite texture="assistantBeretRagged.png" limb="Head" origin="0.5,0.9" sourcerect="0,0,32,32" depth="0.038" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Security Beret"
+	aliases="Ragged Enforcer Beret"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A fancy beret worn by both submarine and outpost Security Enforcers.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="securityBeretRagged.png" depth="0.6" sourcerect="0,0,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="securityBeretRagged.png" limb="Head" origin="0.5,0.9" sourcerect="0,0,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -479,7 +503,7 @@
   <Item
     name="Utilitу Vest"
 	aliases="Deathswitch Vest,Deadman's Switch Vest,Suicide Vest"
-    category="Equipment"
+    category="Misc"
     tags="meditem,clothing"
 	canuseonself="true"
     description="An utility vest used mostly by engineers. It has pockets for carrying any extra gear an engineer might need.">
@@ -643,6 +667,7 @@
   
   <Item
     name="Ragged Scientist's Uniform A"
+	aliases="Ragged Scientist's Uniform"
     category="Equipment"
     tags="meditem,clothing">
 	
@@ -661,17 +686,17 @@
       <sprite texture="scientistgearRagged.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
 
       <sprite texture="scientistgearRagged.png" limb="RightHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
-      <sprite texture="scientistgearRagged.png" limb="LeftHand" sourcerect="93,0,15,47" origin="0.45,0.6" hidelimb="false"/>
+	  <sprite texture="Raggedgear.png" limb="LeftHand" sourcerect="0,0,12,37" origin="0.56,0.62"/>
 
       <sprite texture="scientistgearRagged.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="scientistgearRagged.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
 	  
-	  <sprite texture="scientistgearRagged.png" limb="Waist" sourcerect="30,60,28,26" origin="0.5,0.5" hidelimb="false"/>
+	  <sprite texture="scientistgearRagged.png" limb="Waist" sourcerect="30,60,28,26" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="scientistgearRagged.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="scientistgearRagged.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="scientistgearRagged.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="true"/>
 
-      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="false"/>
-      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.15" hidelimb="false"/>
+      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
 	  
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
@@ -699,25 +724,25 @@
 	  <Item name="Tactical Boot"/>
     </Deconstruct>
 
-    <Sprite texture="scientistgearRagged.png" sourcerect="0,88,52,17" depth="0.6"/>
+    <Sprite texture="scientistgearRaggedB.png" sourcerect="0,88,52,17" depth="0.6"/>
 
     <Body width="52" height="17" density="16"/>
 
     <Wearable slots="Any,Torso+Legs">
-      <sprite texture="scientistgearRagged.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+      <sprite texture="scientistgearRaggedB.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
 
-      <sprite texture="scientistgearRagged.png" limb="RightHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
-      <sprite texture="scientistgearRagged.png" limb="LeftHand" sourcerect="93,0,15,47" origin="0.45,0.6" hidelimb="false"/>
+      <sprite texture="scientistgearRaggedB.png" limb="RightHand" sourcerect="47,0,15,47" origin="0.45,0.6" hidelimb="true"/>
+      <sprite texture="scientistgearRaggedB.png" limb="LeftHand" sourcerect="93,0,15,47" origin="0.45,0.6" hidelimb="false"/>
 
-      <sprite texture="scientistgearRagged.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="scientistgearRagged.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgearRaggedB.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgearRaggedB.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
 	  
-	  <sprite texture="scientistgearRagged.png" limb="Waist" sourcerect="30,60,28,26" origin="0.5,0.5" hidelimb="false"/>
-      <sprite texture="scientistgearRagged.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="scientistgearRagged.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="false"/>
+	  <sprite texture="scientistgearRaggedB.png" limb="Waist" sourcerect="30,60,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgearRaggedB.png" limb="RightThigh" sourcerect="63,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="scientistgearRaggedB.png" limb="LeftThigh" sourcerect="63,55,29,46" origin="0.5,0.5" hidelimb="true"/>
 
-      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.11" hidelimb="false"/>
-      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="false"/>
+      <sprite texture="doctorgearRagged.png" limb="RightLeg" sourcerect="26,61,18,51" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="doctorgearRagged.png" limb="LeftLeg" sourcerect="46,61,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
 	  
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>

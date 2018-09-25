@@ -208,7 +208,6 @@
 	  <fabricableitem name="Officer's Cap A" requireditems="Officer's Cap B" requiredtime="2"/>
 	  <fabricableitem name="Officer's Cap B" requireditems="Officer's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Officer's Beret" requireditems="Officer's Cap A" requiredtime="2"/>
-	  <fabricableitem name="Officer's Beret" requireditems="Officer's Cap B" requiredtime="2"/>
 	  <fabricableitem name="Officer's Cap A" requireditems="Officer's Beret" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Ushanka A" requireditems="Crewmember Ushanka B" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Ushanka B" requireditems="Crewmember Ushanka A" requiredtime="2"/>
@@ -286,6 +285,8 @@
 	  <fabricableitem name="Officer's Cap B" requireditems="Ragged Officer's Cap B" requiredtime="2"/>
 	  <fabricableitem name="Officer's Beret" requireditems="Ragged Officer's Beret" requiredtime="2"/>
 	  <fabricableitem name="Ragged Officer's Beret" requireditems="Officer's Beret" requiredtime="2"/>
+	  <fabricableitem name="Security Beret" requireditems="Ragged Security Beret" requiredtime="2"/>
+	  <fabricableitem name="Ragged Security Beret" requireditems="Security Beret" requiredtime="2"/>
 	  <fabricableitem name="Ragged Safety Helmet" requireditems="Safety Helmet" requiredtime="2"/>
 	  <fabricableitem name="Safety Helmet" requireditems="Ragged Safety Helmet" requiredtime="2"/>
 	  <fabricableitem name="Ragged Welding Helmet" requireditems="Welding Helmet" requiredtime="2"/>
@@ -535,6 +536,8 @@
 	  <fabricableitem name="Energy Drink" requireditems="Ration Stamp C" requiredtime="2"/>
 	  <fabricableitem name="Chocolate" requireditems="Ration Stamp D" requiredtime="2"/>
 	  <fabricableitem name="Cigarette" requireditems="Ration Stamp E" requiredtime="2"/>
+	  <fabricableitem name="Water Bottle" requireditems="Basic Ration Stamp" requiredtime="2"/>
+	  <fabricableitem name="Coalition Ration Packet" requireditems="Basic Ration Stamp" requiredtime="2"/>
     </Fabricator>
 		
 		<ConnectionPanel selectkey="Action" canbeselected="true">
@@ -793,9 +796,10 @@
 	  <fabricableitem name="Copper Coil" requireditems="Blue Wire" requiredtime="10"/>
 	  <fabricableitem name="Copper Coil" requireditems="Orange Wire" requiredtime="10"/>
 	  
-	 <fabricableitem name="Makeshift Suppressed Pistol" requireditems="Steel Bar, Steel Bar, Bandage, Oxygen Bottle" requiredtime="15">
+	 <fabricableitem name="Makeshift Suppressed Pistol" requireditems="Steel Bar, Steel Bar, Bandage" requiredtime="15">
 	    <RequiredSkill name="Construction" level="50"/>
 		<RequiredSkill name="Weapons" level="30"/>
+		<Item name="Oxygen Bottle" mincondition="0"/>
 	  </fabricableitem>
 	  <fabricableitem name="Flashlight Suppressed Pistol" requireditems="Makeshift Suppressed Pistol, Flashlight, Battery, Steel Sliver" requiredtime="5">
 		<Item name="Duct Tape" mincondition="0.5" usecondition="true"/>

@@ -347,7 +347,7 @@
     
     <RangedWeapon barrelpos="93,6" spread="3" unskilledspread="10" reload="0.35">
       <Sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg" type="OnUse"/>
-      <RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="Incompatible ammunition loaded"/>
       <RequiredSkill name="Weapons" level="45"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
@@ -389,7 +389,7 @@
     
     <RangedWeapon barrelpos="93,6" spread="3" unskilledspread="10" reload="0.35">
       <Sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg" type="OnUse"/>
-      <RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="Incompatible ammunition loaded"/>
       <RequiredSkill name="Weapons" level="45"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
@@ -800,6 +800,99 @@
   </Item>
   
   <Item
+    name="Charge Gun Battery"
+	aliases="Charge Mag,Pulse Pistol Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description=""
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Sliver"/>
+	  <Item name="Battery Cell" condition="0"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,63,9,15" depth="0.55"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,63,9,15" depth="0.55" maxcondition="90" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,63,9,15" depth="0.55" maxcondition="80" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,63,9,15" depth="0.55" maxcondition="70" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,63,9,15" depth="0.55" maxcondition="60" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,63,9,15" depth="0.55" maxcondition="50" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,63,9,15" depth="0.55" maxcondition="40" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,63,9,15" depth="0.55" maxcondition="30" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,63,9,15" depth="0.55" maxcondition="20" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,63,9,15" depth="0.55" maxcondition="10" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="100,63,9,15" depth="0.55" maxcondition="0" fadein="true"/>
+
+    <Body width="9" height="15" density="11" friction="0.95"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
+  </Item>
+  
+  <Item
+    name="Charge Gun"
+	aliases="Charge Pistol,Pulse Pistol"
+    category="Equipment"
+	tags="meditem,weapon"
+    description=""
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,79,38,21" depth="0.55"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="39,79,38,21" depth="0.55"/>
+
+    <Body width="38" height="21" density="25"/>
+	
+	<ItemContainer capacity="1" itempos="-2,-3" hideitems="false">
+      <Containable name="Charge Gun Battery"/>
+    </ItemContainer>
+	
+	<LightComponent lightcolor="0,0.78,1,1" range="250" powerconsumption="0" IsOn="true">
+      <LightTexture texture="Mods/BTEPlus/Items/Weapons/chargelight.png" alpha="1.0" size="3,0.5"/>
+    </LightComponent>
+	
+	<RepairTool structurefixamount="-20" limbfixamount="-40" bleedingdamage="100" range="2000" barrelpos="28,3" particles="plasma">
+	  <ParticleEmitter particle="plasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-25" Condition="-5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="700"/>
+	  <RequiredItems name="Charge Gun Battery" type="Contained" msg="Battery Depleted"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="65" force="4" shockwave="false" flames="false" smoke="false" sparks="true" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-5" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-50" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              aimpos="75,18" handle1="-9,-3" handle2="-8,-4" holdpos="40,5" holdangle="-45">
+	  <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true">
+	    <RequiredItems name="Charge Gun Battery" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="1"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
     name="Diving Machete"
 	aliases="Machete"
     category="Equipment"
@@ -876,7 +969,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
 		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit.ogg" type="OnUse" range="3000"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>

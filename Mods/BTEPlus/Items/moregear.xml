@@ -28,15 +28,15 @@
   </Item>
   
   <Item
-    name="Light Ballistic Vest and Pouch"
-	aliases="Medical Vest,Vest with Pouch"
+    name="Doctor's Light Ballistic Vest"
+	aliases="Light Ballistic Vest and Pouch,Medical Vest,Vest with Pouch"
     category="Equipment"
     tags="meditem,clothing"
-	description="While a light ballistic vest won't offer any protection against most of the inhabitants of the subsurface ocean, it can be somewhat useful if there are traitors on board. This vest has an attached leather pouch and is designed to be worn by Medical Officers.">
+	description="A light ballistic vest with an attached leather pouch designed to hold medical supplies.">
 	
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
-	  <Item name="Polycarbonate Sliver"/>
+	  <Item name="Polycarbonate Bar"/>
 	  <Item name="Steel Sliver"/>
     </Deconstruct>
 
@@ -59,6 +59,31 @@
 	  <Containable name="medical"/>
 	  <Containable name="smallitem"/>
     </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Doctor's Helmet"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A headgear worn to protect the head from injuries while helping the injured."
+	cargocontainername="Standard Shipping Box"
+	price="85">
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="moregear.png" depth="0.6" sourcerect="0,49,32,32"/>
+
+    <Body width="14" height="8" radius="8" density="16"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="moregear.png" limb="Head" origin="0.5,0.9" sourcerect="0,49,32,32" depth="0.038" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
   </Item>
   
   <Item
@@ -107,7 +132,7 @@
     </LightComponent>
   </Item>
 
-  <Item
+  <!-- <Item
     name="Buoy Grenade"
 	aliases="Underwater Grenade,Floating Grenade,Water Grenade"
     category="Equipment"
@@ -159,7 +184,7 @@
     </LightComponent>
   </Item>
   
-  <!-- <Item
+  <Item
     name="IM Grenade"
 	aliases="Impact Grenade,Impact Nade"
     category="Equipment"
@@ -368,7 +393,7 @@
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
 	
 	<ItemContainer capacity="6" canbeselected="true" hideitems="true">
-      <Containable name="Oxygen Bottle,Tactical Grenade,HTM,Glowstick,Buoy Grenade,Rubber Bullet,grenade"/>
+      <Containable name="smallitem,Oxygen Bottle,Tactical Grenade,HTM,Glowstick,Buoy Grenade,Rubber Bullet,grenade"/>
     </ItemContainer>
   </Item>
   
@@ -498,7 +523,8 @@
   </Item>
   
   <Item
-    name="White Wetsuit"
+    name="Colorable Wetsuit"
+	aliases="White Wetsuit"
     category="Equipment"
     tags="bigitem,diving,clothing"
 	description="A wetsuit allows faster movement underwater but it can't withstand the immense pressure under Europa's crust unless properly sealed. This one is white so it works well with color tinting.">
@@ -618,10 +644,6 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/>
 	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
     </Wearable>
-	
-	<ItemContainer capacity="1">
-        <Containable name="Renegade Access Unit"/>
-    </ItemContainer>
   </Item>
 
   <Item

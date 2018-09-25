@@ -504,7 +504,7 @@
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-1" oxygen="-2500"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-0.5"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door" Stuck="20" Condition="5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door" Stuck="20" Condition="5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="20"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>
@@ -561,7 +561,7 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-0.8"/>
       <StatusEffect type="OnUse" target="Contained" targetnames="Battery Cell" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Fulgurium Battery Cell" Condition="-1"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="40"/>
       <StatusEffect type="OnFailure" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-2.0"/>
@@ -614,7 +614,7 @@
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-0.5"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-2" oxygen="-2750"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-4"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door" Stuck="-20" Condition="-5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door" Stuck="-20" Condition="-5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="30"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>

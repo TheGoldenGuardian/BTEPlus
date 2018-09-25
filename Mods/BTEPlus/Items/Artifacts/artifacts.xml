@@ -2,6 +2,7 @@
 <Items>
   <Item
     name="Skyholder Artifact"
+	aliases="Skyholder"
     category="Alien"
     Tags="alien,rtfct">
 
@@ -25,6 +26,7 @@
 
   <Item
     name="Thermal Artifact"
+	aliases="Thermal"
     category="Alien"
     Tags="alien,rtfct">
 
@@ -52,6 +54,7 @@
 
   <Item
     name="Faraday Artifact"
+	aliases="Faraday"
     category="Alien"
 	Tags="alien,rtfct">
 
@@ -77,6 +80,7 @@
   
   <Item
     name="Nasonov Artifact"
+	aliases="Nasonov"
     category="Alien"
     Tags="alien,rtfct">
 
@@ -98,6 +102,7 @@
   
   <Item
     name="Claret Artifact"
+	aliases="Claret"
     category="Alien"
     Tags="alien,rtfct"
     pickdistance="150"
@@ -122,6 +127,7 @@
   
   <Item
     name="Calyxion Artifact"
+	aliases="Calyxion"
     category="Alien"
     Tags="alien,rtfct"
     pickdistance="150"
@@ -147,6 +153,7 @@
   
   <Item
     name="Inficiat Artifact"
+	aliases="Inficiat"
     category="Alien"
     Tags="alien,rtfct"
     pickdistance="150"
@@ -172,6 +179,7 @@
   
   <Item
     name="Grinder Artifact"
+	aliases="Grinder"
     category="Alien"
     Tags="alien,rtfct">
 
@@ -197,6 +205,7 @@
 
   <Item
     name="Flopper Artifact"
+	aliases="Flopper"
     category="Alien"
     Tags="alien,rtfct"
 	impacttolerance="4">
@@ -222,9 +231,10 @@
   </Item>
   
   <Item
-    name="Oxygenite Shard"
+    name="'White' Shard"
+	aliases="Oxygenite Shard"
     category="Alien"
-    tags="meditem,alien"
+    tags="meditem,alien,shard"
     impacttolerance="8">
 	
 	<Deconstruct time="20">
@@ -237,7 +247,7 @@
 
     <Body width="9" height="32" density="10.1"/>
 	
-	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" throwforce="3" aimpos="35,-10">
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This" Condition="-53">
 	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
 	  </StatusEffect>
@@ -250,10 +260,10 @@
   </Item>
 
   <Item
-   name="Sulphurite Shard"
-   aliases="Sulfurite Shard"
+   name="'Yellow' Shard"
+   aliases="Sulphurite Shard,Sulfurite Shard"
    category="Alien"
-   tags="meditem,alien"
+   tags="meditem,alien,shard"
    impacttolerance="5"
    spritecolor="255.0,250.0,0.0,1.0">
 
@@ -267,7 +277,7 @@
 
     <Body width="9" height="32" density="14"/>
 	
-	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" throwforce="3" aimpos="35,-10">
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This" Condition="-28.3">
 	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
 	  </StatusEffect>
@@ -275,15 +285,13 @@
 	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
 	  </StatusEffect>
     </Throwable>
-
-    <Holdable slots="Any,RightHand,LeftHand" handle1="0,-5"/>
   </Item>
   
   <Item
-    name="Thermite Shard"
-	aliases="Incendium Bar"
+    name="'Red' Shard"
+	aliases="Thermite Shard,Incendium Bar"
     category="Alien"
-    tags="meditem,alien"
+    tags="meditem,alien,shard"
     impacttolerance="8"
 	spritecolor="0.5,0.0,0.0,1.0">
 	
@@ -297,7 +305,7 @@
 
     <Body width="9" height="32" density="12"/>
 	
-	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" throwforce="3" aimpos="35,-10">
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
 	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
 	  </StatusEffect>
@@ -305,6 +313,117 @@
 	    <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
         <Fire size="300.0"/>
       </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Gold' Shard"
+   aliases="Zrbite Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Sliver"/>
+      <Item name="Biomass"/>
+	  <Item name="Biomass"/>
+    </Deconstruct>
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="0,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Copper' Shard"
+   aliases="Nitrous Zrbite Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5"
+   spritecolor="0.78,0.55,0.2,1.0">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Vial of Fulgurium Powder"/>
+      <Item name="Vial of Fulgurium Powder"/>
+	  <Item name="Vial of Nitroglycerin"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This" Condition="-53">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-53"/>
+      <StatusEffect type="OnBroken" target="This">
+		<sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <Explosion range="500" stun="15" force="16" camerashake="4" decal="explosion" decalsize="0.55"/>
+		<Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Dark Green' Shard"
+   aliases="Uranium Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5"
+   spritecolor="0.2,0.35,0.06,1.0">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Pink' Shard"
+   aliases="Materium Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5">
+
+    <Deconstruct time="20">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminum Sliver"/>
+      <Item name="Copper Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Uranium Sliver"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="10,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnActive" target="Character" health="-0.01"/>
     </Throwable>
   </Item>
 
@@ -333,7 +452,7 @@
       <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Windowed Door,Glass Door,Hatch,Duct Block" Stuck="-20.0" Condition="-6.0"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-20.0" Condition="-6.0"/>
 	  <Fixable name="structure"/>
       <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800.0" loop="true"/>
 	  <RequiredItems name="Oxygenite Shard,Sulphurite Shard,Thermite Shard" type="Contained" msg="The shard inside is depleted"/>
@@ -342,6 +461,10 @@
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Shard" Condition="-1.2" oxygen="-20000.0"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Shard" Condition="-0.4"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Zrbite Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Nitrous Zrbite Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Uranium Shard" Condition="-0.1"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Materium Shard" Condition="-5"/>
       <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" range="500">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
       </LightComponent>
@@ -361,9 +484,7 @@
     </Projectile>
 
     <ItemContainer capacity="1" hideitems="true" itempos="9,-15">
-      <Containable name="Oxygenite Shard"/>
-      <Containable name="Sulphurite Shard"/>
-	  <Containable name="Thermite Shard"/>
+      <Containable name="shard"/>
     </ItemContainer>
   </Item>
 

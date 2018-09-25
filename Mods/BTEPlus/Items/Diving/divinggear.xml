@@ -47,7 +47,7 @@
     name="Oxygenite Tank"
     category="Equipment"
     Tags="meditem,oxygensource"
-	description="A Tank containing liquid Oxygenite. Oxygenite last a lot longer and it's much more effective than a breathable gas."
+	description="A Tank containing liquid Oxygenite. Oxygenite lasts a lot longer and is much more effective than a breathable gas."
 	impacttolerance="3">
 
     <Deconstruct time="10">
