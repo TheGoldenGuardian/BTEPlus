@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 7.4 Plus 1.2" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 7.4 Plus 1.2b" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml"/> -->
   <!-- <Item file="Content/Items/itemlabel.xml"/> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml"/> -->
@@ -146,8 +146,8 @@
   <Structure file="Mods/BTEPlus/Map/MoreStructurePrefabs.xml"/>
   <!-- <RuinConfig file="Mods/BTE/Map/RuinConfig.xml"/> -->
   <RuinConfig file="Mods/BTEPlus/Map/RuinConfig.xml"/>
-  <Particles file="Mods/BTE/Particles/ParticlePrefabs.xml"/>
-  <!-- <Particles file="Mods/BTEPlus/Particles/ParticlePrefabs.xml"/> -->
+  <!-- <Particles file="Mods/BTE/Particles/ParticlePrefabs.xml"/> -->
+  <Particles file="Mods/BTEPlus/Particles/ParticlePrefabs.xml"/>
   <!-- <RandomEvents file="Mods/BTE/randomevents.xml"/> -->
   <RandomEvents file="Mods/BTEPlus/randomevents.xml"/>
   <LocationTypes file="Mods/BTE/Map/locationTypes.xml"/>
@@ -168,8 +168,10 @@
   <Item file="Mods/BTEPlus/Items/Medical/morefood.xml"/>
   <Item file="Mods/BTEPlus/Items/Misc/miscmisc.xml"/>
   <Item file="Mods/BTEPlus/Items/Jobgear/renegadegear.xml"/>
+  <Item file="Mods/BTEPlus/Items/Jobgear/taugear.xml"/>
   <Character file="Mods/BTEPlus/Characters/Human/renegade.xml"/>
   <Character file="Mods/BTEPlus/Characters/CombatRobot/combatrobot.xml"/>
+  <Character file="Mods/BTEPlus/Characters/RenegadeRobot/renegaderobot.xml"/>
   
   <Executable file="Barotrauma.exe"/>
 </contentpackage>

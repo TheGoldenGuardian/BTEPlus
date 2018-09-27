@@ -275,4 +275,124 @@
 	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
     </Wearable>
   </Item>
+  
+  <!-- Robot Gear -->
+  <Item
+	name="Robotic Access Chip"
+	aliases="Robocard,Robochip,Access Chip"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,com,cap,ast,sec,sct,med,eng,mec,cul,nov,pri,clw,stg,ID Card">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.5"/>
+	  <Item name="Copper Sliver" outcondition="0.5"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+
+	<Sprite texture="renegadegear.png" sourcerect="168,118,17,10" depth="0.82"/>
+
+	<Body width="17" height="10" density="10.8"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Robot Speed Enhancement Upgrade"
+	aliases="Speed,Speed Upgrade"
+	Tags="smallitem,upgrade"
+	spritecolor="0,0,255,1">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.5"/>
+	  <Item name="Copper Sliver" outcondition="0.5"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+
+	<Sprite texture="renegadegear.png" sourcerect="168,118,17,10" depth="0.82"/>
+
+	<Body width="17" height="10" density="10.8"/>
+
+	<Wearable slots="Head,Torso,Legs">
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.2" disabledeltatime="true"/>
+	</Wearable>
+  </Item>
+  
+  <Item
+	name="Robot Stun Reduction Upgrade"
+	aliases="Stun,Stun Upgrade"
+	Tags="smallitem,upgrade"
+	spritecolor="255,255,0,1">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.5"/>
+	  <Item name="Copper Sliver" outcondition="0.5"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+
+	<Sprite texture="renegadegear.png" sourcerect="168,118,17,10" depth="0.82"/>
+
+	<Body width="17" height="10" density="10.8"/>
+
+	<Wearable slots="Head,Torso,Legs">
+	  <StatusEffect tags="combatbot" type="OnWearing" target="Character" duration="1" disabledeltatime="true">
+		<Conditional SpeciesName="Combat Robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" stun="-100" SpeedMultiplier="10">
+	    <Conditional hasstatustag="combatbot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" stun="-100" duration="1" SpeedMultiplier="10">
+	    <Conditional SpeciesName="Combat Robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" stun="-100"/>
+	</Wearable>
+  </Item>
+  
+  <Item
+	name="Robot Energy Shield Upgrade"
+	aliases="Shield,Shield Upgrade"
+	Tags="smallitem,upgrade"
+	spritecolor="255,255,255,1">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.5"/>
+	  <Item name="Copper Sliver" outcondition="0.5"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+
+	<Sprite texture="renegadegear.png" sourcerect="168,118,17,10" depth="0.82"/>
+
+	<Body width="17" height="10" density="10.8"/>
+
+	<Wearable slots="Head,Torso,Legs">
+	  <sprite texture="shieldHead.png" limb="Head" sourcerect="1,1,37,38" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
+	  
+      <sprite texture="shieldTorso.png" limb="Torso" sourcerect="0,0,29,58" depth="0.0499" origin="0.5,0.6" inheritlimbdepth="false"/>
+	  
+	  <sprite texture="shieldTorso.png" limb="RightHand" sourcerect="49,2,13,47" depth="-0.099" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+      <sprite texture="shieldTorso.png" limb="LeftHand" sourcerect="49,2,13,47" depth="0.15999" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+
+      <sprite texture="shieldTorso.png" limb="RightArm" sourcerect="30,2,17,39" depth="0.0099" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+      <sprite texture="shieldTorso.png" limb="LeftArm" sourcerect="30,2,17,39" depth="0.14999" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+
+      <sprite texture="shieldLegs.png" limb="Waist" sourcerect="0,0,32,29" depth="0.045" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+      <sprite texture="shieldLegs.png" limb="RightThigh" sourcerect="0,32,26,48" depth="0.1099" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+      <sprite texture="shieldLegs.png" limb="LeftThigh" sourcerect="0,32,26,48" depth="0.14999" origin="0.5,0.5" inheritlimbdepth="false" hidelimb="false"/>
+
+      <sprite texture="shieldLegs.png" limb="RightLeg" sourcerect="32,0,22,50" depth="0.1199" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="shieldLegs.png" limb="LeftLeg" sourcerect="32,0,22,50" depth="0.15999" origin="0.5,0.5" hidelimb="false"/>
+	  
+	  <sprite texture="shieldLegs.png" limb="RightFoot" sourcerect="35,53,16,25" depth="0.1299" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="shieldLegs.png" limb="LeftFoot" sourcerect="35,53,16,25" depth="0.16999" origin="0.5,0.5" hidelimb="false"/>
+
+      <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="1" damagesound="DamageMetalBlunt" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="1" damagesound="DamageMetalSlash" deflectprojectiles="true"/>
+	  
+	  <sound file="Mods/BTE/Items/Pump/ForceField.ogg" type="OnWearing" range="600" loop="true"/>
+    </Wearable>
+  </Item>
 </Items>

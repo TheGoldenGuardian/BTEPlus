@@ -23,8 +23,8 @@
   <item prefab="Oxygenite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
   <item prefab="Sulphurite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
   <item prefab="Thermite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
-  <item prefab="Zrbite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
-  <item prefab="Nitrous Zrbite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
+  <item prefab="Zrbite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="3"/>
+  <item prefab="Nitrous Zrbite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="2"/>
   <item prefab="Uranium Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
   <item prefab="Materium Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="3"/>
   

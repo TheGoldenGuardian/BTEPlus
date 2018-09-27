@@ -1,0 +1,318 @@
+﻿<Items>
+  <Item
+    name="Tau-19 Headgear"
+	aliases="Tau Helmet"
+    category="Equipment"
+    Tags="meditem,diving"
+	description=""
+	cargocontainername="Standard Shipping Box">
+
+    <!-- <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct> -->
+    
+    <sprite texture="taugear.png" depth="0.6" sourcerect="0,0,27,31"/>
+  
+    <Body height="26" width="230" density="18"/>
+	
+	<WifiComponent range="40000" LinkToChat="true"/>
+
+    <Wearable limbtype="Head" slots="Any,Head+Face">
+      <sprite texture="taugear.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="0,0,27,31" origin="0.5,0.6"/>
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.12" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" PressureProtection="1000">
+	    <Conditional hasstatustag="rds"/>
+	  </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.4"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Tank"/>
+      <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
+    </ItemContainer>  
+  </Item>
+  
+  <Item
+    name="Tau-19 Body Armor"
+	aliases="Tau Ballistic Vest,Tau Armor,Tau Vest"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="taugeargear.png" sourcerect="0,34,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.45,0.55" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftHand" sourcerect="87,31,15,47" origin="0.45,0.55" hidelimb="true"/>
+
+      <sprite texture="taugear.png" limb="RightArm" sourcerect="65,32,21,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftArm" sourcerect="108,31,21,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Coil Baton"
+	aliases="Coil Bat"
+    category="Equipment"
+    Tags="bigitem,weapon"
+	description="Hot superconducting metal on a bat."
+    cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="20">
+      <Item name="Spare Parts"/>
+	  <Item name="Bronze Sliver"/>
+	  <Item name="FPGA Circuit"/>
+	  <Item name="Coppy Coil"/>
+    </Deconstruct>
+
+    <Sprite texture="taugear.png" sourcerect="30,5,72,7" depth="0.55"/>
+    
+    <Body width="72" height="6" density="25"/>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+              aimpos="50,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <Attack damage="3" stun="0.2" damagetype="Blunt" sound="Content/Items/Weapons/smack.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="3" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="3" stun="-0.2" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+
+	  <StatusEffect type="OnUse" target="Character" stun="1" bleed="0.2" stackable="false" disabledeltatime="true">
+        <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+        <Explosion range="100" force="0.25" shockwave="false" flames="false" smoke="false" camerashake="1.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="400" damage="25" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <RequiredItem name="Battery Cell" type="Contained"/>
+		  <Explosion range="250" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-20" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="walker"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+	    <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+      </StatusEffect>
+
+      <StatusEffect type="OnUse" target="Character" stun="1" bleed="0.2" disabledeltatime="true">
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+        <Explosion range="100" force="0.01" shockwave="false" flames="false" smoke="false" camerashake="1.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="400" damage="50" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="scorpion"/>
+		  <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>
+		  <Explosion range="250" damage="50" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-40" disabledeltatime="true">
+	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="synth"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="synthette"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="fractalguardian2"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="walker"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-1" health="-10" disabledeltatime="true">
+	    <Conditional SpeciesName="carrier"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-20" disabledeltatime="true">
+	    <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
+      </StatusEffect>
+	  
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </MeleeWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell"/>
+      <Containable name="Fulgurium Battery Cell"/>      
+    </ItemContainer>
+  </Item>
+  
+  <!-- <Item
+    name="Ballistic Trousers"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A standard issue pairs of synthetic fiber trousers with a ballistic mesh layer and knee pads.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="15"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="doctorgear.png" limb="Waist" sourcerect="0,0,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="RightThigh" sourcerect="133,0,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="LeftThigh" sourcerect="161,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="securitygear.png" limb="RightLeg" sourcerect="135,52,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="securitygear.png" limb="LeftLeg" sourcerect="135,52,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.12" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item> -->
+</Items>

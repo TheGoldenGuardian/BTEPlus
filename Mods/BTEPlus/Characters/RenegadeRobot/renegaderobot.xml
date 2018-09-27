@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Character name="Combat Robot" humanoid="true" health="300" doesbleed="false" usebloodparticles="false">
+<Character name="Renegade Robot" humanoid="true" health="300" doesbleed="false" usebloodparticles="false">
   
   <ai 
     combatstrength="150"
@@ -27,8 +27,8 @@
     
     <!-- head -->
     <limb id="0" radius="13" mass="6" type="Head" attackpriority="2">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/head.png" sourcerect="1,1,37,38" depth="0.04" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedhead.png" sourcerect="1,1,37,38" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/head.png" sourcerect="1,1,37,38" depth="0.04" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedhead.png" sourcerect="1,1,37,38" origin="0.5,0.5"/>
 	  <attack range="70" damagerange="35" structuredamage="10" duration="0.1" bleedingdamage="0.25" damage="8" stun="4" damagetype="Blunt"
 			  targetforce="500" force="10" applyforceonlimbs="0" torque="-10">
 		<StatusEffect type="OnUse" target="Character">
@@ -54,15 +54,15 @@
 
     <!-- body -->
     <limb id="1" radius="14" height="21" mass="20" type="Torso" attackpriority="3">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/torso.png" sourcerect="0,0,29,58" depth="0.05" origin="0.5,0.6"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedtorso.png" sourcerect="0,0,29,58" origin="0.5,0.6"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/torso.png" sourcerect="0,0,29,58" depth="0.05" origin="0.5,0.6"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedtorso.png" sourcerect="0,0,29,58" origin="0.5,0.6"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="12" radius="13" mass="20" type="Waist">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="0,0,32,29" depth="0.045" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="0,0,32,29" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="0,0,32,29" depth="0.045" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="0,0,32,29" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -70,15 +70,15 @@
 
     <!-- left arm -->
     <limb id="2" radius="8" height="20" mass="3" type="LeftArm">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/torso.png" sourcerect="30,2,17,39" depth="0.15" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedtorso.png" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/torso.png" sourcerect="30,2,17,39" depth="0.15" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedtorso.png" sourcerect="30,2,17,39" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="3" radius="6" height="26" mass="3" type="LeftHand" pullpos="0.0,-18.0">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/torso.png" sourcerect="49,2,13,47" depth="0.16" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedtorso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/torso.png" sourcerect="49,2,13,47" depth="0.16" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedtorso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -86,15 +86,15 @@
 
     <!-- right arm -->
     <limb id="4" radius="8" height="20" mass="3" type="RightArm">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/torso.png" sourcerect="30,2,17,39" depth="0.01" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedtorso.png" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/torso.png" sourcerect="30,2,17,39" depth="0.01" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedtorso.png" sourcerect="30,2,17,39" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="5" radius="6" height="26" mass="3" type="RightHand" pullpos="0.0,-18.0">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/torso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedtorso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/torso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedtorso.png" sourcerect="49,2,13,47" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -102,22 +102,22 @@
 
     <!-- left leg -->
     <limb id="6" radius="10" height="30" mass="8" type="LeftThigh">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="0,32,26,48" depth="0.15" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="0,32,26,48" depth="0.15" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="7" radius="6" height="39" mass="5" type="LeftLeg">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="32,0,22,50" depth="0.16" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="32,0,22,50" depth="0.16" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="8" radius="5" height="13" mass="2" type ="LeftFoot" flip="true" pullpos="-5.0,0.0">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="35,53,16,25" depth="0.17" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="35,53,16,25" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="35,53,16,25" depth="0.17" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="35,53,16,25" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
@@ -126,22 +126,22 @@
   
     <!-- right leg -->
     <limb id="9" radius="10" height="30" mass="8" type="RightThigh">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="0,32,26,48" depth="0.11" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="0,32,26,48" depth="0.11" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="0,32,26,48" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="10" radius="6" height="39" mass="5" type="RightLeg">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="32,0,22,50" depth="0.12" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="32,0,22,50" depth="0.12" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="32,0,22,50" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </limb>
     <limb id="11" radius="5" height="13" mass="2" type="RightFoot" flip="true" pullpos="-5.0,0.0">
-      <sprite texture="Mods/BTEPlus/Characters/CombatRobot/legs.png" sourcerect="35,53,16,25" depth="0.13" origin="0.5,0.5"/>
-      <damagedsprite texture="Mods/BTEPlus/Characters/CombatRobot/damagedlegs.png" sourcerect="35,53,16,25" origin="0.5,0.5"/>
+      <sprite texture="Mods/BTEPlus/Characters/RenegadeRobot/legs.png" sourcerect="35,53,16,25" depth="0.13" origin="0.5,0.5"/>
+      <damagedsprite texture="Mods/BTEPlus/Characters/RenegadeRobot/damagedlegs.png" sourcerect="35,53,16,25" origin="0.5,0.5"/>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>

@@ -785,9 +785,10 @@
   </Item>
 
   <Item
-    name="Flare"
+    name="Flare Red"
+	aliases="Flare,Red Flare"
     category="Equipment"
-	tags="smallitem"
+	tags="smallitem,flare"
 	description="Flares are used mostly for signalling but also as emergency illumination."
     spritecolor="1.0,0.0,0.0,1.0"
 	canuseonself="true"
@@ -800,7 +801,7 @@
 	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
     </Deconstruct>
 
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="0,38,21,7" depth="0.55"/>
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
 
     <Body width="21" height="7" density="12"/>
 	
@@ -811,6 +812,314 @@
 	<LightComponent LightColor="1.0,0.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flare" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Green"
+	aliases="Green Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="0.0,1.0,0.0,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="0.0,1.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flareG" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Blue"
+	aliases="Blue Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="0.0,0.0,1.0,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="0.0,0.0,1.0,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flareB" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Yellow"
+	aliases="Yellow Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="1.0,1.0,0.0,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="1.0,1.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flareY" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare White"
+	aliases="White Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="1.0,1.0,1.0,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flareW" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Purple"
+	aliases="Purple Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="1.0,0.0,1.0,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="1.0,0.0,1.0,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flarePu" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Pink"
+	aliases="Pink Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="1.0,0.41,0.71,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="1.0,0.41,0.71,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flarePi" particlespersecond="30"/>
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" IsOn="false"/>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" IsOn="true"/>
+	  <StatusEffect type="OnActive" target="This" Condition="-100" setvalue="true">
+        <RequiredItem name="cntnr,clothing" type="Container"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Orange"
+	aliases="Orange Flare"
+    category="Equipment"
+	tags="smallitem,flare"
+	description="Flares are used mostly for signalling but also as emergency illumination."
+    spritecolor="1.0,0.65,0.0,1.0"
+	canuseonself="true"
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminium Powder" mincondition="0.99" outcondition="0.25"/>
+	  <Item name="Potassium" mincondition="0.99" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture ="Tools.png" sourcerect="198,69,21,7" depth="0.55"/>
+
+    <Body width="21" height="7" density="12"/>
+	
+	<Projectile launchimpulse="12" sticktocharacters="false">
+      <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
+    </Projectile>
+	
+	<LightComponent LightColor="1.0,0.65,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-1">
+        <ParticleEmitter particle="flareO" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This" IsOn="false"/>

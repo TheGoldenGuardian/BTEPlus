@@ -800,8 +800,8 @@
   </Item>
   
   <Item
-    name="Charge Gun Battery"
-	aliases="Charge Mag,Pulse Pistol Mag"
+    name="Pulse Pistol Battery"
+	aliases="Charge Mag,Pulse Pistol Mag,Charge Gun Battery"
     category="Equipment"
     Tags="smallitem,weapon"
 	description=""
@@ -812,17 +812,17 @@
 	  <Item name="Battery Cell" condition="0"/>
     </Deconstruct>
 
-    <Sprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,63,9,15" depth="0.55"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,63,9,15" depth="0.55" maxcondition="90" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,63,9,15" depth="0.55" maxcondition="80" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,63,9,15" depth="0.55" maxcondition="70" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,63,9,15" depth="0.55" maxcondition="60" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,63,9,15" depth="0.55" maxcondition="50" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,63,9,15" depth="0.55" maxcondition="40" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,63,9,15" depth="0.55" maxcondition="30" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,63,9,15" depth="0.55" maxcondition="20" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,63,9,15" depth="0.55" maxcondition="10" fadein="true"/>
-	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="100,63,9,15" depth="0.55" maxcondition="0" fadein="true"/>
+    <Sprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,63,9,15" depth="0.149"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,63,9,15" depth="0.149" maxcondition="90" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,63,9,15" depth="0.149" maxcondition="80" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,63,9,15" depth="0.149" maxcondition="70" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,63,9,15" depth="0.149" maxcondition="60" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,63,9,15" depth="0.149" maxcondition="50" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,63,9,15" depth="0.149" maxcondition="40" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,63,9,15" depth="0.149" maxcondition="30" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,63,9,15" depth="0.149" maxcondition="20" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,63,9,15" depth="0.149" maxcondition="10" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="100,63,9,15" depth="0.149" maxcondition="0" fadein="true"/>
 
     <Body width="9" height="15" density="11" friction="0.95"/>
 
@@ -834,8 +834,8 @@
   </Item>
   
   <Item
-    name="Charge Gun"
-	aliases="Charge Pistol,Pulse Pistol"
+    name="Pulse Pistol"
+	aliases="Charge Pistol,Charge Gun"
     category="Equipment"
 	tags="meditem,weapon"
     description=""
@@ -853,7 +853,7 @@
     <Body width="38" height="21" density="25"/>
 	
 	<ItemContainer capacity="1" itempos="-2,-3" hideitems="false">
-      <Containable name="Charge Gun Battery"/>
+      <Containable name="Pulse Pistol Battery"/>
     </ItemContainer>
 	
 	<LightComponent lightcolor="0,0.78,1,1" range="250" powerconsumption="0" IsOn="true">
@@ -869,9 +869,9 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-25" Condition="-5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-25" Condition="-20"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="700"/>
-	  <RequiredItems name="Charge Gun Battery" type="Contained" msg="Battery Depleted"/>
+	  <RequiredItems name="Pulse Pistol Battery" type="Contained" msg="Battery Depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse" target="This">
 	    <Explosion range="65" force="4" shockwave="false" flames="false" smoke="false" sparks="true" camerashake="1"/>
@@ -883,9 +883,143 @@
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
               aimpos="75,18" handle1="-9,-3" handle2="-8,-4" holdpos="40,5" holdangle="-45">
 	  <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true">
-	    <RequiredItems name="Charge Gun Battery" type="Contained"/>
+	    <RequiredItems name="Pulse Pistol Battery" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="1"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Pulse SMG Battery"
+	aliases="Charge SMG Mag,Pulse SMG Mag"
+    category="Equipment"
+    Tags="smallitem,weapon"
+	description=""
+	impacttolerance="3">
+
+    <Deconstruct time="10">
+      <Item name="Steel Sliver"/>
+	  <Item name="Battery Cell" condition="0"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,123,9,19" depth="0.149"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,123,9,19" depth="0.149" maxcondition="98" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,123,9,19" depth="0.149" maxcondition="96" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,123,9,19" depth="0.149" maxcondition="94" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,123,9,19" depth="0.149" maxcondition="92" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,123,9,19" depth="0.149" maxcondition="90" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,123,9,19" depth="0.149" maxcondition="88" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,123,9,19" depth="0.149" maxcondition="86" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,123,9,19" depth="0.149" maxcondition="84" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,123,9,19" depth="0.149" maxcondition="82" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,143,9,19" depth="0.149" maxcondition="80" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,143,9,19" depth="0.149" maxcondition="78" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,143,9,19" depth="0.149" maxcondition="76" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,143,9,19" depth="0.149" maxcondition="74" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,143,9,19" depth="0.149" maxcondition="72" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,143,9,19" depth="0.149" maxcondition="70" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,143,9,19" depth="0.149" maxcondition="68" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,143,9,19" depth="0.149" maxcondition="66" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,143,9,19" depth="0.149" maxcondition="64" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,143,9,19" depth="0.149" maxcondition="62" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,163,9,19" depth="0.149" maxcondition="60" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,163,9,19" depth="0.149" maxcondition="58" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,163,9,19" depth="0.149" maxcondition="56" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,163,9,19" depth="0.149" maxcondition="54" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,163,9,19" depth="0.149" maxcondition="52" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,163,9,19" depth="0.149" maxcondition="50" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,163,9,19" depth="0.149" maxcondition="48" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,163,9,19" depth="0.149" maxcondition="46" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,163,9,19" depth="0.149" maxcondition="44" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,163,9,19" depth="0.149" maxcondition="42" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,183,9,19" depth="0.149" maxcondition="40" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,183,9,19" depth="0.149" maxcondition="38" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,183,9,19" depth="0.149" maxcondition="36" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,183,9,19" depth="0.149" maxcondition="34" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,183,9,19" depth="0.149" maxcondition="32" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,183,9,19" depth="0.149" maxcondition="30" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,183,9,19" depth="0.149" maxcondition="28" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,183,9,19" depth="0.149" maxcondition="26" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,183,9,19" depth="0.149" maxcondition="24" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,183,9,19" depth="0.149" maxcondition="22" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,203,9,19" depth="0.149" maxcondition="20" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="10,203,9,19" depth="0.149" maxcondition="18" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="20,203,9,19" depth="0.149" maxcondition="16" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="30,203,9,19" depth="0.149" maxcondition="14" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="40,203,9,19" depth="0.149" maxcondition="12" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="50,203,9,19" depth="0.149" maxcondition="10" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="60,203,9,19" depth="0.149" maxcondition="8" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,203,9,19" depth="0.149" maxcondition="6" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="80,203,9,19" depth="0.149" maxcondition="4" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="90,203,9,19" depth="0.149" maxcondition="2" fadein="true"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="100,203,9,19" depth="0.149" maxcondition="0" fadein="true"/>
+
+
+    <Body width="9" height="19" density="13" friction="1"/>
+
+    <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/MagHit.ogg"/>
+	  </StatusEffect>
+	</Throwable>
+  </Item>
+  
+  <Item
+    name="Pulse SMG"
+	aliases="Charge SMG"
+    category="Equipment"
+	tags="meditem,weapon"
+    description=""
+    impacttolerance="3">
+
+    <Deconstruct time="20">      
+      <Item name="Spare Parts"/>
+	  <Item name="Fulgurium Bar"/>
+	  <Item name="FPGA Circuit"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+  
+    <Sprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="0,101,47,21" depth="0.55"/>
+
+    <Body width="47" height="21" density="25"/>
+	
+	<ItemContainer capacity="1" itempos="3,-3" hideitems="false" itemangle="15">
+      <Containable name="Pulse SMG Battery"/>
+    </ItemContainer>
+	
+	<LightComponent lightcolor="0,0.78,1,1" range="250" powerconsumption="0" IsOn="true">
+      <LightTexture texture="Mods/BTEPlus/Items/Weapons/chargelight.png" alpha="1.0" size="3,0.5"/>
+    </LightComponent>
+	
+	<RepairTool structurefixamount="-5" limbfixamount="-5" bleedingdamage="100" range="2000" barrelpos="47,3" particles="plasma">
+	  <ParticleEmitter particle="plasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+	  <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <Fixable name="structure"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-25" Condition="-5"/>
+      <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="700"/>
+	  <RequiredItems name="Pulse SMG Battery" type="Contained" msg="Battery Depleted"/>
+      <RequiredSkill name="Weapons" level="50"/>
+	  <StatusEffect type="OnUse" target="This">
+	    <Explosion range="65" force="0.5" shockwave="false" flames="false" smoke="false" sparks="true" camerashake="1"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-2" disabledeltatime="true"/>
+	  <StatusEffect type="OnFailure" target="Contained" Condition="-20" disabledeltatime="true"/>
+    </RepairTool>
+	
+	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+              aimpos="45,0" handle1="-9,-3" handle2="8,4" holdpos="40,5" holdangle="-45">
+	  <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true">
+	    <RequiredItems name="Pulse SMG Battery" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="0.1"/>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>

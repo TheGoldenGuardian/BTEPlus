@@ -184,7 +184,8 @@
   </Item>
   
   <Item
-    name="Ragged Capt's Cap"
+    name="Ragged Capt's Cap A"
+	aliases="Ragged Capt's Cap"
     category="Misc"
     tags="meditem,clothing"
     description="A token of the Captain's unquestionable authority.">
@@ -199,6 +200,29 @@
 
     <Wearable limbtype="Head" slots="Any,Head">
       <sprite texture="captainTorsoRagged.png" limb="Head" origin="0.5,0.9" sourcerect="32,48,32,32" depth="0.038" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Ragged Capt's Cap B"
+    category="Misc"
+    tags="meditem,clothing"
+    description="A token of the Captain's unquestionable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="captainTorsoRagged.png" depth="0.6" sourcerect="32,48,32,32"/>
+
+    <Body width="25" height="15" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="captainTorsoBRagged.png" limb="Head" origin="0.5,0.9" sourcerect="32,48,32,32" depth="0.038" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.08" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
@@ -785,7 +809,8 @@
   </Item>
   
   <Item
-    name="Ragged Capt's Uniform"
+    name="Ragged Capt's Uniform A"
+	aliases="Ragged Capt's Uniform"
     category="Equipment"
     tags="meditem,clothing">
 	
@@ -814,6 +839,52 @@
       <sprite texture="captainLegsRagged.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
 
       <sprite texture="captainLegsRagged.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="assistantLegsRagged.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Capt's Uniform B"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Block"/>
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+    <Sprite texture="captainLegsBRagged.png" sourcerect="0,52,52,17" depth="0.6"/>
+
+    <Body width="52" height="17" density="16"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="captainTorsoBRagged.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="captainTorsoB.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="captainTorsoBRagged.png" limb="LeftHand" sourcerect="48,0,15,41" origin="0.6,0.6"/>
+
+      <sprite texture="captainTorsoB.png" limb="RightArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainTorsoBRagged.png" limb="LeftArm" sourcerect="30,0,19,43" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="captainLegsBRagged.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsBRagged.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsBRagged.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="captainLegsBRagged.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="assistantLegsRagged.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
 	  
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
