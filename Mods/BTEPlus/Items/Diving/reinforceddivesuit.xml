@@ -111,8 +111,8 @@
 	  <sprite texture="reinforceddivesuit.png" limb="RightHand" sourcerect="105,54,13,47" origin="0.4,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="reinforceddivesuit.png" limb="LeftHand" sourcerect="105,54,13,47" origin="0.4,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
 
-      <sprite texture="reinforceddivesuit.png" limb="RightArm" sourcerect="86,56,17,39" origin="0.4,0.35" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="reinforceddivesuit.png" limb="LeftArm" sourcerect="86,56,17,39" origin="0.4,0.35" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="RightArm" sourcerect="86,56,17,39" origin="0.5,0.5" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftArm" sourcerect="86,56,17,39" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
 
       <sprite texture="reinforceddivesuit.png" limb="Waist" sourcerect="81,0,30,26" origin="0.5,0.45" depth="0.004" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="reinforceddivesuit.png" limb="RightThigh" sourcerect="53,0,26,48" origin="0.5,0.5" depth="0.011" inheritlimbdepth="false" hidelimb="true"/>

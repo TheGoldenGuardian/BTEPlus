@@ -459,7 +459,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100">
 	  </StatusEffect>
       <StatusEffect type="Always" target="This" Condition="100" setvalue="true">
-		<RequiredItem type="Contained" name="Flare"/>
+		<RequiredItem type="Contained" name="Flare Red,flare"/>
 	  </StatusEffect>
       <StatusEffect type="OnUse">
         <Explosion range="80" force="1" shockwave="false" flames="false" smoke="false" sparks="true" camerashake="5.0"/>
@@ -470,7 +470,7 @@
     </RangedWeapon>
 
     <ItemContainer capacity="1" hideitems="true">
-      <Containable name="Flare"/>
+      <Containable name="Flare Red,flare"/>
     </ItemContainer>
 
     <Holdable slots="RightHand,LeftHand,Any" controlpose="true"

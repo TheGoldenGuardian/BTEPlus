@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Jobs>
   <Job name="Captain" description="The Commanding Officer with authority over the entire crew. The captain is responsible for commanding the rest of the crew and trying to keep everything running smoothly."
-	   minnumber="1" maxnumber="1" minkarma="0.8" initialcount="1">
+	   minnumber="1" maxnumber="1" minkarma="0" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="40,60"/>
       <Skill name="Construction" level="15,30"/>
@@ -51,7 +51,7 @@
   </Job>
   
   <Job name="Officer" description="The executive officer or second-in-command. The officer's duty is to help the captain with administrative and navigation responsibilities. If the captain is absent, the officer will temporarily assume command."
-	   maxnumber="1" minkarma="0.7">
+	   maxnumber="1" minkarma="0">
     <Skills>
       <Skill name="Weapons" level="30,50"/>
       <Skill name="Construction" level="20,40"/>
@@ -95,7 +95,7 @@
   </Job>
   
   <Job name="Enforcer" description="Enforcer are are responsible for keeping the submarine safe from potential attackers. The creatures inhabiting the ocean aren't the only threat they need to worry about, as several of the renegade groups opposing the Europa Coalition are known to have sent infiltrators on board the vessels."
-	   maxnumber="4" minkarma="0.6">
+	   maxnumber="4" minkarma="0">
     <Skills>
       <Skill name="Weapons" level="50,70"/>
       <Skill name="Construction" level="20,40"/>
@@ -140,7 +140,7 @@
   </Job>
   
   <Job name="Scientist" description="Scientists are usually found in science vessels but they are often employed by military or private employers because of their knowledge of biochemistry and quantum physics."
-	   maxnumber="2" minkarma="0.5">
+	   maxnumber="2" minkarma="0">
     <Skills>
       <Skill name="Weapons" level="10,20"/>
       <Skill name="Construction" level="15,30"/>
@@ -180,7 +180,7 @@
   </Job>
 
   <Job name="Medical Doctor" description="The primary duty of the doctors is to help injured crew members, but their knowledge of chemistry and pharmaceutics can also be useful for creating various non-medicinal chemicals."
-	   maxnumber="2" minkarma="0.5">
+	   maxnumber="2" minkarma="0">
     <Skills>
       <Skill name="Weapons" level="15,30"/>
       <Skill name="Construction" level="10,20"/>
@@ -218,7 +218,7 @@
   </Job>
   
   <Job name="Engineer" description="Engineers have above-average electrician skills, but fixing complex mechanical devices is still usually out of their skill set. They are competent at fixing electrical devices however, and are the ones to turn to when the power grid starts failing."
-	   minnumber="1" minkarma="0.4" initialcount="1">
+	   minnumber="1" minkarma="0" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="10,20"/>
       <Skill name="Construction" level="20,40"/>
@@ -287,7 +287,7 @@
   </Job>
   
   <Job name="Cook" description="The primary duty of a cook, or culinary specialist, is to provide cooking services for the rest of the crew. They are also responsible for keeping the storerooms stocked and the dinning areas clean."
-	   maxnumber="2" minkarma="0.2">
+	   maxnumber="2" minkarma="0">
     <Skills>
       <Skill name="Weapons" level="20,40"/>
       <Skill name="Construction" level="15,30"/>
@@ -320,7 +320,7 @@
   </Job>
 
   <Job name="Seaman" description="Seamen don't have any specific responsibilities or areas of expertise. This job is a good choice for newcomers who want to get a hang of working on board the submarine without taking up tasks that they aren't qualified for."
-	   minkarma="0.1" allowalways="true">
+	   minkarma="0" allowalways="true">
     <Skills>
       <Skill name="Weapons" level="15,30"/>
       <Skill name="Construction" level="20,40"/>
@@ -370,6 +370,42 @@
 	  <Item name="Ration Stamp A"/>
 	  <Item name="Ration Stamp A"/>
 	  <!-- <Item name="Handcuffs" equip="true"/> -->
+    </Items>
+  </Job>
+  
+  <Job name="Coalition Security" description=""
+	   maxnumber="1" minkarma="11">
+    <Skills>
+      <Skill name="Weapons" level="60,80"/>
+      <Skill name="Construction" level="20,40"/>
+      <Skill name="Electrical Engineering" level="15,40"/>
+	  <Skill name="Medical" level="30,60"/>
+	  <Skill name="Cooking" level="15,30"/>
+	  <Skill name="Science" level="10,50"/>
+    </Skills>
+    <Items>
+      <Item name="Task Force Access Card" equip="true"/>
+	  <Item name="Clipboard">
+        <Item name="Top Secret Cover"/>
+		<Item name="Coalition Enforcer"/>
+		<Item name="Basic Emergency Protocol"/>
+		<Item name="Document about Prisoners"/>
+		<Item name="Classified Protocol A"/>
+		<Item name="Classified Protocol B"/>
+      </Item> 
+	  <Item name="Tau-19 Headgear" equip="true"/>
+	  <Item name="Tau-19 Body Armor" equip="true"/>
+	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Handcuffs"/>
+	  <Item name="Stun Baton">
+        <Item name="Battery Cell"/>
+	  </Item> 
+	  <Item name="Wallet">
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+	  </Item>
     </Items>
   </Job>
 </Jobs>

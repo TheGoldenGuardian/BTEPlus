@@ -1,7 +1,7 @@
 ﻿<Items>
   <Item
     name="Tau-19 Headgear"
-	aliases="Tau Helmet"
+	aliases="Tau Helmet,Tau Head"
     category="Equipment"
     Tags="meditem,diving"
 	description=""
@@ -12,14 +12,14 @@
 	  <Item name="Aluminium Sliver"/>
     </Deconstruct> -->
     
-    <sprite texture="taugear.png" depth="0.6" sourcerect="0,0,27,31"/>
+    <sprite texture="taugear.png" depth="0.6" sourcerect="0,0,29,32"/>
   
-    <Body height="26" width="230" density="18"/>
+    <Body height="29" width="32" density="18"/>
 	
 	<WifiComponent range="40000" LinkToChat="true"/>
 
     <Wearable limbtype="Head" slots="Any,Head+Face">
-      <sprite texture="taugear.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="0,0,27,31" origin="0.5,0.6"/>
+      <sprite texture="taugear.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="0,0,29,32" origin="0.5,0.6" hidelimb="true"/>
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.12" disabledeltatime="true"/>
 	  <StatusEffect type="OnWearing" target="Character" PressureProtection="1000">
 	    <Conditional hasstatustag="rds"/>
@@ -92,25 +92,25 @@
   
   <Item
     name="Tau-19 Body Armor"
-	aliases="Tau Ballistic Vest,Tau Armor,Tau Vest"
+	aliases="Tau Ballistic Vest,Tau Armor,Tau Vest,Tau Torso"
     category="Equipment"
     tags="bigitem,clothing"
 	description="">
 	
-	<Deconstruct time="15">
+	<!-- <Deconstruct time="15">
       <Item name="Polycarbonate Bar"/>
 	  <Item name="Polycarbonate Bar"/>
 	  <Item name="Steel Bar"/>
-    </Deconstruct>
+    </Deconstruct> -->
 
-    <Sprite texture="taugeargear.png" sourcerect="0,34,60,31" depth="0.6"/>
+    <Sprite texture="taugear.png" sourcerect="0,34,60,31" depth="0.6"/>
 
     <Body width="52" height="17" density="40"/>
 
     <Wearable slots="Any,Torso">
-      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+      <sprite texture="taugear.png" limb="Torso" sourcerect="1,132,44,58" depthlimb="Head" origin="0.52,0.48"/>
 	  
-	  <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.45,0.55" hidelimb="true"/>
+	  <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.45,0.55" depth="0.001" hidelimb="true"/>
       <sprite texture="taugear.png" limb="LeftHand" sourcerect="87,31,15,47" origin="0.45,0.55" hidelimb="true"/>
 
       <sprite texture="taugear.png" limb="RightArm" sourcerect="65,32,21,40" origin="0.5,0.5" hidelimb="true"/>
@@ -119,9 +119,54 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
+	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Tau-19 Ballistic Leggings"
+	aliases="Tau Legs"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="">
+	
+	<!-- <Deconstruct time="10">
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct> -->
+
+    <Sprite texture="taugear.png" sourcerect="48,171,51,16" depth="0.6"/>
+
+    <Body width="51" height="16" density="20"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="taugear.png" limb="Waist" sourcerect="50,133,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="RightThigh" sourcerect="78,89,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftThigh" sourcerect="104,79,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="taugear.png" limb="RightLeg" sourcerect="2,79,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftLeg" sourcerect="2,79,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="taugear.png" limb="RightFoot" sound="footstep_metal" sourcerect="42,104,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftFoot" sound="footstep_metal" sourcerect="42,104,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.14" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.25" bleedingmultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
   </Item>
   
   <Item
@@ -137,7 +182,7 @@
       <Item name="Spare Parts"/>
 	  <Item name="Bronze Sliver"/>
 	  <Item name="FPGA Circuit"/>
-	  <Item name="Coppy Coil"/>
+	  <Item name="Copper Coil"/>
     </Deconstruct>
 
     <Sprite texture="taugear.png" sourcerect="30,5,72,7" depth="0.55"/>
@@ -276,43 +321,4 @@
       <Containable name="Fulgurium Battery Cell"/>      
     </ItemContainer>
   </Item>
-  
-  <!-- <Item
-    name="Ballistic Trousers"
-    category="Equipment"
-	tags="meditem,clothing"
-	description="A standard issue pairs of synthetic fiber trousers with a ballistic mesh layer and knee pads.">
-	
-	<Deconstruct time="10">
-	  <Item name="Polycarbonate Bar"/>
-	  <Item name="Steel Bar"/>
-      <Item name="Tactical Boot"/>
-	  <Item name="Tactical Boot"/>
-    </Deconstruct>
-
-    <Sprite texture="doctorgear.png" sourcerect="76,19,51,13" depth="0.6"/>
-
-    <Body width="51" height="13" density="15"/>
-
-    <Wearable slots="Any,Legs">
-      <sprite texture="doctorgear.png" limb="Waist" sourcerect="0,0,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="securitygear.png" limb="RightThigh" sourcerect="133,0,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
-      <sprite texture="securitygear.png" limb="LeftThigh" sourcerect="161,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
-
-      <sprite texture="securitygear.png" limb="RightLeg" sourcerect="135,52,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
-      <sprite texture="securitygear.png" limb="LeftLeg" sourcerect="135,52,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
-	  
-	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
-      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
-	  
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.12" disabledeltatime="true"/>
-	  
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-    </Wearable>
-
-    <ItemContainer capacity="2">
-      <Containable name="smallitem"/>
-    </ItemContainer>
-  </Item> -->
 </Items>

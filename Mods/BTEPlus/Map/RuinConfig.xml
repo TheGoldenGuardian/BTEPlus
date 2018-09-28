@@ -26,9 +26,12 @@
   <item prefab="Zrbite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="3"/>
   <item prefab="Nitrous Zrbite Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="2"/>
   <item prefab="Uranium Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="5"/>
-  <item prefab="Materium Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="3"/>
+  <item prefab="Materium Shard" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="1"/>
+  
+  <item prefab="Dirium Sliver" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="1"/>
   
   <item prefab="Ancient Weapon" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="1"/>
+  <item prefab="Ancient Tool" alignment="Center,Right,Top,Bottom,Left" type="Prop" commonness="1"/>
 
   <item prefab="Alien Door" alignment="Center" type="Door"/>
   <item prefab="Alien Hatch" alignment="Center" type="Hatch"/>

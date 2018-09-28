@@ -542,6 +542,18 @@
     velocitychange="0.0, 0.0">
     <sprite texture="Content/Particles/flames.png" sourcerect="0,64,128,64" origin="0.0,0.5"/>
   </largeplasma>
+  
+  <healplasma
+    startsizemin="0.9,3.0" startsizemax="5.0,5.0"
+    sizechange="20.0,-0.5"
+    startcolor="0.4, 0.9, 0.4" startalpha="1.0"
+    colorchange="0.0, 0.0, 0.0, -4.0"
+    lifetime="0.25"
+    drawtarget="both"
+    blendstate="additive"
+    velocitychange="0.0, 0.0">
+    <sprite texture="Content/Particles/flames.png" sourcerect="0,64,128,64" origin="0.0,0.5"/>
+  </healplasma>
 
   <fleshsmoke
     lifetime="3"
@@ -740,6 +752,18 @@
     velocitychange="0.0, 1.0">
     <sprite texture="Content/Particles/spatter.png" sourcerect="128,128,128,128"/>
   </flareO>
+  
+  <pulsar
+    startsizemin="1,1" startsizemax="1,1"
+    sizechange="-4.0,-0.5"
+    startcolor="1.0, 1.0, 1.0" startalpha="1.0"
+    colorchange="0.0, 0.0, 0.0, -0.1"
+    lifetime="0.25"    
+    drawtarget="both"
+    blendstate="additive"
+    velocitychange="0.0, 0.0">
+    <sprite texture="Mods/BTEPlus/Particles/pulsar.png" origin="0,0.5"/>
+  </pulsar>
   
   <shrapnel
     startsizemin="0.1,0.1" startsizemax="1.0,1.0"

@@ -300,8 +300,10 @@
 	  <fabricableitem name="Crewmember Sweater A" requireditems="Ragged Sweater" requiredtime="2"/>
 	  <fabricableitem name="Ragged Jumper" requireditems="Crewmember Jumper A" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Jumper A" requireditems="Ragged Jumper" requiredtime="2"/>
-	  <fabricableitem name="Ragged Capt's Uniform" requireditems="Captain's Uniform A" requiredtime="2"/>
-	  <fabricableitem name="Captain's Uniform A" requireditems="Ragged Capt's Uniform" requiredtime="2"/> 
+	  <fabricableitem name="Ragged Capt's Uniform A" requireditems="Captain's Uniform A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform A" requireditems="Ragged Capt's Uniform A" requiredtime="2"/> 
+	  <fabricableitem name="Ragged Capt's Uniform B" requireditems="Captain's Uniform B" requiredtime="2"/>
+	  <fabricableitem name="Captain's Uniform B" requireditems="Ragged Capt's Uniform B" requiredtime="2"/> 
 	  <fabricableitem name="Ragged Officer's Jacket" requireditems="Officer's Jacket" requiredtime="2"/>
 	  <fabricableitem name="Officer's Jacket" requireditems="Ragged Officer's Jacket" requiredtime="2"/> 
 	  <fabricableitem name="Scientist's Uniform A" requireditems="Scientist's Uniform B" requiredtime="2"/>

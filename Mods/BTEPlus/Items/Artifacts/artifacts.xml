@@ -455,16 +455,16 @@
 	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-20.0" Condition="-6.0"/>
 	  <Fixable name="structure"/>
       <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800.0" loop="true"/>
-	  <RequiredItems name="Oxygenite Shard,Sulphurite Shard,Thermite Shard" type="Contained" msg="The shard inside is depleted"/>
+	  <RequiredItems name="'White' Shard,'Yellow' Shard,'Red' Shard,shard" type="Contained" msg="The shard inside is depleted"/>
       <RequiredSkill name="Weapons" level="30"/>
-	  <StatusEffect type="OnFailure" target="Contained" targetnames="Oxygenite Shard,Sulphurite Shard,Thermite Shard" Condition="-2.0"/>
-	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Shard" Condition="-1.2" oxygen="-20000.0"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Shard" Condition="-0.4"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Shard" Condition="-0.8"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Zrbite Shard" Condition="-0.8"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Nitrous Zrbite Shard" Condition="-0.8"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Uranium Shard" Condition="-0.1"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Materium Shard" Condition="-5"/>
+	  <StatusEffect type="OnFailure" target="Contained" targetnames="'White' Shard,'Yellow' Shard,'Red' Shard,shard" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="'Yellow' Shard" Condition="-1.2" oxygen="-20000.0"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'White' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Red' Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Gold' Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Copper' Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Dark Green' Shard" Condition="-0.1"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Pink' Shard" Condition="-5"/>
       <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" range="500">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
       </LightComponent>
@@ -485,6 +485,65 @@
 
     <ItemContainer capacity="1" hideitems="true" itempos="9,-15">
       <Containable name="shard"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+   name="Alien Tool"
+   aliases="Ancient Tool"
+   category="Alien"
+   Tags="bigitem,weapon,alien">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="Content/Items/Artifacts/alientools.png" depth="0.55" sourcerect="0,0,95,50" origin="0.5,0.4"/>
+
+    <Body width="85" height="40" density="10.1"/>
+
+    <Holdable slots="Any,RightHand+LeftHand" aimpos="100,0" handle1="0,11" handle2="2,11"/>
+
+    <RepairTool extinquishamount="10" structurefixamount="3" limbfixamount="0.2" range="600" barrelpos="30,15" particles="healplasma">
+      <ParticleEmitter particle="healplasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch,Thick Door" Stuck="-20.0" Condition="5.0"/>
+	  <Fixable name="structure"/>
+      <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800.0" loop="true"/>
+	  <RequiredItems name="'White' Shard,'Yellow' Shard,'Red' Shard,shard" type="Contained" msg="The shard inside is depleted"/>
+      <RequiredSkill name="Construction" level="30"/>
+	  <StatusEffect type="OnFailure" target="Contained" targetnames="'White' Shard,'Yellow' Shard,'Red' Shard,shard" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="'Yellow' Shard" Condition="-0.6"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'White' Shard" Condition="-0.2" oxygen="20000"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Red' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Gold' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Copper' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Dark Green' Shard" Condition="-0.05"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Pink' Shard" Condition="-2.5"/>
+      <LightComponent LightColor="0.4,0.9,0.4,1.0" Flicker="0.5" range="500">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
+      </LightComponent>
+    </RepairTool>
+	
+	<Projectile launchimpulse="80.0">
+      <Attack damage="1000" bleedingdamage="10" structuredamage="500" damagetype="Blunt"/>
+      <StatusEffect type="OnUse" Condition="-100.0" stun="10.0" disabledeltatime="true">
+	    <sound file="Content/Items/Artifacts/alienweapon.ogg"/>
+        <Explosion range="1000" structuredamage="5000" damage="1000" stun="10" force="50" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" velocitymax="50" scalemin="2" scalemax="5"/>
+      </StatusEffect>
+    </Projectile>
+
+    <ItemContainer capacity="1" hideitems="true" itempos="9,-15">
+      <Containable name="Oxygenite Shard,Sulphurite Shard,Thermite Shard,shard"/>
     </ItemContainer>
   </Item>
 

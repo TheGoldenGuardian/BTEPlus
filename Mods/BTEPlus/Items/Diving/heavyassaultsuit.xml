@@ -32,7 +32,7 @@
 		  <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
             <Conditional IsDead="false"/>
           </StatusEffect>
-          <sprite texture="Mods/BTEPlus/Items/Diving/HeavyAssaultSuitlight.png" depth="0.025" origin="0.1,0.82" alpha="5.0"/>
+          <sprite texture="Mods/BTEPlus/Items/Diving/HeavyAssaultSuitLight.png" depth="0.025" origin="0.1,0.82" alpha="5.0"/>
         </LightComponent>
       </sprite>
 
@@ -48,8 +48,8 @@
       <sprite texture="HeavyAssaultSuit.png" limb="RightLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.012" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="HeavyAssaultSuit.png" limb="LeftLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
 
-      <sprite texture="HeavyAssaultSuit.png" limb="RightFoot" sound="footstep_gear" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="HeavyAssaultSuit.png" limb="LeftFoot" sound="footstep_gear" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HeavyAssaultSuit.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="HeavyAssaultSuit.png" limb="LeftFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.0131" inheritlimbdepth="false" hidelimb="true"/>
       
       <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" PressureProtection="100" SpeedMultiplier="-0.80" LowPassMultiplier="0.2" disabledeltatime="true"/>
 	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.1">

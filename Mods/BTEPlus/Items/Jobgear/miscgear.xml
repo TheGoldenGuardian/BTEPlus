@@ -692,7 +692,7 @@
   <Item
     name="Ragged Scientist's Uniform A"
 	aliases="Ragged Scientist's Uniform"
-    category="Equipment"
+    category="Misc"
     tags="meditem,clothing">
 	
 	<Deconstruct time="15">
@@ -902,7 +902,8 @@
   </Item>
   
   <Item
-    name="Ragged Prisoner Jumpsuit"
+    name="Ragged Prisoner Jumpsuit A"
+	aliases="Ragged Prisoner Jumpsuit"
     category="Misc"
     tags="meditem,clothing"
     description="The usual garment given to detainees by the Coalition.">
@@ -915,7 +916,7 @@
 
     <Body width="50" height="17" density="14"/>
 
-    <Wearable slots="Any,Torso+Legs" armorvalue="1.5">
+    <Wearable slots="Any,Torso+Legs">
       <sprite texture="prisonergearRagged.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48" depthlimb="Head"/>
 	  
 	  <sprite texture="prisonergearRagged.png" limb="LeftHand" sourcerect="72,0,17,42" origin="0.45,0.6"/>
@@ -933,7 +934,40 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingdamagemultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ragged Prisoner Jumpsuit C"
+    category="Misc"
+    tags="meditem,clothing"
+    description="The usual garment given to detainees by the Coalition.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+    </Deconstruct>
+
+	<Sprite texture= "prisonergearRagged.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="prisonergearRagged.png" limb="Waist" sourcerect="81,48,31,27" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="prisonergearRagged.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="prisonergearRagged.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
     </Wearable>
 
     <ItemContainer capacity="1">
