@@ -277,8 +277,10 @@
 	  <fabricableitem name="Crewmember Ushanka A" requireditems="Ragged Ushanka A" requiredtime="2"/>
 	  <fabricableitem name="Ragged Ushanka B" requireditems="Crewmember Ushanka B" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Ushanka B" requireditems="Ragged Ushanka B" requiredtime="2"/>
-	  <fabricableitem name="Ragged Capt's Cap" requireditems="Captain's Cap A" requiredtime="2"/>
-	  <fabricableitem name="Captain's Cap A" requireditems="Ragged Capt's Cap" requiredtime="2"/>
+	  <fabricableitem name="Ragged Capt's Cap A" requireditems="Captain's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap A" requireditems="Ragged Capt's Cap A" requiredtime="2"/>
+	  <fabricableitem name="Ragged Capt's Cap B" requireditems="Captain's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap B" requireditems="Ragged Capt's Cap B" requiredtime="2"/>
 	  <fabricableitem name="Ragged Officer's Cap A" requireditems="Officer's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Officer's Cap A" requireditems="Ragged Officer's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Ragged Officer's Cap B" requireditems="Officer's Cap B" requiredtime="2"/>
@@ -320,6 +322,8 @@
 	  <fabricableitem name="Utility Jumpsuit" requireditems="Ragged Utility Jumpsuit" requiredtime="2"/>
 	  <fabricableitem name="Ragged Prisoner Jumpsuit" requireditems="Prisoner Jumpsuit A" requiredtime="2"/>
 	  <fabricableitem name="Prisoner Jumpsuit A" requireditems="Ragged Prisoner Jumpsuit" requiredtime="2"/>
+	  <fabricableitem name="Ragged Prisoner Jumpsuit C" requireditems="Prisoner Jumpsuit C" requiredtime="2"/>
+	  <fabricableitem name="Prisoner Jumpsuit C" requireditems="Ragged Prisoner Jumpsuit C" requiredtime="2"/>
 	  <fabricableitem name="Ragged Armor Vest" requireditems="Ballistic Vest A" requiredtime="2"/>
 	  <fabricableitem name="Ballistic Vest A" requireditems="Ragged Armor Vest" requiredtime="2"/>
 	  <fabricableitem name="Ragged Trousers" requireditems="Crewmember Trousers A" requiredtime="2"/>

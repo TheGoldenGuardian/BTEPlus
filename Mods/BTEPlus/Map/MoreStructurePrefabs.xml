@@ -204,4 +204,8 @@
   <renegadeLogoVandalized width="121" height="141">
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="415,49,121,141" depth="0.97" canflipx="false"/>
   </renegadeLogoVandalized>
+  
+  <tauLogo width="188" height="188">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="763,0,188,188" depth="0.97" canflipx="false"/>
+  </tauLogo>
 </prefabs>

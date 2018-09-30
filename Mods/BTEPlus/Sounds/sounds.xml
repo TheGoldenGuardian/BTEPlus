@@ -127,6 +127,10 @@
   <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau2.ogg"/>
   <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau3.ogg"/>
   <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau4.ogg"/>
+  
+  <footstep_mtf file="Mods/BTEPlus/Sounds/Step/MTF/Step1.ogg"/>
+  <footstep_mtf file="Mods/BTEPlus/Sounds/Step/MTF/Step2.ogg"/>
+  <footstep_mtf file="Mods/BTEPlus/Sounds/Step/MTF/Step3.ogg"/>
 
   <footstep_armor file="Content/Sounds/Footsteps/Armor/armor-01.ogg"/>
   <footstep_armor file="Content/Sounds/Footsteps/Armor/armor-02.ogg"/>

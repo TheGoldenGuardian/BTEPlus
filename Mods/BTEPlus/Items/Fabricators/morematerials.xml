@@ -15,7 +15,7 @@
 
     <Sprite texture="Mods/BTE/Items/Fabricators/materials.png" sourcerect="13,38,12,12" depth="0.55"/>
 
-    <Body width="12" height="12" density="9.5"/>
+    <Body width="12" height="12" density="15"/>
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
@@ -36,7 +36,7 @@
 
     <Sprite texture="Mods/BTE/Items/Fabricators/materials.png" sourcerect="25,0,24,12" depth="0.55"/>
 
-    <Body width="24" height="12" density="20"/>
+    <Body width="24" height="12" density="30"/>
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>
@@ -57,7 +57,7 @@
 
     <Sprite texture="Mods/BTE/Items/Fabricators/materials.png" sourcerect="25,13,24,24" depth="0.55"/>
 
-    <Body width="24" height="24" density="40"/>
+    <Body width="24" height="24" density="60"/>
 
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
   </Item>

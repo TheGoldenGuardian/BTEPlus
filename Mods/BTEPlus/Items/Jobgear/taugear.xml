@@ -1,7 +1,7 @@
 ﻿<Items>
   <Item
-    name="Tau-19 Headgear"
-	aliases="Tau Helmet,Tau Head"
+    name="Tau-19 Heavy Headgear"
+	aliases="MTF Heavy Helmet,MTF Gasmask,MTF Helmet A"
     category="Equipment"
     Tags="meditem,diving"
 	description=""
@@ -91,8 +91,192 @@
   </Item>
   
   <Item
-    name="Tau-19 Body Armor"
-	aliases="Tau Ballistic Vest,Tau Armor,Tau Vest,Tau Torso"
+    name="Tau-19 Tactical Headgear"
+	aliases="MTF Helmet B"
+    category="Equipment"
+    Tags="meditem,diving"
+	description=""
+	cargocontainername="Standard Shipping Box">
+
+    <!-- <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct> -->
+    
+    <sprite texture="taugear.png" depth="0.6" sourcerect="30,0,27,32"/>
+  
+    <Body height="27" width="32" density="18"/>
+	
+	<WifiComponent range="40000" LinkToChat="true"/>
+
+    <Wearable limbtype="Head" slots="Any,Head+Face">
+      <sprite texture="taugear.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="30,0,29,32" origin="0.5,0.6" hidelimb="false"/>
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.10" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" PressureProtection="1000">
+	    <Conditional hasstatustag="rds"/>
+	  </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.175" bleedingmultiplier="0.275" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.075" bleedingmultiplier="0.175" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Tank"/>
+      <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
+    </ItemContainer>  
+  </Item>
+  
+  <Item
+    name="Tau-19 Medical Headgear"
+	aliases="MTF Helmet C"
+    category="Equipment"
+    Tags="meditem,diving"
+	description=""
+	cargocontainername="Standard Shipping Box">
+
+    <!-- <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct> -->
+    
+    <sprite texture="taugear.png" depth="0.6" sourcerect="60,0,29,32"/>
+  
+    <Body height="29" width="32" density="18"/>
+	
+	<WifiComponent range="40000" LinkToChat="true"/>
+
+    <Wearable limbtype="Head" slots="Any,Head+Face">
+      <sprite texture="taugear.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="60,0,29,32" origin="0.5,0.6" hidelimb="false"/>
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.10" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" PressureProtection="1000">
+	    <Conditional hasstatustag="rds"/>
+	  </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.175" bleedingmultiplier="0.275" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.075" bleedingmultiplier="0.175" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Tank"/>
+      <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
+    </ItemContainer>
+	
+	<StatusHUD drawhudwhenequipped="true"/>
+  </Item>
+  
+  <Item
+    name="Tau-19 Ballistic Vest"
+	aliases="MTF Vest,MTF Vest A"
     category="Equipment"
     tags="bigitem,clothing"
 	description="">
@@ -108,10 +292,10 @@
     <Body width="52" height="17" density="40"/>
 
     <Wearable slots="Any,Torso">
-      <sprite texture="taugear.png" limb="Torso" sourcerect="1,132,44,58" depthlimb="Head" origin="0.52,0.48"/>
+      <sprite texture="taugear.png" limb="Torso" sourcerect="0,151,44,58" depthlimb="Head" origin="0.52,0.48"/>
 	  
-	  <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.45,0.55" depth="0.001" hidelimb="true"/>
-      <sprite texture="taugear.png" limb="LeftHand" sourcerect="87,31,15,47" origin="0.45,0.55" hidelimb="true"/>
+	  <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.5,0.5" depth="0.001" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftHand" sourcerect="87,31,15,47" origin="0.5,0.5" hidelimb="true"/>
 
       <sprite texture="taugear.png" limb="RightArm" sourcerect="65,32,21,40" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="taugear.png" limb="LeftArm" sourcerect="108,31,21,40" origin="0.5,0.5" hidelimb="true"/>
@@ -129,8 +313,122 @@
   </Item>
   
   <Item
+    name="Tau-19 Tactical Vest"
+	aliases="MTF Vest,MTF Vest D"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="">
+	
+	<!-- <Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct> -->
+
+    <Sprite texture="taugear.png" sourcerect="0,34,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="taugear.png" limb="Torso" sourcerect="0,151,44,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <!-- <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.5,0.5" depth="0.001" hidelimb="false"/>
+      <sprite texture="taugear.png" limb="LeftHand" sourcerect="87,31,15,47" origin="0.5,0.5" hidelimb="false"/> -->
+
+      <sprite texture="taugear.png" limb="RightArm" sourcerect="155,32,21,40" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="taugear.png" limb="LeftArm" sourcerect="155,32,21,40" origin="0.5,0.5" hidelimb="false"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Tau-19 Carry Vest"
+	aliases="MTF Vest B"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="">
+	
+	<!-- <Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct> -->
+
+    <Sprite texture="taugear.png" sourcerect="0,34,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="taugear.png" limb="Torso" sourcerect="90,154,56,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="taugear.png" limb="RightHand" sourcerect="135,79,15,48" origin="0.5,0.5" depth="0.001" hidelimb="false"/>
+      <sprite texture="taugear.png" limb="LeftHand" sourcerect="135,79,15,48" origin="0.5,0.5" hidelimb="false"/>
+
+      <sprite texture="taugear.png" limb="RightArm" sourcerect="130,32,21,40" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="taugear.png" limb="LeftArm" sourcerect="155,32,21,40" origin="0.5,0.5" hidelimb="false"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.175" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="5">
+      <Containable name="smallitem,tool"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Tau-19 Medical Vest"
+	aliases="MTF Vest C"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="">
+	
+	<!-- <Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct> -->
+
+    <Sprite texture="taugear.png" sourcerect="0,34,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="taugear.png" limb="Torso" sourcerect="46,149,44,66" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="taugear.png" limb="RightHand" sourcerect="87,31,15,47" origin="0.5,0.5" depth="0.001" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftHand" sourcerect="87,31,15,47" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="taugear.png" limb="RightArm" sourcerect="108,31,21,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftArm" sourcerect="108,31,21,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.165" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.15" bleedingmultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.05" bleedingmultiplier="0.15" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem,medical"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
     name="Tau-19 Ballistic Leggings"
-	aliases="Tau Legs"
+	aliases="MTF Legs"
     category="Equipment"
 	tags="meditem,clothing"
 	description="">
@@ -142,20 +440,20 @@
 	  <Item name="Tactical Boot"/>
     </Deconstruct> -->
 
-    <Sprite texture="taugear.png" sourcerect="48,171,51,16" depth="0.6"/>
+    <Sprite texture="taugear.png" sourcerect="0,132,51,16" depth="0.6"/>
 
     <Body width="51" height="16" density="20"/>
 
     <Wearable slots="Any,Legs">
-      <sprite texture="taugear.png" limb="Waist" sourcerect="50,133,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
-      <sprite texture="taugear.png" limb="RightThigh" sourcerect="78,89,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="Waist" sourcerect="24,93,28,26" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="RightThigh" sourcerect="78,79,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
       <sprite texture="taugear.png" limb="LeftThigh" sourcerect="104,79,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
 
       <sprite texture="taugear.png" limb="RightLeg" sourcerect="2,79,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
       <sprite texture="taugear.png" limb="LeftLeg" sourcerect="2,79,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
 	  
-	  <sprite texture="taugear.png" limb="RightFoot" sound="footstep_metal" sourcerect="42,104,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
-      <sprite texture="taugear.png" limb="LeftFoot" sound="footstep_metal" sourcerect="42,104,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  <sprite texture="taugear.png" limb="RightFoot" sound="footstep_mtf" sourcerect="24,67,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftFoot" sound="footstep_mtf" sourcerect="24,67,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
 	  
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.14" disabledeltatime="true"/>
 	  
@@ -165,7 +463,7 @@
     </Wearable>
 
     <ItemContainer capacity="1">
-      <Containable name="smallitem"/>
+      <Containable name="Gauss Pistol,Pulse Pistol,Diving Revolver,Flashlight Revolver,Old Revolver,Makeshift Suppressed Pistol,Flashlight Suppressed Pistol,Security Pistol,Flashlight Pistol"/>
     </ItemContainer>
   </Item>
   
@@ -185,13 +483,13 @@
 	  <Item name="Copper Coil"/>
     </Deconstruct>
 
-    <Sprite texture="taugear.png" sourcerect="30,5,72,7" depth="0.55"/>
+    <Sprite texture="taugear.png" sourcerect="56,138,72,7" depth="0.55"/>
     
     <Body width="72" height="6" density="25"/>
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
-              aimpos="50,0" handle1="-5,0" holdangle="10" reload="1.0">
-      <Attack damage="3" stun="0.2" damagetype="Blunt" sound="Content/Items/Weapons/smack.ogg"/>
+              aimpos="50,0" handle1="-15,0" handle2="-15,0" holdangle="80" aimangle="45" reload="1.5">
+      <Attack damage="4" bleedingdamage="0.125" stun="1" damagetype="Blunt" sound="Content/Items/Weapons/smack.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
 		  <Explosion range="300" damage="3" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
@@ -208,7 +506,7 @@
 		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit2.ogg" type="OnUse" range="3000"/>
 		</StatusEffect>
 
-	  <StatusEffect type="OnUse" target="Character" stun="1" bleed="0.2" stackable="false" disabledeltatime="true">
+	  <StatusEffect type="OnUse" target="Character" health="-10" stun="2" bleed="0.125" stackable="false" disabledeltatime="true">
         <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
         <Explosion range="100" force="0.25" shockwave="false" flames="false" smoke="false" camerashake="1.0"/>
       </StatusEffect>
@@ -260,7 +558,7 @@
 	    <RequiredItem name="Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
       </StatusEffect>
 
-      <StatusEffect type="OnUse" target="Character" stun="1" bleed="0.2" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="Character" stun="4" bleed="0.375" health="-16" disabledeltatime="true">
         <RequiredItem name="Fulgurium Battery Cell" type="Contained" msg="Loaded Battery Cell required"/>        
         <Explosion range="100" force="0.01" shockwave="false" flames="false" smoke="false" camerashake="1.0"/>
       </StatusEffect>

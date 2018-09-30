@@ -315,6 +315,7 @@
 	<Body width="17" height="10" density="10.8"/>
 
 	<Wearable slots="Head,Torso,Legs">
+		<sprite texture="shieldHead.png" limb="Head" sourcerect="0,0,1,1" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.2" disabledeltatime="true"/>
 	</Wearable>
   </Item>
@@ -337,16 +338,8 @@
 	<Body width="17" height="10" density="10.8"/>
 
 	<Wearable slots="Head,Torso,Legs">
-	  <StatusEffect tags="combatbot" type="OnWearing" target="Character" duration="1" disabledeltatime="true">
-		<Conditional SpeciesName="Combat Robot"/>
-	  </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" stun="-100" SpeedMultiplier="10">
-	    <Conditional hasstatustag="combatbot"/>
-	  </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" stun="-100" duration="1" SpeedMultiplier="10">
-	    <Conditional SpeciesName="Combat Robot"/>
-	  </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" stun="-100"/>
+		<sprite texture="shieldHead.png" limb="Head" sourcerect="0,0,1,1" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" Stun="0" setvalue="true"/>
 	</Wearable>
   </Item>
   

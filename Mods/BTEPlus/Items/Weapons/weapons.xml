@@ -1296,7 +1296,7 @@
     </RepairTool>
 	
 	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
-              aimpos="75,18" handle1="-12,-3" handle2="-11,-4" holdangle="-45">
+              aimpos="75,18" handle1="-12,-3" handle2="-11,-4">
 	  <StatusEffect type="OnUse" target="This" Condition="-99" disabledeltatime="true">
 	    <RequiredItems name="Gauss Pistol Magazine" type="Contained"/>
 	  </StatusEffect>

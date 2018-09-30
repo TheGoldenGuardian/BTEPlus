@@ -253,7 +253,7 @@
   </Job>
 
   <Job name="Mechanic" description="Mechanics have high construction and mechanic skills. They are skilled at using tools such as plasma cutters and welders, and are usually the only ones who can fix broken mechanical devices."
-	   minnumber="1" minkarma="0.3" initialcount="1">
+	   minnumber="1" minkarma="0" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="20,40"/>
       <Skill name="Construction" level="50,70"/>
@@ -373,29 +373,90 @@
     </Items>
   </Job>
   
-  <Job name="Coalition Security" description=""
-	   maxnumber="1" minkarma="11">
+  <Job name="CS Commander" description=""
+	   maxnumber="1" minkarma="1">
     <Skills>
       <Skill name="Weapons" level="60,80"/>
       <Skill name="Construction" level="20,40"/>
       <Skill name="Electrical Engineering" level="15,40"/>
-	  <Skill name="Medical" level="30,60"/>
+	  <Skill name="Medical" level="20,40"/>
 	  <Skill name="Cooking" level="15,30"/>
 	  <Skill name="Science" level="10,50"/>
     </Skills>
     <Items>
-      <Item name="Task Force Access Card" equip="true"/>
-	  <Item name="Clipboard">
-        <Item name="Top Secret Cover"/>
-		<Item name="Coalition Enforcer"/>
-		<Item name="Basic Emergency Protocol"/>
-		<Item name="Document about Prisoners"/>
-		<Item name="Classified Protocol A"/>
-		<Item name="Classified Protocol B"/>
-      </Item> 
-	  <Item name="Tau-19 Headgear" equip="true"/>
-	  <Item name="Tau-19 Body Armor" equip="true"/>
+      <Item name="Task Force Commander Access Card" equip="true"/>
+	  <Item name="Tau-19 Heavy Headgear" equip="true"/>
+	  <Item name="Tau-19 Ballistic Vest" equip="true"/>
 	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Restraint Set"/>
+	  <Item name="Stun Baton">
+        <Item name="Battery Cell"/>
+	  </Item> 
+	  <Item name="Wallet">
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+	  </Item>
+    </Items>
+  </Job>
+  
+  <Job name="CS Engineer" description=""
+	   maxnumber="1" minkarma="0.95">
+    <Skills>
+      <Skill name="Weapons" level="50,60"/>
+      <Skill name="Construction" level="50,70"/>
+      <Skill name="Electrical Engineering" level="60,80"/>
+	  <Skill name="Medical" level="20,40"/>
+	  <Skill name="Cooking" level="15,40"/>
+	  <Skill name="Science" level="10,40"/>
+    </Skills>
+    <Items>
+      <Item name="Task Force Engineer Access Card" equip="true"/>
+	  <Item name="Tau-19 Tactical Headgear" equip="true"/>
+	  <Item name="Tau-19 Carry Vest" equip="true">
+		<Item name="Welding Tool">
+			<Item name="Thermite Tank"/>
+		</Item>
+		<Item name="Plasma Cutter">
+			<Item name="Oxygen Tank"/>
+		</Item>
+		<Item name="Wrench"/>
+		<Item name="Screwdriver"/>
+	  </Item>
+	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Restraint Set"/>
+	  <Item name="Stun Baton">
+        <Item name="Battery Cell"/>
+	  </Item> 
+	  <Item name="Wallet">
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+	  </Item>
+    </Items>
+  </Job>
+  
+  <Job name="CS Medic" description=""
+	   maxnumber="1" minkarma="0.95">
+    <Skills>
+      <Skill name="Weapons" level="40,60"/>
+      <Skill name="Construction" level="10,20"/>
+      <Skill name="Electrical Engineering" level="10,20"/>
+      <Skill name="Medical" level="60,70"/>
+	  <Skill name="Cooking" level="20,50"/>
+	  <Skill name="Science" level="30,50"/>
+    </Skills>
+    <Items>
+      <Item name="Task Force Medic Access Card" equip="true"/>
+	  <Item name="Tau-19 Medical Headgear" equip="true"/>
+	  <Item name="Tau-19 Medical Vest" equip="true"/>
+	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Dart Gun">
+		<Item name="Medical Dart">
+			<Item name="Canister of Midazolam"/>
+		</Item>
+	  </Item>
 	  <Item name="Handcuffs"/>
 	  <Item name="Stun Baton">
         <Item name="Battery Cell"/>
@@ -403,6 +464,31 @@
 	  <Item name="Wallet">
 		<Item name="Basic Ration Stamp"/>
 		<Item name="Basic Ration Stamp"/>
+		<Item name="Basic Ration Stamp"/>
+	  </Item>
+    </Items>
+  </Job>
+  
+  <Job name="CS Grunt" description=""
+	   maxnumber="1" minkarma="0.95">
+    <Skills>
+      <Skill name="Weapons" level="50,80"/>
+      <Skill name="Construction" level="10,40"/>
+      <Skill name="Electrical Engineering" level="10,40"/>
+      <Skill name="Medical" level="20,60"/>
+	  <Skill name="Cooking" level="20,60"/>
+	  <Skill name="Science" level="20,60"/>
+    </Skills>
+    <Items>
+      <Item name="Task Force Grunt Access Card" equip="true"/>
+	  <Item name="Tau-19 Tactical Headgear" equip="true"/>
+	  <Item name="Tau-19 Tactical Vest" equip="true"/>
+	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Handcuffs"/>
+	  <Item name="Stun Baton">
+        <Item name="Battery Cell"/>
+	  </Item> 
+	  <Item name="Wallet">
 		<Item name="Basic Ration Stamp"/>
 		<Item name="Basic Ration Stamp"/>
 	  </Item>

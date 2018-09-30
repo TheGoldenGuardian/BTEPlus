@@ -108,7 +108,7 @@
     pickdistance="150"
     indestructible="true">
 
-    <Sprite texture="claret.png" depth="0.7" sourcerect="0,0,58,55"/>
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="198,108,58,55"/>
 
     <Deconstruct time="30">
       <Item name="Steel Bar"/>
@@ -133,7 +133,7 @@
     pickdistance="150"
     indestructible="true">
 
-    <Sprite texture="calyxion.png" depth="0.7" sourcerect="0,0,65,54"/>
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="191,0,65,54"/>
 
     <Deconstruct time="30">
       <Item name="Steel Bar"/>
@@ -159,7 +159,7 @@
     pickdistance="150"
     indestructible="true">
 
-    <Sprite texture="inficiat.png" depth="0.7" sourcerect="0,0,53,52"/>
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="203,55,53,52"/>
 
     <Deconstruct time="30">
       <Item name="Steel Bar"/>
@@ -228,6 +228,24 @@
         <Explosion range="350" stun="5" force="0.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="4.5"/>
       </StatusEffect>
     </Holdable>
+  </Item>
+  
+  <Item
+    name="Dirium Fragment"
+	aliases="Dirium Frag"
+    category="Alien"
+    tags="meditem,alien"
+    impacttolerance="8">
+	
+	<Deconstruct time="10">
+      <Item name="Dirium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="0,32,10,10"/>
+
+    <Body width="10" height="10" density="15"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" handle2="0,0" throwforce="3" aimpos="35,-10"/>
   </Item>
   
   <Item

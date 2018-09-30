@@ -15,33 +15,27 @@
       <Item name="Spare Parts"/>
     </Deconstruct>
 
-    <Sprite texture ="exoskeleton.png" sourcerect="73,102,50,25" depth="0.55"/>
+    <Sprite texture ="exolegs.png" sourcerect="69,46,50,25" depth="0.55"/>
 
     <Body width="50" height="25" density="20"/>
 
-    <Wearable limbtype="Legs" slots="Any,Legs">	  
-	  <sprite texture="exoskeleton.png" limb="Torso" sourcerect="42,0,42,97" origin="0.5,0.55" depth="0.006" inheritlimbdepth="true" depthlimb="Legs" hidelimb="false"/>
+    <Wearable limbtype="Legs" slots="Any,Legs">
+      <sprite texture="exolegs.png" limb="Waist" sourcerect="94,0,32,32" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+	  
+      <sprite texture="exolegs.png" limb="RightThigh" sourcerect="0,0,30,52" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="exolegs.png" limb="LeftThigh" sourcerect="0,60,30,52" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
 
-      <sprite texture="exoskeleton.png" limb="RightHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.0" inheritlimbdepth="true" hidelimb="false"/>
-      <sprite texture="exoskeleton.png" limb="LeftHand" sourcerect="0,78,15,50" origin="0.45,0.4" depth="0.016" inheritlimbdepth="true" hidelimb="false"/>
-
-      <sprite texture="exoskeleton.png" limb="RightArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.001" inheritlimbdepth="true" hidelimb="false"/>
-      <sprite texture="exoskeleton.png" limb="LeftArm" sourcerect="0,0,19,43" origin="0.5,0.4" depth="0.015" inheritlimbdepth="true" hidelimb="false"/>
-
-      <sprite texture="exoskeleton.png" limb="RightThigh" sourcerect="22,0,18,44" origin="0.5,0.5" depth="0.011" depthlimb="Tail" inheritlimbdepth="true" hidelimb="false"/>
-      <sprite texture="exoskeleton.png" limb="LeftThigh" sourcerect="0,0,1,1" origin="0.5,0.5" depth="0.015" inheritlimbdepth="true" hidelimb="false"/>
-
-      <sprite texture="exoskeleton.png" limb="RightLeg" sourcerect="17,47,21,51" origin="0.5,0.55" depth="0.012" depthlimb="Tail" inheritlimbdepth="false" hidelimb="false"/>
-      <sprite texture="exoskeleton.png" limb="LeftLeg" sourcerect="87,47,21,51" origin="0.5,0.55" depth="0.016" inheritlimbdepth="true" hidelimb="false"/>
-
-      <sprite texture="exoskeleton.png" limb="RightFoot" sound="footstep_armor" sourcerect="30,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="true" hidelimb="false"/>
-      <sprite texture="exoskeleton.png" limb="LeftFoot" sound="footstep_armor" sourcerect="50,100,20,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="true" hidelimb="false"/>
+      <sprite texture="exolegs.png" limb="RightLeg" sourcerect="31,0,24,57" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="exolegs.png" limb="LeftLeg" sourcerect="31,60,24,57" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <sprite texture="exolegs.png" limb="RightFoot" sound="footstep_armor" sourcerect="66,86,22,31" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="exolegs.png" limb="LeftFoot" sound="footstep_armor" sourcerect="96,86,22,31" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
      
       <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.8" LowPassMultiplier="0.2" disabledeltatime="true"/>
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.05">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1" disabledeltatime="true">
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.9" disabledeltatime="true">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>  

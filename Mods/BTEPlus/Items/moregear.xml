@@ -454,7 +454,7 @@
 
     <RangedWeapon barrelpos="27,6.5" spread="1" unskilledspread="2" reload="1">
       <Sound file="Mods/BTEPlus/Items/FlareGun.ogg" type="OnUse"/>
-      <RequiredItems name="Flare" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredItems name="Flare Red,flare" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="30"/>
       <StatusEffect type="OnUse" target="This" Condition="-100">
 	  </StatusEffect>

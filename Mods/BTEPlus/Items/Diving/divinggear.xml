@@ -176,6 +176,96 @@
   </Item>
   
   <Item
+    name="Beaked Diving Mask"
+	aliases="Beaked Gas Mask,Bird Mask"
+    category="Misc"
+    Tags="meditem,diving"
+	description="Small enough to carry around in case of need, but won't protect you from the water pressure in the event of a full-blown hull breach. Someone must've been a fan of birds."
+	cargocontainername="Standard Shipping Box">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+    </Deconstruct>
+    
+    <Sprite texture ="DivingSuit2.png" depth="0.6" sourcerect="64,101,20,24"/>
+  
+    <Body width="24" height="20" density="10.5"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="DivingSuit2.png" limb="Head" sourcerect="60,98,28,30" origin="0.1,0.5"/>
+      <StatusEffect type="OnWearing" target="Character" ObstructVision="true" HideFace="true" SpeedMultiplier="-0.03" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  <StatusEffect type="OnWearing" target="Character" PressureProtection="10">
+	    <Conditional hasstatustag="wetsuit"/>
+	  </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-0.5">
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500" Condition="-1">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.1" Condition="-0.25">
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.004">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Hydrogen Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-200" Oxygen="-20" Health="-0.2" Condition="-0.25">
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.008">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Sulphurite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100" Oxygen="-10" Health="-0.3" Condition="-0.5">
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.006">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Thermite Tank"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000" Condition="-0.1" PressureProtection="1">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+		<Conditional IsDead="false"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.001">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.1" disabledeltatime="true">
+        <RequiredItem type="Contained" name="Oxygenite Tank"/>
+      </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Tank"/>
+      <Containable name="Oxygenite Tank"/>
+	  <Containable name="Sulphurite Tank"/>
+	  <Containable name="Thermite Tank"/>
+	  <Containable name="Oxygen Bottle"/>
+	  <Containable name="Hydrogen Tank"/>
+    </ItemContainer>  
+  </Item>
+  
+  <Item
     name="Wetsuit"
     category="Equipment"
     tags="bigitem,diving,clothing"

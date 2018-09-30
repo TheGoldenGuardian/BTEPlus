@@ -73,10 +73,10 @@
   </Item>
   
   <Item
-	name="Task Force Access Card"
+	name="Task Force Commander Access Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,wllt,docs,sec,ast,ID Card">
+	Tags="smallitem,wllt,docs,med,mec,eng,sec,ast,com,ID Card">
 	
 	<Deconstruct time="80">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -84,6 +84,60 @@
     </Deconstruct>
 
 	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="0,28,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Task Force Engineer Access Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,sec,eng,mec,ID Card">
+	
+	<Deconstruct time="80">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="32,28,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Task Force Medic Access Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,sec,med,ID Card">
+	
+	<Deconstruct time="80">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="16,28,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Task Force Grunt Access Card"
+	aliases="ID Card"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,sec,ID Card">
+	
+	<Deconstruct time="80">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="48,28,16,16" depth="0.82"/>
 
 	<Body width="16" height="16" density="10.1"/>
 
