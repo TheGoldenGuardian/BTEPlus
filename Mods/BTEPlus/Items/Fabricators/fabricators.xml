@@ -349,15 +349,28 @@
 		<Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="true"/>
 		<RequiredSkill name="Construction" level="60"/>
       </fabricableitem>
-	  <fabricableitem name="Sulphurite Coolant Rod" requireditems="Sulphurite Shard" requiredtime="35">
-        <Item name="Blueprints - Advanced Reactor Rods" mincondition="0.0" usecondition="true"/>
-		<Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="true"/>
-		<RequiredSkill name="Construction" level="45"/>
+	  
+	  <fabricableitem name="Sulphurite Coolant Can" requireditems="Polycarbonate Bar" requiredtime="20">
+		<Item name="Sulphuric Acid" count="3" mincondition="100" usecondition="true"/>
+		<RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
-	  <fabricableitem name="Oxygenite Coolant Rod" requireditems="Oxygenite Shard" requiredtime="45">
-        <Item name="Blueprints - Advanced Reactor Rods" mincondition="0.0" usecondition="true"/>
-		<Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="true"/>
-		<RequiredSkill name="Construction" level="55"/>
+	  <fabricableitem name="Oxygenite Coolant Can" requireditems="Polycarbonate Bar" requiredtime="40">
+		<Item name="Liquid Oxygenite" count="3" mincondition="100" usecondition="true"/>
+		<RequiredSkill name="Construction" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Diesel Can" requireditems="Polycarbonate Bar,Biomass,Liquid Oxygenite,Sulphuric Acid" requiredtime="20">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Railgun Shеll" requireditems="Steel Block,Polycarbonate Bar,Copper Coil,Detonator" requiredtime="30">
+        <RequiredSkill name="Construction" level="40"/>
+		<RequiredSkill name="Electrical Engineering" level="40"/>
+		<RequiredSkill name="Weapons" level="15"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Shеll" requireditems="Railgun Shell,Copper Coil,Detonator,FPGA Circuit" requiredtime="30">
+		<RequiredSkill name="Electrical Engineering" level="40"/>
+		<RequiredSkill name="Weapons" level="10"/>
       </fabricableitem>
     </Fabricator>
 		

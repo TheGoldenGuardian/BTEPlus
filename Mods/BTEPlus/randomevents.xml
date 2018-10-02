@@ -350,4 +350,16 @@
   <ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="1"
     itemname="Flopper Artifact"/>
+	
+	<ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Charger Artifact"/>
+	
+	<ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Droplet Artifact"/>
+	
+	<ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Aura Artifact"/>
 </Randomevents>

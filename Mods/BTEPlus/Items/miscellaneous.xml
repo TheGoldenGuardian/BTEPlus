@@ -136,8 +136,8 @@
     <Body width="7.5" height="4" density="40"/>
 
     <RepairTool extinquishamount="3" limbfixamount="0.075" range="100" barrelpos="15,0.5" particles="weld">
-	  <ParticleEmitter particle="waterdrop" velocitymin="350" velocitymax="450" particlespersecond="60"/>
-      <ParticleEmitterHitCharacter particle="watersplash" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <ParticleEmitter particle="medspray" velocitymin="350" velocitymax="450" particlespersecond="60"/>
+      <ParticleEmitterHitCharacter particle="medsplash" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
       <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5"/>
@@ -155,12 +155,14 @@
               holdpos="25,-15" aimpos="45,-8" handle1="0,-4"/>
 			  
 	<ItemComponent>
-	  <StatusEffect type="OnUse" target="Character" Health="0.5">
+	  <StatusEffect type="OnUse" target="Character" Health="1">
 	    <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
 	    <sound file="Content/Items/Tools/weldingTool.ogg"/>
 		<Use/>
 	  </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5">
+		<RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	  </StatusEffect>
     </ItemComponent>
   </Item>
   
@@ -228,49 +230,6 @@
         <Remove/>
       </StatusEffect>
     </ItemComponent>
-  </Item>
-  
-  <Item
-    name="Nuclear Charge"
-	aliases="Nuke"
-    category="Equipment"
-    Tags="bigitem,explosive"
-	spritecolor="1.0,1.0,1.0,1.0"
-	description="A nuclear explosive charge designed to be used to obliterate an enemy submarine or as a self-destruct mechanism. It's impact sensitive so it is very highly advised to keep safely stored! (Note: Not actually nuclear.)"
-	impacttolerance="12"
-	cargocontainername="Explosives Shipping Box"
-    price="4000">
-	
-	<Deconstruct time="20">      
-      <Item name="Polycarbonate Block" maxcondition="0.0" outcondition="0.25"/>
-	  <Item name="Polycarbonate Bar" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-	  <Item name="Propellant Powder" mincondition="0.99"/>
-    </Deconstruct>
-
-    <Sprite texture="miscellaneous.png" depth="0.8" sourcerect="1,43,31,15"/>
-
-    <Body width="31" height="15"/>
-	
-	<ItemComponent characterusable="false">
-      <StatusEffect type="OnUse" target="This" Condition="-100"/>
-    </ItemComponent>
-
-    <Pickable slots="LeftHand+RightHand">
-	  <StatusEffect type="OnFire" target="This" Condition="-10"/>
-	  <StatusEffect type="OnImpact" target="This" Condition="-12.5" setvalue="true"/>
-      <StatusEffect type="OnBroken" target="This">
-	  <sound file="Mods/BTE/Items/Weapons/BlastExplosionBig.ogg"/>
-        <Explosion range="5000" structuredamage="2000" damage="1500" bleedingdamage="20.0" stun="50" force="100" severlimbsprobability="2.0" camerashake="36.0" decal="explosion" decalsize="3"/>
-		<Remove/>
-      </StatusEffect>
-    </Pickable>
   </Item>
   
   <Item
@@ -366,7 +325,7 @@
     </LightComponent>
     
     <ItemContainer capacity="1" hideitems="true">
-      <Containable name="Battery Cell, Fulgurium Battery Cell">
+      <Containable name="Battery Cell,Fulgurium Battery Cell">
         <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
       </Containable>
     </ItemContainer>

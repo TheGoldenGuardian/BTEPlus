@@ -468,6 +468,50 @@
   </Item>
   
   <Item
+    name="Tau-19 Wetsuit"
+	aliases="MTF Wetsuit"
+    category="Equipment"
+    tags="bigitem,diving,clothing"
+	description="">
+	
+	<Deconstruct time="30">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Block"/>
+    </Deconstruct>
+
+    <Sprite texture="tausuit.png" sourcerect="0,86,59,26" depth="0.55"/>
+
+    <Body width="56" height="23" density="12"/>
+
+    <Wearable slots="Torso+Legs,Any">
+	  <sprite texture="taugear.png" limb="Torso" sourcerect="0,151,44,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="tausuit.png" limb="RightHand" sourcerect="51,0,13,47" origin="0.5,0.5" depth="0.001" hidelimb="true"/>
+      <sprite texture="tausuit.png" limb="LeftHand" sourcerect="51,0,13,47" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="tausuit.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="tausuit.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="tausuit.png" limb="RightThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="tausuit.png" limb="LeftThigh" sourcerect="73,4,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="tausuit.png" limb="RightLeg" sourcerect="75,56,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="tausuit.png" limb="LeftLeg" sourcerect="75,56,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+
+      <sprite texture="taugear.png" limb="RightFoot" sound="footstep_mtf" sourcerect="24,67,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="taugear.png" limb="LeftFoot" sound="footstep_mtf" sourcerect="24,67,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.40" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.25" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.20" disabledeltatime="true"/>
+	  <StatusEffect tags="rds" type="OnWearing" target="Character" duration="1"/>
+    </Wearable>
+  </Item>
+  
+  <Item
     name="Coil Baton"
 	aliases="Coil Bat"
     category="Equipment"

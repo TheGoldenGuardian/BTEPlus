@@ -145,7 +145,7 @@
       <Skill name="Weapons" level="10,20"/>
       <Skill name="Construction" level="15,30"/>
       <Skill name="Electrical Engineering" level="20,40"/>
-      <Skill name="Science" level="50,70"/>
+      <Skill name="Science" level="60,70"/>
 	  <Skill name="Medical" level="30,50"/>
 	  <Skill name="Cooking" level="15,30"/>
     </Skills>
@@ -388,6 +388,7 @@
 	  <Item name="Tau-19 Heavy Headgear" equip="true"/>
 	  <Item name="Tau-19 Ballistic Vest" equip="true"/>
 	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Tau-19 Wetsuit"/>
 	  <Item name="Restraint Set"/>
 	  <Item name="Stun Baton">
         <Item name="Battery Cell"/>
@@ -425,6 +426,7 @@
 		<Item name="Screwdriver"/>
 	  </Item>
 	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Tau-19 Wetsuit"/>
 	  <Item name="Restraint Set"/>
 	  <Item name="Stun Baton">
         <Item name="Battery Cell"/>
@@ -452,15 +454,16 @@
 	  <Item name="Tau-19 Medical Headgear" equip="true"/>
 	  <Item name="Tau-19 Medical Vest" equip="true"/>
 	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Tau-19 Wetsuit"/>
+	  <Item name="Handcuffs"/>
+	  <Item name="Stun Baton">
+        <Item name="Battery Cell"/>
+	  </Item> 
 	  <Item name="Dart Gun">
 		<Item name="Medical Dart">
 			<Item name="Canister of Midazolam"/>
 		</Item>
 	  </Item>
-	  <Item name="Handcuffs"/>
-	  <Item name="Stun Baton">
-        <Item name="Battery Cell"/>
-	  </Item> 
 	  <Item name="Wallet">
 		<Item name="Basic Ration Stamp"/>
 		<Item name="Basic Ration Stamp"/>
@@ -484,6 +487,7 @@
 	  <Item name="Tau-19 Tactical Headgear" equip="true"/>
 	  <Item name="Tau-19 Tactical Vest" equip="true"/>
 	  <Item name="Tau-19 Ballistic Leggings" equip="true"/>
+	  <Item name="Tau-19 Wetsuit"/>
 	  <Item name="Handcuffs"/>
 	  <Item name="Stun Baton">
         <Item name="Battery Cell"/>

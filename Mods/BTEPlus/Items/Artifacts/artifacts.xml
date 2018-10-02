@@ -23,6 +23,54 @@
       <StatusEffect type="OnBroken" target="Hull" oxygen="-75000"/>
     </Holdable>
   </Item>
+  
+  <Item
+    name="Droplet Artifact"
+	aliases="Droplet"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="196,164,60,60"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+
+    <Body width="50" height="50" density="10" friction="0"/>
+	
+	<Pump canbeselected="false" maxflow="100" PowerConsumption="0.0" MinVoltage="0.0">
+		<GuiFrame rect="0,0,330,145" alignment="Center" style="ItemUI"/>
+		<StatusEffect type="Always" target="This" FlowPercentage="100" setvalue="true" IsActive="true"/>
+	</Pump>
+
+    <Throwable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" throwforce="2"/>
+  </Item>
+  
+  <Item
+    name="Aura Artifact"
+	aliases="Aura"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="9,0,1,1"/>
+
+    <Deconstruct time="120">
+    </Deconstruct>
+
+    <Body width="60" height="60" density="10" friction="1"/>
+	
+	<LightComponent LightColor="1.0,1.0,0.4,1.0" Flicker="0" range="350" powerconsumption="0" minvoltage="0" IsOn="true">
+      <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0"/>
+    </LightComponent>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="Always" target="This" Condition="100" setvalue="true">
+        <Explosion range="250" damage="-0.05" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="Character" health="0.05"/>
+    </Holdable>
+  </Item>
 
   <Item
     name="Thermal Artifact"
@@ -39,7 +87,7 @@
       <Item name="Thermite Shard"/>
     </Deconstruct>
     
-    <Body radius="28" density="20" friction="0.95"/>
+    <Body radius="28" density="12" friction="0.95"/>
 
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 	  <StatusEffect type="Always" target="This" Condition="-20">
@@ -67,7 +115,7 @@
       <Item name="Fulgurium Bar"/>
     </Deconstruct>
 
-    <Body radius="25" density="50" friction="0.95"/>
+    <Body radius="25" density="14" friction="0.95"/>
 
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 	  <StatusEffect type="Always" target="This" Condition="-60"/>
@@ -93,7 +141,7 @@
       <Item name="Fulgurium Bar"/>
     </Deconstruct>
     
-    <Body width="55" height="55" density="30" friction="0.95"/>
+    <Body width="55" height="55" density="16" friction="0.95"/>
 	
 	<AiTarget sightrange="10000.0" soundrange="10000"/>
 
@@ -117,7 +165,7 @@
       <Item name="Copper Bar"/>
     </Deconstruct>
     
-    <Body width="55" height="55" density="28" friction="0.95"/>
+    <Body width="55" height="55" density="16" friction="0.95"/>
 
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
 		<StatusEffect type="OnActive" target="Character" bleeding="0.25"/>
@@ -199,6 +247,34 @@
 	  <StatusEffect type="InWater" target="This" Condition="90"/>
 	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
         <Explosion range="250" structuredamage="2.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="4.5"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Charger Artifact"
+	aliases="Charger"
+    category="Alien"
+    Tags="alien,rtfct"
+	impacttolerance="1">
+
+    <Sprite texture="Mods/BTE/Items/Artifacts/artifact.png" depth="0.7" sourcerect="1,58,58,54"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Bronze Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+        
+    <Body radius="26" density="10.01" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" Condition="-60"/>
+	  <StatusEffect type="OnImpact" target="This" Condition="-25"/>
+	  <StatusEffect type="InWater" target="This" Condition="40"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
+        <Explosion range="1000" empstrength="0.01" force="0.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
       </StatusEffect>
     </Holdable>
   </Item>

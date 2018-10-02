@@ -3,7 +3,7 @@
     name="Radio"
     category="Equipment"
     tags="smallitem"
-	description="A handheld radio. Allows remote communication between the crew."
+	description="A handheld radio. Allows long-range remote communication between the crew."
 	cargocontainername="Electronics Shipping Box"
 	price="50">
 	
@@ -16,7 +16,7 @@
 
     <Body width="9" height="30" density="10.3"/>
 
-    <WifiComponent range="60000" LinkToChat="true">
+    <WifiComponent canbeselected="true" range="60000" LinkToChat="true">
       <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
     </WifiComponent>
 
@@ -25,7 +25,7 @@
         <Containable name="Fulgurium Battery Cell"/>
       </ItemContainer>
 	
-	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16">
+	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16" holdpos="12,6" aimable="true">
 	  <StatusEffect type="OnActive" target="Contained" Condition="-0.05"/>
     </Holdable>
   </Item>
@@ -34,7 +34,7 @@
     name="Headset"
     category="Equipment"
     tags="smallitem"
-	description="Allows short-range communication between the crew."
+	description="Allows relatively short-range communication between the crew."
 	cargocontainername="Electronics Shipping Box"
 	price="100">
 	
@@ -600,4 +600,169 @@
       <Containable name="smallitem"/>
     </ItemContainer>
   </Item>
+  
+  <Item
+    name="Crewmember Jumpsuit A"
+	aliases="Jumpsuit,Jumpsuit A"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A plain jumpsuit.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture="jumpsuit.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="jumpsuit.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48" depthlimb="Head"/>
+	  
+	  <sprite texture="jumpsuit.png" limb="RightHand" sourcerect="72,0,17,42" origin="0.45,0.6"/>
+      <sprite texture="jumpsuit.png" limb="LeftHand" sourcerect="72,0,17,42" origin="0.45,0.6"/>
+
+      <sprite texture="jumpsuit.png" limb="RightArm" sourcerect="56,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftArm" sourcerect="56,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="jumpsuit.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="jumpsuit.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.90"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Jumpsuit B"
+	aliases="Jumpsuit B"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A plain jumpsuit.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture="jumpsuit.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="jumpsuit.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.48" depthlimb="Head"/>
+
+      <sprite texture="jumpsuit.png" limb="RightArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="false"/>
+      <sprite texture="jumpsuit.png" limb="LeftArm" sourcerect="34,0,17,42" origin="0.5,0.5" hidelimb="false"/>
+
+      <sprite texture="jumpsuit.png" limb="Waist" sourcerect="81,77,30,26" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="jumpsuit.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.92"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.91" bleedingmultiplier="0.91" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.91" bleedingmultiplier="0.91" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Crewmember Jumpsuit C"
+	aliases="Jumpsuit C"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A plain jumpsuit.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Block"/>
+	  <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture="jumpsuit.png" sourcerect="0,52,50,25" depth="0.6"/>
+
+    <Body width="50" height="17" density="14"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="jumpsuit.png" limb="Waist" sourcerect="97,1,31,27" origin="0.5,0.45" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="RightThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftThigh" sourcerect="53,77,27,49" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="jumpsuit.png" limb="RightLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="jumpsuit.png" limb="LeftLeg" sourcerect="33,77,20,51" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.96"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.92" bleedingmultiplier="0.92" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.92" bleedingmultiplier="0.92" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <!-- <Item
+    name="Crewmember T-Shirt"
+	aliases="T-Shirt,Tee"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A very basic garment covering the torso and shoulders.">
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture="tshirt.png" sourcerect="0,88,51,12" depth="0.6"/>
+
+    <Body width="50" height="12" density="10.5"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="tshirt.png" limb="Torso" sourcerect="0,0,31,60" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="tshirt.png" limb="RightArm" sourcerect="32,1,19,41" origin="0.5,0.5"/>
+      <sprite texture="tshirt.png" limb="LeftArm" sourcerect="32,1,19,41" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.01" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="1">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item> -->
 </Items>

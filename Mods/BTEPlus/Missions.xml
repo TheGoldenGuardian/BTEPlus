@@ -25,6 +25,32 @@
     itemname="Flopper Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
+  
+  <SalvageMission 
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3500"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Droplet Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission 
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Aura Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
 
   <SalvageMission
     name="Salvaging an artifact"
@@ -55,6 +81,19 @@
   <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3500"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Charger Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
     commonness="5"
     reward="3500"
     radarlabel="Infrasonic signal"
@@ -62,6 +101,32 @@
     successmessage="The artifact has been succesfully retrieved."
     spawntype="cave"
     itemname="Thermal Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="3500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Droplet Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="8"
+    reward="3000"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Aura Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
   

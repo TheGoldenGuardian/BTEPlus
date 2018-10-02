@@ -294,7 +294,25 @@
 
 	<Body width="17" height="10" density="10.8"/>
 
-	<Pickable slots="Card,Any"/>
+	<Wearable slots="Card,Any">
+		<sprite texture="shieldHead.png" limb="Head" sourcerect="0,0,1,1" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="This,Character" condition="100" setvalue="true">
+		<Conditional SpeciesName="Combat Robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="This,Character" condition="100" setvalue="true">
+		<Conditional SpeciesName="Renegade Robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="This,Character" condition="100" setvalue="true">
+		<Conditional SpeciesName="robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="This,Character" condition="100" setvalue="true">
+		<Conditional SpeciesName="synth"/>
+	  </StatusEffect>
+	  <StatusEffect type="Always" target="This" condition="-50"/>
+	  <StatusEffect type="OnBroken" target="This">
+		<Remove/>
+	  </StatusEffect>
+	</Wearable>
   </Item>
   
   <Item
@@ -314,9 +332,17 @@
 
 	<Body width="17" height="10" density="10.8"/>
 
-	<Wearable slots="Head,Torso,Legs">
+	<Wearable slots="Head,Torso,Legs,Any">
 		<sprite texture="shieldHead.png" limb="Head" sourcerect="0,0,1,1" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.5" disabledeltatime="true">
+		<Conditional SpeciesName="Combat Robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.5" disabledeltatime="true">
+		<Conditional SpeciesName="robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.5" disabledeltatime="true">
+		<Conditional SpeciesName="Renegade Robot"/>
+	  </StatusEffect>
 	</Wearable>
   </Item>
   
@@ -337,9 +363,17 @@
 
 	<Body width="17" height="10" density="10.8"/>
 
-	<Wearable slots="Head,Torso,Legs">
+	<Wearable slots="Head,Torso,Legs,Any">
 		<sprite texture="shieldHead.png" limb="Head" sourcerect="0,0,1,1" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
-	  <StatusEffect type="OnWearing" target="Character" Stun="0" setvalue="true"/>
+	  <StatusEffect type="OnWearing" target="Character" Stun="0" setvalue="true">
+		<Conditional SpeciesName="Combat Robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" Stun="0" setvalue="true">
+		<Conditional SpeciesName="robot"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" Stun="0" setvalue="true">
+		<Conditional SpeciesName="Renegade Robot"/>
+	  </StatusEffect>
 	</Wearable>
   </Item>
   
@@ -360,7 +394,7 @@
 
 	<Body width="17" height="10" density="10.8"/>
 
-	<Wearable slots="Head,Torso,Legs">
+	<Wearable slots="Head,Torso,Legs,Any">
 	  <sprite texture="shieldHead.png" limb="Head" sourcerect="1,1,37,38" depth="0.0399" origin="0.5,0.5" inheritlimbdepth="false"/>
 	  
       <sprite texture="shieldTorso.png" limb="Torso" sourcerect="0,0,29,58" depth="0.0499" origin="0.5,0.6" inheritlimbdepth="false"/>

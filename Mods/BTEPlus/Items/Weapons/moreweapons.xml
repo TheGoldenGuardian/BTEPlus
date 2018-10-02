@@ -803,6 +803,51 @@
   </Item>
   
   <Item
+    name="Rifle"
+	aliases="Old Rifle"
+    category="Misc"
+	tags="bigitem,weapon"
+	description=""
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <!-- <Deconstruct time="10">      
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+    </Deconstruct> -->
+  
+    <Sprite texture="moreweapons.png" sourcerect="0,206,126,23" depth="0.55"/>
+
+    <Body width="126" height="23" density="30"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-28,-3" handle2="15,4"/>
+    
+    <RangedWeapon barrelpos="129,4" spread="0" unskilledspread="18" reload="4">
+      <Sound file="Mods/BTEPlus/Items/Weapons/riflefire.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="6" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" condition="-1000"/>
+	  <StatusEffect type="InWater" target="This" condition="-0.15"/>
+	  <StatusEffect type="OnBroken" target="This">
+		<Remove/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
     name="Pulse Pistol Battery"
 	aliases="Charge Mag,Pulse Pistol Mag,Charge Gun Battery"
     category="Equipment"
@@ -925,7 +970,7 @@
 	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="63,135,6,9" depth="0.149" maxcondition="10" fadein="true"/>
 	<BrokenSprite texture="Mods/BTEPlus/Items/Weapons/moreweapons.png" sourcerect="70,135,6,9" depth="0.149" maxcondition="0" fadein="true"/>
 	
-    <Body width="9" height="19" density="13" friction="1"/>
+    <Body width="6" height="9" density="13" friction="1"/>
 	
 	<LightComponent lightcolor="0.16,0.36,0.93,1" range="50" powerconsumption="0" IsOn="true"/>
 
@@ -1065,7 +1110,7 @@
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
 	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-99999999" Condition="-99999999"/>
-      <sound file="Mods/BTEPlus/Items/Weapons/bfpc.ogg" type="OnUse" range="5000"/>
+      <sound file="Mods/BTEPlus/Items/Weapons/bfpcfire.ogg" type="OnUse" range="5000"/>
 	  <RequiredItems name="Pulsar Capsule" type="Contained" msg="Capsule Discharged"/>
       <RequiredSkill name="Weapons" level="80"/>
 	  <StatusEffect type="OnUse" target="This" delay="0.01">

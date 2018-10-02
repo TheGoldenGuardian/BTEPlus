@@ -25,6 +25,18 @@
     <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="98,256,48,128" depth ="0.85"/>    
   </verticalresizablewindow3>
   
+  <thinWallX description="A horizontal wall with collision detection"
+    width="64" height="16" resizehorizontal="true" body="true" castshadow="true" health="250" maxhealth="250">
+    <sprite texture="Content/Map/testroom.png" sourcerect="0,1003,576,16" depth="0.05"/>
+    <backgroundsprite texture="Content/Map/testroom.png" sourcerect="0,967,576,16" depth="0.85"/>
+  </thinWallX>
+  
+  <thinWallY description="A vertical wall with collision detection"    
+    width="16" height="64" resizevertical="true" body="true" castshadow="true" health="250" maxhealth="250">
+    <sprite texture="Content/Map/testroom.png" sourcerect="955,214,16,576" depth="0.05" fliphorizontal="true"/>
+    <backgroundsprite texture="Content/Map/testroom.png" sourcerect="990,214,16,576" depth="0.85" fliphorizontal="true"/>    
+  </thinWallY>
+  
   <bed width="173" height="64">
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,191,173,64" depth="0.8"/>
   </bed>

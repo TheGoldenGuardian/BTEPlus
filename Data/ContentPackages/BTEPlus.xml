@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 7.4 Plus 1.4" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 7.5 Plus 1.5" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml"/> -->
   <!-- <Item file="Content/Items/itemlabel.xml"/> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml"/> -->
@@ -164,6 +164,8 @@
   <Item file="Mods/BTEPlus/Items/Diving/reinforceddivesuit.xml"/>
   <!-- <Item file="Mods/BTEPlus/Items/Turrets/gunturrets.xml"/> -->
   <Item file="Mods/BTEPlus/Items/Weapons/moreweapons.xml"/>
+  <Item file="Mods/BTEPlus/Items/Weapons/morerailgun.xml"/>
+  <Item file="Mods/BTEPlus/Items/Weapons/moreexplosives.xml"/>
   <Item file="Mods/BTEPlus/Items/Machines/moremachines.xml"/>
   <Item file="Mods/BTEPlus/Items/Medical/morefood.xml"/>
   <Item file="Mods/BTEPlus/Items/Misc/miscmisc.xml"/>
@@ -171,6 +173,7 @@
   <Item file="Mods/BTEPlus/Items/Jobgear/taugear.xml"/>
   <Item file="Mods/BTEPlus/Items/Fabricators/morematerials.xml"/>
   <Character file="Mods/BTEPlus/Characters/Human/renegade.xml"/>
+  <Character file="Mods/BTEPlus/Characters/Human/ghost.xml"/>
   <Character file="Mods/BTEPlus/Characters/CombatRobot/combatrobot.xml"/>
   <Character file="Mods/BTEPlus/Characters/RenegadeRobot/renegaderobot.xml"/>
   

@@ -89,7 +89,7 @@
 	  <Containable name="Thermite Tank"/>
 	  <Containable name="Oxygen Bottle"/>
 	  <Containable name="Hydrogen Tank"/>
-    </ItemContainer>  
+    </ItemContainer>
   </Item>
   
   <Item
@@ -108,8 +108,8 @@
     <Wearable slots="Any,Torso+Legs">
       <sprite texture="reinforceddivesuit.png" limb="Torso" sourcerect="0,0,32,51" origin="0.5,0.5" depth="0.0041" inheritlimbdepth="false"/>
 	  
-	  <sprite texture="reinforceddivesuit.png" limb="RightHand" sourcerect="105,54,13,47" origin="0.4,0.4" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
-      <sprite texture="reinforceddivesuit.png" limb="LeftHand" sourcerect="105,54,13,47" origin="0.4,0.4" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
+	  <sprite texture="reinforceddivesuit.png" limb="RightHand" sourcerect="105,54,13,47" origin="0.5,0.5" depth="0.0" inheritlimbdepth="false" hidelimb="true"/>
+      <sprite texture="reinforceddivesuit.png" limb="LeftHand" sourcerect="105,54,13,47" origin="0.5,0.5" depth="0.016" inheritlimbdepth="false" hidelimb="true"/>
 
       <sprite texture="reinforceddivesuit.png" limb="RightArm" sourcerect="86,56,17,39" origin="0.5,0.5" depth="0.001" inheritlimbdepth="false" hidelimb="true"/>
       <sprite texture="reinforceddivesuit.png" limb="LeftArm" sourcerect="86,56,17,39" origin="0.5,0.5" depth="0.015" inheritlimbdepth="false" hidelimb="true"/>
@@ -132,7 +132,7 @@
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
 	  
-	  <StatusEffect tags="rds" type="OnWearing" target="Character" duration="6"/>
+	  <StatusEffect tags="rds" type="OnWearing" target="Character" duration="1"/>
 
       <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.5"/>
       <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.5" damagesound="DamageMetalBlunt" deflectprojectiles="true"/>

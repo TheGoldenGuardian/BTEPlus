@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Healing Charge"
+	aliases="Medical Charge"
+    category="Equipment"
+    Tags="smallitem,explosive"
+	description="An explosive that releases a healing aura within a small area for half a minute. Any kind of apparel will block the healing effect and as such it is advised to take as much off as you can."
+	cargocontainername="Medical Shipping Box"
+	price="1000">
+	
+	<Deconstruct time="5"> 
+	  <Item name="Polycarbonate Sliver" mincondition="0.99"/>
+      <Item name="Corrigodone" mincondition="0.99"/>
+	  <Item name="Corrigodone" mincondition="0.99"/>
+	  <Item name="Spare Electronics"/>
+    </Deconstruct>
+
+    <Sprite texture="moreweapons.png" depth="0.8" sourcerect="112,16,16,8"/>
+
+    <Body width="16" height="8"/>
+	
+	<ItemComponent characterusable="false">
+	  <StatusEffect type="OnUse" target="This" IsOn="true"/>
+    </ItemComponent>
+	
+	<LightComponent LightColor="0.0,0.85,0.0,1.0" Flicker="0.25" range="200" IsOn="false">
+      <StatusEffect type="OnActive" target="This" Condition="-3.3333333333333333333333333">
+		<ParticleEmitter particle="bubbles" particlespersecond="20"/>
+		<Explosion range="300" damage="-0.05" stun="-0.01" force="0" flames="false" smoke="false" shockwave="false" camerashake="0"/>
+      </StatusEffect>
+      <sound file="Content/Items/Tools/flare.ogg" type="OnActive" range="800" loop="true"/>
+	  <StatusEffect type="OnBroken" target="This" IsOn="false">
+	    <Remove/>
+      </StatusEffect>
+    </LightComponent>
+
+    <Pickable slots="Any">
+	  <StatusEffect type="OnFire" target="This" Condition="-25"/>
+    </Pickable>
+  </Item>
+  
+  <Item
+    name="Nuclear Charge"
+	aliases="Nuke"
+    category="Equipment"
+    Tags="bigitem,explosive"
+	spritecolor="1.0,1.0,1.0,1.0"
+	description="A nuclear explosive charge designed to be used to obliterate an enemy submarine or as a self-destruct mechanism. It's impact sensitive so it is very highly advised to keep safely stored! (Note: Not actually nuclear.)"
+	impacttolerance="12"
+	cargocontainername="Explosives Shipping Box"
+    price="4000">
+	
+	<Deconstruct time="20">      
+      <Item name="Polycarbonate Block" maxcondition="0.0" outcondition="0.25"/>
+	  <Item name="Polycarbonate Bar" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="moreweapons.png" depth="0.8" sourcerect="97,0,31,15"/>
+
+    <Body width="31" height="15"/>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100"/>
+    </ItemComponent>
+
+    <Holdable slots="LeftHand+RightHand" controlpos="true">
+	  <StatusEffect type="OnFire" target="This" Condition="-10"/>
+	  <StatusEffect type="OnImpact" target="This" Condition="-12.5"/>
+      <StatusEffect type="OnBroken" target="This">
+	  <sound file="Mods/BTE/Items/Weapons/BlastExplosionBig.ogg"/>
+        <Explosion range="5000" structuredamage="2000" damage="1500" bleedingdamage="20.0" stun="50" force="100" severlimbsprobability="2.0" camerashake="36.0" decal="explosion" decalsize="3"/>
+		<Remove/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+</Items>

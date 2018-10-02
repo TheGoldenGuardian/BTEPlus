@@ -17,7 +17,11 @@
 
     <Body width="12" height="12" density="15"/>
 
-    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" canBeCombined="true">
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+	</Holdable>
   </Item>
   
   <Item

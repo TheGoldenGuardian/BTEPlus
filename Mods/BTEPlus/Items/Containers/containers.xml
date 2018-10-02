@@ -312,8 +312,9 @@
 	  <Containable name="Diving Shotgun"/>
 	  <Containable name="Harpoon Gun"/>
 	  <Containable name="Spear Gun"/>
+	  <Containable name="Flashlight Spear Gun"/>
 	  <Containable name="Dart Gun"/>
-	  <Containable name="Captain's Revolver"/>
+	  <Containable name="Flashlight Revolver"/>
 	  <Containable name="Flashlight Shotgun"/>
 	  <Containable name="Single Shotgun"/>
 	  <Containable name="Grenade Launcher"/>
@@ -322,7 +323,32 @@
 	  <Containable name="Clown Machinegun"/>
 	  <Containable name="Gravity Gun"/>
 	  <Containable name="Makeshift Suppressed Pistol"/>
+	  <Containable name="Flashlight Suppressed Pistol"/>
 	  <Containable name="Utility Axe"/>
+	  <Containable name="Pulse Pistol"/>
+	  <Containable name="Pulse SMG"/>
+	  <Containable name="Pulse Cannon"/>
+	  <Containable name="Pulse Rifle"/>
+	  <Containable name="Automatic Shotgun"/>
+	  <Containable name="Flashlight Auto-Shotgun"/>
+	  <Containable name="SMRSL"/>
+	  <Containable name="Plasma Torcher"/>
+	  <Containable name="Makeshift Shotgun"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Tool Rack"
+	Tags="cntnr">
+    
+    <Sprite texture="morecontainers.png" sourcerect="0,45,54,95" depth="0.78"/>
+
+    <ItemContainer capacity="3" canbeselected="true" hideitems="false" itempos="27,-16" iteminterval="0,-31">
+      
+	  <Containable name="Welding Tool"/>
+	  <Containable name="Plasma Cutter"/>
+	  <Containable name="Plasma Torcher"/>
+	  <Containable name="tool"/>
     </ItemContainer>
   </Item>
   
@@ -684,7 +710,7 @@
     <Holdable slots="Any,RightHand,LeftHand" handle1="0,0"/>
 	
 	<ItemContainer capacity="10" canbeselected="true" hideitems="true">
-      <Containable name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round"/>
+      <Containable name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round"/>
     </ItemContainer>
   </Item>
 </Items>
