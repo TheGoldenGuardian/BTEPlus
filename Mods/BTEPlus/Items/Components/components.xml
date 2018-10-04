@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Scope"
+    category="Misc"
+    Tags="smallitem,component"
+	description="A scope. Commonly found on the Dart Gun."
+    canuseonself="true"
+	cargocontainername="Workshop Shipping Box">
+
+    <Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Steel Sliver" outcondition="0.5"/>
+    </Deconstruct>
+
+    <Sprite texture="components.png" sourcerect="0,0,38,10" depth="0.55"/>
+    
+    <Body width="34" height="8" density="11"/>
+
+    <Holdable slots="RightHand,LeftHand,Any" aimpos="34,23">
+    </Holdable>
+  </Item>
+</Items>

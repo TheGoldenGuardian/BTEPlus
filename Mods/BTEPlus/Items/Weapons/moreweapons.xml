@@ -823,7 +823,7 @@
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
 			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-28,-3" handle2="15,4"/>
     
-    <RangedWeapon barrelpos="129,4" spread="0" unskilledspread="18" reload="4">
+    <RangedWeapon barrelpos="129,4" spread="1" unskilledspread="18" reload="4">
       <Sound file="Mods/BTEPlus/Items/Weapons/riflefire.ogg" type="OnUse"/>
       <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -835,12 +835,56 @@
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="This" condition="-1000"/>
 	  <StatusEffect type="InWater" target="This" condition="-0.15"/>
+	  <StatusEffect type="OnFire" target="This" condition="-1"/>
 	  <StatusEffect type="OnBroken" target="This">
 		<Remove/>
 	  </StatusEffect>
     </RangedWeapon>
 
     <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Revolver Round"/>
+	  <Containable name="Revolver HL Round"/>
+	  <Containable name="Revolver Flare Round"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Reinforced Rifle"
+	aliases="Reinforced Old Rifle,Strong Rifle"
+    category="Misc"
+	tags="bigitem,weapon"
+	description=""
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Scope"/>
+	  <Item name="Rifle"/>
+    </Deconstruct>
+  
+    <Sprite texture="moreweapons.png" sourcerect="130,201,126,33" depth="0.55"/>
+
+    <Body width="126" height="23" density="35"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-28,-3" handle2="15,4"/>
+    
+    <RangedWeapon barrelpos="129,4" spread="0" unskilledspread="15" reload="3">
+      <Sound file="Mods/BTEPlus/Items/Weapons/riflefire.ogg" type="OnUse"/>
+      <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="6" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+		<Remove/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="2" hideitems="true">
       <Containable name="Revolver Round"/>
 	  <Containable name="Revolver HL Round"/>
 	  <Containable name="Revolver Flare Round"/>
@@ -922,7 +966,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-25" Condition="-20"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-25" Condition="-20"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Pulse Pistol Battery" type="Contained" msg="Battery Depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
@@ -1021,7 +1065,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-25" Condition="-5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-25" Condition="-5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Pulse SMG Battery" type="Contained" msg="Battery Depleted"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1109,7 +1153,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-99999999" Condition="-99999999"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-99999999" Condition="-99999999"/>
       <sound file="Mods/BTEPlus/Items/Weapons/bfpcfire.ogg" type="OnUse" range="5000"/>
 	  <RequiredItems name="Pulsar Capsule" type="Contained" msg="Capsule Discharged"/>
       <RequiredSkill name="Weapons" level="80"/>
@@ -1126,7 +1170,7 @@
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>
-	  <StatusEffect type="Always" target="Character" SpeedMultiplier="-0.15"/>
+	  <StatusEffect type="OnActive" target="Character" SpeedMultiplier="-0.15" duration="1" stackable="false"/>
 	</Holdable>
   </Item>
   
@@ -1146,7 +1190,7 @@
 	  <Item name="Steel Sliver"/>
     </Deconstruct>
 
-    <Sprite texture="moreweapons.png" sourcerect="0,31,86,11" depth="0.55"/>
+    <Sprite texture="moreweapons.png" sourcerect="0,11,86,11" depth="0.55"/>
     
     <Body width="86" height="11" density="45"/>
 	
@@ -1194,7 +1238,7 @@
 	  <Item name="Steel Bar"/>
     </Deconstruct>
 
-    <Sprite texture="moreweapons.png" sourcerect="0,21,100,10" depth="0.55"/>
+    <Sprite texture="moreweapons.png" sourcerect="0,0,100,10" depth="0.55"/>
     
     <Body width="100" height="10" density="23"/>
 
@@ -1216,6 +1260,218 @@
 		<StatusEffect type="OnUse" target="Character" Health="14" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
 		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Broken Wine Bottle"
+    category="Broken Red Wine Bottle"
+    Tags="smallitem,weapon"
+	description="A makeshift stabby weapon made from a bottle of Red Wine."
+    canuseonself="true">
+
+    <Sprite texture="moreweapons.png" sourcerect="140,0,40,10" depth="0.55"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="140,10,40,10" depth="0.55" maxcondition="90"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="140,20,40,10" depth="0.55" maxcondition="60"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="140,30,40,10" depth="0.55" maxcondition="30"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="140,40,40,10" depth="0.55" maxcondition="10"/>
+    
+    <Body width="40" height="10" density="15"/>
+	
+	<ItemComponent>
+	<StatusEffect type="OnUse" target="Character,This" stun="-1.4">
+		<Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		<Conditional condition="gt 98"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character,This" Health="-2.2">
+	    <sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		<Conditional condition="lt 99"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character,This" bleeding="1" duration="5">
+		<Conditional condition="lt 99"/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="50,0" handle1="-9,4" handle2="-9,4" holdangle="-80" reload="0.8">
+      <Attack damage="1" bleedingdamage="0.1" stun="0.1" targetforce="10" damagetype="Slash"/>
+		<StatusEffect type="Always" target="This" condition="99" setvalue="true">
+		  <Conditional condition="gt 99.9"/>
+		  <Sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-2" stun="1.9">
+			<Conditional condition="gt 98"/>
+			<Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-4" bleeding="0.9">
+			<Conditional condition="gt 15"/>
+			<sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-8" bleeding="1.9">
+			<Conditional condition="lt 15"/>
+			<sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnBroken" target="This">
+		  <Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		  <Remove/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="4" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="4" stun="-0.1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This" condition="-10"/>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Broken Vodka Bottle"
+    Tags="smallitem,weapon"
+	description="A makeshift stabby weapon made from a bottle of Vodka."
+    canuseonself="true">
+
+    <Sprite texture="moreweapons.png" sourcerect="181,0,40,10" depth="0.55"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="181,10,40,10" depth="0.55" maxcondition="90"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="181,20,40,10" depth="0.55" maxcondition="60"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="181,30,40,10" depth="0.55" maxcondition="30"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="181,40,40,10" depth="0.55" maxcondition="10"/>
+    
+    <Body width="40" height="10" density="15"/>
+	
+	<ItemComponent>
+	<StatusEffect type="OnUse" target="Character,This" stun="-1.4">
+		<Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		<Conditional condition="gt 98"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character,This" Health="-2.2">
+	    <sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		<Conditional condition="lt 99"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character,This" bleeding="1" duration="5">
+		<Conditional condition="lt 99"/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="50,0" handle1="-9,4" handle2="-9,4" holdangle="-80" reload="0.8">
+      <Attack damage="1" bleedingdamage="0.1" stun="0.1" targetforce="10" damagetype="Slash"/>
+		<StatusEffect type="Always" target="This" condition="99" setvalue="true">
+		  <Conditional condition="gt 99.9"/>
+		  <Sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-2" stun="1.9">
+			<Conditional condition="gt 98"/>
+			<Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-4" bleeding="0.9">
+			<Conditional condition="gt 15"/>
+			<sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-8" bleeding="1.9">
+			<Conditional condition="lt 15"/>
+			<sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnBroken" target="This">
+		  <Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		  <Remove/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="4" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="4" stun="-0.1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This" condition="-10"/>
+    </MeleeWeapon>
+  </Item>
+  
+  <Item
+    name="Broken Beer Bottle"
+    Tags="smallitem,weapon"
+	description="A makeshift stabby weapon made from a bottle of Beer."
+    canuseonself="true">
+
+    <Sprite texture="moreweapons.png" sourcerect="222,0,34,10" depth="0.55"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="222,10,34,10" depth="0.55" maxcondition="90"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="222,20,34,10" depth="0.55" maxcondition="60"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="222,30,34,10" depth="0.55" maxcondition="30"/>
+	<BrokenSprite texture="moreweapons.png" sourcerect="222,40,34,10" depth="0.55" maxcondition="10"/>
+    
+    <Body width="34" height="10" density="15"/>
+	<BrokenBody width="1" radius="15" density="-155" maxcondition="10"/>
+	
+	<ItemComponent>
+	<StatusEffect type="OnUse" target="Character,This" stun="-1.4">
+		<Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		<Conditional condition="gt 98"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character,This" Health="-2.2">
+	    <sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		<Conditional condition="lt 99"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character,This" bleeding="1" duration="5">
+		<Conditional condition="lt 99"/>
+	  </StatusEffect>
+    </ItemComponent>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="50,0" handle1="-9,4" handle2="-9,4" holdangle="-80" reload="0.8">
+      <Attack damage="1" bleedingdamage="0.1" stun="0.1" targetforce="10" damagetype="Slash"/>
+		<StatusEffect type="Always" target="This" condition="99" setvalue="true">
+		  <Conditional condition="gt 99.9"/>
+		  <Sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-2" stun="1.9">
+			<Conditional condition="gt 98"/>
+			<Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-4" bleeding="0.9">
+			<Conditional condition="gt 15"/>
+			<sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This,Character" health="-8" bleeding="1.9">
+			<Conditional condition="lt 15"/>
+			<sound file="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnBroken" target="This">
+		  <Sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		  <Remove/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="4" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="4" stun="-0.1" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="This" condition="-15"/>
     </MeleeWeapon>
   </Item>
 </Items>

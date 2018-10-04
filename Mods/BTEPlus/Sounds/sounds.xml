@@ -64,6 +64,11 @@
   <damagesound file="Mods/BTEPlus/Sounds/Flesh/flesh_impact_hard4.ogg" damagerange="1.0,70.0" damagesoundtype="DamageFlesh"/>
   <damagesound file="Mods/BTEPlus/Sounds/Flesh/flesh_impact_hard5.ogg" damagerange="1.0,40.0" damagesoundtype="DamageFlesh"/>
   <damagesound file="Mods/BTEPlus/Sounds/Flesh/flesh_impact_hard6.ogg" damagerange="1.0,60.0" damagesoundtype="DamageFlesh"/>
+  
+  <damagesound file="Mods/BTEPlus/Sounds/Step/Rattle/hurt1.ogg" damagerange="1.0,100.0" damagesoundtype="DamageRattle"/>
+  <damagesound file="Mods/BTEPlus/Sounds/Step/Rattle/hurt2.ogg" damagerange="1.0,100.0" damagesoundtype="DamageRattle"/>
+  <damagesound file="Mods/BTEPlus/Sounds/Step/Rattle/hurt3.ogg" damagerange="1.0,100.0" damagesoundtype="DamageRattle"/>
+  <damagesound file="Mods/BTEPlus/Sounds/Step/Rattle/hurt4.ogg" damagerange="1.0,100.0" damagesoundtype="DamageRattle"/>
 
   <damagesound file="Content/Sounds/Damage/creak1.ogg" damagesoundtype="Pressure"/>
   <damagesound file="Content/Sounds/Damage/creak2.ogg" damagesoundtype="Pressure"/>
@@ -127,6 +132,11 @@
   <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau2.ogg"/>
   <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau3.ogg"/>
   <footstep_tau file="Mods/BTEPlus/Sounds/Step/Tau/tau4.ogg"/>
+  
+  <footstep_rattle file="Mods/BTEPlus/Sounds/Step/Rattle/step1.ogg"/>
+  <footstep_rattle file="Mods/BTEPlus/Sounds/Step/Rattle/step2.ogg"/>
+  <footstep_rattle file="Mods/BTEPlus/Sounds/Step/Rattle/step3.ogg"/>
+  <footstep_rattle file="Mods/BTEPlus/Sounds/Step/Rattle/step4.ogg"/>
   
   <footstep_mtf file="Mods/BTEPlus/Sounds/Step/MTF/Step1.ogg"/>
   <footstep_mtf file="Mods/BTEPlus/Sounds/Step/MTF/Step2.ogg"/>

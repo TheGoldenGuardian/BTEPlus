@@ -200,7 +200,7 @@
 	aliases="Spanner"
     category="Equipment"
     Tags="meditem,tool"
-	description="Standard issue tool for Mechanics."
+	description="Standard issue tool for Mechanics. Somewhat capable of repairing certain mechanical humanoids."
 	cargocontainername="Workshop Shipping Box"
     price="160">
 	
@@ -233,6 +233,12 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
 		  <Conditional SpeciesName="robot"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
+		  <Conditional SpeciesName="Combat Robot"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
+		  <Conditional SpeciesName="Renegade Robot"/>
 		</StatusEffect>
     </MeleeWeapon>
   </Item>
@@ -561,7 +567,7 @@
 	  <StatusEffect type="OnUse" target="This" Condition="-0.8"/>
       <StatusEffect type="OnUse" target="Contained" targetnames="Battery Cell" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Fulgurium Battery Cell" Condition="-1"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-2.5"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="40"/>
       <StatusEffect type="OnFailure" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-2.0"/>
@@ -614,7 +620,7 @@
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-0.5"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-2" oxygen="-2750"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-4"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door" Stuck="-20" Condition="-5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="30"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>
@@ -751,36 +757,52 @@
   
   <Item
     name="Flashlight"
-	aliases="Torch"
+    aliases="Torch"
     category="Equipment"
     Tags="smallitem,tool"
-	description="A portable hand-held electric light source."
-	cargocontainername="Electronics Shipping Box"
+    description="A portable hand-held electric light source."
+    canuseonself="true"
+    indestructible="true"
+    cargocontainername="Electronics Shipping Box"
     price="150">
 
     <Deconstruct time="15">
       <Item name="Polycarbonate Bar"/>
-	  <Item name="Aluminium Sliver"/>
-	  <Item name="Copper Coil"/>
-	  <Item name="FPGA Circuit"/>
+      <Item name="Aluminium Sliver"/>
+      <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture ="Tools.png" sourcerect="120,10,30,10" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="120,10,30,10" depth="0.55"/>
 
     <Body width="27" height="8" density="10.1"/>
 
-    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" powerconsumption="10" IsOn="true">
+    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" powerconsumption="10" IsOn="false">
       <LightTexture texture="Content/Lights/lightcone.png" origin="0.05,0.5" size="2.0,1.0"/>
     </LightComponent>
     
+    <ItemComponent>
+      <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="false" delay="0.1" checkconditionalalways="true">
+        <Conditional IsOn="true"/>
+        <Sound file="Content/Items/Button/switch.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true" delay="0.1" checkconditionalalways="true">
+        <Conditional IsOn="false"/>
+        <Sound file="Content/Items/Button/switch.ogg"/>
+      </StatusEffect>
+    </ItemComponent>
+    
     <ItemContainer capacity="1" hideitems="true">
-      <Containable name="Battery Cell, Fulgurium Battery Cell">
-        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      <Containable name="Battery Cell,Fulgurium Battery Cell">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true" checkconditionalalways="true">
+          <Conditional IsOn="true"/>
+        </StatusEffect>
       </Containable>
     </ItemContainer>
-	
-	<Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="-6,0" handle2="-6,0">
-      <StatusEffect type="OnActive" target="Contained" Condition="-0.1"/>
+    
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="-6,0" handle2="-6,0">
+      <StatusEffect type="OnActive" target="This,Contained" Condition="-0.1">
+        <Conditional IsOn="true"/>
+      </StatusEffect>
     </Holdable>
   </Item>
 

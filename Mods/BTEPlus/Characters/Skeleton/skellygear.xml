@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Tactical Boots"
+	aliases="Boots"
+    category="Misc"
+	tags="meditem,clothing"
+	description="A pair of very tactical boots."
+	cargocontainername="Standard Shipping Box">
+	
+	<Deconstruct time="0.1">
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture="skellygear.png" sourcerect="0,0,32,29" depth="0.6"/>
+
+    <Body width="30" height="27" density="15"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="skellygear.png" limb="RightLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.11" hidelimb="false"/>
+      <sprite texture="skellygear.png" limb="LeftLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.15" hidelimb="false"/>
+	  
+	  <sprite texture="skellygear.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="skellygear.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.01" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Skull Mask"
+	aliases="Wearable Skull,BONE MASK"
+    category="Equipment"
+	description="Rattle."
+	Tags="smallitem"
+	impacttolerance="3">
+
+    <Deconstruct time="5">
+      <Item name="Biomass"/>
+    </Deconstruct>
+
+    <Sprite texture ="skellygear.png" depth="0.55" sourcerect="98,15,25,25"/>
+
+    <Body height="25" width="25" density="8"/>
+	
+	<Wearable slots="Any,Face">
+      <sprite texture="skellygear.png" limb="Head" sourcerect="91,11,37,38" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" SpeedMultiplier="-0.001" disabledeltatime="true"/>
+	  
+	  <StatusEffect type="OnImpact" target="this">
+		<Sound file="Mods/BTEPlus/Sounds/Step/Rattle/hurt1.ogg"/>
+	  </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.95"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.85" bleedingmultiplier="0.85" damagesound="DamageRattle" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.85" bleedingmultiplier="0.85" damagesound="DamageRattle" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Bone"
+    category="Misc"
+    Tags="meditem,tool"
+	description="Standard issue tool for SKELETON!"
+	cargocontainername="Workshop Shipping Box">
+	
+	<Deconstruct time="5">
+	  <Item name="Biomass"/>
+    </Deconstruct>
+
+    <Body width="51" height="10" density="10"/>
+	
+	<Sprite texture="skellygear.png" sourcerect="77,0,51,10" depth="0.55"/>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="50,0" handle1="-14,-2" handle2="-14,-2" holdangle="15" reload="1.3">
+      <Attack damage="3" structuredamage="1" damagetype="Blunt" stun="0.25" targetforce="30" sound="Mods/BTEPlus/Sounds/Step/Rattle/hurt2.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="endworm"/>
+		  <Explosion range="300" damage="12" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="12" stun="-5.0" disabledeltatime="true">
+		  <Conditional SpeciesName="endworm"/>
+		</StatusEffect>
+    </MeleeWeapon>
+  </Item>
+</Items>

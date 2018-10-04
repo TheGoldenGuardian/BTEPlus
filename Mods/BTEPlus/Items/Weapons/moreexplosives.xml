@@ -16,7 +16,7 @@
 	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture="moreweapons.png" depth="0.8" sourcerect="112,16,16,8"/>
+    <Sprite texture="moreweapons.png" depth="0.8" sourcerect="123,16,16,8"/>
 
     <Body width="16" height="8"/>
 	
@@ -64,7 +64,7 @@
 	  <Item name="Propellant Powder" mincondition="0.99"/>
     </Deconstruct>
 
-    <Sprite texture="moreweapons.png" depth="0.8" sourcerect="97,0,31,15"/>
+    <Sprite texture="moreweapons.png" depth="0.8" sourcerect="108,0,31,15"/>
 
     <Body width="31" height="15"/>
 	

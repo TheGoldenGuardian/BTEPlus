@@ -307,6 +307,8 @@
     Tags="smallitem,tool"
 	description="A portable hand-held electric light source."
 	cargocontainername="Electronics Shipping Box"
+	canuseonself="true"
+	indestructible="true"
     price="200">
 
     <Deconstruct time="18">
@@ -320,18 +322,33 @@
 
     <Body width="15" height="40" density="11.5"/>
 
-    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0" range="600" powerconsumption="10" IsOn="true">
+    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0" range="600" powerconsumption="10" IsOn="false">
       <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0"/>
     </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="false" delay="0.1" checkconditionalalways="true">
+        <Conditional IsOn="true"/>
+        <Sound file="Content/Items/Button/switch.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true" delay="0.1" checkconditionalalways="true">
+        <Conditional IsOn="false"/>
+        <Sound file="Content/Items/Button/switch.ogg"/>
+      </StatusEffect>
+    </ItemComponent>
     
     <ItemContainer capacity="1" hideitems="true">
       <Containable name="Battery Cell,Fulgurium Battery Cell">
-        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true" checkconditionalalways="true">
+          <Conditional IsOn="true"/>
+        </StatusEffect>
       </Containable>
     </ItemContainer>
-	
-	<Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="0,19" handle2="0,19">
-      <StatusEffect type="OnActive" target="Contained" Condition="-0.1"/>
+    
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="0,19" handle2="0,19">
+      <StatusEffect type="OnActive" target="This,Contained" Condition="-0.1">
+        <Conditional IsOn="true"/>
+      </StatusEffect>
     </Holdable>
   </Item>
   

@@ -134,7 +134,7 @@
     <Body width="52" height="17" density="16"/>
 
     <Wearable slots="Any,Torso+Legs">
-      <sprite texture="captainTorso.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+      <sprite texture="captainTorso.png" limb="Torso" sourcerect="0,0,30,58" origin="0.5,0.48" depthlimb="Head"/>
 
       <sprite texture="captainTorso.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
       <sprite texture="captainTorso.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
@@ -180,7 +180,7 @@
     <Body width="52" height="17" density="16"/>
 
     <Wearable slots="Any,Torso+Legs">
-      <sprite texture="captainTorsoB.png" limb="Torso" sourcerect="0,3,30,58" origin="0.5,0.48" depthlimb="Head"/>
+      <sprite texture="captainTorsoB.png" limb="Torso" sourcerect="0,0,30,58" origin="0.5,0.48" depthlimb="Head"/>
 
       <sprite texture="captainTorsoB.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
       <sprite texture="captainTorsoB.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
@@ -202,6 +202,96 @@
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
       <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.7" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ballistic Captain's Uniform A"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="5">
+	  <Item name="Captain's Uniform A"/>
+      <Item name="Ballistic Vest A"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="56"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="captainTorso.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="captainTorso.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="captainTorso.png" limb="RightArm" sourcerect="71,5,21,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainTorso.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="captainLegs.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegs.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegs.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="captainLegs.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegs.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.20" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Ballistic Captain's Uniform B"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="5">
+	  <Item name="Captain's Uniform B"/>
+      <Item name="Ballistic Vest A"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="56"/>
+
+    <Wearable slots="Any,Torso+Legs">
+      <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+
+      <sprite texture="captainTorsoB.png" limb="RightHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+      <sprite texture="captainTorsoB.png" limb="LeftHand" sourcerect="47,0,15,39" origin="0.45,0.6"/>
+
+      <sprite texture="captainTorsoB.png" limb="RightArm" sourcerect="71,5,21,42" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainTorsoB.png" limb="LeftArm" sourcerect="30,0,17,42" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="captainLegsB.png" limb="Waist" sourcerect="0,0,28,26" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsB.png" limb="RightThigh" sourcerect="81,53,29,46" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsB.png" limb="LeftThigh" sourcerect="53,0,29,46" origin="0.5,0.5" hidelimb="true"/>
+
+      <sprite texture="captainLegsB.png" limb="RightLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="captainLegsB.png" limb="LeftLeg" sourcerect="31,0,21,49" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.20" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
 	
 	<ItemContainer capacity="3">

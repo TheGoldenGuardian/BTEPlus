@@ -310,6 +310,7 @@
 	  </StatusEffect>
 	  <StatusEffect type="Always" target="This" condition="-50"/>
 	  <StatusEffect type="OnBroken" target="This">
+		<Sound file="Mods/BTEPlus/Items/Jobgear/spark.ogg"/>
 		<Remove/>
 	  </StatusEffect>
 	</Wearable>

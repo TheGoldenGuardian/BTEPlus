@@ -21,8 +21,8 @@
     <limb id="0" radius="13" mass="6" type="Head" attackpriority="2">
       <sprite texture="Mods/BTEPlus/Characters/Human/[GENDER]head[HEADID].png" sourcerect="1,1,37,38" depth="0.04" origin="0.5,0.5"/>
       <damagedsprite texture="Content/Characters/Human/damagedhead.png" sourcerect="1,1,37,38" origin="0.5,0.5"/>
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="1.5" bleedingmultiplier="1.1" damagesound="LimbArmor"/>
-	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="1.5" bleedingmultiplier="1.25" damagesound="LimbArmor"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="1.5" bleedingmultiplier="1.1"/>
+	  <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="1.5" bleedingmultiplier="1.25"/>
     </limb>
 
     <!-- body -->

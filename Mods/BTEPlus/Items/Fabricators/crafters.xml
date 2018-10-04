@@ -218,6 +218,13 @@
         <RequiredSkill name="Weapons" level="50"/>
       </fabricableitem>
 	  
+	  <fabricableitem name="Ballistic Captain's Uniform A" requireditems="Ballistic Vest A,Captain's Uniform A" requiredtime="2">
+        <RequiredSkill name="Weapons" level="40"/>
+      </fabricableitem>
+	  <fabricableitem name="Ballistic Captain's Uniform B" requireditems="Ballistic Vest A,Captain's Uniform B" requiredtime="2">
+        <RequiredSkill name="Weapons" level="40"/>
+      </fabricableitem>
+	  
 	  <fabricableitem name="Captain's Cap A" requireditems="Captain's Cap B" requiredtime="2"/>
 	  <fabricableitem name="Captain's Cap B" requireditems="Captain's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Captain's Uniform A" requireditems="Captain's Uniform B" requiredtime="2"/>
@@ -342,13 +349,16 @@
 		<RequiredSkill name="Weapons" level="30"/>
 	  </fabricableitem>
 	  <fabricableitem name="t1/2 Glasses" requireditems="Polycarbonate Sliver" requiredtime="5"/>
+	  <fabricableitem name="Broken Wine Bottle" requireditems="Red Wine" requiredtime="1"/>
+	  <fabricableitem name="Broken Vodka Bottle" requireditems="Vodka" requiredtime="1"/>
+	  <fabricableitem name="Broken Beer Bottle" requireditems="Beer" requiredtime="1"/>
     </Fabricator>
 
     <ItemContainer capacity="2" canbeselected="true" hideitems="true" hudpos="0.15,0.6" slotsperrow="1">
-	  <Containable name="clothing,Food Can,Polycarbonate Sliver,t1/2 Glasses,Shiv"/>
+	  <Containable name="clothing,Food Can,Polycarbonate Sliver,t1/2 Glasses,Shiv,Red Wine,Vodka,Beer,Broken Red Wine Bottle,Broken Vodka Bottle,Broken Beer Bottle"/>
 	</ItemContainer>
     <ItemContainer capacity="2" canbeselected="true" hideitems="true" hudpos="0.85,0.6" slotsperrow="1">
-	  <Containable name="clothing,Food Can,Polycarbonate Sliver,t1/2 Glasses,Shiv"/>
+	  <Containable name="clothing,Food Can,Polycarbonate Sliver,t1/2 Glasses,Shiv,Red Wine,Vodka,Beer,Broken Red Wine Bottle,Broken Vodka Bottle,Broken Beer Bottle"/>
 	</ItemContainer>
   </Item>
   

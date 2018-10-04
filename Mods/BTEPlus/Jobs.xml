@@ -402,7 +402,7 @@
     </Items>
   </Job>
   
-  <Job name="CS Engineer" description=""
+  <Job name="CS Engineer" description="Equipped with a backpack containing all the tools one could need."
 	   maxnumber="1" minkarma="0.95">
     <Skills>
       <Skill name="Weapons" level="50,60"/>
@@ -439,7 +439,7 @@
     </Items>
   </Job>
   
-  <Job name="CS Medic" description=""
+  <Job name="CS Medic" description="Equipped with a Dart Gun and a sedative dart, as well as a vest with a Medical Satchel."
 	   maxnumber="1" minkarma="0.95">
     <Skills>
       <Skill name="Weapons" level="40,60"/>
@@ -472,7 +472,7 @@
     </Items>
   </Job>
   
-  <Job name="CS Grunt" description=""
+  <Job name="CS Grunt" description="Standard unit of the [REDACTED]."
 	   maxnumber="1" minkarma="0.95">
     <Skills>
       <Skill name="Weapons" level="50,80"/>

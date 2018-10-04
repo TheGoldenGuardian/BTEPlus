@@ -1284,7 +1284,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-1.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Gauss Pistol Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="20"/>
@@ -1364,7 +1364,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-1.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyLoop.ogg" type="OnUse" range="800" loop="true"/>
 	  <RequiredItems name="Gauss Carbine Magazine" type="Contained" msg="The loaded magazine is depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
@@ -1447,7 +1447,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="9" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-2.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-2.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="900"/>
 	  <RequiredItems name="Gauss Rifle Magazine" type="Contained" msg="The loaded bar is depleted"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1503,7 +1503,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-1.5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-1.5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Vial of Aluminium Powder,Vial of Copper Powder,Vial of Bronze Powder,Vial of Iron Powder,Vial of Uranium Powder,Vial of Fulgurium Powder" type="Contained" msg="The loaded powder is depleted"/>
       <RequiredSkill name="Electrical Engineering" level="50"/>
@@ -1592,19 +1592,31 @@
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-50" disabledeltatime="true">
 	    <Conditional SpeciesName="robot"/>
-        <RequiredItem name="Battery Cell" type="Contained"/>        
+        <RequiredItem name="Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-75" disabledeltatime="true">
+	    <Conditional SpeciesName="Combat Robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-75" disabledeltatime="true">
+	    <Conditional SpeciesName="Renegade Robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-12" health="4" disabledeltatime="true">
+	    <Conditional SpeciesName="Skeleton"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-25" disabledeltatime="true">
 	    <Conditional SpeciesName="synth"/>
-        <RequiredItem name="Battery Cell" type="Contained"/>        
+        <RequiredItem name="Battery Cell" type="Contained"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-25" disabledeltatime="true">
 	    <Conditional SpeciesName="synthette"/>
-        <RequiredItem name="Battery Cell" type="Contained"/>        
+        <RequiredItem name="Battery Cell" type="Contained"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-25" disabledeltatime="true">
 	    <Conditional SpeciesName="fractalguardian"/>
-        <RequiredItem name="Battery Cell" type="Contained"/>        
+        <RequiredItem name="Battery Cell" type="Contained"/>
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-25" disabledeltatime="true">
 	    <Conditional SpeciesName="fractalguardian2"/>
@@ -1640,6 +1652,18 @@
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-90" disabledeltatime="true">
 	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-100" disabledeltatime="true">
+	    <Conditional SpeciesName="Combat Robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-100" disabledeltatime="true">
+	    <Conditional SpeciesName="Renegade Robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-12" health="4" disabledeltatime="true">
+	    <Conditional SpeciesName="Skeleton"/>
         <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-8" health="-45" disabledeltatime="true">
@@ -1745,6 +1769,18 @@
 	    <Conditional SpeciesName="robot"/>
         <RequiredItem name="Battery Cell" type="Contained"/>        
       </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-55" disabledeltatime="true">
+	    <Conditional SpeciesName="Combat Robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-55" disabledeltatime="true">
+	    <Conditional SpeciesName="Renegade Robot"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-12" health="3" disabledeltatime="true">
+	    <Conditional SpeciesName="Skeleton"/>
+        <RequiredItem name="Battery Cell" type="Contained"/>
+      </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-20" disabledeltatime="true">
 	    <Conditional SpeciesName="synth"/>
         <RequiredItem name="Battery Cell" type="Contained"/>        
@@ -1795,6 +1831,18 @@
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-80" disabledeltatime="true">
 	    <Conditional SpeciesName="robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-100" disabledeltatime="true">
+	    <Conditional SpeciesName="Combat Robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-100" disabledeltatime="true">
+	    <Conditional SpeciesName="Renegade Robot"/>
+        <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="-12" health="4" disabledeltatime="true">
+	    <Conditional SpeciesName="Skeleton"/>
         <RequiredItem name="Fulgurium Battery Cell" type="Contained"/>        
       </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="-10" health="-40" disabledeltatime="true">
