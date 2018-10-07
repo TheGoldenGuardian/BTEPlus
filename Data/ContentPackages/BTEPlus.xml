@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 7.5 Plus 1.6" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 7.5 Plus 1.7" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml"/> -->
   <!-- <Item file="Content/Items/itemlabel.xml"/> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml"/> -->
@@ -173,7 +173,7 @@
   <Item file="Mods/BTEPlus/Items/Jobgear/renegadegear.xml"/>
   <Item file="Mods/BTEPlus/Items/Jobgear/taugear.xml"/>
   <Item file="Mods/BTEPlus/Items/Fabricators/morematerials.xml"/>
-  <Item file="Mods/BTEPlus/Items/Misc/Chess/chess.xml"/>
+  <Item file="Mods/BTEPlus/Items/Misc/chess.xml"/>
   <Item file="Mods/BTEPlus/Items/Components/components.xml"/>
   <Character file="Mods/BTEPlus/Characters/Human/renegade.xml"/>
   <Character file="Mods/BTEPlus/Characters/Human/ghost.xml"/>
@@ -181,6 +181,10 @@
   <Item file="Mods/BTEPlus/Characters/Skeleton/skellygear.xml"/>
   <Character file="Mods/BTEPlus/Characters/CombatRobot/combatrobot.xml"/>
   <Character file="Mods/BTEPlus/Characters/RenegadeRobot/renegaderobot.xml"/>
+  <Character file="Mods/BTEPlus/Characters/Longarms/longarms.xml"/>
+  <Character file="Mods/BTEPlus/Characters/Longlegs/longlegs.xml"/>
+  <Character file="Mods/BTEPlus/Characters/Longlimbs/longlimbs.xml"/>
+  <Character file="Mods/BTEPlus/Characters/Shorttorso/shorttorso.xml"/>
   
   <Executable file="Barotrauma.exe"/>
 </contentpackage>

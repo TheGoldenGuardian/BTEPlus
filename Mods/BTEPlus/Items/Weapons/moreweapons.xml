@@ -3,7 +3,7 @@
 <Items>
     <Item
     name="Diving Revolver"
-	aliases="Underwater Revolver"
+	aliases="Underwater Revolver,CR2"
     category="Equipment"
     tags="meditem,weapon"
     description="[CR2] The Coalition Revolver 2 is still in testing. In fact, it may never leave testing, but for raw power in a pocket sized package, there is no other choice. Standard issue for high-ranking officers."
@@ -28,6 +28,7 @@
       <StatusEffect type="Always" target="This" Condition="15"/>
       <StatusEffect type="OnUse">
         <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
         <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -47,19 +48,22 @@
 	  <StatusEffect type="OnUse" target="Character" Health="-50">
 	    <sound file="Mods/BTEPlus/Items/Weapons/revolverfire.ogg"/>
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="15">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
     </ItemComponent>
   </Item>
 
   <Item
     name="Flashlight Revolver"
-	aliases="Captain's Gun,Captain's Revolver"
+	aliases="Captain's Gun,Captain's Revolver,Flashlight CR2"
     category="Equipment"
     tags="meditem,weapon"
     description="[CR2] The Coalition Revolver 2 is still in testing. In fact, it may never leave testing, but for raw power in a pocket sized package, there is no other choice. Standard issue for high-ranking officers. This one has an attached self-powered flashlight."
@@ -89,6 +93,7 @@
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
         <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+		<RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
     </RangedWeapon>
 
@@ -109,14 +114,162 @@
 	  <StatusEffect type="OnUse" target="Character" Health="-50">
 	    <sound file="Mods/BTEPlus/Items/Weapons/revolverfire.ogg"/>
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="15">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
     </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Security Pistol"
+	aliases="Security Sidearm,CSP.50,CSP .50"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="[CSP .50] A large caliber pistol holding 7 rounds. Usually affectionately called the 'hand cannon.' Uses Large Bore Rounds."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+    price="2000"
+	canuseonself="true">
+
+    <Deconstruct time="10">
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="67,58,37,21" depth="0.55"/>
+
+    <Body width="37" height="21" density="40"/>
+
+    <RangedWeapon barrelpos="37,4" spread="1" unskilledspread="6" reload="0.7">
+	  <StatusEffect type="OnUse">
+        <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Large Bore Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      </StatusEffect>
+      <Sound file="Mods/BTEPlus/Items/Weapons/secpistolfire.ogg" type="OnUse"/>
+      <RequiredItems name="Large Bore Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+      <StatusEffect type="Always" target="This" Condition="15"/>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="7" hideitems="true">
+      <Containable name="Large Bore Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+            holdpos="31,-23" aimpos="75,18" handle1="-10,-3" handle2="-1,-5" holdangle="70"/>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-90">
+	    <sound file="Mods/BTEPlus/Items/Weapons/secpistolfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Large Bore Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="4" duration="2">
+		<Use/>
+		<RequiredItems name="Large Bore Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+		<RequiredItems name="Large Bore Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Flashlight Security Pistol"
+	aliases="Flashlight Security Sidearm,Flashlight CSP.50,Flashlight CSP .50,FSP"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="[CSP .50] A large caliber pistol holding 7 rounds. Usually affectionately called the 'hand cannon.' Uses Large Bore Rounds."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+    price="2000"
+	canuseonself="true">
+
+    <Deconstruct time="10">
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture="FlashlightGuns.png" sourcerect="67,58,37,21" depth="0.55"/>
+
+    <Body width="37" height="21" density="40"/>
+
+    <RangedWeapon barrelpos="37,4" spread="1" unskilledspread="6" reload="0.7">
+	  <StatusEffect type="OnUse">
+        <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Large Bore Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      </StatusEffect>
+      <Sound file="Mods/BTEPlus/Items/Weapons/secpistolfire.ogg" type="OnUse"/>
+      <RequiredItems name="Large Bore Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+      <StatusEffect type="OnBroken" target="This" Condition="1" delay="15"/>
+      <StatusEffect type="Always" target="This" Condition="15"/>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+	
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" IsOn="true">
+      <LightTexture texture="Content/Lights/lightcone.png" origin="0.05,0.5" size="2.0,0.5"/>
+    </LightComponent>
+
+    <ItemContainer capacity="7" hideitems="true">
+      <Containable name="Large Bore Round"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+            holdpos="35,-23" aimpos="75,18" handle1="-10,-3" handle2="-1,-5" holdangle="0"/>
+			
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-90">
+	    <sound file="Mods/BTEPlus/Items/Weapons/secpistolfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Large Bore Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="4" duration="2">
+		<Use/>
+		<RequiredItems name="Large Bore Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+		<RequiredItems name="Large Bore Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Large Bore Round"
+	aliases="Large Bullet"
+    category="Equipment"
+	Tags="smallitem,weapon"
+	description="A massive hollow-point round."
+    interactthroughwalls="true"
+	cargocontainername="Weapons Shipping Box"
+	price="100">
+	
+	<Deconstruct time="5">
+      <Item name="Steel Sliver" outcondition="0.25"/>
+	  <Item name="Propellant Powder" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="BallisticGuns.png" sourcerect="95,32,7,3" depth="0.55"/>
+
+    <Body width="7" height="3" density="35"/>
+
+	<Pickable slots="Any"/>
+    <Projectile hitscan="true" removeonhit="true">
+      <Attack damage="45" bleedingdamage="4" stun="1.5" structuredamage="85" targetforce="50" damagetype="Blunt"/>
+    </Projectile>
   </Item>
   
   <Item
@@ -145,6 +298,7 @@
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse" Condition="-5">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -164,12 +318,15 @@
 	  <StatusEffect type="OnUse" target="Character" Health="-50">
 	    <sound file="Mods/BTEPlus/Items/Weapons/oldrevolverfire.ogg"/>
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="15">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
     </ItemComponent>
   </Item>
@@ -201,6 +358,7 @@
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse" Condition="-5">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -224,12 +382,15 @@
 	  <StatusEffect type="OnUse" target="Character" Health="-50">
 	    <sound file="Mods/BTEPlus/Items/Weapons/oldrevolverfire.ogg"/>
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="15">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
     </ItemComponent>
   </Item>
@@ -242,7 +403,8 @@
 	description="[DS-M2] The diving shotgun was an aging design, still used among a large majority of the Coalition. This is the upgraded variant, standard issue for security-heavy ships."
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3"
-    price="3750">
+    price="3750"
+	canuseonself="true">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -262,6 +424,7 @@
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -274,6 +437,31 @@
 	  <Containable name="Shotgun Taser Round"/>
 	  <Containable name="Shotgun Flechette Round"/>
     </ItemContainer>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Health="-40">
+	    <sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
   </Item>
   
   <Item
@@ -283,7 +471,8 @@
 	tags="bigitem,weapon"
 	description="[DS-M2] The diving shotgun was an aging design, still used among a large majority of the Coalition. This is the upgraded variant, standard issue for security-heavy ships. This one has an attached self-powered flashlight."
 	cargocontainername="Weapons Shipping Box"
-	impacttolerance="3">
+	impacttolerance="3"
+	canuseonself="true">
 
     <Deconstruct time="3">
       <Item name="Diving Shotgun"/>
@@ -305,6 +494,7 @@
       <RequiredSkill name="Weapons" level="40"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -321,6 +511,31 @@
 	  <Containable name="Shotgun Taser Round"/>
 	  <Containable name="Shotgun Flechette Round"/>
     </ItemContainer>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Health="-40">
+	    <sound file="Mods/BTEPlus/Items/Weapons/pumpfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
   </Item>
   
   <Item
@@ -331,7 +546,8 @@
 	description="[AS-M1] This rather standard semi-automatic shotgun is mainly used among prison ships, but only holds 6 shells. It can not load less than lethal, due to their low power."
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3"
-    price="4000">
+    price="4000"
+	canuseonself="true">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -351,6 +567,7 @@
       <RequiredSkill name="Weapons" level="45"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="Incompatible ammunition loaded"/>
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -363,6 +580,31 @@
 	  <Containable name="Shotgun Taser Round"/>
 	  <Containable name="Shotgun Flechette Round"/>
     </ItemContainer>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Health="-40">
+	    <sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
   </Item>
   
   <Item
@@ -373,7 +615,8 @@
 	description="[AS-M1] This rather standard semi-automatic shotgun is mainly used among prison ships, but only holds 6 shells. It can not load less than lethal, due to their low power. This one has an attached self-powered flashlight."
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3"
-    price="4000">
+    price="4000"
+	canuseonself="true">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -393,6 +636,7 @@
       <RequiredSkill name="Weapons" level="45"/>
 	  <StatusEffect type="OnUse">
 	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained" msg="Incompatible ammunition loaded"/>
       </StatusEffect>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -409,6 +653,31 @@
 	  <Containable name="Shotgun Taser Round"/>
 	  <Containable name="Shotgun Flechette Round"/>
     </ItemContainer>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
+	    <sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" Health="-40">
+	    <sound file="Mods/BTEPlus/Items/Weapons/autosgfire.ogg"/>
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
+		<Use/>
+		<RequiredItems name="Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Character" stun="15">
+		<Use/>
+		<RequiredItems name="Shotgun Slug Round,Shotgun Flechette Round" type="Contained"/>
+	  </StatusEffect>
+    </ItemComponent>
   </Item>
   
   <Item
@@ -712,6 +981,7 @@
       <StatusEffect type="Always" target="This" Condition="15"/>
       <StatusEffect type="OnUse">
         <Explosion range="150" force="1" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>
+		<RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
         <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -728,15 +998,18 @@
             holdpos="31,-23" aimpos="90,18" handle1="-14,0" handle2="-14,0" holdangle="36"/>
 			
 	<ItemComponent>
-	  <StatusEffect type="OnUse" target="Character" Health="-45">
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
 	    <sound file="Mods/BTEPlus/Items/Weapons/silencedfire.ogg"/>
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="15">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
     </ItemComponent>
   </Item>
@@ -770,6 +1043,7 @@
       <StatusEffect type="Always" target="This" Condition="15"/>
       <StatusEffect type="OnUse">
         <Explosion range="150" force="1" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="2.0"/>
+		<RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       </StatusEffect>
       <StatusEffect type="OnImpact" target="This">
         <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
@@ -789,17 +1063,67 @@
     </LightComponent>
 			
 	<ItemComponent>
-	  <StatusEffect type="OnUse" target="Character" Health="-45">
+	  <StatusEffect type="OnUse" target="Character" Health="-50">
 	    <sound file="Mods/BTEPlus/Items/Weapons/silencedfire.ogg"/>
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" bleeding="2" duration="3">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" stun="15">
 		<Use/>
+		<RequiredItems name="Revolver Round,Revolver HL Round" type="Contained"/>
 	  </StatusEffect>
     </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Makeshift Shotgun"
+	aliases="Scrap Shotgun,Break-Action Shotgun"
+    category="Equipment"
+	tags="meditem,weapon"
+	description=""
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <Deconstruct time="10">      
+      <Item name="Steel Block"/>
+	  <Item name="Bandage"/>
+    </Deconstruct>
+  
+    <Sprite texture="makeshiftshotgun.png" sourcerect="0,0,84,20" depth="0.55"/>
+	<BrokenSprite texture="makeshiftshotgun.png" sourcerect="0,21,84,24" depth="0.55" maxcondition="99.9999"/>
+
+    <Body width="84" height="20" density="45"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="35,-10" holdangle="-6" aimpos="50,-3" handle1="-8,-3" handle2="10,4"/>
+    
+    <RangedWeapon barrelpos="83,5" spread="4" unskilledspread="16">
+      <Sound file="Mods/BTEPlus/Items/Weapons/msfire.ogg" type="OnUse"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="6" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" Condition="-100">
+	  </StatusEffect>
+      <StatusEffect type="Always" target="This" Condition="100" setvalue="true">
+		<RequiredItem type="Contained" name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round"/>
+	  </StatusEffect>
+      <RequiredItems name="Shotgun Slug Round,Shotgun Beanbag Round,Shotgun Taser Round,Shotgun Flechette Round" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="40"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Shotgun Slug Round"/>
+	  <Containable name="Shotgun Beanbag Round"/>
+	  <Containable name="Shotgun Taser Round"/>
+	  <Containable name="Shotgun Flechette Round"/>
+    </ItemContainer>
   </Item>
   
   <Item
@@ -1206,7 +1530,7 @@
 
     <MeleeWeapon slots="RightHand+LeftHand,Any"
           aimpos="50,0" handle1="-38,3" handle2="-24,-1" holdangle="68" aimangle="18" reload="1.2">
-      <Attack damage="14" bleedingdamage="5" stun="0.5" targetforce="15" damagetype="Slash" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+      <Attack damage="14" bleedingdamage="5" stun="0.5" targetforce="15" damagetype="Slash" severlimbsprobability="0.95" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -1244,7 +1568,7 @@
 
     <MeleeWeapon slots="RightHand+LeftHand,Any"
               aimpos="50,0" handle2="-41,-2" handle1="-33,2" holdpos="0,0" holdangle="-60" aimangle="40" reload="4">
-      <Attack damage="19" bleedingdamage="12" stun="0.8" damagetype="Slash" structuredamage="5" targetforce="20" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
+      <Attack damage="19" bleedingdamage="12" stun="0.8" damagetype="Slash" structuredamage="5" targetforce="20" severlimbsprobability="1" sound="Mods/BTE/Items/Weapons/Stabbing.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>

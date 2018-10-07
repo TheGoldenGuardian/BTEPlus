@@ -35,7 +35,7 @@
 	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-0.05">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.9" disabledeltatime="true">
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0" disabledeltatime="true" setvalue="true">
         <RequiredItem type="Contained" name="loadable"/>
       </StatusEffect>
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>  

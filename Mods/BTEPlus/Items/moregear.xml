@@ -1,5 +1,41 @@
 ﻿<Items> 
   <Item
+    name="Enforcer Shades"
+	aliases="Shades"
+    category="Equipment"
+    tags="smallitem"
+	description="A nice pair of protective shades with an attached communications headset.">
+	
+	<Deconstruct time="15">
+      <Item name="Aluminium Sliver"/>
+      <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture ="moregear.png" sourcerect="0,154,20,8" depth="0.6"/>
+
+    <Body width="18" height="6" density="15"/>
+	
+	<WifiComponent range="40000" LinkToChat="true">
+      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>
+    </WifiComponent>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Battery Cell"/>
+      <Containable name="Fulgurium Battery Cell"/>
+    </ItemContainer>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="moregear.png" limb="Head" depth="0.6" sourcerect="0,154,20,8" origin="0.45,0.9"/>
+	  <sprite texture="Jobgear/securitygear.png" depth="0.61" sourcerect="100,112,16,16"/>
+      <StatusEffect type="OnWearing" target="Contained" Condition="-0.05"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.95"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.85" bleedingmultiplier="0.9"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9"/>
+	</Wearable>
+  </Item>
+  
+  <Item
     name="Light Ballistic Vest"
 	aliases="Light Armor,Light Armour"
     category="Equipment"

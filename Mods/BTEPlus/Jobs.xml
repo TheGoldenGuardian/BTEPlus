@@ -132,7 +132,7 @@
 	  <Item name="Stun Baton">
         <Item name="Battery Cell"/>
 	  </Item> 
-      <Item name="Headset" equip="true">
+      <Item name="Enforcer Shades" equip="true">
         <Item name="Battery Cell"/>
       </Item>
 	  <Item name="Armoured Gasmask"/>

@@ -5,9 +5,71 @@
     <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="0,0,32,32" depth="0.85"/>    
   </PowerWall> -->
   
+  <ForegroundRailing width="64" height="100" resizehorizontal="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="477,233,224,100" depth="0.05011"/>
+  </ForegroundRailing>
+  
+  <platformForeground width="64" height="26" resizehorizontal="true" body="true" platform="true">
+    <sprite texture="Content/Map/testroom.png" sourcerect="896,53,128,32" depth="0.0501"/>
+  </platformForeground>
+  
+  <roughforegroundwall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Content/Map/testroom.png" sourcerect="200,104,240,240" depth="0.0502"/>
+  </roughforegroundwall>
+  
+  <fakeverticalwall description="A vertical wall without collision detection"
+    width="32" height="64" resizevertical="true" castshadow="true">
+    <sprite texture="Content/Map/testroom.png" sourcerect="953,214,32,576" depth="0.05" />
+  </fakeverticalwall>
+  
+  <fakehorizontalwall description="A horizontal wall without collision detection"
+    width="64" height="32" resizehorizontal="true" body="true" castshadow="true" platform="true">
+    <sprite texture="Content/Map/testroom.png" sourcerect="0,989,576,32" depth="0.05"/>
+  </fakehorizontalwall>
+  
+  <largeplatformForeground width="64" height="64" resizehorizontal="true" body="true" platform="true">
+    <sprite texture="Content/Map/testroom.png" sourcerect="896,0,128,64" depth="0.0501"/>
+  </largeplatformForeground>
+  
+  <modularStairsRightBOTTOM width="28" height="90" stairdirection="Right">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,385,28,90" depth="0.1"/>
+  </modularStairsRightBOTTOM>
+  
+  <modularStairsRightMIDDLE width="39" height="107" stairdirection="Right">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="79,385,39,107" depth="0.1"/>
+  </modularStairsRightMIDDLE>
+  
+  <modularStairsRightTOP width="28" height="90" stairdirection="Right">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="120,385,28,90" depth="0.1"/>
+  </modularStairsRightTOP>
+  
+  <modularStairsLeftBOTTOM width="28" height="90" stairdirection="Left">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,385,28,90" fliphorizontal="true" depth="0.1"/>
+  </modularStairsLeftBOTTOM>
+  
+  <modularStairsLeftMIDDLE width="39" height="107" stairdirection="Left">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="79,385,39,107" fliphorizontal="true" depth="0.1"/>
+  </modularStairsLeftMIDDLE>
+  
+  <modularStairsLeftTOP width="28" height="90" stairdirection="Left">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="120,385,28,90" fliphorizontal="true" depth="0.1"/>
+  </modularStairsLeftTOP>
+  
+  <metalplatewall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="800,201,224,224" depth="1.0"/>
+  </metalplatewall>
+  
+  <scpbgwall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="0,0,242,242" depth="1.0"/>
+  </scpbgwall>
+  
+  <corrugatedmetalwall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="243,0,242,242" depth="1.0"/>
+  </corrugatedmetalwall>
+  
   <ff_x_wall description="A horizontal wall with collision detection"
     width="512" height="48" resizehorizontal="true" body="true" castshadow="true" health="750">
-    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" depth="0.05" sourcerect="49,0,512,48" />
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" depth="0.05" sourcerect="49,0,512,48"/>
   </ff_x_wall>
 
   <ff_y_wall description="A vertical wall with collision detection"
@@ -15,12 +77,12 @@
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" depth="0.06" sourcerect="0,0,48,512"/>
   </ff_y_wall>
   
-  <horizontalresizablewindow3 width="128" height ="48" body="true" health="90" tags="glass" resizehorizontal="true">
+  <horizontalresizablewindow3 width="128" height="48" body="true" health="90" tags="glass" resizehorizontal="true">
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="147,256,128,48" depth ="0.06"/>
     <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="147,305,128,48" depth ="0.85"/>    
   </horizontalresizablewindow3>
 
-  <verticalresizablewindow3 width = "48" height ="128" body="true" health="90" tags="glass" resizevertical="true">
+  <verticalresizablewindow3 width="48" height="128" body="true" health="90" tags="glass" resizevertical="true">
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="49,256,48,128" depth ="0.06"/>
     <backgroundsprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="98,256,48,128" depth ="0.85"/>    
   </verticalresizablewindow3>
@@ -221,8 +283,8 @@
     <sprite texture="Mods/BTEPlus/Map/scpstuff.png" sourcerect="22,134,82,56" depth="0.97" canflipx="false"/>
   </cautionAuthorizedOnly>
   
-  <cautionAirlock width="250" height="63">
-    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="538,201,250,63" depth="0.97" canflipx="false"/>
+  <cautionAirlock width="165" height="23">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="538,201,165,23" depth="0.97" canflipx="false"/>
   </cautionAirlock>
   
   <logoECI width="200" height="90">
@@ -276,4 +338,32 @@
   <eci-341 width="100" height="100">
     <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="202,101,100,100" depth="0.97" canflipx="false"/>
   </eci-341>
+  
+  <eci-109 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="0,202,100,100" depth="0.97" canflipx="false"/>
+  </eci-109>
+  
+  <eci-264 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="101,202,100,100" depth="0.97" canflipx="false"/>
+  </eci-264>
+  
+  <eci-129 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="202,202,100,100" depth="0.97" canflipx="false"/>
+  </eci-129>
+  
+  <eci-083 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="0,303,100,100" depth="0.97" canflipx="false"/>
+  </eci-083>
+  
+  <eci-451 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="101,303,100,100" depth="0.97" canflipx="false"/>
+  </eci-451>
+  
+  <eci-048 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="202,303,100,100" depth="0.97" canflipx="false"/>
+  </eci-048>
+  
+  <eci-081 width="100" height="100">
+    <sprite texture="Mods/BTEPlus/Map/eci.png" sourcerect="0,404,100,100" depth="0.97" canflipx="false"/>
+  </eci-081>
 </prefabs>
