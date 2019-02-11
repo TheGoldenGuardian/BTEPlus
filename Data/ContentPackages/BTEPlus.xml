@@ -59,7 +59,7 @@
   <!-- <Sounds file="Content/Sounds/sounds.xml"/> -->
   
   <Item file="Mods/BTE/Items/itemlabel.xml"/>
-  <Item file="Mods/BTE/Items/Artifacts/artifacts.xml"/>
+  <Item file="Mods/BTEPlus/Items/Artifacts/artifacts.xml"/>
   <Item file="Mods/BTE/Items/Containers/containers.xml"/>
   <Item file="Mods/BTE/Items/Jobgear/idcard.xml"/>
   <Item file="Mods/BTEPlus/Items/Jobgear/captaingear.xml"/>
