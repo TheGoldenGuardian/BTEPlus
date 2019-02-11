@@ -349,7 +349,7 @@
 
   <Item
    name="'Yellow' Shard"
-   aliases="Sulfurite Shard"
+   aliases="Sulphurite Shard,Sulfurite Shard"
    category="Alien"
    tags="meditem,alien,shard"
    impacttolerance="5"
