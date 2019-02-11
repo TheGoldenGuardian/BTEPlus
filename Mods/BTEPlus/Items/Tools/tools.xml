@@ -2,7 +2,7 @@
 <Items>
   <Item
     name="Screwdriver"
-    category="Equipment"
+    category="Equipment,Electrical"
     Tags="smallitem,tool"
 	description="Standard issue tool for Electrical Engineers."
 	cargocontainername="Workshop Shipping Box"
@@ -13,7 +13,7 @@
 	  <Item name="Steel Sliver" outcondition="0.5"/>
     </Deconstruct>
        
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="0,58,31,6" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="0,58,31,6" depth="0.55"/>
 
     <Body width="31" height="6" density="13"/>
 			  
@@ -30,7 +30,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="2" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="2" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="2" stun="-0.1" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -40,7 +40,7 @@
   
   <Item
     name="Pliers"
-    category="Equipment"
+    category="Equipment,Electrical"
     Tags="smallitem,tool"
 	description="Standard issue tool for Electrical Engineers.">
 	
@@ -49,7 +49,7 @@
 	  <Item name="Steel Sliver"/>
     </Deconstruct>
        
-    <Sprite texture ="Tools.png" sourcerect="93,79,40,17" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="93,79,40,17" depth="0.55"/>
 
     <Body width="36" height="14" density="13.2"/>
 			  
@@ -66,7 +66,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="1" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="1" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="1" stun="-0.15" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -86,7 +86,7 @@
 	  <Item name="Steel Sliver" outcondition="0.75"/>
     </Deconstruct>
        
-    <Sprite texture ="Tools.png" sourcerect="93,59,32,7" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="93,59,32,7" depth="0.55"/>
 
     <Body width="32" height="6" density="10.9"/>
 	
@@ -95,7 +95,7 @@
 	    <sound file="Mods/BTE/Items/Weapons/Screwdriver.ogg"/>
 		<Use/>
 	  </StatusEffect>
-	  <StatusEffect type="OnUse" target="Character" bleeding="0.8" duration="5">
+	  <StatusEffect type="OnUse" target="Character" bleeding="2.4">
 		<Use/>
 	  </StatusEffect>
     </ItemComponent>
@@ -113,7 +113,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="3" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="3" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="3" stun="-0.05" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -133,13 +133,13 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite  texture ="Tools.png" sourcerect="93,108,55,20" depth="0.55"/>
+    <Sprite  texture="Tools.png" sourcerect="93,108,55,20" depth="0.55"/>
 
     <Body width="56" height="14" density="48"/>
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-14,-2" handle2="-11,-1" holdangle="30" reload="2.3">
-      <Attack damage="16" bleedingdamage="0.2" structuredamage="8" damagetype="Blunt" stun="0.8" targetforce="40" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
+      <Attack damage="16" bleedingdamage="0.2" structuredamage="4" damagetype="Blunt" stun="0.8" targetforce="40" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -150,7 +150,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="16" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="16" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="16" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -169,13 +169,13 @@
       <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite  texture ="Tools.png" sourcerect="93,140,60,20" depth="0.55"/>
+    <Sprite  texture="Tools.png" sourcerect="93,140,60,20" depth="0.55"/>
 
     <Body width="56" height="14" density="46"/>
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-14,-2" handle2="-11,-1" holdangle="30" reload="2.2">
-      <Attack damage="6" bleedingdamage="0.3" structuredamage="4" damagetype="Slash" stun="0.8" targetforce="10"
+      <Attack damage="6" bleedingdamage="0.3" damagetype="Slash" stun="0.8" targetforce="10"
 	  severlimbsprobability="0.1" sound="Mods/BTE/Items/Weapons/Screwdriver.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
@@ -187,7 +187,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="6" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="6" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="6" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -200,7 +200,7 @@
 	aliases="Spanner"
     category="Equipment"
     Tags="meditem,tool"
-	description="Standard issue tool for Mechanics. Somewhat capable of repairing certain mechanical humanoids."
+	description="Standard issue tool for Mechanics."
 	cargocontainername="Workshop Shipping Box"
     price="160">
 	
@@ -215,7 +215,7 @@
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-14,-2" handle2="-11,-1" holdangle="30" reload="2.1">
-      <Attack damage="12" bleedingdamage="0.2" structuredamage="6" damagetype="Blunt" stun="0.3" targetforce="30" sound="Mods/BTE/Items/Weapons/Wrench.ogg"/>
+      <Attack damage="12" bleedingdamage="0.2" structuredamage="2" damagetype="Blunt" stun="0.3" targetforce="30" sound="Mods/BTE/Items/Weapons/Wrench.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -226,19 +226,10 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="12" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="12" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="12" stun="-5.0" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
-		  <Conditional SpeciesName="robot"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
-		  <Conditional SpeciesName="Combat Robot"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="8" stun="-0.5" disabledeltatime="true">
-		  <Conditional SpeciesName="Renegade Robot"/>
 		</StatusEffect>
     </MeleeWeapon>
   </Item>
@@ -256,13 +247,13 @@
 	  <Item name="Steel Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="Tools.png" sourcerect="156,0,64,12" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="156,0,64,12" depth="0.55"/>
 
     <Body width="60" height="10" density="50"/>
 
     <MeleeWeapon slots="RightHand+LeftHand,Any"
           controlpose="true" aimpos="50,0" handle1="-5,0" handle2="-3,5" holdangle="30" reload="2.4">
-      <Attack damage="15" bleedingdamage="0.15" structuredamage="10" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
+      <Attack damage="15" bleedingdamage="0.15" structuredamage="3" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -273,7 +264,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="15" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="15" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="15" stun="-0.7" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -281,56 +272,13 @@
     </MeleeWeapon>
   </Item>
   
-  <!-- <Item
-    name="Red Crowbar"
-	aliases="t1/2 Crowbar,Raising the Bar"
-    category="Equipment"
-    Tags="meditem,tool"
-	description="A small crowbar used to force open doors in emergencies. This one looks oddly familiar."
-    cargocontainername="Standard Shipping Box">
-	
-	<Deconstruct time="5">
-	  <Item name="Steel Bar"/>
-	  <Item name="Steel Sliver"/>
-	  <Item name="t1/2 Glasses"/>
-    </Deconstruct>
-
-    <Sprite texture ="Tools.png" sourcerect="156,22,64,12" depth="0.55"/>
-
-    <Body width="60" height="10" density="50"/>
-
-    <MeleeWeapon slots="RightHand+LeftHand,Any"
-          controlpose="true" aimpos="50,0" handle1="-5,0" handle2="-3,5" holdangle="30" reload="2.4">
-      <Attack damage="15" bleedingdamage="0.15" structuredamage="10" stun="0.7" targetforce="40" damagetype="Blunt" sound="Mods/BTE/Items/Weapons/Hammer.ogg"/>
-	  <Sound file="Mods/BTEPlus/Items/Tools/CrowbarSwing.ogg" type="OnUse"/>
-	  <StatusEffect type="OnUse" target="Character">
-		  <Conditional SpeciesName="watcher"/>
-		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
-		  <Conditional SpeciesName="watcher"/>
-		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit1.ogg" type="OnUse" range="3000"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character">
-		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="15" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
-		</StatusEffect>
-		<StatusEffect type="OnUse" target="Character" Health="15" stun="-0.7" disabledeltatime="true">
-		  <Conditional SpeciesName="endworm"/>
-		</StatusEffect>
-		<StatusEffect type="OnImpact" target="This">
-	    <sound file="Mods/BTEPlus/Items/Tools/CrowbarHit1.ogg"/>
-		<sound file="Mods/BTEPlus/Items/Tools/CrowbarHit2.ogg"/>
-	  </StatusEffect>
-    </MeleeWeapon>
-  </Item> -->
-  
   <Item
     name="Frying Pan"
 	aliases="Frypan,Skillet"
     category="Equipment"
     Tags="meditem,tool"
-	description="Standard issue cooking implement for Culinary Specialists.">
+	description="Standard issue cooking implement for Culinary Specialists."
+	price="150">
 	
 	<Deconstruct time="5">
 	  <Item name="Steel Bar"/>
@@ -343,7 +291,7 @@
 
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-14,3" handle2="-14,3" holdangle="30" reload="2.0">
-      <Attack damage="9" structuredamage="2" damagetype="Blunt" stun="0.7" targetforce="30" sound="Mods/BTE/Items/Weapons/FryingPan.ogg"/>
+      <Attack damage="9" damagetype="Blunt" stun="0.7" targetforce="30" sound="Mods/BTE/Items/Weapons/FryingPan.ogg"/>
 	  <StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -354,7 +302,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="9" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="500" damage="9" force="5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="9" stun="-0.7" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>
@@ -369,32 +317,27 @@
     Tags="meditem"
 	description="A tank with liquefied compressed Sulphurite gas. This gas is not toxic but its denser than oxygen so displaces it when released."
 	cargocontainername="Explosives Shipping Box"
-    price="60">
+    impacttolerance="3"
+	price="60">
 
     <Deconstruct time="10">
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="sulphuritetank.png" sourcerect="0,0,12,33" depth="0.55"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="12,0,12,33" depth="0.55" maxcondition="92.5"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="24,0,12,33" depth="0.55" maxcondition="85"/>
-    <BrokenSprite texture="sulphuritetank.png" sourcerect="36,0,12,33" depth="0.55" maxcondition="77.5"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="48,0,12,33" depth="0.55" maxcondition="70"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="60,0,12,33" depth="0.55" maxcondition="62.5"/>
-    <BrokenSprite texture="sulphuritetank.png" sourcerect="72,0,12,33" depth="0.55" maxcondition="55"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="0,33,12,33" depth="0.55" maxcondition="47.5"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="12,33,12,33" depth="0.55" maxcondition="40"/>
-    <BrokenSprite texture="sulphuritetank.png" sourcerect="24,33,12,33" depth="0.55" maxcondition="25"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="36,33,12,33" depth="0.55" maxcondition="17.5"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="48,33,12,33" depth="0.55" maxcondition="10"/>
-    <BrokenSprite texture="sulphuritetank.png" sourcerect="60,33,12,33" depth="0.55" maxcondition="2.5"/>
-	<BrokenSprite texture="sulphuritetank.png" sourcerect="72,33,12,33" depth="0.55" maxcondition="0"/>
+    <Sprite texture ="thermitetank.png" sourcerect="0,0,12,33" depth="0.55"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="13,0,12,33" depth="0.55" maxcondition="75"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="26,0,12,33" depth="0.55" maxcondition="50"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="39,0,12,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="52,0,12,33" depth="0.55" maxcondition="0"/>
 
     <Body width="12" height="33" density="8"/>
 
-    <Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" handle1="0,5" handle2="0,-5">
+    <Throwable slots="RightHand,LeftHand,Any" handle1="0,5" handle2="0,-5" throwforce="3" aimpos="35,-10">
       <StatusEffect type="OnFire" target="This,Hull" Condition="-2" oxygen="-5000"/>
-    </Holdable>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GrenadeHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
   </Item>
   
   <Item
@@ -411,19 +354,10 @@
     </Deconstruct>
 
     <Sprite texture ="hydrogentank.png" sourcerect="0,0,12,33" depth="0.55"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="12,0,12,33" depth="0.55" maxcondition="92.5"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="24,0,12,33" depth="0.55" maxcondition="85"/>
-    <BrokenSprite texture="hydrogentank.png" sourcerect="36,0,12,33" depth="0.55" maxcondition="77.5"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="48,0,12,33" depth="0.55" maxcondition="70"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="60,0,12,33" depth="0.55" maxcondition="62.5"/>
-    <BrokenSprite texture="hydrogentank.png" sourcerect="72,0,12,33" depth="0.55" maxcondition="55"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="0,33,12,33" depth="0.55" maxcondition="47.5"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="12,33,12,33" depth="0.55" maxcondition="40"/>
-    <BrokenSprite texture="hydrogentank.png" sourcerect="24,33,12,33" depth="0.55" maxcondition="25"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="36,33,12,33" depth="0.55" maxcondition="17.5"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="48,33,12,33" depth="0.55" maxcondition="10"/>
-    <BrokenSprite texture="hydrogentank.png" sourcerect="60,33,12,33" depth="0.55" maxcondition="2.5"/>
-	<BrokenSprite texture="hydrogentank.png" sourcerect="72,33,12,33" depth="0.55" maxcondition="0"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="13,0,12,33" depth="0.55" maxcondition="75"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="26,0,12,33" depth="0.55" maxcondition="50"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="39,0,12,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="hydrogentank.png" sourcerect="52,0,12,33" depth="0.55" maxcondition="0"/>
 
     <Body width="12" height="33" density="8"/>
 
@@ -446,35 +380,31 @@
     Tags="meditem"
 	description="A tank with compressed thermite gas, which is used as welding fuel."
 	cargocontainername="Explosives Shipping Box"
-    price="75">
+    impacttolerance="3"
+	price="75">
 
     <Deconstruct time="10">
       <Item name="Aluminium Bar"/>
     </Deconstruct>
 
     <Sprite texture ="thermitetank.png" sourcerect="0,0,12,33" depth="0.55"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="12,0,12,33" depth="0.55" maxcondition="92.5" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="24,0,12,33" depth="0.55" maxcondition="85" fadein="true"/>
-    <BrokenSprite texture="thermitetank.png" sourcerect="36,0,12,33" depth="0.55" maxcondition="77.5" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="48,0,12,33" depth="0.55" maxcondition="70" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="60,0,12,33" depth="0.55" maxcondition="62.5" fadein="true"/>
-    <BrokenSprite texture="thermitetank.png" sourcerect="72,0,12,33" depth="0.55" maxcondition="55" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="0,33,12,33" depth="0.55" maxcondition="47.5" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="12,33,12,33" depth="0.55" maxcondition="40" fadein="true"/>
-    <BrokenSprite texture="thermitetank.png" sourcerect="24,33,12,33" depth="0.55" maxcondition="25" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="36,33,12,33" depth="0.55" maxcondition="17.5" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="48,33,12,33" depth="0.55" maxcondition="10" fadein="true"/>
-    <BrokenSprite texture="thermitetank.png" sourcerect="60,33,12,33" depth="0.55" maxcondition="2.5" fadein="true"/>
-	<BrokenSprite texture="thermitetank.png" sourcerect="72,33,12,33" depth="0.55" maxcondition="0" fadein="true"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="13,0,12,33" depth="0.55" maxcondition="75"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="26,0,12,33" depth="0.55" maxcondition="50"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="39,0,12,33" depth="0.55" maxcondition="25"/>
+	<BrokenSprite texture="thermitetank.png" sourcerect="52,0,12,33" depth="0.55" maxcondition="0"/>
 
     <Body width="12" height="33" density="8"/>
 
-    <Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" handle1="0,5" handle2="0,-5">
-      <StatusEffect type="OnFire" target="This" Condition="-100.0" disabledeltatime="true">
+    <Throwable slots="RightHand,LeftHand,Any" handle1="0,5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+      <StatusEffect type="OnFire" target="This" Condition="-100" disabledeltatime="true">
 	    <sound file="Mods/BTE/Items/Weapons/BlastExplosionSmall.ogg"/>
         <Explosion range="300" structuredamage="15" damage="50" stun="4" force="3.5"/>
+		<Fire size="40"/>
       </StatusEffect>
-    </Holdable>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GrenadeHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
   </Item>
   
   <Item
@@ -488,10 +418,12 @@
     price="250">
 	
 	<Deconstruct time="10">
-	  <Item name="Spare Parts"/>
+	  <Item name="Steel Bar"/>
+      <Item name="Aluminium Bar"/>
+      <Item name="Polycarbonate Bar"/>
     </Deconstruct>
 
-    <Sprite texture ="Tools.png" sourcerect="0,104,49,19" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="0,104,49,19" depth="0.55"/>
 
     <Body width="47" height="17" density="40"/>
 
@@ -504,13 +436,13 @@
       <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
       <RequiredItems name="Thermite Tank,Sulphurite Tank,Hydrogen Tank,Oxygen Tank,Oxygenite Tank,Oxygen Bottle" type="Contained" msg="Welding fuel depleted"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-3"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Bottle" Condition="-8"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-3"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Bottle" Condition="-6"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-1" oxygen="-2500"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-0.5"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door" Stuck="20" Condition="5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door,Small Door,Thin Small Door" Stuck="20" Condition="5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="20"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>
@@ -525,10 +457,10 @@
     <ItemContainer capacity="1" hideitems="false" itempos="8,-21">
       <Containable name="Oxygen Tank"/>
 	  <Containable name="Oxygenite Tank"/>
+	  <Containable name="Hydrogen Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
 	  <Containable name="Oxygen Bottle"/>
-	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
@@ -545,43 +477,42 @@
     price="200">
 
     <Deconstruct time="10">
-	  <Item name="Steel Bar"/>
-      <Item name="Spare Parts"/>
+	  <Item name="Steel Block"/>
+      <Item name="Aluminium Bar"/>
+      <Item name="Polycarbonate Bar"/>
 	  <Item name="Steel Sliver"/>
 	  <Item name="Steel Sliver" mincondition="0.99"/>
     </Deconstruct>
     
-    <Sprite texture ="Tools.png" sourcerect="0,41,77,49" depth="0.55"/>
+    <Sprite texture="Tools.png" sourcerect="0,41,77,49" depth="0.55"/>
 
     <Body width="76" height="48" density="40"/>
 
-    <RepairTool structurefixamount="-1.0" limbfixamount="-4.2" range="50" barrelpos="20,10" particles="bubbles">
+    <RepairTool structurefixamount="-1.0" limbfixamount="-4.1" range="50" barrelpos="20,10" particles="bubbles">
 	  <ParticleEmitter particle="bubbles" particlespersecond="50"/>
       <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
       <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
       <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
-      <ParticleEmitterHitCharacter particle="blood" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
 	  <sound file="Mods/BTE/Items/Tools/SawLoop.ogg" type="OnUse" range="500" loop="true"/>
-	  <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained" msg="Battery cell depleted"/>
-	  <StatusEffect type="OnUse" target="This" Condition="-0.8"/>
-      <StatusEffect type="OnUse" target="Contained" targetnames="Battery Cell" Condition="-2"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Fulgurium Battery Cell" Condition="-1"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-2.5"/>
+	  <RequiredItems name="Battery Cell,Power Cell,Fulgurium Power Cell" type="Contained" msg="Energy cell depleted"/>
+	  <StatusEffect type="OnUse" target="This" Condition="-0.8">
+	    <Explosion range="30" force="0.1" severlimbsprobability="0.01" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="1.5"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained" targetnames="Battery Cell" Condition="-6"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Power Cell,Fulgurium Power Cell" Condition="-2"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door,Small Door,Thin Small Door" Stuck="-20" Condition="-2.5"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="40"/>
-      <StatusEffect type="OnFailure" target="Contained" targetnames="Battery Cell,Fulgurium Battery Cell" Condition="-2.0"/>
-      <LightComponent LightColor="0.8,0.7,1.0,0.3" Flicker="0.5">
-        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
-      </LightComponent>
+      <StatusEffect type="OnFailure" target="Contained" targetnames="Battery Cell,Power Cell,Fulgurium Power Cell" Condition="-2"/>
 	  <StatusEffect type="OnImpact" target="This">
 	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
 	  </StatusEffect>
     </RepairTool>
 
     <ItemContainer capacity="1" hideitems="true">
-      <Containable name="Battery Cell"/>
-      <Containable name="Fulgurium Battery Cell"/>
+      <Containable name="loadable"/>
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
@@ -598,10 +529,12 @@
     price="350">
 
     <Deconstruct time="10">
-	  <Item name="Spare Parts"/>
+	  <Item name="Steel Bar"/>
+      <Item name="Aluminium Bar"/>
+      <Item name="Polycarbonate Bar"/>
     </Deconstruct>
     
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="0,0,41,16" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="0,0,41,16" depth="0.55"/>
 
     <Body width="41" height="16" density="40"/>
 
@@ -614,13 +547,13 @@
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <sound file="Content/Items/Tools/plasmaCutter.ogg" type="OnUse" range="500" loop="true"/>
 	  <RequiredItems name="Oxygen Tank,Oxygenite Tank,Hydrogen Tank,Sulphurite Tank,Thermite Tank,Oxygen Bottle" type="Contained" msg="Gas tank depleted"/>
-      <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-1"/>
+      <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Tank" Condition="-1"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygen Bottle" Condition="-2"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Tank" Condition="-2"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Hydrogen Tank" Condition="-0.5"/>
-	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-2" oxygen="-2750"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Tank" Condition="-3" oxygen="-2750"/>
 	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Tank" Condition="-4"/>
-      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-20" Condition="-5.0"/>
+      <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door,Small Door,Thin Small Door" Stuck="-20" Condition="-5.0"/>
       <Fixable name="structure"/>
       <RequiredSkill name="Construction" level="30"/>
       <StatusEffect type="OnFailure" target="Contained" Condition="-1.5"/>
@@ -635,10 +568,10 @@
     <ItemContainer capacity="1" hideitems="false" itempos="-17,-21">
       <Containable name="Oxygen Tank"/>
 	  <Containable name="Oxygenite Tank"/>
+	  <Containable name="Hydrogen Tank"/>
 	  <Containable name="Sulphurite Tank"/>
 	  <Containable name="Thermite Tank"/>
 	  <Containable name="Oxygen Bottle"/>
-	  <Containable name="Hydrogen Tank"/>
     </ItemContainer>
 	
 	<Holdable slots="RightHand+LeftHand,Any" controlpose="true"
@@ -659,13 +592,13 @@
       <Item name="Steel Block"/>
     </Deconstruct>
 
-    <Sprite texture ="Content/Items/Tools/extinguisher.png"  depth="0.55" sourcerect="0,0,34,64" origin="0.4,0.5"/>
+    <Sprite texture="Content/Items/Tools/extinguisher.png"  depth="0.55" sourcerect="0,0,34,64" origin="0.4,0.5"/>
 
     <Body radius="10" height="45" density="7"/>
 	
 	<RepairTool extinquishamount="60" range="500" barrelpos="21,25">
       <ParticleEmitter particle="extinguisher" velocitymin="500" velocitymax="650" particlespersecond="50"/>
-      <StatusEffect type="OnUse" target="This" Condition="-1.5" oxygen="-2050"/>
+      <StatusEffect type="OnUse" target="This,Hull" Condition="-1.5" oxygen="-2050"/>
       <sound file="Content/Items/Tools/extinguisher.ogg" type="OnUse" range="500" loop="true"/>
     </RepairTool>
 
@@ -687,34 +620,76 @@
       <Item name="Aluminium Sliver"/>
       <Item name="Copper Sliver"/>
     </Deconstruct>
+	
+	<fixrequirement name="Electrical repairs">
+      <skill name="Electrical Engineering" level="50"/>
+      <item name="Screwdriver"/>
+      <item name="Pliers"/>
+    </fixrequirement>
+	
+	<LightComponent lightcolor="0.0,0.0,0.0,0.0" range="0" powerconsumption="0">
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,0,0,0" alpha="1.0"/>
+    </LightComponent>
     
-    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="0,0,20,9" depth="0.8"/>
+    <Sprite texture="Mods/BTE/Items/Tools/Tools.png" sourcerect="144,56,16,6" depth="0.8"/>
 
-    <Body width="20" height="9" density="30"/>
+    <Body width="14" height="4" density="18"/>
 
-    <Pickable slots="Any,RightHand,LeftHand"/>
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" throwforce="4" aimpos="35,-10"/>
   </Item>
   
   <Item
-    name="Fulgurium Battery Cell"
+    name="Power Cell"
+    category="Equipment,Electrical"
+	description="A power source more suited for military handheld devices, exosuits and emergency generators."
+    tags="smallitem,loadable"
+	cargocontainername="Electronics Shipping Box"
+    price="150">
+
+    <Deconstruct time="15">
+      <Item name="Aluminium Sliver"/>
+	  <Item name="Lead Sliver"/>
+	  <Item name="Copper Sliver"/>
+    </Deconstruct>
+	
+	<fixrequirement name="Electrical repairs">
+      <skill name="Electrical Engineering" level="55"/>
+      <item name="Screwdriver"/>
+      <item name="Pliers"/>
+    </fixrequirement>
+	
+	<LightComponent lightcolor="0.0,0.0,0.0,0.0" range="0" powerconsumption="0">
+      <sprite texture="Content/Items/Electricity/lamp.png" sourcerect="0,0,0,0" alpha="1.0"/>
+    </LightComponent>
+    
+    <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="0,0,20,9" depth="0.8"/>
+
+    <Body width="20" height="9" density="20"/>
+
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Fulgurium Power Cell"
+	aliases="Fulgurium Battery Cell"
     category="Equipment,Electrical"
     tags="smallitem,loadable"
-    description="A battery cell constructed of the rare and poorly understood compound Fulgurium."
+    description="A power cell constructed of the rare and poorly understood compound Fulgurium."
 	>
 
-    <Deconstruct time="10">
+    <Deconstruct time="20">
       <Item name="Aluminium Sliver"/>
-      <Item name="Copper Sliver"/>
+	  <Item name="Lead Sliver"/>
       <Item name="Fulgurium Sliver"/>  
     </Deconstruct>
 
     <Sprite texture="Content/Items/Weapons/weapons.png" sourcerect="0,0,20,9" depth="0.8"/>
 
-    <Body width="20" height="9" density="20"/>
+    <Body width="20" height="9" density="16"/>
 
-    <Pickable slots="Any,RightHand,LeftHand">
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" throwforce="3" aimpos="35,-10">
 	  <StatusEffect type="Always" target="This" Condition="0.06"/>
-	</Pickable>
+	</Throwable>
   </Item>
 
   <Item
@@ -728,17 +703,25 @@
 	<Deconstruct time="10">
       <Item name="Polycarbonate Bar"/>
       <Item name="Aluminium Sliver"/>
-	  <Item name="Copper Coil"/>
-	  <Item name="FPGA Circuit"/>
+	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
-    <Sprite texture ="Content/Items/Tools/tools.png" sourcerect="42,0,22,9" depth="0.55"/>
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="42,0,22,9" depth="0.55"/>
 
     <Body width="31" height="6" density="14"/>
+	
+	<ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" isActive="true"/>
+    </ItemComponent>
 
     <Radar range="6000" powerconsumption="10" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="0.2">
-      <StatusEffect type="OnUse" target="Contained" Condition="-1.2" disabledeltatime="true"/>
-      <sound file="Content/Items/Engine/radarPing.ogg" type="OnUse" range="1000"/>
+      <StatusEffect type="OnUse" target="Contained" targetnames="Battery Cell" Condition="-1.1" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Power Cell,Fulgurium Power Cell" Condition="-0.6" disabledeltatime="true"/>
+	  <sound file="Mods/BTE/Items/Tools/SonarPing1.ogg" type="OnUse" range="1000"/>
+	  <sound file="Mods/BTE/Items/Tools/SonarPing2.ogg" type="OnUse" range="1000"/>
+	  <sound file="Mods/BTE/Items/Tools/SonarPing3.ogg" type="OnUse" range="1000"/>
+	  <sound file="Mods/BTE/Items/Tools/SonarPing4.ogg" type="OnUse" range="1000"/>
+	  <sound file="Mods/BTE/Items/Tools/SonarPing5.ogg" type="OnUse" range="1000"/>
 	  <GuiFrame rect="0,0,0.5,0.5" alignment="Center" style="ItemUI"/>
       <PingCircle texture="Content/Items/Engine/pingCircle.png" origin="0.5,0.5"/>
       <ScreenOverlay texture="Content/Items/Engine/radarOverlay.png" origin="0.5,0.5"/>
@@ -746,7 +729,7 @@
     </Radar>
 
     <ItemContainer capacity="1" hideitems="true">
-      <Containable name="Battery Cell, Fulgurium Battery Cell">
+      <Containable name="loadable">
         <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
       </Containable>
     </ItemContainer>
@@ -757,50 +740,50 @@
   
   <Item
     name="Flashlight"
-    aliases="Torch"
+	aliases="Torch"
     category="Equipment"
     Tags="smallitem,tool"
-    description="A portable hand-held electric light source."
-    canuseonself="true"
-    indestructible="true"
-    cargocontainername="Electronics Shipping Box"
+	description="A portable handheld electric light source."
+	canuseonself="true"
+	indestructible="true"
+	cargocontainername="Electronics Shipping Box"
     price="150">
 
     <Deconstruct time="15">
       <Item name="Polycarbonate Bar"/>
-      <Item name="Aluminium Sliver"/>
-      <Item name="Spare Electronics"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Spare Electronics"/>
     </Deconstruct>
 
     <Sprite texture="Tools.png" sourcerect="120,10,30,10" depth="0.55"/>
 
-    <Body width="27" height="8" density="10.1"/>
+    <Body width="27" height="8" density="10.2"/>
 
     <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.1" range="800" powerconsumption="10" IsOn="false">
       <LightTexture texture="Content/Lights/lightcone.png" origin="0.05,0.5" size="2.0,1.0"/>
     </LightComponent>
-    
-    <ItemComponent>
+	
+	<ItemComponent>
       <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="false" delay="0.1" checkconditionalalways="true">
         <Conditional IsOn="true"/>
         <Sound file="Content/Items/Button/switch.ogg"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true" delay="0.1" checkconditionalalways="true">
+	  <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true" delay="0.1" checkconditionalalways="true">
         <Conditional IsOn="false"/>
         <Sound file="Content/Items/Button/switch.ogg"/>
       </StatusEffect>
     </ItemComponent>
     
     <ItemContainer capacity="1" hideitems="true">
-      <Containable name="Battery Cell,Fulgurium Battery Cell">
+      <Containable name="loadable">
         <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true" checkconditionalalways="true">
           <Conditional IsOn="true"/>
         </StatusEffect>
       </Containable>
     </ItemContainer>
-    
-    <Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="-6,0" handle2="-6,0">
-      <StatusEffect type="OnActive" target="This,Contained" Condition="-0.1">
+	
+	<Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="-6,0" handle2="-6,0">
+	  <StatusEffect type="OnActive" target="This,Contained" Condition="-0.1">
         <Conditional IsOn="true"/>
       </StatusEffect>
     </Holdable>
@@ -831,7 +814,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="1.0,0.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="1.0,0.0,0.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flare" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -875,7 +858,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="0.0,1.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="0.0,1.0,0.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flareG" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -919,7 +902,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="0.0,0.0,1.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="0.0,0.0,1.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flareB" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -963,7 +946,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="1.0,1.0,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="1.0,1.0,0.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flareY" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -1007,7 +990,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flareW" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -1051,7 +1034,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="1.0,0.0,1.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="1.0,0.0,1.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flarePu" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -1095,7 +1078,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="1.0,0.41,0.71,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="1.0,0.41,0.71,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flarePi" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -1139,7 +1122,7 @@
       <Attack damage="5" bleedingdamage="0" stun="0.8" structuredamage="0" targetforce="12" damagetype="Blunt"/>
     </Projectile>
 	
-	<LightComponent LightColor="1.0,0.65,0.0,1.0" Flicker="0.5" range="600" IsOn="false">
+	<LightComponent LightColor="1.0,0.65,0.0,1.0" Flicker="0.5" range="900" IsOn="false">
       <StatusEffect type="OnActive" target="This" Condition="-1">
         <ParticleEmitter particle="flareO" particlespersecond="30"/>
         <ParticleEmitter particle="bubbles" particlespersecond="30"/>
@@ -1156,5 +1139,224 @@
     </ItemComponent>
 
     <Throwable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="Flare Gun"
+    category="Equipment"
+    tags="meditem,weapon"
+    description="A lightweight polycarbonate flare launching device."
+    cargocontainername="Weapons Shipping Box"
+    impacttolerance="3"
+    price="1000">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Mods/BTEPlus/Items/Tools/Tools.png" sourcerect="161,104,29,21" depth="0.55"/>
+	<BrokenSprite texture="Mods/BTEPlus/Items/Tools/Tools.png" sourcerect="190,104,29,21" depth="0.55" maxcondition="99.9999"/>
+
+    <Body width="28" height="20" density="9"/>
+
+    <RangedWeapon barrelpos="27,6.5" spread="1" unskilledspread="2" reload="1">
+      <Sound file="Mods/BTEPlus/Items/Tools/FlareGun.ogg" type="OnUse"/>
+      <RequiredItems name="Flare Red,flare" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="30"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100">
+	  </StatusEffect>
+      <StatusEffect type="Always" target="This" Condition="100" setvalue="true">
+		<RequiredItem type="Contained" name="Flare Red,flare"/>
+	  </StatusEffect>
+      <StatusEffect type="OnUse">
+        <Explosion range="80" force="1" shockwave="false" flames="false" smoke="false" sparks="true" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This">
+        <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+      </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Flare Red,flare"/>
+    </ItemContainer>
+
+    <Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+            aimpos="75,18" handle1="-5,-3" handle2="-5,-3" holdangle="0"/>
+  </Item>
+  
+  <Item
+    name="Medical Spray"
+	aliases="Medspray"
+    category="Equipment"
+    Tags="meditem,tool,medical"
+	description="A specialised spray bottle designed to be sprayed over injures to help them heal."
+	cargocontainername="Medical Shipping Box"
+	impacttolerance="3"
+	canuseonself="true"
+    price="250">
+	
+	<Deconstruct time="3">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="36,3,15,8" depth="0.52"/>
+
+    <Body width="7.5" height="4" density="40"/>
+
+    <RepairTool extinquishamount="3" limbfixamount="0.075" range="100" barrelpos="15,0.5" particles="weld">
+	  <ParticleEmitter particle="medspray" velocitymin="350" velocitymax="450" particlespersecond="60"/>
+      <ParticleEmitterHitCharacter particle="medsplash" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
+      <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5"/>
+      <RequiredSkill name="Medical" level="20"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RepairTool>
+   
+    <ItemContainer capacity="1" hideitems="false" itempos="-1,-15">
+      <Containable name="Medical Spray Canister"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              holdpos="25,-15" aimpos="45,-8" handle1="0,-4"/>
+			  
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="1">
+	    <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	    <sound file="Content/Items/Tools/weldingTool.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5">
+		<RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Medical Spray Canister"
+	aliases="Medspray Fuel, Medical Spray Fuel"
+    category="Equipment"
+    Tags="meditem,medical"
+	description="A canister with the corrigodone-based healing spray used by the Medical Spray."
+	cargocontainername="Medical Shipping Box"
+    price="60">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Corrigodone" mincondition="0.999"/>
+	  <Item name="Corrigodone" mincondition="0.749" maxcondition="0.998" outcondition="0.75"/>
+	  <Item name="Corrigodone" mincondition="0.499" maxcondition="0.748" outcondition="0.5"/>
+	  <Item name="Corrigodone" mincondition="0.249" maxcondition="0.498" outcondition="0.25"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="55,8,16,32" depth="0.53"/>
+
+    <Body width="8" height="16" density="3"/>
+
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="0,0" handle1="0,5" handle2="0,-5">
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Scoped Medical Spray"
+	aliases="Sniper Medspray,Scoped Medspray"
+    category="Equipment"
+    Tags="meditem,tool,medical"
+	description="A specialised canister designed to be sprayed over injures to help them heal. Some maniac taped a scope onto this one."
+	cargocontainername="Medical Shipping Box"
+	impacttolerance="3"
+	canuseonself="true">
+	
+	<Deconstruct time="3">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="74,1,37,24" depth="0.52"/>
+
+    <Body width="7.5" height="4" density="40"/>
+
+    <RepairTool extinquishamount="3" limbfixamount="0.075" range="150" barrelpos="15,0.5" particles="weld">
+	  <ParticleEmitter particle="medspray" velocitymin="525" velocitymax="675" particlespersecond="60"/>
+      <ParticleEmitterHitCharacter particle="medsplash" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <sound file="Content/Items/Tools/weldingTool.ogg" type="OnUse" range="500" loop="true"/>
+      <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5"/>
+      <RequiredSkill name="Medical" level="20"/>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RepairTool>
+   
+    <ItemContainer capacity="1" hideitems="false" itempos="-1,-15">
+      <Containable name="Medical Spray Canister"/>
+    </ItemContainer>
+	
+	<Holdable slots="RightHand,LeftHand,Any" controlpose="true"
+              holdpos="25,-15" aimpos="45,8" handle1="0,-4"/>
+			  
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" Health="1">
+	    <RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	    <sound file="Content/Items/Tools/weldingTool.ogg"/>
+		<Use/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="Medical Spray Canister" Condition="-0.5">
+		<RequiredItems name="Medical Spray Canister" type="Contained" msg="Medical Spray depleted"/>
+	  </StatusEffect>
+    </ItemComponent>
+  </Item>
+  
+  <Item
+    name="Lantern"
+	aliases="Hand Lamp"
+    category="Equipment"
+    Tags="smallitem,tool"
+	description="A portable hand-held electric light source."
+	cargocontainername="Electronics Shipping Box"
+	canuseonself="true"
+	indestructible="true"
+    price="200">
+
+    <Deconstruct time="18">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="Copper Coil"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" sourcerect="139,52,16,43" depth="0.55"/>
+
+    <Body width="15" height="40" density="11.5"/>
+
+    <LightComponent LightColor="1.0,1.0,1.0,1.0" Flicker="0" range="600" powerconsumption="10" IsOn="false">
+      <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0"/>
+    </LightComponent>
+	
+	<ItemComponent>
+      <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="false" delay="0.1" checkconditionalalways="true">
+        <Conditional IsOn="true"/>
+        <Sound file="Content/Items/Button/switch.ogg"/>
+      </StatusEffect>
+	  <StatusEffect type="OnUse" target="This" setvalue="true" IsOn="true" delay="0.1" checkconditionalalways="true">
+        <Conditional IsOn="false"/>
+        <Sound file="Content/Items/Button/switch.ogg"/>
+      </StatusEffect>
+    </ItemComponent>
+    
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="loadable">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true" checkconditionalalways="true">
+          <Conditional IsOn="true"/>
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+    
+    <Holdable slots="RightHand,LeftHand,Any" holdpos="30,-15" aimpos="100,0" handle1="0,19" handle2="0,19">
+      <StatusEffect type="OnActive" target="This,Contained" Condition="-0.1">
+        <Conditional IsOn="true"/>
+      </StatusEffect>
+    </Holdable>
   </Item>
 </Items>

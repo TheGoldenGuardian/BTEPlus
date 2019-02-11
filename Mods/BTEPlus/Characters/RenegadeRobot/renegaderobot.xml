@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Character name="Renegade Robot" humanoid="true" health="300" doesbleed="false" usebloodparticles="false">
+<Character name="Combat Robot" humanoid="true" health="300" doesbleed="false" usebloodparticles="false">
   
   <ai 
     combatstrength="150"

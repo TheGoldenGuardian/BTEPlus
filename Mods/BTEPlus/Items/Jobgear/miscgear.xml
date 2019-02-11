@@ -345,7 +345,7 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
 	  
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -370,7 +370,7 @@
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
 	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.5" bleedingmultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingdamagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingdamagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -393,8 +393,8 @@
       <sprite texture="securitygearRagged.png" limb="Head" depth="0.038" inheritlimbdepth="false" sourcerect="66,53,29,22" origin="0.51,0.9" />
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.1" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
 	  
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -803,8 +803,8 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.15" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.1" bleedingmultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -1233,7 +1233,7 @@
 
     <Body width="50" height="17" density="14"/>
 
-    <Wearable slots="Any,Torso+Legs" armorvalue="1.5">
+    <Wearable slots="Any,Torso+Legs">
       <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
 	  
 	  <sprite texture="doctorgear.png" limb="RightHand" sourcerect="93,59,15,47" origin="0.45,0.55"/>
@@ -1326,7 +1326,7 @@
 
     <Body width="50" height="17" density="14"/>
 
-    <Wearable slots="Any,Torso+Legs" armorvalue="1.5">
+    <Wearable slots="Any,Torso+Legs">
       <sprite texture="securitygear.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
 
       <sprite texture="prisonergearRagged.png" limb="Waist" sourcerect="98,0,30,36" origin="0.5,0.3" hidelimb="true"/>
@@ -1417,7 +1417,7 @@
 	  <sprite texture="securitygearRagged.png" limb="RightFoot" sourcerect="98,100,11,25" origin="0.3,0.8"/>
       <sprite texture="securitygearRagged.png" limb="LeftFoot" sourcerect="98,100,11,25" origin="0.3,0.8"/>
       
-      <StatusEffect type="OnWearing" target="Character" Stun="1" lockhands="true" ObstructVision="true" HideFace="true" setvalue="true"/>
+      <StatusEffect type="OnWearing" target="Character" Stun="1" lockhands="true" ObstructVision="true" HideFace="true"/>
 	  <StatusEffect type="OnWearing" target="This" Condition="-0.26"/>
     </Wearable>
   </Item>

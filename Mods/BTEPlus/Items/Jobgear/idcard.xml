@@ -76,7 +76,7 @@
 	name="Task Force Commander Access Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,wllt,docs,med,mec,eng,sec,ast,com,ID Card">
+	Tags="smallitem,wllt,docs,med,mec,eng,sec,ast,com,tau,ID Card">
 	
 	<Deconstruct time="80">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -94,7 +94,7 @@
 	name="Task Force Engineer Access Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,wllt,docs,sec,eng,mec,ID Card">
+	Tags="smallitem,wllt,docs,sec,eng,mec,tau,ID Card">
 	
 	<Deconstruct time="80">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -112,7 +112,7 @@
 	name="Task Force Medic Access Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,wllt,docs,sec,med,ID Card">
+	Tags="smallitem,wllt,docs,sec,med,tau,ID Card">
 	
 	<Deconstruct time="80">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -130,7 +130,7 @@
 	name="Task Force Grunt Access Card"
 	aliases="ID Card"
     category="Equipment"
-	Tags="smallitem,wllt,docs,sec,ID Card">
+	Tags="smallitem,wllt,docs,sec,tau,ID Card">
 	
 	<Deconstruct time="80">
       <Item name="Polycarbonate Sliver" outcondition="0.5"/>
@@ -286,5 +286,107 @@
 	<Body width="16" height="16" density="10.1"/>
 
 	<Pickable slots="Card,Any"/>
+  </Item>
+  
+  <Item
+	name="Keycard Level 1"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,l1">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="0,42,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+	name="Keycard Level 2"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,l1,l2">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="16,42,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+	name="Keycard Level 3"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,l1,l2,l3">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="32,42,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+	name="Keycard Level 4"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,l1,l2,l3,l4">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="48,42,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+	name="Keycard Level 5"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,l1,l2,l3,l4,l5">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="64,42,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Any"/>
+  </Item>
+  
+  <Item
+	name="Keycard Omni"
+    category="Equipment"
+	Tags="smallitem,wllt,docs,l1,l2,l3,l4,l5,omni,admin,com,cap,ast,sec,sct,med,eng,mec,cul,nov,pri,clw,stg,P1,P2,P3,P4,ID Card">
+	
+	<Deconstruct time="20">
+      <Item name="Polycarbonate Sliver" outcondition="0.5"/>
+	  <Item name="Iron Powder" outcondition="0.25"/>
+    </Deconstruct>
+
+	<Sprite texture="Mods/BTEPlus/Items/Jobgear/idcard.png" sourcerect="64,42,16,16" depth="0.82"/>
+
+	<Body width="16" height="16" density="10.1"/>
+
+	<Pickable slots="Any"/>
   </Item>
 </Items>

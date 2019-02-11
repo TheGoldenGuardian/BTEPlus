@@ -3,7 +3,7 @@
     name="Radio"
     category="Equipment"
     tags="smallitem"
-	description="A handheld radio. Allows long-range remote communication between the crew."
+	description="A handheld radio. Allows remote communication between the crew."
 	cargocontainername="Electronics Shipping Box"
 	price="50">
 	
@@ -16,17 +16,17 @@
 
     <Body width="9" height="30" density="10.3"/>
 
-    <WifiComponent canbeselected="true" range="60000" LinkToChat="true">
-      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+    <WifiComponent range="60000" LinkToChat="true">
+      <RequiredItems name="loadable" type="Contained"/>
     </WifiComponent>
 
       <ItemContainer capacity="1" hideitems="true">
-        <Containable name="Battery Cell"/>
-        <Containable name="Fulgurium Battery Cell"/>
+        <Containable name="loadable"/>
       </ItemContainer>
 	
-	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16" holdpos="12,6" aimable="true">
-	  <StatusEffect type="OnActive" target="Contained" Condition="-0.05"/>
+	<Holdable slots="Any,RightHand,LeftHand" handle1="5,-16" handle2="5,-16">
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Battery Cell" Condition="-0.05"/>
+	  <StatusEffect type="OnActive" target="Contained" targetnames="Power Cell,Fulgurium Power Cell" Condition="-0.025"/>
     </Holdable>
   </Item>
   
@@ -34,7 +34,7 @@
     name="Headset"
     category="Equipment"
     tags="smallitem"
-	description="Allows relatively short-range communication between the crew."
+	description="Allows short-range communication between the crew."
 	cargocontainername="Electronics Shipping Box"
 	price="100">
 	
@@ -48,17 +48,309 @@
     <Body radius="8" density="10.1"/>
 
     <WifiComponent range="40000" LinkToChat="true">
-      <RequiredItems name="Battery Cell,Fulgurium Battery Cell" type="Contained"/>      
+      <RequiredItems name="loadable" type="Contained"/>      
     </WifiComponent>
 
       <ItemContainer capacity="1" hideitems="true">
-        <Containable name="Battery Cell"/>
-        <Containable name="Fulgurium Battery Cell"/>
+        <Containable name="loadable"/>
       </ItemContainer>
     
     <Wearable limbtype="Head" slots="Any,Face">
-      <StatusEffect type="OnWearing" target="Contained" Condition="-0.1"/>
+	  <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell" Condition="-0.1"/>
+	  <StatusEffect type="OnWearing" target="Contained" targetnames="Power Cell,Fulgurium Power Cell" Condition="-0.05"/>
       <sprite texture="securitygear.png" limb="Head" origin="0.5,0.5" sourcerect="100,112,16,16" depth="0.04" inheritlimbdepth="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Health Scanner Headset"
+	aliases="Doctor Headset HUD,Medical Headset HUD,Health HUD Headset"
+    category="Equipment"
+    tags="smallitem"
+	description="A Health Scanner HUD with an attached communications headset.">
+	
+	<Deconstruct time="15">
+      <Item name="Aluminium Sliver"/>
+      <Item name="FPGA Circuit"/>
+    </Deconstruct>
+
+    <Sprite texture ="Mods/BTEPlus/Items/Jobgear/doctorgear.png" sourcerect="0,120,20,8" depth="0.6"/>
+
+    <Body width="18" height="6" density="15"/>
+	
+	<WifiComponent range="40000" LinkToChat="true">
+      <RequiredItems name="loadable" type="Contained"/>      
+    </WifiComponent>
+
+      <ItemContainer capacity="1" hideitems="true">
+        <Containable name="loadable"/>
+      </ItemContainer>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="doctorgear.png" limb="Head" sourcerect="0,120,20,8" origin="0.45,0.9" depth="0.04" inheritlimbdepth="false"/>
+	  <sprite texture="securitygear.png" sourcerect="100,112,16,16" depth="0.041" inheritlimbdepth="false"/>
+      <StatusEffect type="OnWearing" target="Contained" targetnames="Battery Cell" Condition="-0.1"/>
+	  <StatusEffect type="OnWearing" target="Contained" targetnames="Power Cell,Fulgurium Power Cell" Condition="-0.05"/>
+	</Wearable>
+
+    <StatusHUD drawhudwhenequipped="true"/>
+  </Item>
+  
+  <Item
+    name="Exoskeletal Legs"
+	aliases="Exolegs, Exoskeleton"
+    category="Equipment"
+    tags="meditem,clothing"
+	fireproof="true"
+	description="An electronically powered exoskeleton worn over the legs"
+    price="3500">
+	
+	<Deconstruct time="30">
+      <Item name="Spare Parts"/>
+	  <Item name="Spare Parts"/>
+      <Item name="Spare Parts"/>
+    </Deconstruct>
+
+    <Sprite texture ="exolegs.png" sourcerect="69,46,50,25" depth="0.55"/>
+
+    <Body width="50" height="25" density="20"/>
+
+    <Wearable limbtype="Legs" slots="Any,Legs">
+      <sprite texture="exolegs.png" limb="Waist" sourcerect="94,0,32,32" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+	  
+      <sprite texture="exolegs.png" limb="RightThigh" sourcerect="0,0,30,52" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="exolegs.png" limb="LeftThigh" sourcerect="0,60,30,52" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+
+      <sprite texture="exolegs.png" limb="RightLeg" sourcerect="31,0,24,57" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="exolegs.png" limb="LeftLeg" sourcerect="31,60,24,57" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <sprite texture="exolegs.png" limb="RightFoot" sound="footstep_armor" sourcerect="66,86,22,31" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="exolegs.png" limb="LeftFoot" sound="footstep_armor" sourcerect="96,86,22,31" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+     
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.8" LowPassMultiplier="0.2" disabledeltatime="true"/>
+	  <StatusEffect type="OnWearing" target="Contained" targetnames="loadable" Condition="-0.05">
+        <RequiredItem type="Contained" name="loadable"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.95" disabledeltatime="true">
+        <RequiredItem type="Contained" name="loadable"/>
+      </StatusEffect>
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>  
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" damagesound="LimbArmor" deflectprojectiles="false"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+	  <Containable name="loadable">
+        <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
+      </Containable>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+	name="Crewmember Bandanna"
+	aliases="Bandanna,Facebandanna,Facemask"
+	category="Equipment"
+	tags="smallitem,clothing"
+	description="A bandana that fits snugly to the wearer's face, concealing their identity without obstructing their vision."
+	cargocontainername="Standard Shipping Box"
+    price="50">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+    
+    <Sprite texture ="miscellaneous.png" depth="0.65" sourcerect="6,18,21,16"/>
+  
+    <Body height="10.5" width="19.5" density="10.02"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="miscellaneous.png" limb="Head" sourcerect="0,0,32,42" origin="0.45,0.5"/>
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" SpeedMultiplier="-0.001" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.99"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+    </Wearable> 
+  </Item>
+  
+  <Item
+    name="Crewmember Toque Blanche"
+	aliases="Chef's Hat,Chef Hat,Cook Hat"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="A token of the Assistant's undeniable authority.">
+	
+	<Deconstruct time="10">
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="chefHat.png" depth="0.6" sourcerect="0,0,30,27"/>
+
+    <Body width="29" height="26" density="10.3"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="chefHat.png" limb="Head" origin="0.55,1.15" sourcerect="0,0,30,27" depth="0.038" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.003" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.95" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.95" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Crewmember Apron"
+    category="Equipment"
+    tags="meditem,clothing">
+	
+	<Deconstruct time="8">
+	  <Item name="Polycarbonate Sliver"/>
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="chefApron.png" sourcerect="14,73,50,4" depth="0.6"/>
+
+    <Body width="48" height="3.5" density="6"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="chefApron.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
+	  
+      <sprite texture="chefApron.png" limb="RightArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+      <sprite texture="chefApron.png" limb="LeftArm" sourcerect="30,2,17,39" origin="0.5,0.5"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.01" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.95"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.95" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.95" bleedingmultiplier="0.85" deflectprojectiles="false"/>
+    </Wearable>
+  	
+	<ItemContainer capacity="2">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Doctor's Light Ballistic Vest"
+	aliases="Light Ballistic Vest and Pouch,Medical Vest,Vest with Pouch"
+    category="Equipment"
+    tags="meditem,clothing"
+	description="A light ballistic vest with an attached leather pouch designed to hold medical supplies.">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="moregear.png" sourcerect="30,39,41,10" depth="0.6"/>
+
+    <Body width="41" height="10" density="10"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="moregear.png" limb="Torso" sourcerect="71,0,32,49" depthlimb="Head" origin="0.56,0.48"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.05" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.95"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.8" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+	
+	<ItemContainer capacity="2">
+      <Containable name="chem"/>
+	  <Containable name="medical"/>
+	  <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Doctor's Helmet"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A headgear worn to protect the head from injuries while helping the injured."
+	cargocontainername="Standard Shipping Box"
+	price="85">
+	
+	<Deconstruct time="5">
+	  <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="moregear.png" depth="0.6" sourcerect="0,49,32,32"/>
+
+    <Body width="14" height="8" radius="8" density="16"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="moregear.png" limb="Head" origin="0.5,0.9" sourcerect="0,49,32,32" depth="0.038" inheritlimbdepth="false"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/> <!-- oxygen="-0.01" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingdamagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Stasis Mask"
+	aliases="Breathing apparatus."
+    category="Equipment"
+    Tags="smallitem,medical"
+	description="A special breathing apparatus designed to keep the subject from dying due to lack of oxygen. It can only fit Oxygen Bottles and cannot be used to help conscious individuals stay conscious."
+	cargocontainername="Standard Shipping Box"
+    price="150">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Sliver"/>
+	  <Item name="Aluminium Sliver"/>
+	  <Item name="FPGA Circuit"/>
+    </Deconstruct>
+    
+    <Sprite texture="moregear.png" depth="0.6" sourcerect="112,14,14,11"/>
+  
+    <Body height="14" width="11" density="7"/>
+
+    <Wearable limbtype="Head" slots="Any,Face">
+      <sprite texture="moregear.png" limb="Head" sourcerect="110,0,18,30" origin="0.1,0.5" depth="0.04" inheritlimbdepth="false"/>
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true"/> <!-- oxygen="-0.03" /> -->
+	  <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="15" Condition="-0.5" checkconditionalalways="true">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional Oxygen="lt -50"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-15" checkconditionalalways="true">
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+		<Conditional Oxygen="gt -60"/>
+		<Conditional Oxygen="lt -60"/>
+      </StatusEffect>
+	  <StatusEffect type="OnWearing" target="Character" HuskInfectionState="-0.002">
+	    <Conditional HuskInfectionState="lt 1.0"/>
+	    <RequiredItem type="Contained" name="Oxygen Bottle"/>
+      </StatusEffect>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.99"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" deflectprojectiles="true"/>
+    </Wearable>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="Oxygen Bottle"/>
+    </ItemContainer>  
+  </Item>
+  
+  <Item
+    name="t1/2 Glasses"
+	aliases="Gorbnob Fredmun's Glasses,Glasses,Spectacles,Specs"
+    category="Equipment"
+	description="An oddly familiar pair of specs."
+	Tags="smallitem">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture ="miscellaneous.png" depth="0.55" sourcerect="111,89,17,7"/>
+
+    <Body height="17" width="7" density="6"/>
+	
+	<Wearable slots="Any,Face">
+      <sprite texture="miscellaneous.png" limb="Head" sourcerect="98,75,37,38" origin="0.5,0.5" depth="0.04" inheritlimbdepth="false"/>
     </Wearable>
   </Item>
   

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Jobs>
   <Job name="Captain" description="The Commanding Officer with authority over the entire crew. The captain is responsible for commanding the rest of the crew and trying to keep everything running smoothly."
-	   minnumber="1" maxnumber="1" minkarma="0" initialcount="1">
+	   minnumber="1" maxnumber="1" minkarma="0.8" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="40,60"/>
       <Skill name="Construction" level="15,30"/>
       <Skill name="Electrical Engineering" level="30,50"/>
-      <Skill name="Medical" level="20,40"/>
+      <Skill name="Science" level="10,20"/>
+	  <Skill name="Medical" level="20,40"/>
 	  <Skill name="Cooking" level="20,40"/>
-	  <Skill name="Science" level="10,20"/>
     </Skills>
     <Items>
       <Item name="Captain ID Card" equip="true"/>
@@ -51,14 +51,14 @@
   </Job>
   
   <Job name="Officer" description="The executive officer or second-in-command. The officer's duty is to help the captain with administrative and navigation responsibilities. If the captain is absent, the officer will temporarily assume command."
-	   maxnumber="1" minkarma="0">
+	   maxnumber="1" minkarma="0.7">
     <Skills>
       <Skill name="Weapons" level="30,50"/>
       <Skill name="Construction" level="20,40"/>
       <Skill name="Electrical Engineering" level="10,20"/>
-      <Skill name="Medical" level="40,60"/>
+      <Skill name="Science" level="15,30"/>
+	  <Skill name="Medical" level="40,60"/>
 	  <Skill name="Cooking" level="20,40"/>
-	  <Skill name="Science" level="15,30"/>
     </Skills>
     <Items>
       <Item name="Officer ID Card" equip="true"/>
@@ -82,7 +82,7 @@
 		<Item name="Classified Protocol A"/>
 		<Item name="Classified Protocol B"/>
       </Item> 
-      <Item name="Officer's Cap A" equip="true"/>
+      <Item name="Officer's Cap" equip="true"/>
 	  <Item name="Officer's Jacket" equip="true"/>
 	  <Item name="Officer's Trousers A" equip="true"/>
 	  <Item name="Flashlight">
@@ -94,15 +94,15 @@
     </Items>
   </Job>
   
-  <Job name="Enforcer" description="Enforcer are are responsible for keeping the submarine safe from potential attackers. The creatures inhabiting the ocean aren't the only threat they need to worry about, as several of the renegade groups opposing the Europa Coalition are known to have sent infiltrators on board the vessels."
-	   maxnumber="4" minkarma="0">
+  <Job name="Enforcer" description="Enforcers are are responsible for keeping the submarine safe from potential attackers. The creatures inhabiting the ocean aren't the only threat they need to worry about, as several of the renegade groups opposing the Europa Coalition are known to have sent infiltrators on board the vessels."
+	   maxnumber="2" minkarma="0.6">
     <Skills>
       <Skill name="Weapons" level="50,70"/>
       <Skill name="Construction" level="20,40"/>
       <Skill name="Electrical Engineering" level="15,30"/>
+	  <Skill name="Science" level="10,20"/>
 	  <Skill name="Medical" level="30,50"/>
 	  <Skill name="Cooking" level="15,30"/>
-	  <Skill name="Science" level="10,20"/>
     </Skills>
     <Items>
       <Item name="Enforcer ID Card" equip="true"/>
@@ -125,13 +125,11 @@
 		<Item name="Classified Protocol A"/>
 		<Item name="Classified Protocol B"/>
       </Item> 
-	  <Item name="Security Beret" equip="true"/>
+      <Item name="Security Beret" equip="true"/>
 	  <Item name="Light Ballistic Vest" equip="true"/>
 	  <Item name="Ballistic Trousers" equip="true"/>
-	  <Item name="Handcuffs"/>
-	  <Item name="Stun Baton">
-        <Item name="Battery Cell"/>
-	  </Item> 
+	  <Item name="Tempcuffs"/>
+	  <Item name="Stun Baton"/> 
       <Item name="Enforcer Shades" equip="true">
         <Item name="Battery Cell"/>
       </Item>
@@ -140,12 +138,12 @@
   </Job>
   
   <Job name="Scientist" description="Scientists are usually found in science vessels but they are often employed by military or private employers because of their knowledge of biochemistry and quantum physics."
-	   maxnumber="2" minkarma="0">
+	   maxnumber="1" minkarma="0.5">
     <Skills>
       <Skill name="Weapons" level="10,20"/>
       <Skill name="Construction" level="15,30"/>
       <Skill name="Electrical Engineering" level="20,40"/>
-      <Skill name="Science" level="60,70"/>
+      <Skill name="Science" level="50,70"/>
 	  <Skill name="Medical" level="30,50"/>
 	  <Skill name="Cooking" level="15,30"/>
     </Skills>
@@ -167,6 +165,7 @@
 		<Item name="Basic Emergency Protocol"/>
 		<Item name="Document about Threshers"/>
 		<Item name="Document about Crawlers"/>
+		<Item name="Document about Ghost Crawlers"/>
 		<Item name="Document about Mantises"/>
 		<Item name="Document about Scorpions"/>
 		<Item name="Document about Molochs"/>
@@ -180,14 +179,14 @@
   </Job>
 
   <Job name="Medical Doctor" description="The primary duty of the doctors is to help injured crew members, but their knowledge of chemistry and pharmaceutics can also be useful for creating various non-medicinal chemicals."
-	   maxnumber="2" minkarma="0">
+	   maxnumber="2" minkarma="0.5">
     <Skills>
       <Skill name="Weapons" level="15,30"/>
       <Skill name="Construction" level="10,20"/>
       <Skill name="Electrical Engineering" level="10,20"/>
+	  <Skill name="Science" level="30,50"/>
       <Skill name="Medical" level="60,70"/>
 	  <Skill name="Cooking" level="20,50"/>
-	  <Skill name="Science" level="30,50"/>
     </Skills>
     <Items>
       <Item name="Doctor ID Card" equip="true"/>
@@ -213,19 +212,19 @@
       </Item>  
       <Item name="Health Scanner Headset" equip="true">
         <Item name="Battery Cell"/>
-      </Item>   
+      </Item>      
     </Items>
   </Job>
   
   <Job name="Engineer" description="Engineers have above-average electrician skills, but fixing complex mechanical devices is still usually out of their skill set. They are competent at fixing electrical devices however, and are the ones to turn to when the power grid starts failing."
-	   minnumber="1" minkarma="0" initialcount="1">
+	   minnumber="1" maxnumber="4" minkarma="0.4" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="10,20"/>
       <Skill name="Construction" level="20,40"/>
-      <Skill name="Electrical Engineering" level="60,80"/>
-      <Skill name="Medical" level="10,20"/>
-	  <Skill name="Cooking" level="10,20"/>
-	  <Skill name="Science" level="5,20"/>
+      <Skill name="Electrical Engineering" level="50,70"/>
+	  <Skill name="Science" level="30,50"/>
+      <Skill name="Medical" level="15,30"/>
+	  <Skill name="Cooking" level="15,30"/>
     </Skills>
     <Items>
       <Item name="Engineer ID Card" equip="true"/>
@@ -241,6 +240,8 @@
         <Item name="Coalition Engineer"/>
 		<Item name="Basic Emergency Protocol"/>
 		<Item name="Document about Nuclear Reactors"/>
+		<Item name="Document about Fusion Reactors"/>
+		<Item name="Document about Power Grids"/>
       </Item> 
       <Item name="Utility Vest" equip="true"/>
 	  <Item name="Crewmember Cargo Trousers A" equip="true"/>   
@@ -253,14 +254,14 @@
   </Job>
 
   <Job name="Mechanic" description="Mechanics have high construction and mechanic skills. They are skilled at using tools such as plasma cutters and welders, and are usually the only ones who can fix broken mechanical devices."
-	   minnumber="1" minkarma="0" initialcount="1">
+	   minnumber="1" maxnumber="4" minkarma="0.3" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="20,40"/>
       <Skill name="Construction" level="50,70"/>
       <Skill name="Electrical Engineering" level="15,30"/>
+	  <Skill name="Science" level="30,50"/>
       <Skill name="Medical" level="15,30"/>
 	  <Skill name="Cooking" level="10,20"/>
-	  <Skill name="Science" level="30,50"/>
     </Skills>
     <Items>
       <Item name="Mechanic ID Card" equip="true"/>
@@ -287,14 +288,14 @@
   </Job>
   
   <Job name="Cook" description="The primary duty of a cook, or culinary specialist, is to provide cooking services for the rest of the crew. They are also responsible for keeping the storerooms stocked and the dinning areas clean."
-	   maxnumber="2" minkarma="0">
+	   maxnumber="1" minkarma="0.2">
     <Skills>
       <Skill name="Weapons" level="20,40"/>
       <Skill name="Construction" level="15,30"/>
       <Skill name="Electrical Engineering" level="15,30"/>
+	  <Skill name="Science" level="10,20"/>
       <Skill name="Medical" level="30,50"/>
 	  <Skill name="Cooking" level="50,70"/>
-	  <Skill name="Science" level="10,20"/>
     </Skills>
     <Items>
       <Item name="Cook ID Card" equip="true"/>
@@ -310,7 +311,7 @@
 		<Item name="Basic Emergency Protocol"/>
       </Item> 
 	  <Item name="Frying Pan"/>
-	  <Item name="Crewmember Toque Blanche"/>
+	  <Item name="Crewmember Toque Blanche" equip="true"/>
 	  <Item name="Crewmember Apron" equip="true"/>
 	  <Item name="Crewmember Trousers A" equip="true"/>
       <Item name="Headset" equip="true">
@@ -320,14 +321,14 @@
   </Job>
 
   <Job name="Seaman" description="Seamen don't have any specific responsibilities or areas of expertise. This job is a good choice for newcomers who want to get a hang of working on board the submarine without taking up tasks that they aren't qualified for."
-	   minkarma="0" allowalways="true">
+	   minkarma="0.1" allowalways="true">
     <Skills>
       <Skill name="Weapons" level="15,30"/>
       <Skill name="Construction" level="20,40"/>
       <Skill name="Electrical Engineering" level="20,40"/>
+	  <Skill name="Science" level="15,30"/>
       <Skill name="Medical" level="30,50"/>
 	  <Skill name="Cooking" level="30,50"/>
-	  <Skill name="Science" level="15,30"/>
     </Skills>
     <Items>
       <Item name="Seaman ID Card" equip="true"/>
@@ -341,7 +342,6 @@
         <Item name="Coalition Seamen"/>
 		<Item name="Basic Emergency Protocol"/>
       </Item> 
-	  <Item name="Crewmember Beanie"/>
 	  <Item name="Crewmember Cargo Trousers A" equip="true"/>
       <Item name="Flashlight">
 	    <Item name="Battery Cell"/>
@@ -354,14 +354,14 @@
   </Job>
   
   <Job name="Prisoner" description="Prisoners can range from petty individuals to dangerous and even reckless psychopaths. Coalition labor facilities make no distinctive outfits or safety measures for them so seeing low-risk prisoners sharing cell blocks with maximum security ones is commonplace."
-	   minkarma="0.0" allowalways="true">
+	   minkarma="0.0">
     <Skills>
-      <Skill name="Weapons" level="5,80"/>
-      <Skill name="Construction" level="5,80"/>
-      <Skill name="Electrical Engineering" level="5,80"/>
-      <Skill name="Medical" level="5,80"/>
-	  <Skill name="Cooking" level="5,80"/>
-	  <Skill name="Science" level="5,80"/>
+      <Skill name="Weapons" level="5,65"/>
+      <Skill name="Construction" level="5,65"/>
+      <Skill name="Electrical Engineering" level="5,65"/>
+	  <Skill name="Science" level="5,65"/>
+      <Skill name="Medical" level="5,65"/>
+	  <Skill name="Cooking" level="5,65"/>
     </Skills>
     <Items>
       <Item name="Prisoner ID Card" equip="true"/>
@@ -369,7 +369,7 @@
 	  <Item name="Ration Stamp A"/>
 	  <Item name="Ration Stamp A"/>
 	  <Item name="Ration Stamp A"/>
-	  <!-- <Item name="Handcuffs" equip="true"/> -->
+	  <Item name="Tempcuffs" equip="true"/>
     </Items>
   </Job>
   

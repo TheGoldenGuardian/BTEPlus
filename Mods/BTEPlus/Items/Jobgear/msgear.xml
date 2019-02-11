@@ -1,0 +1,121 @@
+﻿<Items>
+  <Item
+    name="Red Vest"
+	aliases="Marco's Vest"
+    category="Equipment"
+	tags="meditem,clothing"
+	cargocontainername="Standard Shipping Box">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+	<Sprite texture= "msgear.png" sourcerect="0,115,50,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="msgear.png" limb="Torso" sourcerect="0,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
+	  
+	  <sprite texture="msgear.png" limb="RightHand" sourcerect="0,48,15,48" origin="0.5,0.5" depth="0.001" hidelimb="false"/>
+      <sprite texture="msgear.png" limb="LeftHand" sourcerect="16,48,15,48" origin="0.5,0.5" hidelimb="false"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+    name="Yellow Vest"
+	aliases="Tarma's Vest"
+    category="Equipment"
+	tags="meditem,clothing"
+	cargocontainername="Standard Shipping Box">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+    </Deconstruct>
+
+	<Sprite texture="msgear.png" sourcerect="51,115,50,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="msgear.png" limb="Torso" sourcerect="30,0,29,49" depthlimb="Head" origin="0.52,0.6"/>
+	  
+	  <sprite texture="msgear.png" limb="RightHand" sourcerect="0,48,15,48" origin="0.5,0.5" depth="0.001" hidelimb="false"/>
+      <sprite texture="msgear.png" limb="LeftHand" sourcerect="16,48,15,48" origin="0.5,0.5" hidelimb="false"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.02" disabledeltatime="true"/> <!-- oxygen="-0.004" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
+	name="Headband"
+	aliases="Marco's Headband"
+	category="Equipment"
+	tags="smallitem,clothing"
+	cargocontainername="Standard Shipping Box">
+
+    <Deconstruct time="5">
+      <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+    
+    <Sprite texture ="msgear.png" depth="0.65" sourcerect="104,103,23,6"/>
+  
+    <Body height="5.5" width="22" density="10.02"/>
+
+    <Wearable limbtype="Head" slots="Any,Head">
+      <sprite texture="msgear.png" limb="Head" sourcerect="102,102,25,26" origin="0.5,0.5"/>
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" SpeedMultiplier="-0.001" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.99"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.99" bleedingmultiplier="0.99" damagesound="LimbArmor" deflectprojectiles="false"/>
+    </Wearable> 
+  </Item>
+  
+  <Item
+    name="PF Trousers"
+	aliases="Marco's Trousers,Tarma's Trousers"
+    category="Equipment"
+	tags="meditem,clothing"
+	cargocontainername="Standard Shipping Box">
+	
+	<Deconstruct time="15">
+	  <Item name="Polycarbonate Bar"/>
+      <Item name="Tactical Boot"/>
+	  <Item name="Tactical Boot"/>
+    </Deconstruct>
+
+	<Sprite texture="msgear.png" sourcerect="0,101,51,13" depth="0.6"/>
+
+    <Body width="51" height="13" density="15"/>
+
+    <Wearable slots="Any,Legs">
+      <sprite texture="mslegs.png" limb="Waist" sourcerect="0,0,32,29" depth="0.01" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="mslegs.png" limb="RightThigh" sourcerect="0,32,26,48" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="mslegs.png" limb="LeftThigh" sourcerect="56,0,26,48" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+
+      <sprite texture="mslegs.png" limb="RightLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.11" hidelimb="true"/>
+      <sprite texture="mslegs.png" limb="LeftLeg" sourcerect="32,0,22,50" origin="0.5,0.5" depth="0.15" hidelimb="true"/>
+	  
+	  <sprite texture="mslegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.10" hidelimb="true"/>
+      <sprite texture="mslegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="35,53,16,25" origin="0.5,0.5" depth="0.14" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.06" disabledeltatime="true"/>
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.9" bleedingmultiplier="0.9" deflectprojectiles="false"/>
+    </Wearable>
+	
+	<ItemContainer capacity="3">
+      <Containable name="smallitem"/>
+    </ItemContainer>
+  </Item>
+</Items>

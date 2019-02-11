@@ -186,8 +186,8 @@
   </Item>
   
   <Item
-    name="Flashlight Security Pistol"
-	aliases="Flashlight Security Sidearm,Flashlight CSP.50,Flashlight CSP .50,FSP"
+    name="Flashlight Pistol"
+	aliases="Flashlight Security Sidearm,Flashlight CSP.50,Flashlight CSP .50,FSP,Flashlight Security Pistol"
     category="Equipment"
     tags="meditem,weapon"
     description="[CSP .50] A large caliber pistol holding 7 rounds. Usually affectionately called the 'hand cannon.' Uses Large Bore Rounds."
@@ -1147,7 +1147,7 @@
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
 			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-28,-3" handle2="15,4"/>
     
-    <RangedWeapon barrelpos="129,4" spread="1" unskilledspread="18" reload="4">
+    <RangedWeapon barrelpos="51,9" spread="1" unskilledspread="18" reload="4">
       <Sound file="Mods/BTEPlus/Items/Weapons/riflefire.ogg" type="OnUse"/>
       <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1193,7 +1193,7 @@
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
 			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-28,-3" handle2="15,4"/>
     
-    <RangedWeapon barrelpos="129,4" spread="0" unskilledspread="15" reload="3">
+    <RangedWeapon barrelpos="51,9" spread="0" unskilledspread="15" reload="3">
       <Sound file="Mods/BTEPlus/Items/Weapons/riflefire.ogg" type="OnUse"/>
       <RequiredItems name="Revolver Round,Revolver HL Round,Revolver Flare Round" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1213,6 +1213,107 @@
 	  <Containable name="Revolver HL Round"/>
 	  <Containable name="Revolver Flare Round"/>
     </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Man-Portable Railgun"
+	aliases="Man-Portable Miniature Railgun,Mini Railgun,Mini-Railgun,mpr"
+    category="Misc"
+	tags="bigitem,weapon"
+	description=""
+	cargocontainername="Weapons Shipping Box"
+	impacttolerance="3">
+
+    <!--<Deconstruct time="10">      
+      <Item name=""/>
+    </Deconstruct>-->
+  
+    <Sprite texture="moreweapons.png" sourcerect="133,155,123,33" depth="0.55"/>
+
+    <Body width="133" height="155" density="66"/>
+
+    <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
+			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-25,-3" handle2="15,4"/>
+    
+    <RangedWeapon barrelpos="4,3" spread="0" unskilledspread="0" reload="20">
+      <Sound file="Content/Items/Weapons/railgun.ogg" type="OnUse"/>
+      <RequiredItems name="mprammo" type="Contained" msg="The loaded ammunition is too damaged"/>
+      <RequiredSkill name="Weapons" level="50"/>
+	  <StatusEffect type="OnUse">
+	    <Explosion range="150" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="12"/>
+      </StatusEffect>
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/GunHit.ogg"/>
+	  </StatusEffect>
+    </RangedWeapon>
+
+    <ItemContainer capacity="1" hideitems="true">
+      <Containable name="mprammo"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+    name="Man-Portable Railgun Spear"
+	aliases="mprs"
+    category="Equipment"
+	tags="mprammo">
+
+    <!-- <Deconstruct time="16">
+      <Item name="Steel Bar"/>
+      <Item name="Steel Bar" mincondition="0.5"/>
+	  <Item name="Steel Bar" mincondition="0.99"/>
+    </Deconstruct> -->
+
+    <Sprite texture="moreweapons.png" sourcerect="169,147,83,5" depth="0.55"/>
+
+    <Body width="83" height="5" density="52"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false"/>
+    
+    <Projectile launchimpulse="50" sticktocharacters="true">
+      <Attack damage="80" bleedingdamage="12" stun="2.2" structuredamage="200" damagetype="Slash" severlimbsprobability="1"/>
+	  <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="2"/>
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  
+  <Item
+    name="Stun Grenade"
+    category="Equipment"
+    price="200"
+	description="A non-lethal hand grenade designed to stun all within its blast radius for a short time. Unlike the HTM Grenade, it does not allow charges and will only stun. The pin does not need to be pulled for it to detonate."
+    cargocontainername="Explosives Shipping Box"
+    tags="smallitem,weapon,explosive,grenade">
+
+    <Deconstruct time="10">
+      <Item name="Steel Bar"/>
+      <Item name="Flash Powder" mincondition="0.99"/>
+      <Item name="Chloral Hydrate" mincondition="0.99"/>
+    </Deconstruct>
+
+    <Sprite texture="moreweapons.png" sourcerect="128,25,11,24" depth="0.55"/>
+
+    <Body width="11" height="24" density="30"/>
+	
+	<Projectile launchimpulse="18" sticktocharacters="false">
+      <Attack damage="8" bleedingdamage="0" stun="0.5" structuredamage="0" targetforce="1" damagetype="Blunt"/>
+    </Projectile>
+    
+    <!-- Empty itemcomponent that explodes the grenade when used by something else than a character (e.g. a detonator) -->
+    <ItemComponent characterusable="false">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" delay="3.0">
+        <sound file="Content/Items/Weapons/stungrenade.ogg"/>
+        <Explosion range="500" damage="5" stun="25" force="0.1" flames="false" smoke="false" camerashake="2.5"/>
+      </StatusEffect>
+    </ItemComponent>
+
+    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" aimpos="35,-10">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0">
+        <sound file="Content/Items/Weapons/stungrenade.ogg"/>
+        <Explosion range="500" damage="5" stun="25" force="0.1" flames="false" smoke="false" camerashake="2.5"/>
+      </StatusEffect>
+    </Throwable>
   </Item>
   
   <Item
@@ -1290,7 +1391,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-25" Condition="-20"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="DDoor,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door,Small Door,Thin Small Door" Stuck="-25" Condition="-20"/>
       <sound file="Mods/BTE/Items/Weapons/EnergyBig.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Pulse Pistol Battery" type="Contained" msg="Battery Depleted"/>
       <RequiredSkill name="Weapons" level="40"/>
@@ -1389,7 +1490,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-25" Condition="-5"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door,Small Door,Thin Small Door" Stuck="-25" Condition="-5"/>
       <sound file="Mods/BTE/Items/Weapons/EnergySmall.ogg" type="OnUse" range="700"/>
 	  <RequiredItems name="Pulse SMG Battery" type="Contained" msg="Battery Depleted"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1477,7 +1578,7 @@
       <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
       <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
 	  <Fixable name="structure"/>
-	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Small Door,Thick Door,Thin Door,Thin Windowed Door,Wall Hatch,Glass Hatch,Wall Door" Stuck="-99999999" Condition="-99999999"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Glass Hatch,Hatch,Blast Hatch,Duct Block,Tall Door,Wide Hatch,Thin Door,Thin Windowed Door,Thin Hatch,Wall Door,Wall Hatch,Thick Door,Small Door,Thin Small Door" Stuck="-99999999" Condition="-99999999"/>
       <sound file="Mods/BTEPlus/Items/Weapons/bfpcfire.ogg" type="OnUse" range="5000"/>
 	  <RequiredItems name="Pulsar Capsule" type="Contained" msg="Capsule Discharged"/>
       <RequiredSkill name="Weapons" level="80"/>
@@ -1619,10 +1720,6 @@
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-9,4" handle2="-9,4" holdangle="-80" reload="0.8">
       <Attack damage="1" bleedingdamage="0.1" stun="0.1" targetforce="10" damagetype="Slash"/>
-		<StatusEffect type="Always" target="This" condition="99" setvalue="true">
-		  <Conditional condition="gt 99.9"/>
-		  <Sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
-		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -1689,10 +1786,6 @@
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-9,4" handle2="-9,4" holdangle="-80" reload="0.8">
       <Attack damage="1" bleedingdamage="0.1" stun="0.1" targetforce="10" damagetype="Slash"/>
-		<StatusEffect type="Always" target="This" condition="99" setvalue="true">
-		  <Conditional condition="gt 99.9"/>
-		  <Sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
-		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
@@ -1741,7 +1834,6 @@
 	<BrokenSprite texture="moreweapons.png" sourcerect="222,40,34,10" depth="0.55" maxcondition="10"/>
     
     <Body width="34" height="10" density="15"/>
-	<BrokenBody width="1" radius="15" density="-155" maxcondition="10"/>
 	
 	<ItemComponent>
 	<StatusEffect type="OnUse" target="Character,This" stun="-1.4">
@@ -1760,10 +1852,6 @@
     <MeleeWeapon slots="RightHand,LeftHand,Any"
           aimpos="50,0" handle1="-9,4" handle2="-9,4" holdangle="-80" reload="0.8">
       <Attack damage="1" bleedingdamage="0.1" stun="0.1" targetforce="10" damagetype="Slash"/>
-		<StatusEffect type="Always" target="This" condition="99" setvalue="true">
-		  <Conditional condition="gt 99.9"/>
-		  <Sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
-		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="watcher"/>
 		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>

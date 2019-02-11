@@ -6,14 +6,13 @@
 		category="Machine"
 		Tags="cntnr">
     
-      <Sprite texture="Fabricators.png" depth="0.8" sourcerect="0,0,64,128"/>
+      <Sprite texture="Fabricators.png" depth="0.8" sourcerect="0,0,64,128" canflipx="false"/>
 	  
-	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
         <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="0,0,64,128" alpha="1.0"/>
-	    <StatusEffect type="Always" target="This" IsOn="true"/>
       </LightComponent>
 
-	  <Fabricator canbeselected="true" powerconsumption="250">
+	  <Fabricator canbeselected="true" powerconsumption="140">
 	  <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
       <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
       <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
@@ -30,13 +29,16 @@
 	  <fabricableitem name="Railgun Bronze Spear" requireditems="Bronze Block,Bronze Bar" requiredtime="15">
         <RequiredSkill name="Construction" level="25"/>
       </fabricableitem>
-	  <fabricableitem name="Railgun Steel Spear" requireditems="Steel Block,Steel Bar" requiredtime="16">
+	  <fabricableitem name="Railgun Lead Spear" requireditems="Lead Block,Lead Bar" requiredtime="16">
         <RequiredSkill name="Construction" level="26"/>
       </fabricableitem>
-	  <fabricableitem name="Railgun Uranium Spear" requireditems="Uranium Block,Uranium Bar" requiredtime="18">
+	  <fabricableitem name="Railgun Steel Spear" requireditems="Steel Block,Steel Bar" requiredtime="18">
         <RequiredSkill name="Construction" level="28"/>
       </fabricableitem>
-	  <fabricableitem name="Railgun Fulgurium Spear" requireditems="Fulgurium Block,Fulgurium Bar" requiredtime="20">
+	  <fabricableitem name="Railgun Uranium Spear" requireditems="Uranium Block,Uranium Bar" requiredtime="20">
+        <RequiredSkill name="Construction" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun Fulgurium Spear" requireditems="Fulgurium Block,Fulgurium Bar" requiredtime="22">
         <RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
 
@@ -44,7 +46,8 @@
 	  <fabricableitem name="Aluminium Spear" requireditems="Aluminium Bar" requiredtime="8"/>
 	  <fabricableitem name="Copper Spear" requireditems="Copper Bar" requiredtime="10"/>
 	  <fabricableitem name="Bronze Spear" requireditems="Bronze Bar" requiredtime="11"/>
-      <fabricableitem name="Steel Spear" requireditems="Steel Bar" requiredtime="12"/>
+	  <fabricableitem name="Lead Spear" requireditems="Lead Bar" requiredtime="12"/>
+      <fabricableitem name="Steel Spear" requireditems="Steel Bar" requiredtime="13"/>
 	  <fabricableitem name="Uranium Spear" requireditems="Uranium Bar" requiredtime="14"/>
 	  <fabricableitem name="Fulgurium Spear" requireditems="Fulgurium Bar" requiredtime="16"/>
 	  
@@ -52,7 +55,8 @@
 	  <fabricableitem name="Aluminium Saw" requireditems="Aluminium Bar" requiredtime="10"/>
 	  <fabricableitem name="Copper Saw" requireditems="Copper Bar" requiredtime="12"/>
 	  <fabricableitem name="Bronze Saw" requireditems="Bronze Bar" requiredtime="13"/>
-	  <fabricableitem name="Steel Saw" requireditems="Steel Bar" requiredtime="14"/>
+	  <fabricableitem name="Lead Saw" requireditems="Lead Bar" requiredtime="14"/>
+	  <fabricableitem name="Steel Saw" requireditems="Steel Bar" requiredtime="15"/>
 	  <fabricableitem name="Uranium Saw" requireditems="Uranium Bar" requiredtime="16"/>
 	  <fabricableitem name="Fulgurium Saw" requireditems="Fulgurium Bar" requiredtime="18"/>
 	  
@@ -64,7 +68,7 @@
       </fabricableitem>
 	  
 	  <fabricableitem name="Diving Knife" requireditems="Polycarbonate Sliver,Steel Sliver" requiredtime="15">
-	    <Item name="ByPass - Diving Knife" mincondition="0.0" usecondition="true"/>
+	    <Item name="ByPass - Standard-Issue Weapons" mincondition="0.0" usecondition="true"/>
 		<RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
 	  <fabricableitem name="Utility Knife" requiredtime="10">
@@ -81,6 +85,13 @@
 	  <fabricableitem name="Frying Pan" requireditems="Steel Bar,Polycarbonate Sliver" requiredtime="10"/>
 	  
 	  <fabricableitem name="Food Can" requireditems="Aluminium Bar" requiredtime="5"/>
+	  
+	  <fabricableitem name="Oxygen Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
+	  <fabricableitem name="Oxygen Bottle" requireditems="Aluminium Sliver" outcondition="0.0" requiredtime="7.5"/>
+	  <fabricableitem name="Oxygenite Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
+	  <fabricableitem name="Sulphurite Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
+	  <fabricableitem name="Thermite Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
+	  <fabricableitem name="Hydrogen Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
 
       <fabricableitem name="Copper Coil" requireditems="Copper Sliver" requiredtime="5"/>
 	  <fabricableitem name="Wire" requireditems="Copper Coil,Polycarbonate Sliver" requiredtime="5"/>
@@ -95,10 +106,6 @@
 	  <fabricableitem name="Spare Parts" requireditems="Polycarbonate Bar,Aluminium Bar,Steel Bar" requiredtime="15">
 	    <RequiredSkill name="Construction" level="50"/>
       </fabricableitem>
-	  
-	  <fabricableitem name="Duct Tape" requiredtime="3">
-		<Item name="Biomass" mincondition="0.99"/>
-	  </fabricableitem>
 
 	  <fabricableitem name="Polycarbonate Sliver" requireditems="Biomass" requiredtime="15">
 	    <RequiredSkill name="Construction" level="40"/>
@@ -122,6 +129,9 @@
 	  <fabricableitem name="Bronze Bar" requireditems="Bronze Sliver,Bronze Sliver" requiredtime="13"/>
 	  <fabricableitem name="Bronze Block" requireditems="Aluminium Bar,Copper Bar" requiredtime="15"/>
 	  <fabricableitem name="Bronze Block" requireditems="Bronze Bar,Bronze Bar" requiredtime="15"/>
+	  <fabricableitem name="Lead Sliver" requireditems="Lead Powder,Lead Powder" requiredtime="11"/>
+	  <fabricableitem name="Lead Bar" requireditems="Lead Sliver,Lead Sliver" requiredtime="12"/>
+	  <fabricableitem name="Lead Block" requireditems="Lead Bar,Lead Bar" requiredtime="14"/>
 	  <fabricableitem name="Steel Sliver" requireditems="Iron Powder,Iron Powder" requiredtime="12"/>
 	  <fabricableitem name="Steel Bar" requireditems="Steel Sliver,Steel Sliver" requiredtime="14"/>
 	  <fabricableitem name="Steel Block" requireditems="Steel Bar,Steel Bar" requiredtime="16"/>
@@ -152,9 +162,9 @@
 		category="Machine"
 		Tags="cntnr">
     
-      <Sprite texture="Fabricators.png" depth="0.79" sourcerect="65,0,64,69"/>
+      <Sprite texture="Fabricators.png" depth="0.79" sourcerect="65,0,64,69" canflipx="false"/>
 
-	  <Fabricator canbeselected="true" powerconsumption="250">
+	  <Fabricator canbeselected="true" powerconsumption="150">
 	  <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
       <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
       <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
@@ -162,46 +172,48 @@
 	  <fabricableitem name="Railgun Shell" requireditems="Steel Block,Polycarbonate Bar" requiredtime="20">
         <RequiredSkill name="Construction" level="35"/>
       </fabricableitem>
-	  <fabricableitem name="Railgun Fusion Shell" requireditems="Railgun Shell,Uranium Bar" requiredtime="20">
-        <Item name="Blueprints - Fusion Weapons" mincondition="0.0" usecondition="true"/>
-		<RequiredSkill name="Construction" level="50"/>
+	  <fabricableitem name="Railgun Fusion Shell" requireditems="Railgun Shell" requiredtime="40">
+        <Item name="Uranium Fuel Rod" mincondition="0.0" usecondition="false"/>
+		<Item name="Blueprints - Fusion Weapons" mincondition="0.0" usecondition="true"/>
+		<RequiredSkill name="Construction" level="60"/>
+      </fabricableitem>
+	  <fabricableitem name="Railgun EMP Shell" requireditems="Railgun Shell,FPGA Circuit" requiredtime="40">
+	    <Item name="Fulgurium Fuel Rod" mincondition="0.0" usecondition="false"/>
+		<Item name="Blueprints - EMP Weapons" mincondition="0.0" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="60"/>
       </fabricableitem>
 	  
-	  <fabricableitem name="Depth Charge Shell" requireditems="Steel Block,Steel Bar" requiredtime="20">
+	  <fabricableitem name="Depth Charge Shell" requireditems="Steel Block,Lead Bar" requiredtime="20">
         <RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
-	  <fabricableitem name="Depth Charge Fusion Shell" requireditems="Depth Charge Shell,Uranium Block" requiredtime="20">
-        <Item name="Blueprints - Fusion Weapons" mincondition="0.0" usecondition="true"/>
-		<RequiredSkill name="Construction" level="50"/>
+	  <fabricableitem name="Depth Charge Fusion Shell" requireditems="Depth Charge Shell" requiredtime="40">
+        <Item name="Uranium Fuel Rod" count="2" mincondition="0.0" usecondition="false"/>
+		<Item name="Blueprints - Fusion Weapons" mincondition="0.0" usecondition="true"/>
+		<RequiredSkill name="Construction" level="55"/>
+      </fabricableitem>
+	  <fabricableitem name="Depth Charge EMP Shell" requireditems="Depth Charge Shell,Fulgurium Block,FPGA Circuit" requiredtime="40">
+		<Item name="Blueprints - EMP Weapons" mincondition="0.0" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="55"/>
       </fabricableitem>
 	  
-	  <fabricableitem name="Depth Mine Shell" requireditems="Steel Block,Steel Bar" requiredtime="20">
+	  <fabricableitem name="Depth Mine Shell" requireditems="Steel Block,Polycarbonate Bar" requiredtime="20">
         <RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
 	  <fabricableitem name="Buoy Mine Shell" requireditems="Aluminium Block,Polycarbonate Bar" requiredtime="20">
         <RequiredSkill name="Construction" level="35"/>
       </fabricableitem>
-	  
-	  <fabricableitem name="Light Ballistic Vest" requireditems="Polycarbonate Bar, Polycarbonate Sliver, Steel Sliver" requiredtime="15">
-        <RequiredSkill name="Construction" level="20"/>
-		<RequiredSkill name="Weapons" level="30"/>
-      </fabricableitem>
 
       <fabricableitem name="Harpoon Gun" requireditems="Steel Bar,Spare Parts" requiredtime="20">
         <RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
-	  <fabricableitem name="Spear Gun" requireditems="Harpoon Gun,Spare Parts" requiredtime="40">
-		<Item name="ByPass - Spear Gun" mincondition="0.0" usecondition="true"/>
-        <RequiredSkill name="Construction" level="40"/>
-      </fabricableitem>
-	  
-	  <fabricableitem name="Hollowhead Spear" requireditems="Plastic Spear,Aluminium Sliver" requiredtime="25">
-	  <RequiredSkill name="Construction" level="35"/>
-	  </fabricableitem>
 	  
 	  <fabricableitem name="Grenade Launcher" requireditems="Steel Bar, Spare Parts" requiredtime="35">
         <RequiredSkill name="Construction" level="60"/>
       </fabricableitem>
+	  
+	  <fabricableitem name="Hollowhead Spear" requireditems="Plastic Spear,Aluminium Sliver" requiredtime="25">
+	  <RequiredSkill name="Construction" level="30"/>
+	  </fabricableitem>
 	  
 	  <fabricableitem name="Gauss Pistol" requireditems="Spare Parts,Fulgurium Sliver,FPGA Circuit" requiredtime="40">
 		<Item name="Blueprints - Gauss Weapons" mincondition="0.0" usecondition="true"/>
@@ -230,19 +242,17 @@
         <RequiredSkill name="Construction" level="60"/>
       </fabricableitem>
 	  
-	  <fabricableitem name="Welding Tool" requireditems="Spare Parts,Spare Electronics" requiredtime="20">
+	  <fabricableitem name="Welding Tool" requireditems="Spare Parts" requiredtime="20">
         <RequiredSkill name="Construction" level="40"/>
       </fabricableitem>
 	  
-	  <fabricableitem name="Saw Cutter" requireditems="Steel Bar,Spare Parts,Spare Electronics,Steel Saw" requiredtime="25">
+	  <fabricableitem name="Saw Cutter" requireditems="Steel Bar,Spare Parts,Steel Saw" requiredtime="25">
         <RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
 	  
-	  <fabricableitem name="Plasma Cutter" requireditems="Spare Parts,Spare Electronics" requiredtime="30">
+	  <fabricableitem name="Plasma Cutter" requireditems="Spare Parts" requiredtime="30">
         <RequiredSkill name="Construction" level="50"/>
       </fabricableitem>
-	  
-	  <fabricableitem name="Oxygen Tank" requireditems="Aluminium Bar" outcondition="0.0" requiredtime="15"/>
 	  
 	  <fabricableitem name="Radio" requireditems="Polycarbonate Sliver,Spare Electronics" requiredtime="10">
 	    <RequiredSkill name="Electrical Engineering" level="25"/>
@@ -271,17 +281,24 @@
 	  
 	  <fabricableitem name="Battery Cell" requireditems="Aluminium Sliver,Copper Sliver" requiredtime="10">
         <Item name="Sulphuric Acid" mincondition="0.5" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Power Cell" requireditems="Lead Sliver" requiredtime="20">
+        <Item name="Battery Cell" mincondition="0.0" usecondition="false"/>
+		<Item name="Sulphuric Acid" mincondition="0.5" usecondition="true"/>
 		<RequiredSkill name="Electrical Engineering" level="40"/>
       </fabricableitem>
-	  
-	  <fabricableitem name="Fulgurium Battery Cell" requireditems="Fulgurium Sliver" requiredtime="15">
+	  <fabricableitem name="Fulgurium Battery Cell" requireditems="Fulgurium Sliver" requiredtime="30">
         <Item name="Blueprints - Fulgurium Energy" mincondition="0.0" usecondition="true"/>
-		<Item name="Battery Cell" mincondition="0.0" usecondition="false"/>
+		<Item name="Power Cell" mincondition="0.0" usecondition="false"/>
 		<Item name="Sulphuric Acid" mincondition="0.5" usecondition="true"/>
 		<RequiredSkill name="Electrical Engineering" level="50"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Flashlight" requireditems="Polycarbonate Bar,Aluminium Sliver,Spare Electronics" requiredtime="20">
+        <RequiredSkill name="Electrical Engineering" level="30"/>
+      </fabricableitem>
+	  <fabricableitem name="Lantern" requireditems="Polycarbonate Sliver,Aluminium Bar,Steel Sliver,Spare Electronics" requiredtime="20">
         <RequiredSkill name="Electrical Engineering" level="30"/>
       </fabricableitem>
 	  
@@ -294,13 +311,18 @@
       </fabricableitem>
 	  
 	  <fabricableitem name="Handcuffs" requireditems="Steel Bar" requiredtime="20">
-		<Item name="ByPass - Handcuffs" mincondition="0.0" usecondition="true"/>
+		<Item name="ByPass - Non-Lethal Options" mincondition="0.0" usecondition="true"/>
 		<RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Stun Baton" requireditems="Spare Parts,Bronze Sliver,FPGA Circuit" requiredtime="40">
-		<Item name="ByPass - Stun Baton" mincondition="0.0" usecondition="true"/>
+		<Item name="ByPass - Non-Lethal Options" mincondition="0.0" usecondition="true"/>
 		<RequiredSkill name="Electrical Engineering" level="50"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Sonar Charge" requireditems="Aluminium Sliver,Copper Coil,FPGA Circuit" requiredtime="30">
+	    <Item name="Blueprints - Soundwave Weapons" mincondition="0.0" usecondition="true"/>
+		<RequiredSkill name="Electrical Engineering" level="40"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Shockwave Charge" requireditems="Aluminium Sliver,Copper Coil,FPGA Circuit" requiredtime="30">
@@ -308,21 +330,22 @@
 		<RequiredSkill name="Electrical Engineering" level="50"/>
       </fabricableitem>
 	  
-	  <fabricableitem name="EMP Charge" requireditems="Aluminium Sliver,Fulgurium Sliver,FPGA Circuit" requiredtime="40">
+	  <fabricableitem name="EMP Charge" requireditems="Lead Sliver,Fulgurium Powder,FPGA Circuit" requiredtime="40">
 	    <Item name="Blueprints - EMP Weapons" mincondition="0.0" usecondition="true"/>
-		<RequiredSkill name="Electrical Engineering" level="60"/>
+		<RequiredSkill name="Electrical Engineering" level="55"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Tactical Grenade" requireditems="Steel Bar,Aluminium Sliver" requiredtime="20">
-		<Item name="ByPass - Tactical Grenade" mincondition="0.0" usecondition="true"/>
-		<RequiredSkill name="Construction" level="50"/>
+		<Item name="ByPass - Standard-Issue Weapons" mincondition="0.0" usecondition="true"/>
+		<RequiredSkill name="Construction" level="40"/>
       </fabricableitem>
-	  <fabricableitem name="HTM" requireditems="Steel Bar,FPGA Circuit" requiredtime="25">
+	  <fabricableitem name="HTM" requireditems="Steel Sliver,Fulgurium Sliver,FPGA Circuit" requiredtime="25">
 		<Item name="Blueprints - HTM" mincondition="0.0" usecondition="true"/>
 		<RequiredSkill name="Electrical Engineering" level="50"/>
       </fabricableitem>
-	  <fabricableitem name ="Buoy Grenade" requireditems="HTM, Polycarbonate Sliver" requiredtime="20">
-		<RequiredSkill name="Construction" level="50"/>
+	  
+	  <fabricableitem name="Diving Mask" requireditems="Polycarbonate Bar,Aluminium Sliver" requiredtime="20">
+	    <RequiredSkill name="Construction" level="20"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Flare" requireditems="Polycarbonate Sliver" requiredtime="10">
@@ -330,12 +353,8 @@
 		<Item name="Potassium" mincondition="0.5" usecondition="true"/>
 		<RequiredSkill name="Construction" level="25"/>
       </fabricableitem>
-	  
-	  <fabricableitem name="Diesel Can" requireditems="Polycarbonate Bar,Biomass,Liquid Oxygenite,Sulphuric Acid" requiredtime="20">
-        <RequiredSkill name="Construction" level="30"/>
-      </fabricableitem>
 
-      <fabricableitem name="Uranium Fuel Rod" requireditems="Uranium Bar,Aluminium Bar" requiredtime="30">
+      <fabricableitem name="Uranium Fuel Rod" requireditems="Uranium Sliver,Aluminium Sliver,Lead Bar" requiredtime="30">
         <RequiredSkill name="Construction" level="40"/>
       </fabricableitem>
 	  <fabricableitem name="Thermite Fuel Rod" requireditems="Thermite Shard" requiredtime="40">
@@ -351,26 +370,16 @@
       </fabricableitem>
 	  
 	  <fabricableitem name="Sulphurite Coolant Can" requireditems="Polycarbonate Bar" requiredtime="20">
-		<Item name="Sulphuric Acid" count="3" mincondition="100" usecondition="true"/>
+		<Item name="Sulphuric Acid" count="3" usecondition="true"/>
 		<RequiredSkill name="Construction" level="30"/>
       </fabricableitem>
 	  <fabricableitem name="Oxygenite Coolant Can" requireditems="Polycarbonate Bar" requiredtime="40">
-		<Item name="Liquid Oxygenite" count="3" mincondition="100" usecondition="true"/>
+		<Item name="Liquid Oxygenite" count="3" usecondition="true"/>
 		<RequiredSkill name="Construction" level="40"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Diesel Can" requireditems="Polycarbonate Bar,Biomass,Liquid Oxygenite,Sulphuric Acid" requiredtime="20">
         <RequiredSkill name="Construction" level="30"/>
-      </fabricableitem>
-	  
-	  <fabricableitem name="Railgun Shеll" requireditems="Steel Block,Polycarbonate Bar,Copper Coil,Detonator" requiredtime="30">
-        <RequiredSkill name="Construction" level="40"/>
-		<RequiredSkill name="Electrical Engineering" level="40"/>
-		<RequiredSkill name="Weapons" level="15"/>
-      </fabricableitem>
-	  <fabricableitem name="Railgun Shеll" requireditems="Railgun Shell,Copper Coil,Detonator,FPGA Circuit" requiredtime="30">
-		<RequiredSkill name="Electrical Engineering" level="40"/>
-		<RequiredSkill name="Weapons" level="10"/>
       </fabricableitem>
     </Fabricator>
 		
@@ -394,14 +403,13 @@
 	  category="Machine"
 	  Tags="cntnr">
 
-      <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" depth="0.8" sourcerect="65,129,64,128"/>
+      <Sprite texture="Mods/BTE/Items/Fabricators/Fabricators.png" depth="0.8" sourcerect="65,129,64,128" canflipx="false"/>
 	
-	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1">
+	  <LightComponent lightcolor="1.0,1.0,1.0,0.1" range="1000" powerconsumption="1" IsOn="true">
         <sprite texture="Mods/BTE/Items/Fabricators/FabricatorLights.png" sourcerect="65,129,64,128" alpha="1.0"/>
-	    <StatusEffect type="Always" target="This" IsOn="true"/>
       </LightComponent>
     
-      <Fabricator canbeselected="true" powerconsumption="100">
+      <Fabricator canbeselected="true" powerconsumption="110">
 	  <RequiredItem name="ID Card" type="Picked" msg="UNAUTHORIZED ACCESS"/>
       <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
       <sound file="Content/Items/Fabricators/fabricator.ogg" type="OnActive" range="1000" loop="true"/>
@@ -418,6 +426,12 @@
 		<Item name="Aluminium Sliver" mincondition="0.75" usecondition="true"/>
 		<RequiredSkill name="Science" level="30"/>
       </fabricableitem>
+	  
+	  <fabricableitem name="Medical Spray" requireditems="Polycarbonate Sliver" requiredtime="5"/>
+	  
+	  <fabricableitem name="Medical Spray Canister" requireditems="Polycarbonate Bar,Canister of Corrigodone,Canister of Corrigodone" requiredtime="15">
+		<RequiredSkill name="Medical" level="40"/>
+	  </fabricableitem>
 	  
 	  <fabricableitem name="Medical Syringe" requiredtime="15">
 		<Item name="Polycarbonate Sliver" mincondition="0.75" usecondition="true"/>
@@ -531,7 +545,8 @@
 		<Item name="Phosphorus" mincondition="0.15" usecondition="true"/>
 		<Item name="Sugar" mincondition="0.15" usecondition="true"/>
 		<Item name="Stabilozine" mincondition="0.15" usecondition="true"/>
-		<RequiredSkill name="Science" level="60"/>
+		<RequiredSkill name="Science" level="50"/>
+		<RequiredSkill name="Medical" level="35"/>
       </fabricableitem>
 	  <fabricableitem name="Pill Bottle of Hyperzine" requireditems="Hyperzine" requiredtime="10">
         <RequiredSkill name="Science" level="40"/>
@@ -575,11 +590,20 @@
 	  <fabricableitem name="Sufforin" requiredtime="30">
 		<Item name="Erythrozine" mincondition="0.15" usecondition="true"/>
 		<Item name="Flash Powder" mincondition="0.15" usecondition="true"/>
+		<Item name="Bronze Powder" mincondition="0.15" usecondition="true"/>
 		<Item name="Sulphuric Acid" mincondition="0.15" usecondition="true"/>
-		<RequiredSkill name="Science" level="60"/>
+		<RequiredSkill name="Science" level="50"/>
       </fabricableitem>
 	  <fabricableitem name="Pill Bottle of Sufforin" requireditems="Sufforin" requiredtime="10">
         <RequiredSkill name="Science" level="40"/>
+      </fabricableitem>
+	  
+	  <fabricableitem name="Cyanide" outcondition="25" requiredtime="40">
+		<Item name="Apple" mincondition="0.0" count="5" usecondition="false"/>
+		<RequiredSkill name="Science" level="50"/>
+      </fabricableitem>
+	  <fabricableitem name="Pill Bottle of Cyanide" requireditems="Cyanide" requiredtime="10">
+        <RequiredSkill name="Science" level="50"/>
       </fabricableitem>
 	  
 	  <fabricableitem name="Calyxanide" requiredtime="30">
@@ -602,6 +626,9 @@
 	  <fabricableitem name="Bronze Powder" requiredtime="10">
 	    <Item name="Bronze Sliver" mincondition="0.5" usecondition="true"/>
 	  </fabricableitem>
+	  <fabricableitem name="Lead Powder" requiredtime="10">
+	    <Item name="Lead Sliver" mincondition="0.5" usecondition="true"/>
+	  </fabricableitem>
 	  <fabricableitem name="Iron Powder" requiredtime="10">
 	    <Item name="Steel Sliver" mincondition="0.5" usecondition="true"/>
 	  </fabricableitem>
@@ -612,25 +639,38 @@
 	    <Item name="Fulgurium Sliver" mincondition="0.5" usecondition="true"/>
 	  </fabricableitem>
 	
-	  <fabricableitem name="Flash Charge" requireditems="Polycarbonate Sliver,Aluminium Powder,Potassium,Chloral Hydrate" requiredtime="20">
-        <RequiredSkill name="Science" level="25"/>
+	  <fabricableitem name="Flash Charge" requireditems="Polycarbonate Sliver" requiredtime="20">
+        <RequiredSkill name="Science" level="35"/>
+		<Item name="Aluminium Powder" mincondition="0.25" usecondition="true"/>
+		<Item name="Chloral Hydrate" mincondition="0.25" usecondition="true"/>
+		<Item name="Potassium" mincondition="0.5" usecondition="true"/>
       </fabricableitem>
-	  <fabricableitem name="Propellant Charge" requireditems="Polycarbonate Sliver,Aluminium Powder,Sulphuric Acid" requiredtime="20">
-	    <Item name="Nitroglycerin" mincondition="0.25" usecondition="true"/>
-        <RequiredSkill name="Science" level="30"/>
+	  <fabricableitem name="Propellant Charge" requireditems="Polycarbonate Sliver" requiredtime="20">
+        <RequiredSkill name="Science" level="40"/>
+		<Item name="Nitroglycerin" mincondition="0.2" usecondition="true"/>
+		<Item name="Sulphuric Acid" mincondition="0.25" usecondition="true"/>
+		<Item name="Aluminium Powder" mincondition="0.5" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Propellant Charge" requireditems="Polycarbonate Sliver,Propellant Powder,Stabilozine" requiredtime="20">
+        <RequiredSkill name="Science" level="50"/>
+		<Item name="Thermite Powder" count="2"/>
       </fabricableitem>
 	  <fabricableitem name="Concussion Charge" requireditems="Polycarbonate Sliver,Propellant Powder,Propellant Powder,Phosphorus" requiredtime="20">
-        <RequiredSkill name="Science" level="35"/>
+        <RequiredSkill name="Science" level="42"/>
       </fabricableitem>
 	  <fabricableitem name="Blast Charge" requireditems="Concussion Charge,Propellant Powder,Chlorine" requiredtime="20">
-        <RequiredSkill name="Science" level="40"/>
+        <RequiredSkill name="Science" level="44"/>
       </fabricableitem>
 	  <fabricableitem name="Destroyer Charge" requireditems="Blast Charge,Aluminium Powder,Sulphuric Acid" requiredtime="20">
-        <RequiredSkill name="Science" level="45"/>
+        <RequiredSkill name="Science" level="46"/>
       </fabricableitem>
 	  <fabricableitem name="Demolition Charge" requireditems="Destroyer Charge" requiredtime="20">
-	    <Item name="Nitroglycerin" mincondition="0.5" usecondition="true"/>
+        <RequiredSkill name="Science" level="48"/>
+		<Item name="Nitroglycerin" mincondition="0.4" usecondition="true"/>
+      </fabricableitem>
+	  <fabricableitem name="Breach Charge" requireditems="Demolition Charge" requiredtime="20">
         <RequiredSkill name="Science" level="50"/>
+		<Item name="Stabilozine" mincondition="0.5" usecondition="true"/>
       </fabricableitem>
 	  <fabricableitem name="Shrapnel Charge" requireditems="Steel Sliver,Aluminium Powder,Propellant Powder" requiredtime="20">
         <RequiredSkill name="Science" level="45"/>
@@ -643,7 +683,7 @@
 		<RequiredSkill name="Science" level="55"/>
       </fabricableitem>
 	  <fabricableitem name="Wetbomb Charge" requireditems="Blast Charge,Potassium" requiredtime="20">
-        <RequiredSkill name="Science" level="60"/>
+        <RequiredSkill name="Science" level="55"/>
       </fabricableitem>
 	  <fabricableitem name="Dye Charge" requireditems="Polycarbonate Sliver" requiredtime="20">
 	    <Item name="Potassium" mincondition="0.5" usecondition="true"/>

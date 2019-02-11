@@ -59,6 +59,18 @@
     <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="800,201,224,224" depth="1.0"/>
   </metalplatewall>
   
+  <officewall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="800,426,224,224" depth="1.0"/>
+  </officewall>
+  
+  <medbaywall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="800,651,224,224" depth="1.0"/>
+  </medbaywall>
+  
+  <whitewall width="64" height="64" resizehorizontal="true" resizevertical="true">
+    <sprite texture="Mods/BTEPlus/Map/moreroomstuff.png" sourcerect="575,334,224,224" depth="1.0"/>
+  </whitewall>
+  
   <scpbgwall width="64" height="64" resizehorizontal="true" resizevertical="true">
     <sprite texture="Mods/BTE/Map/roomstuff.png" sourcerect="0,0,242,242" depth="1.0"/>
   </scpbgwall>

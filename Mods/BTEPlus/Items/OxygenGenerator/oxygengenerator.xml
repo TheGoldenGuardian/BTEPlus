@@ -1,10 +1,9 @@
 ﻿<Items>
   <Item
     name="Hydrogen Generator"
-    category="Machine"
-    linkable="true">
+    category="Machine">
 
-    <Sprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGenerator.png" depth="0.8" sourcerect="0,0,118,123"/>
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGenerator.png" depth="0.8" sourcerect="0,0,118,123" canflipx="false"/>
 	<BrokenSprite texture="Mods/BTE/Items/OxygenGenerator/HydrogenGeneratorBroken.png" depth="0.8" sourcerect="0,0,118,123" maxcondition="0"/>
 	
 	<fixrequirement name="Mechanical repairs">
@@ -49,7 +48,7 @@
     category="Machine"
     linkable="true">
 
-    <Sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGenerator.png" depth="0.8" sourcerect="0,0,128,128"/>
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGenerator.png" depth="0.8" sourcerect="0,0,128,128" canflipx="false"/>
 	<BrokenSprite texture="Mods/BTE/Items/OxygenGenerator/OxygenGeneratorBroken.png" depth="0.8" sourcerect="0,0,128,128" maxcondition="0"/>
 	
 	<fixrequirement name="Mechanical repairs">
@@ -65,7 +64,7 @@
       </StatusEffect>
     </LightComponent>
 
-    <OxygenGenerator powerconsumption="1000" minvoltage="0.5" canbeselected="true">
+    <OxygenGenerator powerconsumption="500" minvoltage="0.5" canbeselected="true">
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Tank" Condition="0.4"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygenite Tank" Condition="0.0"/>
 	  <StatusEffect type="OnActive" target="Contained" targetnames="Oxygen Bottle" Condition="0.8"/>
@@ -97,7 +96,7 @@
     category="Machine"
     linkable="true">
 
-    <Sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModule.png" depth="0.79" sourcerect="0,0,107,100"/>
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModule.png" depth="0.79" sourcerect="0,0,107,100" canflipx="false"/>
 	<BrokenSprite texture="Mods/BTE/Items/OxygenGenerator/OxygenModuleBroken.png" depth="0.79" sourcerect="0,0,107,100" maxcondition="0"/>
 	
 	<fixrequirement name="Mechanical repairs">
@@ -136,7 +135,7 @@
     name="Refill Dock"
     category="Machine">
 
-    <Sprite texture="Mods/BTE/Items/OxygenGenerator/RefillDock.png" depth="0.8" sourcerect="0,0,74,44"/>
+    <Sprite texture="Mods/BTE/Items/OxygenGenerator/RefillDock.png" depth="0.8" sourcerect="0,0,74,44" canflipx="false"/>
 	
 	<Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
       <GuiFrame rect="0,-100,350,160" alignment="Center" style="ItemUI"/>
@@ -147,7 +146,7 @@
 	<LightComponent lightcolor="1.0,1.0,1.0,0.1" range="750" powerconsumption="1" IsOn="true">
       <sprite texture="Mods/BTE/Items/OxygenGenerator/RefillDockLights.png" sourcerect="0,0,74,44" alpha="1.0"/>
 	  <StatusEffect type="OnBroken" target="This">
-        <Explosion range="100" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false" decal="explosion" decalsize="0.4"/>
+        <Explosion range="100" stun="0.2" force="2.0" flames="false" smoke="false" shockwave="false"/>
       </StatusEffect>
     </LightComponent>
 

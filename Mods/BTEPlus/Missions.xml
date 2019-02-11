@@ -25,32 +25,6 @@
     itemname="Flopper Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
-  
-  <SalvageMission 
-    name="Salvaging an artifact" 
-    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
-    commonness="10"
-    reward="3500"
-    radarlabel="Infrasonic Signal"
-    failuremessage="Retrieving the artifact failed."
-    successmessage="The artifact has been succesfully retrieved."
-    spawntype="ruin"
-    itemname="Droplet Artifact">
-    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
-  </SalvageMission>
-  
-  <SalvageMission 
-    name="Salvaging an artifact" 
-    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
-    commonness="10"
-    reward="3000"
-    radarlabel="Infrasonic Signal"
-    failuremessage="Retrieving the artifact failed."
-    successmessage="The artifact has been succesfully retrieved."
-    spawntype="ruin"
-    itemname="Aura Artifact">
-    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
-  </SalvageMission>
 
   <SalvageMission
     name="Salvaging an artifact"
@@ -77,7 +51,7 @@
     itemname="Grinder Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
-
+  
   <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
@@ -90,7 +64,7 @@
     itemname="Charger Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
-  
+
   <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
@@ -101,6 +75,58 @@
     successmessage="The artifact has been succesfully retrieved."
     spawntype="cave"
     itemname="Thermal Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="5000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Nasonov Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+
+  <SalvageMission
+    name="Salvaging an artifact"
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="5"
+    reward="4500"
+    radarlabel="Infrasonic signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="cave"
+    itemname="Nasonov Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission 
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3500"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Droplet Artifact">
+    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
+  </SalvageMission>
+  
+  <SalvageMission 
+    name="Salvaging an artifact" 
+    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
+    commonness="10"
+    reward="3000"
+    radarlabel="Infrasonic Signal"
+    failuremessage="Retrieving the artifact failed."
+    successmessage="The artifact has been succesfully retrieved."
+    spawntype="ruin"
+    itemname="Aura Artifact">
     <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
   </SalvageMission>
   
@@ -131,32 +157,6 @@
   </SalvageMission>
   
   <SalvageMission
-    name="Salvaging an artifact"
-    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
-    commonness="10"
-    reward="5000"
-    radarlabel="Infrasonic Signal"
-    failuremessage="Retrieving the artifact failed."
-    successmessage="The artifact has been succesfully retrieved."
-    spawntype="ruin"
-    itemname="Nasonov Artifact">
-    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
-  </SalvageMission>
-
-  <SalvageMission
-    name="Salvaging an artifact"
-    description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
-    commonness="5"
-    reward="4500"
-    radarlabel="Infrasonic signal"
-    failuremessage="Retrieving the artifact failed."
-    successmessage="The artifact has been succesfully retrieved."
-    spawntype="cave"
-    itemname="Nasonov Artifact">
-    <message header="Artifact collected" text="The artifact is now on board. Navigate the submarine out of the cavern to claim the reward."/>
-  </SalvageMission>
-  
-    <SalvageMission
     name="Salvaging an artifact"
     description="Researchers of [location1] have picked up an infrasonic signal highly similar to those emitted by alien artifacts previously discovered on Europa. Investigate the signal and retrieve the potential artifact."
     commonness="4"
@@ -277,9 +277,21 @@
     reward="1500"
     radarlabel="Target"
 	failuremessage="Failed to kill the Watcher."
-    successmessage="As soon as you got to [location2] and leave your vessel, a man aproaches and hands you the credits as he walks past you."
+    successmessage="As soon as you got to [location2] and leave your vessel, a man approaches and hands you the credits as he walks past you."
     monsterfile="Mods/BTE/Characters/Watcher/watcher.xml">
     <message header="Target terminated" text="The Watcher is dead. Navigate the submarine out of the cavern to claim the reward."/>
+  </MonsterMission>
+  
+  <MonsterMission
+    name="Killing a Watcher"
+    description="A seafood processing plant in [location2] is offering a reward of 1500 credits to anyone who can slay a Watcher spotted between [location1] and [location2], no questions asked. They will handle the transport once the creature is dead."
+    commonness="8"
+    reward="1500"
+    radarlabel="Target"
+	failuremessage="Failed to kill the Watcher."
+    successmessage="Upon receiving the news, some researchers from [location1] have agreed to pay you the reward instead and also asked for the coordinates so they can send a research team to examine the creature."
+    monsterfile="Mods/BTE/Characters/Watcheremp/watcheremp.xml">
+    <message header="Target terminated" text="This Watcher was different. You should report this incident and claim the reward."/>
   </MonsterMission>
   
   <MonsterMission
@@ -848,6 +860,22 @@
     </Items>
   </CargoMission>
   
+  <!-- Apple Shipment -->
+  <CargoMission
+   name="Special Delivery"
+   description="A crate has been sitting in a warehouse for days. Anyone interested in delivering the shipment to [location2] will receive 400 credits."
+   commonness="3"
+   reward="400"
+   failuremessage="Cargo delivery failed."
+   successmessage="The shipment has been successfully delivered."
+   requireddeliveryamount="14">
+    <Items >
+      <Item name="Standard Shipping Box">
+		<Item name="Apple" amount="20"/>
+      </Item>
+    </Items>
+  </CargoMission>
+  
   <!-- Creature Hunter Stuff -->
   <CargoMission
    name="Special Delivery"
@@ -915,20 +943,6 @@
     </Items>
   </CargoMission> 
   
-  <CargoMission
-    name="Nuclear cargo"
-    description="A local arms dealer is offering 10,000 credits in exchange for delivering 4 extremely dangerous explosives to a company stationed in [location2]."
-    commonness="1"
-    reward="10000"
-	failuremessage="Cargo delivery failed. Not surprising..."
-    successmessage="The nuclear explosives have been successfully delivered. Whew...">
-    <Items>
-      <Item name="Explosives Shipping Box">
-        <Item name="Nuclear Charge" amount="4"/>
-      </Item>
-    </Items>
-  </CargoMission>
-  
   <CombatMission
     name="Search and Destroy"
     
@@ -946,7 +960,7 @@
     successmessage="The [loser] vessel has been defeated by the [winner] crew!"
 	failuremessage="Both crews have perished.">
     
-    <message header="Renegades eliminated!" text="The renegade crew has been defeated! The Coalition vessel has to make its way back to [location1]."/>
-    <message header="Coalition eliminated!" text="The Coalition crew has been defeated! The renegade vessel has to make its way back to [location2]."/>
+    <message header="Crew eliminated" text="The renegade crew has been defeated! The Coalition vessel has to make its way back to [location1]."/>
+    <message header="Crew eliminated" text="The Coalition crew has been defeated! The renegade vessel has to make its way back to [location2]."/>
   </CombatMission>
 </Missions>

@@ -107,8 +107,8 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.13" disabledeltatime="true"/> <!-- oxygen="-0.06" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.6" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   
@@ -155,8 +155,8 @@
       <sprite texture="RenegadeWetsuit.png" limb="LeftFoot" sound="footstep_gear" sourcerect="102,28,16,25" origin="0.5,0.5" depth="0.013" inheritlimbdepth="false" hidelimb="true"/>
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.55" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.25" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
 
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.16" disabledeltatime="true"/>
 	  <StatusEffect tags="wetsuit" type="OnWearing" target="Character" duration="1"/>
@@ -200,8 +200,8 @@
 	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.09" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
 	  <StatusEffect type="OnWearing" target="Contained" Condition="-0.1"/>
 	  
-	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
   </Item>
   

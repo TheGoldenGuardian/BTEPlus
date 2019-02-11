@@ -6,7 +6,7 @@
     category="Misc"
     Tags="smallitem,food"
     canuseonself="true"
-    description="A watertight resealable ration pack made for EVA. Can be placed into the dive suit for carrying. Definitely better than the ration bars. Features minor amounts of the powerful chemical 'Auxilorizine.'">
+    description="A watertight resealable ration pack made for EVA. Can be placed into the dive suit for carrying. Definitely better than the ration bars. Boasts trace amounts of the powerful chemical 'Auxiliorizine.'">
    
     <Deconstruct time="5">
 	  <Item name="Biomass" outcondition="1" mincondition="0.9"/>
@@ -14,12 +14,12 @@
 	  <Item name="Canister of Auxiliorizine" mincondition="0.9" outcondition="0.25"/>
     </Deconstruct>
 
-    <Sprite texture ="CRP.png" sourcerect="0,0,24,31" depth="0.6"/>
+    <Sprite texture ="morefood.png" sourcerect="81,0,24,31" depth="0.6"/>
 
     <Body width="23" height="31" density="11.5"/>
 	
 	<ItemComponent>
-	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.015" Health="0.005" disabledeltatime="true" duration="150" checkconditionalalways="true">
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.015" Health="0.005" disabledeltatime="true" duration="150" stackable="false" checkconditionalalways="true">
 		<Conditional health="gt 0"/>
 	  </StatusEffect>
 	  <StatusEffect type="OnUse" target="Character" Health="0.01" Bleed="-0.001" disabledeltatime="true" duration="150"/>
@@ -46,16 +46,14 @@
 	  <Item name="Polycarbonate Sliver"/>
     </Deconstruct>
 
-    <Sprite texture ="waterbottle.png" sourcerect="0,0,10,34" depth="0.6"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="10,0,10,34" depth="0.6" maxcondition="90"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="20,0,10,34" depth="0.6" maxcondition="80"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="30,0,10,34" depth="0.6" maxcondition="70"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="40,0,10,34" depth="0.6" maxcondition="30"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="50,0,10,34" depth="0.6" maxcondition="20"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="60,0,10,34" depth="0.6" maxcondition="10"/>
-	<BrokenSprite texture="waterbottle.png" sourcerect="70,0,10,34" depth="0.6" maxcondition="0"/>
-
-	
+    <Sprite texture ="morefood.png" sourcerect="0,0,10,34" depth="0.6"/>
+	<BrokenSprite texture="morefood.png" sourcerect="10,0,10,34" depth="0.6" maxcondition="90"/>
+	<BrokenSprite texture="morefood.png" sourcerect="20,0,10,34" depth="0.6" maxcondition="80"/>
+	<BrokenSprite texture="morefood.png" sourcerect="30,0,10,34" depth="0.6" maxcondition="70"/>
+	<BrokenSprite texture="morefood.png" sourcerect="40,0,10,34" depth="0.6" maxcondition="30"/>
+	<BrokenSprite texture="morefood.png" sourcerect="50,0,10,34" depth="0.6" maxcondition="20"/>
+	<BrokenSprite texture="morefood.png" sourcerect="60,0,10,34" depth="0.6" maxcondition="10"/>
+	<BrokenSprite texture="morefood.png" sourcerect="70,0,10,34" depth="0.6" maxcondition="0"/>
 
     <Body width="8" height="32" radius="8" density="11"/>
 	
@@ -71,5 +69,48 @@
 	    <sound file="Mods/BTE/Items/Tools/PlasticHit.ogg"/>
 	  </StatusEffect>
     </Throwable>
+  </Item>
+  
+  <Item
+    name="Baguette"
+	aliases="Longbread,Long Bread,Coolbread,Cool Bread"
+    category="Misc"
+    Tags="meditem,food"
+	canuseonself="true"
+	description="You're about to Baguette your ass kicked!">
+	
+	<Deconstruct time="1">
+	  <Item name="Bread"/>
+      <Item name="Bread"/>
+    </Deconstruct>
+
+    <Sprite  texture ="morefood.png" sourcerect="0,107,69,9" depth="0.55"/>
+
+    <Body width="66" height="7" density="48"/>
+
+    <MeleeWeapon slots="RightHand,LeftHand,Any"
+          aimpos="10,8" handle1="-7,0" handle2="-7,0" holdangle="30" reload="1.0">
+      <Attack damage="0.5" bleedingdamage="0" structuredamage="0" damagetype="Blunt" stun="0.22" targetforce="11" sound="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	  <StatusEffect type="OnUse" target="Character">
+		  <Conditional SpeciesName="watcher"/>
+		  <Explosion range="300" damage="25" stun="5.0" force="5" flames="false" smoke="false" camerashake="0.5"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Character" Health="25" stun="-4.0" disabledeltatime="true">
+		  <Conditional SpeciesName="watcher"/>
+		  <Sound file="Mods/BTE/Sounds/Characters/Teleglitch/TeleHit3.ogg" type="OnUse" range="3000"/>
+		</StatusEffect>
+    </MeleeWeapon>
+	
+	<ItemComponent>
+	  <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.008" Health="0.004" stackable="false" disabledeltatime="true" duration="60">
+		<Conditional health="gt 0"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnUse" target="This,Character" Condition="-12.5" disabledeltatime="true">
+	    <sound file="Mods/BTE/Items/Medical/FoodEat.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </ItemComponent>
   </Item>
 </Items>

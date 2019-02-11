@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Character name="husk" humanoid="true" doesbleed="false" needsair="false" genders="true" maleheadid="1,27" femaleheadid="1,15">
+<Character name="husk" humanoid="true" doesbleed="false" needsair="false" genders="true" maleheadid="1,28" femaleheadid="1,15">
 
     <name firstname="Mods/BTEPlus/Characters/Human/[GENDER]firstnames.txt" lastname="Content/Characters/Human/lastnames.txt" />
 
     <ai combatstrength="100"
 	  attackhumans="500"
-	  attackrooms="5.0"
+	  attackrooms="50"
 	  attackweaker="50"
 	  attackstronger="0"
-      sight="0.5"
-	  hearing="1.0"
+      sight="0.8"
+	  hearing="0.8"
       attackcooldown="5.0"/>
   
     <ragdoll headposition="134" torsoposition="108"
@@ -95,7 +95,7 @@
 
     <limb id="13" width="10" height="30" mass="6" attackpriority="2" flip="true" pullpos="0.0,25.0">
       <sprite texture="Content/Characters/Husk/DivingSuit.png" sourcerect="110,76,18,52" depth="0.5" origin="0.5,0.5"/>
-      <attack range="70" damagerange="35" duration="0.1" bleedingdamage="3" damage="10" stun="0.5" damagetype="slash"
+      <attack range="70" damagerange="35" duration="0.1" bleedingdamage="0.8" damage="8" stun="0.6" structuredamage="2" damagetype="slash"
 			  targetforce="10" force="5" applyforceonlimbs="1" torque="-10">
         <StatusEffect type="OnUse" target="Character" HuskInfectionState="0.01" disabledeltatime="true"/>
         <StatusEffect type="OnUse" target="This" Health="20" disabledeltatime="true"/>
@@ -109,7 +109,7 @@
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character">
 		  <Conditional SpeciesName="endworm"/>
-		  <Explosion range="300" damage="10" force="5" flames="false" smoke="false" sparks="false" flash="false" camerashake="0.5"/>
+		  <Explosion range="300" damage="10" force="5" flames="false" smoke="false" sparks="false" flash="false" shockwave="false" camerashake="0.5"/>
 		</StatusEffect>
 		<StatusEffect type="OnUse" target="Character" Health="10" stun="-0.5" disabledeltatime="true">
 		  <Conditional SpeciesName="endworm"/>

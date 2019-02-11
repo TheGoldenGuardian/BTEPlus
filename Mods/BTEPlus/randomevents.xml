@@ -76,6 +76,15 @@
     musictype="monster">
     <OverrideEventCount leveltype="Open" min="-5" max="1"/>
   </MonsterEvent>
+  
+  <MonsterEvent name="Under attack" description=""
+    characterfile="Mods/BTE/Characters/Molochsmall/molochsmall.xml"
+    mineventcount="-1" maxeventcount="1"
+    spawntype="mainpath"
+    musictype="monster">
+    <OverrideEventCount leveltype="Ridge" min="-5" max="1"/>
+    <OverrideEventCount leveltype="Open" min="1" max="2"/>
+  </MonsterEvent>
 
   <MonsterEvent name="Under attack" description=""
     characterfile="Mods/BTE/Characters/Moloch/moloch.xml"
@@ -83,7 +92,7 @@
     spawntype="mainpath"
     musictype="monster">
     <OverrideEventCount leveltype="Ridge" min="-5" max="1"/>
-    <OverrideEventCount leveltype="Open" min="1" max="5"/>
+    <OverrideEventCount leveltype="Open" min="1" max="4"/>
   </MonsterEvent>
 
   <MonsterEvent name="Under attack" description=""
@@ -242,22 +251,18 @@
   <MonsterEvent name="Under attack" description=""
     characterfile="Mods/BTE/Characters/FractalWalker/fractalwalker.xml"
     mineventcount="0" maxeventcount="1"
-    minamount="1" maxamount="2"
-    spawntype="ruin"
-    musictype="monster">
-  </MonsterEvent>
-  
-  <MonsterEvent name="Under attack" description=""
-    characterfile="Mods/BTE/Characters/FractalWalker/fractalwalker.xml"
-    mineventcount="0" maxeventcount="1"
     minamount="1" maxamount="1"
-    spawntype="mainpath"
+    spawntype="ruin"
     musictype="monster">
   </MonsterEvent>
 
   <ArtifactEvent name="Artifact" description=""
     mineventcount="3" maxeventcount="9"
     itemname="Iron Ore"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="2" maxeventcount="4"
+    itemname="Copper Ore"/>
 	
   <ArtifactEvent name="Artifact" description=""
     mineventcount="1" maxeventcount="3"
@@ -268,11 +273,11 @@
     itemname="Human Skull"/>
 	
   <ArtifactEvent name="Artifact" description=""
-    mineventcount="2" maxeventcount="5"
+    mineventcount="2" maxeventcount="4"
     itemname="Tactical Boot"/>
 	
   <ArtifactEvent name="Artifact" description=""
-    mineventcount="6" maxeventcount="9"
+    mineventcount="4" maxeventcount="8"
     itemname="Plastic Bag"/>
 	
   <ArtifactEvent name="Artifact" description=""
@@ -284,32 +289,44 @@
     itemname="Kelp"/>
 	
   <ArtifactEvent name="Artifact" description=""
+    mineventcount="5" maxeventcount="20"
+    itemname="Mushroom"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="5" maxeventcount="20"
+    itemname="Мushrоom"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="5" maxeventcount="20"
+    itemname="Мushгoom"/>
+	
+  <ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="2"
     itemname="Velonaceps Calyx Egg Sac"/>
 	
   <ArtifactEvent name="Artifact" description=""
-    mineventcount="3" maxeventcount="6"
+    mineventcount="3" maxeventcount="5"
     itemname="Oxygenite Shard"/>
 	
   <ArtifactEvent name="Artifact" description=""
     mineventcount="2" maxeventcount="4"
     itemname="Sulphurite Shard"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="1" maxeventcount="3"
+    itemname="Uraninite Shard"/>
   
   <ArtifactEvent name="Artifact" description=""
     mineventcount="1" maxeventcount="2"
     itemname="Thermite Shard"/>
 	
-  <ArtifactEvent name="Artifact" description=""
+	<ArtifactEvent name="Artifact" description=""
     mineventcount="1" maxeventcount="3"
     itemname="Zrbite Shard"/>
 	
   <ArtifactEvent name="Artifact" description=""
     mineventcount="1" maxeventcount="2"
     itemname="Nitrous Zrbite Shard"/>
-	
-  <ArtifactEvent name="Artifact" description=""
-    mineventcount="1" maxeventcount="2"
-    itemname="Uranium Shard"/>
 	
   <ArtifactEvent name="Artifact" description=""
     mineventcount="1" maxeventcount="1"
@@ -326,6 +343,14 @@
   <ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="1"
     itemname="Inficiat Artifact"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Droplet Artifact"/>
+	
+  <ArtifactEvent name="Artifact" description=""
+    mineventcount="0" maxeventcount="1"
+    itemname="Aura Artifact"/>
   
   <ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="1"
@@ -346,20 +371,12 @@
   <ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="1"
     itemname="Grinder Artifact"/>
-  
-  <ArtifactEvent name="Artifact" description=""
-    mineventcount="0" maxeventcount="1"
-    itemname="Flopper Artifact"/>
 	
 	<ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="1"
     itemname="Charger Artifact"/>
-	
-	<ArtifactEvent name="Artifact" description=""
+  
+  <ArtifactEvent name="Artifact" description=""
     mineventcount="0" maxeventcount="1"
-    itemname="Droplet Artifact"/>
-	
-	<ArtifactEvent name="Artifact" description=""
-    mineventcount="0" maxeventcount="1"
-    itemname="Aura Artifact"/>
+    itemname="Flopper Artifact"/>
 </Randomevents>

@@ -123,7 +123,7 @@
 	  <Item name="Vodka" outcondition="0.10"/>
     </Deconstruct>
 
-    <Sprite texture ="Mods/BTEPlus/Items/Misc/instruments.png" sourcerect="76,24,30,23" depth="0.55"/>
+    <Sprite texture ="Mods/BTEPlus/Items/Misc/instruments.png" sourcerect="107,0,30,23" depth="0.55"/>
 
     <Body width="30" height="23" density="10"/>
 

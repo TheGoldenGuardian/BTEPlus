@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item
+    name="Skyholder Artifact"
+	aliases="Skyholder"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="58,0,60,60"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+
+    <Body width="60" height="61" density="10.1" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" condition="-75"/>
+      <StatusEffect type="OnBroken" target="This" condition="100" setvalue="true"/>
+      <StatusEffect type="OnBroken" target="Hull" oxygen="-75000"/>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Droplet Artifact"
+	aliases="Droplet"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="196,164,60,60"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+
+    <Body width="50" height="50" density="10" friction="0"/>
+	
+	<Pump canbeselected="false" maxflow="100" PowerConsumption="0.0" MinVoltage="0.0">
+		<GuiFrame rect="0,0,330,145" alignment="Center" style="ItemUI"/>
+		<StatusEffect type="Always" target="This" FlowPercentage="100" setvalue="true" IsActive="false" checkconditionalalways="true">
+			<Conditional condition="gt 50"/>
+		</StatusEffect>
+		<StatusEffect type="Always" target="This" setvalue="true" IsActive="true" checkconditionalalways="true">
+			<Conditional condition="lt 50"/>
+		</StatusEffect>
+		<StatusEffect type="Always" target="This" condition="-150">
+			<Conditional condition="gt 25"/>
+		</StatusEffect>
+	</Pump>
+
+    <Throwable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" throwforce="2"/>
+  </Item>
+  
+  <Item
+    name="Aura Artifact"
+	aliases="Aura"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="9,0,1,1"/>
+
+    <Deconstruct time="120">
+    </Deconstruct>
+
+    <Body width="60" height="60" density="10" friction="1"/>
+	
+	<LightComponent LightColor="1.0,1.0,0.4,1.0" Flicker="0" range="350" powerconsumption="0" minvoltage="0" IsOn="true">
+      <LightTexture texture="Content/Lights/light.png" origin="0.5,0.5" size="1.0,1.0"/>
+    </LightComponent>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="Always" target="This" Condition="100" setvalue="true">
+        <Explosion range="250" damage="-0.05" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0"/>
+      </StatusEffect>
+	  <StatusEffect type="OnActive" target="Character" health="0.05"/>
+    </Holdable>
+  </Item>
+
+  <Item
+    name="Thermal Artifact"
+	aliases="Thermal"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="1,0,57,56"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Thermite Shard"/>
+      <Item name="Thermite Shard"/>
+    </Deconstruct>
+    
+    <Body radius="28" density="12" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="Always" target="This" Condition="-20">
+	    <Fire/>
+      </StatusEffect>
+      <StatusEffect type="InWater" target="This" Condition="-40">
+        <ParticleEmitter particle="bubbles" particlespersecond="30"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true" delay="15"/>
+	</Holdable>
+  </Item>
+
+  <Item
+    name="Faraday Artifact"
+	aliases="Faraday"
+    category="Alien"
+	Tags="alien,rtfct">
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="0,56,60,49"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Bar"/>
+      <Item name="Fulgurium Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Body radius="25" density="14" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="Always" target="This" Condition="-60"/>
+	  <StatusEffect type="InWater" target="This" Condition="-30"/>
+      <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
+        <Explosion range="500" force="1.5" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.2"/>
+      </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Nasonov Artifact"
+	aliases="Nasonov"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="60,61,63,67"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Bar"/>
+      <Item name="Fulgurium Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+    
+    <Body width="55" height="55" density="16" friction="0.95"/>
+	
+	<AiTarget sightrange="10000.0" soundrange="10000"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10"/>
+  </Item>
+  
+  <Item
+    name="Claret Artifact"
+	aliases="Claret"
+    category="Alien"
+    Tags="alien,rtfct"
+    pickdistance="150"
+    indestructible="true">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="198,108,58,55"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Bar"/>
+      <Item name="Fulgurium Bar"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+    
+    <Body width="55" height="55" density="16" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+		<StatusEffect type="OnActive" target="Character" bleeding="0.25"/>
+		<StatusEffect tags="claret" type="OnActive" target="Character" duration="1"/>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Calyxion Artifact"
+	aliases="Calyxion"
+    category="Alien"
+    Tags="alien,rtfct"
+    pickdistance="150"
+    indestructible="true">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="191,0,65,54"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+	  <Item name="Aluminum Bar"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+    
+    <Body width="65" height="54" density="20" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="OnActive" target="Character" HuskInfectionState="0.05">
+		<Conditional HuskInfectionState="gt 0.01"/>
+		<sound file="Mods/BTEPlus/Items/Artifacts/Calyxion.ogg" type="OnActive" range="600" loop="true"/>
+      </StatusEffect>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Inficiat Artifact"
+	aliases="Inficiat"
+    category="Alien"
+    Tags="alien,rtfct"
+    pickdistance="150"
+    indestructible="true">
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="203,55,53,52"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Velonaceps Caylx Eggs"/>
+      <Item name="Biomass"/>
+	  <Item name="Biomass"/>
+      <Item name="Copper Bar"/>
+    </Deconstruct>
+    
+    <Body width="53" height="52" density="17" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+	  <StatusEffect type="OnActive" target="Character" HuskInfectionState="0.01"/>
+	  <sound file="Mods/BTEPlus/Items/Artifacts/Inficiat.ogg" type="OnActive" range="600" loop="true"/>
+	</Holdable>
+  </Item>
+  
+  <Item
+    name="Grinder Artifact"
+	aliases="Grinder"
+    category="Alien"
+    Tags="alien,rtfct">
+
+    <Sprite texture="Mods/BTE/Items/Artifacts/artifact.png" depth="0.7" sourcerect="1,0,57,56"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+        
+    <Body radius="26" density="10.01" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" Condition="-60"/>
+	  <StatusEffect type="InWater" target="This" Condition="90"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
+        <Explosion range="250" structuredamage="2.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="4.5"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Charger Artifact"
+	aliases="Charger"
+    category="Alien"
+    Tags="alien,rtfct"
+	impacttolerance="1">
+
+    <Sprite texture="Mods/BTE/Items/Artifacts/artifact.png" depth="0.7" sourcerect="1,58,58,54"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Bronze Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+        
+    <Body radius="26" density="10.01" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" Condition="-60"/>
+	  <StatusEffect type="OnImpact" target="This" Condition="-25"/>
+	  <StatusEffect type="InWater" target="This" Condition="40"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" setvalue="true">
+        <Explosion range="1000" empstrength="0.01" force="0.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="0.5"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item
+    name="Flopper Artifact"
+	aliases="Flopper"
+    category="Alien"
+    Tags="alien,rtfct"
+	impacttolerance="4">
+
+    <Sprite texture="Mods/BTE/Items/Artifacts/artifact.png" depth="0.7" sourcerect="60,0,57,56"/>
+
+    <Deconstruct time="30">
+      <Item name="Steel Bar"/>
+      <Item name="Copper Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+        
+    <Body radius="24" density="10" friction="0.95"/>
+
+    <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10">
+      <StatusEffect type="Always" target="This" Condition="-50"/>
+	  <StatusEffect type="OnImpact" target="This" Condition="-25"/>
+	  <StatusEffect type="OnBroken" target="This" Condition="100" delay="20" setvalue="true">
+        <Explosion range="350" stun="5" force="0.1" shockwave="false" flames="false" smoke="false" flash="false" sparks="false" camerashake="4.5"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  
+  <Item
+    name="Dirium Fragment"
+	aliases="Dirium Frag"
+    category="Alien"
+    tags="meditem,alien"
+    impacttolerance="8">
+	
+	<Deconstruct time="10">
+      <Item name="Dirium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="0,32,10,10"/>
+
+    <Body width="10" height="10" density="15"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" handle2="0,0" throwforce="3" aimpos="35,-10"/>
+  </Item>
+  
+  <Item
+    name="'White' Shard"
+	aliases="Oxygenite Shard"
+    category="Alien"
+    tags="meditem,alien,shard"
+    impacttolerance="8">
+	
+	<Deconstruct time="20">
+      <Item name="Steel Bar"/>
+	  <Item name="Liquid Oxygenite"/>
+	  <Item name="Liquid Oxygenite"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="10.1"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This" Condition="-53">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+      <StatusEffect type="OnBroken" target="This,Hull" oxygen="90000">
+	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <Explosion range="590" damage="30" stun="8" force="20" camerashake="4.5"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+
+  <Item
+   name="'Yellow' Shard"
+   aliases="Sulphurite Shard,Sulfurite Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5"
+   spritecolor="255.0,250.0,0.0,1.0">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Sulphuric Acid"/>
+      <Item name="Sulphuric Acid"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This" Condition="-28.3">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+      <StatusEffect type="OnBroken" target="This,Hull" oxygen="-90000">
+	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+    name="'Red' Shard"
+	aliases="Thermite Shard,Incendium Bar"
+    category="Alien"
+    tags="meditem,alien,shard"
+    impacttolerance="8"
+	spritecolor="0.5,0.0,0.0,1.0">
+	
+	<Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Thermite Powder"/>
+      <Item name="Thermite Powder"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="12"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+	    <sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+	  </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+	    <sound file="Mods/BTE/Items/Weapons/ThermiteExplosion.ogg"/>
+        <Fire size="300.0"/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Gold' Shard"
+   aliases="Zrbite Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Sliver"/>
+      <Item name="Biomass"/>
+	  <Item name="Biomass"/>
+    </Deconstruct>
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="0,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Copper' Shard"
+   aliases="Nitrous Zrbite Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5"
+   spritecolor="0.78,0.55,0.2,1.0">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Vial of Fulgurium Powder"/>
+      <Item name="Vial of Fulgurium Powder"/>
+	  <Item name="Vial of Nitroglycerin"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This" Condition="-53">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-53"/>
+      <StatusEffect type="OnBroken" target="This">
+		<sound file="Mods/BTE/Items/Tools/GlassBreak.ogg"/>
+		<sound file="Mods/BTE/Items/Weapons/ChemExplosion.ogg"/>
+        <Explosion range="500" stun="15" force="16" camerashake="4" decal="explosion" decalsize="0.55"/>
+		<Remove/>
+      </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Dark Green' Shard"
+   aliases="Uranium Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5"
+   spritecolor="0.2,0.35,0.06,1.0">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Uranium Bar"/>
+      <Item name="Uranium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="Content/Items/Artifacts/artifact.png" depth="0.7" sourcerect="119,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+    </Throwable>
+  </Item>
+  
+  <Item
+   name="'Pink' Shard"
+   aliases="Materium Shard"
+   category="Alien"
+   tags="meditem,alien,shard"
+   impacttolerance="5">
+
+    <Deconstruct time="20">
+      <Item name="Polycarbonate Sliver"/>
+      <Item name="Aluminum Sliver"/>
+      <Item name="Copper Sliver"/>
+	  <Item name="Steel Sliver"/>
+	  <Item name="Uranium Sliver"/>
+	  <Item name="Fulgurium Sliver"/>
+    </Deconstruct>
+
+    <Sprite texture="moreartifact.png" depth="0.7" sourcerect="10,0,9,32"/>
+
+    <Body width="9" height="32" density="14"/>
+	
+	<Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,-5" handle2="0,-5" throwforce="3" aimpos="35,-10">
+	  <StatusEffect type="OnImpact" target="This">
+	    <sound file="Mods/BTE/Items/Tools/GlassHit.ogg"/>
+	  </StatusEffect>
+	  <StatusEffect type="OnActive" target="Character" health="-0.01"/>
+    </Throwable>
+  </Item>
+
+  <Item
+   name="Alien Weapon"
+   aliases="Ancient Weapon"
+   category="Alien"
+   Tags="bigitem,weapon,alien">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="Content/Items/Artifacts/alientools.png" depth="0.55" sourcerect="0,0,95,50" origin="0.5,0.4"/>
+
+    <Body width="85" height="40" density="10.1"/>
+
+    <Holdable slots="Any,RightHand+LeftHand" aimpos="100,0" handle1="0,11" handle2="2,11"/>
+
+    <RepairTool structurefixamount="-5.0" limbfixamount="-2.0" range="600" barrelpos="30,15" particles="largeplasma">
+      <ParticleEmitter particle="largeplasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch" Stuck="-20.0" Condition="-6.0"/>
+	  <Fixable name="structure"/>
+      <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800.0" loop="true"/>
+	  <RequiredItems name="'White' Shard,'Yellow' Shard,'Red' Shard,shard" type="Contained" msg="The shard inside is depleted"/>
+      <RequiredSkill name="Weapons" level="30"/>
+	  <StatusEffect type="OnFailure" target="Contained" targetnames="'White' Shard,'Yellow' Shard,'Red' Shard,shard" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="'Yellow' Shard" Condition="-1.2" oxygen="-20000.0"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'White' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Red' Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Gold' Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Copper' Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Dark Green' Shard" Condition="-0.1"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Pink' Shard" Condition="-5"/>
+      <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" range="500">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
+      </LightComponent>
+    </RepairTool>
+    
+    <Propulsion force="-20" usablein="both"/>
+	
+	<Projectile launchimpulse="80.0">
+      <Attack damage="1000" bleedingdamage="10" structuredamage="500" damagetype="Blunt"/>
+      <StatusEffect type="OnUse" Condition="-100.0" stun="10.0" disabledeltatime="true">
+	    <sound file="Content/Items/Artifacts/alienweapon.ogg"/>
+        <Explosion range="1000" structuredamage="5000" damage="1000" stun="10" force="50" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" velocitymax="50" scalemin="2" scalemax="5"/>
+      </StatusEffect>
+    </Projectile>
+
+    <ItemContainer capacity="1" hideitems="true" itempos="9,-15">
+      <Containable name="shard"/>
+    </ItemContainer>
+  </Item>
+  
+  <Item
+   name="Alien Tool"
+   aliases="Ancient Tool"
+   category="Alien"
+   Tags="bigitem,weapon,alien">
+
+    <Deconstruct time="20">
+      <Item name="Steel Bar"/>
+      <Item name="Steel Bar"/>
+      <Item name="Fulgurium Bar"/>
+    </Deconstruct>
+
+    <Sprite texture ="Content/Items/Artifacts/alientools.png" depth="0.55" sourcerect="0,0,95,50" origin="0.5,0.4"/>
+
+    <Body width="85" height="40" density="10.1"/>
+
+    <Holdable slots="Any,RightHand+LeftHand" aimpos="100,0" handle1="0,11" handle2="2,11"/>
+
+    <RepairTool extinquishamount="10" structurefixamount="3" limbfixamount="0.2" range="600" barrelpos="30,15" particles="healplasma">
+      <ParticleEmitter particle="healplasma" particlespersecond="50"/>
+	  <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitItem particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800"/>
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20"/>
+      <ParticleEmitterHitItem particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+      <ParticleEmitterHitCharacter particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100"/>
+	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch,Thick Door,Thin Door,Thin Hatch,Wall Hatch,Wall Door,Tall Door,Wide Hatch,Thick Door" Stuck="-20.0" Condition="5.0"/>
+	  <Fixable name="structure"/>
+      <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800.0" loop="true"/>
+	  <RequiredItems name="'White' Shard,'Yellow' Shard,'Red' Shard,shard" type="Contained" msg="The shard inside is depleted"/>
+      <RequiredSkill name="Construction" level="30"/>
+	  <StatusEffect type="OnFailure" target="Contained" targetnames="'White' Shard,'Yellow' Shard,'Red' Shard,shard" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="'Yellow' Shard" Condition="-0.6"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'White' Shard" Condition="-0.2" oxygen="20000"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Red' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Gold' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Copper' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Dark Green' Shard" Condition="-0.05"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Pink' Shard" Condition="-2.5"/>
+      <LightComponent LightColor="0.4,0.9,0.4,1.0" Flicker="0.5" range="500">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
+      </LightComponent>
+    </RepairTool>
+	
+	<Projectile launchimpulse="80.0">
+      <Attack damage="1000" bleedingdamage="10" structuredamage="500" damagetype="Blunt"/>
+      <StatusEffect type="OnUse" Condition="-100.0" stun="10.0" disabledeltatime="true">
+	    <sound file="Content/Items/Artifacts/alienweapon.ogg"/>
+        <Explosion range="1000" structuredamage="5000" damage="1000" stun="10" force="50" camerashake="5.0"/>
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="This">
+        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="10" velocitymin="0" velocitymax="50" scalemin="2" scalemax="5"/>
+      </StatusEffect>
+    </Projectile>
+
+    <ItemContainer capacity="1" hideitems="true" itempos="9,-15">
+      <Containable name="Oxygenite Shard,Sulphurite Shard,Thermite Shard,shard"/>
+    </ItemContainer>
+  </Item>
+
+  <Item
+    name="Alien Hatch"
+    category="Alien"
+    Tags="alien"
+    linkable="true">
+
+    <Sprite texture="Content/Map/ruins.png" sourcerect="747,0,260,95" depth="0.8" origin="0.5,0.5"/>
+
+    <Door canbeselected="true" horizontal="true">
+      <Sprite texture="Content/Map/ruins.png" sourcerect="0,842,260,54"  depth="0.6" origin="0.0,0.5"/>
+      <sound file="Content/Items/Artifacts/aliendoor.ogg" type="OnUse" range="1000.0"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Artifacts/aliendoor.ogg"/>
+	    <Explosion range ="200" stun="0.1" force="5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <ConnectionPanel selectkey="Action" msg="Rewire [Screwdriver]">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+
+  <Item
+   name="Alien Door"
+   category="Alien"
+   linkable="true"
+   Tags="alien">
+
+    <Sprite texture="Content/Map/ruins.png" sourcerect="746,101,93,259" depth="0.8" origin="0.5,0.5"/>
+
+    <Door canbepicked="false" canbeselected="true">
+      <Sprite texture="Content/Map/ruins.png" sourcerect="842,192,54,259" depth="0.6" origin="0.5,0.0"/>
+      <sound file="Content/Items/Artifacts/aliendoor.ogg" type="OnUse" range="3000"/>
+	  <StatusEffect type="OnBroken" target="This">
+	    <sound file="Content/Items/Artifacts/aliendoor.ogg" range="3000"/>
+	    <Explosion range ="200" stun="0.1" force="5" flash="false" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="5.0"/>
+      </StatusEffect>
+    </Door>
+
+    <ConnectionPanel selectkey="Action" msg="Rewire [Screwdriver]">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <input name="toggle"/>
+      <input name="set_state"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+
+  <Item
+   name="Alien Motion Sensor"
+   linkable="true"
+   category="Alien"
+   Tags="alien">
+
+    <Sprite texture="Content/Map/ruins.png" sourcerect="55,608,81,103" depth="0.8" origin="0.5,0.5"/>
+
+    <MotionSensor range="300" output="0"/>
+
+    <ConnectionPanel selectkey="Action" msg="Rewire [Screwdriver]">
+      <requireditem name="Screwdriver" type="Equipped"/>
+      <output name="state_out"/>
+    </ConnectionPanel>
+  </Item>
+
+  <Item
+   name="Artifact Holder"
+   category="Alien"
+   Tags="alien"
+   linkable="true">
+
+    <Sprite texture="Content/Items/Artifacts/artifactholder.png" depth="0.8" sourcerect="0,0,256,256"/>
+
+    <ItemContainer capacity="1" canbeselected="true" hideitems="false" itempos="128,-128">
+      <Containable name="Alien"/>
+      <Containable name="Thermal Artifact">
+        <StatusEffect type="OnContaining" target="This" Charge="1000"/>        
+      </Containable>
+      <Containable name="Faraday Artifact">
+        <StatusEffect type="OnContaining" target="This" Charge="10"/>
+      </Containable>
+    </ItemContainer>
+
+    <LightComponent lightcolor="0.6,0.8,1.0,1.0" canbeselected="false" range="800" IsOn="true">
+	  <StatusEffect type="Always" target="Contained" targetnames="Oxygenite Shard,Sulphurite Shard,Thermite Shard" Condition="2.0"/>
+	</LightComponent>
+  </Item>
+</Items>
