@@ -136,7 +136,7 @@
 	  <Item name="Armoured Gasmask"/>
     </Items>
   </Job>
-  
+
   <Job name="Scientist" description="Scientists are usually found in science vessels but they are often employed by military or private employers because of their knowledge of biochemistry and quantum physics."
 	   maxnumber="1" minkarma="0.5">
     <Skills>
@@ -373,7 +373,7 @@
     </Items>
   </Job>
   
-  <Job name="CS Commander" description=""
+  <!-- <Job name="CS Commander" description=""
 	   maxnumber="1" minkarma="1">
     <Skills>
       <Skill name="Weapons" level="60,80"/>
@@ -497,5 +497,5 @@
 		<Item name="Basic Ration Stamp"/>
 	  </Item>
     </Items>
-  </Job>
+  </Job>-->
 </Jobs>

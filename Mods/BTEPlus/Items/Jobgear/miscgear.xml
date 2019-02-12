@@ -1221,7 +1221,7 @@
     name="Survivor Docgear"
     category="Misc"
     tags="meditem,clothing"
-    description="The usual garment given to detainees by the Coalition.">
+    description="">
 	
 	<Deconstruct time="10">
       <Item name="Ragged Doc's Coat"/>
@@ -1269,7 +1269,7 @@
     name="Survivor Engigear"
     category="Misc"
     tags="meditem,clothing"
-    description="The fire-resistant fabric offers some protection against fires. Plenty of pockets for carrying any extra gear a mechanic might need.">
+    description="">
 	
 	<Deconstruct time="15">
       <Item name="Ragged Utility Jumpsuit"/>
@@ -1315,7 +1315,7 @@
     name="Survivor Cellgear"
     category="Misc"
     tags="meditem,clothing"
-    description="The usual garment given to detainees by the Coalition.">
+    description="">
 	
 	<Deconstruct time="10">
       <Item name="Ragged Prisoner Jumpsuit"/>

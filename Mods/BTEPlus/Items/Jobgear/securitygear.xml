@@ -50,12 +50,37 @@
   </Item>
   
   <Item
+    name="Battle Visor"
+	aliases="Ballistic Helmet C"
+    category="Equipment"
+    tags="meditem,clothing"
+    description="While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+
+    <Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+      <Item name="Steel Bar"/>
+    </Deconstruct>
+    
+    <Sprite texture="securitygear.png" sourcerect="150,106,29,22" depth="0.6"/>
+
+    <Body radius="12" density="30"/>
+
+    <Wearable slots="Any,Head">
+      <sprite texture="securitygear.png" limb="Head" depth="0.038" inheritlimbdepth="false" sourcerect="150,106,29,22" origin="0.51,0.9"/>
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.095" disabledeltatime="true"/> <!-- oxygen="-0.02" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.8"/>
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.275" bleedingmultiplier="0.475" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.157" bleedingmultiplier="0.275" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
     name="Ballistic Vest A"
 	aliases="Body Armor,Body Armour"
     category="Equipment"
     tags="bigitem,clothing"
-	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board."
-    >
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
 	
 	<Deconstruct time="15">
       <Item name="Polycarbonate Bar"/>
@@ -84,8 +109,7 @@
     name="Ballistic Vest B"
     category="Equipment"
     tags="bigitem,clothing"
-	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board."
-    >
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
 	
 	<Deconstruct time="15">
       <Item name="Polycarbonate Bar"/>
@@ -115,11 +139,44 @@
   </Item>
   
   <Item
+    name="Enforcer Technician's Vest"
+	aliases="Ballistic Vest C"
+    category="Equipment"
+    tags="bigitem,clothing"
+	description="While a ballistic vest won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.">
+	
+	<Deconstruct time="15">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Bar"/>
+	  <Item name="Steel Bar"/>
+    </Deconstruct>
+
+    <Sprite texture="securitygear2.png" sourcerect="68,0,60,31" depth="0.6"/>
+
+    <Body width="52" height="17" density="40"/>
+
+    <Wearable slots="Any,Torso">
+      <sprite texture="securitygear2.png" limb="Torso" sourcerect="0,0,38,58" depthlimb="Head" origin="0.52,0.48"/>
+	  
+	  <sprite texture="securitygear2.png" limb="RightHand" sourcerect="86,38,15,47" origin="0.45,0.55"/>
+      <sprite texture="securitygear2.png" limb="LeftHand" sourcerect="86,38,15,47" origin="0.45,0.55"/>
+
+      <sprite texture="securitygear2.png" limb="RightArm" sourcerect="106,38,21,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="securitygear2.png" limb="LeftArm" sourcerect="106,38,21,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.1" disabledeltatime="true"/> <!-- oxygen="-0.08" /> -->
+	  
+	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.6"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.7" bleedingmultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.4" bleedingmultiplier="0.45" damagesound="LimbArmor" deflectprojectiles="true"/>
+    </Wearable>
+  </Item>
+  
+  <Item
     name="Ballistic Trousers"
     category="Equipment"
 	tags="meditem,clothing"
-	description="A standard issue pairs of synthetic fiber trousers with a ballistic mesh layer and knee pads."
-	>
+	description="A standard issue pairs of synthetic fiber trousers with a ballistic mesh layer and knee pads.">
 	
 	<Deconstruct time="10">
 	  <Item name="Polycarbonate Bar"/>
@@ -180,7 +237,7 @@
 
     <Wearable limbtype="Head" slots="Any,Face">
       <sprite texture="moregear.png" limb="Head" depth="0.6" sourcerect="0,154,20,8" origin="0.45,0.9"/>
-	  <sprite texture="Jobgear/securitygear.png" depth="0.61" sourcerect="100,112,16,16"/>
+	  <sprite texture="securitygear.png" depth="0.61" sourcerect="100,112,16,16"/>
       <StatusEffect type="OnWearing" target="Contained" Condition="-0.05"/>
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.95"/>

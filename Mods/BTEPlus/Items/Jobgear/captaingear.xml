@@ -242,11 +242,11 @@
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
 	  
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.20" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.27" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.55" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.25" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
 	
 	<ItemContainer capacity="3">
@@ -287,11 +287,11 @@
 	  <sprite texture="crewLegs.png" limb="RightFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
       <sprite texture="crewLegs.png" limb="LeftFoot" sound="footstep_metal" sourcerect="53,54,16,25" origin="0.5,0.5" hidelimb="true"/>
 	  
-	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.20" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.27" disabledeltatime="true"/> <!-- oxygen="-0.008" /> -->
 	  
 	  <damagemodifier damagetype="Burn" armorsector="0.0,360.0" damagemultiplier="0.9"/>
-      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.3" bleedingmultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true"/>
-      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.2" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.55" bleedingmultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.25" bleedingmultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true"/>
     </Wearable>
 	
 	<ItemContainer capacity="3">

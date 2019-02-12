@@ -1230,12 +1230,12 @@
   
     <Sprite texture="moreweapons.png" sourcerect="133,155,123,33" depth="0.55"/>
 
-    <Body width="133" height="155" density="66"/>
+    <Body width="123" height="33" density="66"/>
 
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
 			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-25,-3" handle2="15,4"/>
     
-    <RangedWeapon barrelpos="4,3" spread="0" unskilledspread="0" reload="20">
+    <RangedWeapon barrelpos="4,3" spread="0" unskilledspread="0" reload="10">
       <Sound file="Content/Items/Weapons/railgun.ogg" type="OnUse"/>
       <RequiredItems name="mprammo" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1268,10 +1268,10 @@
 
     <Body width="83" height="5" density="52"/>
 
-    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false"/>
+    <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false"/>
     
     <Projectile launchimpulse="50" sticktocharacters="true">
-      <Attack damage="80" bleedingdamage="12" stun="2.2" structuredamage="200" damagetype="Slash" severlimbsprobability="1"/>
+      <Attack damage="135" bleedingdamage="12" stun="2.2" structuredamage="200" damagetype="Slash" severlimbsprobability="1"/>
 	  <StatusEffect type="OnActive" target="This">
         <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="2"/>
       </StatusEffect>
@@ -1497,7 +1497,7 @@
 	  <StatusEffect type="OnUse" target="This">
 	    <Explosion range="65" force="0.5" shockwave="false" flames="false" smoke="false" sparks="false" camerashake="1"/>
       </StatusEffect>
-	  <StatusEffect type="OnUse" target="Contained" Condition="-2" disabledeltatime="true"/>
+	  <StatusEffect type="OnUse" target="Contained" Condition="-0.5" disabledeltatime="true"/>
 	  <StatusEffect type="OnFailure" target="Contained" Condition="-20" disabledeltatime="true"/>
     </RepairTool>
 	

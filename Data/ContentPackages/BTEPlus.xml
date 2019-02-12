@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="BTE 8.4 Plus 1.8" path="Data/ContentPackages/BTEPlus">
+<contentpackage name="BTE 8.4 Plus 1.9 PR" path="Data/ContentPackages/BTEPlus">
   <!-- <Item file="Content/Items/idcard.xml"/> -->
   <!-- <Item file="Content/Items/itemlabel.xml"/> -->
   <!-- <Item file="Content/Items/Artifacts/artifacts.xml"/> -->
@@ -61,7 +61,7 @@
   <Item file="Mods/BTE/Items/itemlabel.xml"/>
   <Item file="Mods/BTEPlus/Items/Artifacts/artifacts.xml"/>
   <Item file="Mods/BTE/Items/Containers/containers.xml"/>
-  <Item file="Mods/BTE/Items/Jobgear/idcard.xml"/>
+  <Item file="Mods/BTEPlus/Items/Jobgear/idcard.xml"/>
   <Item file="Mods/BTEPlus/Items/Jobgear/captaingear.xml"/>
   <Item file="Mods/BTEPlus/Items/Jobgear/securitygear.xml"/>
   <Item file="Mods/BTE/Items/Jobgear/doctorgear.xml"/>

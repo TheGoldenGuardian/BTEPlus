@@ -668,6 +668,41 @@
   </Item>
   
   <Item
+    name="Crewmember Hoodie"
+    category="Equipment"
+	tags="meditem,clothing"
+	description="A garment covering the torso, arms and head, intended to provide warmth in cold environments."
+	cargocontainername="Standard Shipping Box"
+	price="50">
+	
+	<Deconstruct time="10">
+      <Item name="Polycarbonate Bar"/>
+	  <Item name="Polycarbonate Sliver"/>
+    </Deconstruct>
+
+	<Sprite texture="Sweater.png" sourcerect="0,50,51,13" depth="0.6"/>
+
+    <Body width="50" height="17" density="11"/>
+
+    <Wearable slots="Any,Torso">
+	  <sprite texture="Sweater.png" limb="Head" depth="0.039" inheritlimbdepth="false" sourcerect="106,100,22,28" origin="0.55,0.6"/>
+	  
+      <sprite texture="Sweater.png" limb="Torso" sourcerect="0,67,29,49" depthlimb="Head" origin="0.5,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+      <sprite texture="Sweater.png" limb="LeftHand" sourcerect="50,70,14,37" origin="0.6,0.6"/>
+	  
+	  <sprite texture="Sweater.png" limb="RightArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+      <sprite texture="Sweater.png" limb="LeftArm" sourcerect="31,69,17,40" origin="0.5,0.5" hidelimb="true"/>
+	  
+	  <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="-0.07" disabledeltatime="true"/> <!-- oxygen="-0.006" /> -->
+	  
+	  <damagemodifier damagetype="Blunt" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+      <damagemodifier damagetype="Slash" armorsector="0.0,360.0" damagemultiplier="0.8" bleedingmultiplier="0.8" deflectprojectiles="false"/>
+    </Wearable>
+  </Item>
+  
+  <Item
     name="Crewmember Jumper A"
     category="Equipment"
 	tags="meditem,clothing"

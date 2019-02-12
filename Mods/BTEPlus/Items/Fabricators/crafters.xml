@@ -834,6 +834,21 @@
 	  <fabricableitem name="Flashlight Suppressed Pistol" requireditems="Makeshift Suppressed Pistol, Flashlight, Battery, Steel Sliver" requiredtime="5">
 		<Item name="Duct Tape" mincondition="0.5" usecondition="true"/>
 	  </fabricableitem>
+	  <fabricableitem name="Survivor Docgear" requireditems="Ragged Doc's Coat, Ragged Armor Vest, Ragged Cargo Trousers" requiredtime="25">
+		<Item name="Duct Tape" mincondition="0.5" usecondition="true"/>
+		<Item name="Bandage" mincondition="0.99"/>
+		<RequiredSkill name="Construction" level="30"/>
+	  </fabricableitem>
+	  <fabricableitem name="Survivor Engigear" requireditems="Ragged Utility Jumpsuit, Ragged Armor Vest" requiredtime="25">
+		<Item name="Duct Tape" mincondition="0.5" usecondition="true"/>
+		<Item name="Bandage" mincondition="0.99"/>
+		<RequiredSkill name="Construction" level="40"/>
+	  </fabricableitem>
+	  <fabricableitem name="Survivor Cellgear" requireditems="Ragged Prisoner Jumpsuit, Ragged Armor Vest" requiredtime="25">
+		<Item name="Duct Tape" mincondition="0.5" usecondition="true"/>
+		<Item name="Bandage" mincondition="0.99"/>
+		<RequiredSkill name="Construction" level="35"/>
+	  </fabricableitem>
     </Fabricator>
 	
 	<Holdable slots="RightHand+LeftHand" holdpos="0,-80" aimpos="20,-40" handle1="-30,14" handle2="30,14" aimable="false"/>
