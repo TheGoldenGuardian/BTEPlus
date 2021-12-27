@@ -567,27 +567,31 @@
 	  <StatusEffect type="OnUse" target="UseTarget" targetnames="Door,Small Door,Blast Door,Windowed Door,Glass Door,Hatch,Blast Hatch,Duct Block,Alien Door,Alien Hatch" Stuck="-20" Condition="-6.0"/>
 	  <Fixable name="structure"/>
       <sound file="Content/Items/Artifacts/alienweapon.ogg" type="OnUse" range="800" loop="true"/>
-	  <RequiredItems name="Oxygenite Shard,Sulphurite Shard,Uraninite Shard,Thermite Shard" type="Contained" msg="The shard inside is depleted"/>
+	  <RequiredItems name="'White' Shard,'Yellow' Shard,'Red' Shard,'Green' Shard" type="Contained" msg="The shard inside is depleted"/>
       <RequiredSkill name="Weapons" level="30"/>
-	  <StatusEffect type="OnFailure" target="Contained" targetnames="Oxygenite Shard,Sulphurite Shard,Thermite Shard" Condition="-2.0"/>
-	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="Sulphurite Shard" Condition="-1.2" oxygen="-20000"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Oxygenite Shard" Condition="-0.4"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Uraninite Shard" Condition="-0.6"/>
-	  <StatusEffect type="OnUse" target="Contained" targetnames="Thermite Shard" Condition="-0.8"/>
+	  <StatusEffect type="OnFailure" target="Contained" targetnames="'White' Shard,'Yellow' Shard,'Red' Shard,'Green' Shard" Condition="-2.0"/>
+	  <StatusEffect type="OnUse" target="Contained,Hull" targetnames="'Yellow' Shard" Condition="-1.2" oxygen="-20000"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'White' Shard" Condition="-0.4"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Green' Shard" Condition="-0.6"/>
+	  <StatusEffect type="OnUse" target="Contained" targetnames="'Red' Shard" Condition="-0.8"/>
       <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5" range="500">
         <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5"/>
       </LightComponent>
     </RepairTool>
     
     <Propulsion force="-20" usablein="both">
-	  <RequiredItems name="Oxygenite Shard,Sulphurite Shard,Uraninite Shard,Thermite Shard" type="Contained"/>
+	  <RequiredItems name="'White' Shard,'Yellow' Shard,'Red' Shard,'Green' Shard" type="Contained"/>
 	</Propulsion>
 
     <ItemContainer capacity="1" hideitems="true" itempos="9,-15">
       <Containable name="Oxygenite Shard"/>
+      <Containable name="'White' Shard"/>
       <Containable name="Sulphurite Shard"/>
+      <Containable name="'Yellow' Shard"/>
 	  <Containable name="Uraninite Shard"/>
+      <Containable name="'Green' Shard"/>
 	  <Containable name="Thermite Shard"/>
+      <Containable name="'Red' Shard"/>
     </ItemContainer>
   </Item>
 

@@ -245,12 +245,14 @@
       <GuiFrame rect="0,0,600,400" alignment="Center" style="ItemUI"/>
       <sound file="Mods/BTE/Items/Fabricators/SewingKit.ogg" type="OnActive" range="500" loop="true"/>
 
-      <fabricableitem name="Crewmember Cap A" requireditems="Crewmember Cap B" requiredtime="2"/>
-	  <fabricableitem name="Crewmember Cap B" requireditems="Crewmember Cap A" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap A" requireditems="Captain's Cap B" requiredtime="2"/>
+	  <fabricableitem name="Captain's Cap B" requireditems="Captain's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Officer's Cap A" requireditems="Officer's Cap B" requiredtime="2"/>
 	  <fabricableitem name="Officer's Cap B" requireditems="Officer's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Officer's Beret" requireditems="Officer's Cap A" requiredtime="2"/>
 	  <fabricableitem name="Officer's Cap A" requireditems="Officer's Beret" requiredtime="2"/>
+      <fabricableitem name="Crewmember Cap A" requireditems="Crewmember Cap B" requiredtime="2"/>
+	  <fabricableitem name="Crewmember Cap B" requireditems="Crewmember Cap A" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Ushanka A" requireditems="Crewmember Ushanka B" requiredtime="2"/>
 	  <fabricableitem name="Crewmember Ushanka B" requireditems="Crewmember Ushanka A" requiredtime="2"/>
 	  <fabricableitem name="Ballistic Helmet B" requireditems="Ballistic Helmet A" requiredtime="2">

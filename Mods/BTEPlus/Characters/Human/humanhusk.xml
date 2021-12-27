@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Character name="husk" humanoid="true" doesbleed="false" needsair="false" genders="true" maleheadid="1,28" femaleheadid="1,15">
+<Character name="husk" humanoid="true" doesbleed="false" needsair="false" genders="true" maleheadid="1,28" femaleheadid="1,14">
 
     <name firstname="Mods/BTEPlus/Characters/Human/[GENDER]firstnames.txt" lastname="Content/Characters/Human/lastnames.txt" />
 

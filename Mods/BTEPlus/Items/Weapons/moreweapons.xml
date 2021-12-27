@@ -9,8 +9,7 @@
     description="[CR2] The Coalition Revolver 2 is still in testing. In fact, it may never leave testing, but for raw power in a pocket sized package, there is no other choice. Standard issue for high-ranking officers."
     cargocontainername="Weapons Shipping Box"
     impacttolerance="3"
-    price="2000"
-	canuseonself="true">
+    price="2000">
 
     <Deconstruct time="10">
       <Item name="Spare Parts"/>
@@ -68,8 +67,7 @@
     tags="meditem,weapon"
     description="[CR2] The Coalition Revolver 2 is still in testing. In fact, it may never leave testing, but for raw power in a pocket sized package, there is no other choice. Standard issue for high-ranking officers. This one has an attached self-powered flashlight."
     cargocontainername="Weapons Shipping Box"
-    impacttolerance="3"
-	canuseonself="true">
+    impacttolerance="3">
 
     <Deconstruct time="3">      
       <Item name="Diving Revolver"/>
@@ -135,8 +133,7 @@
     description="[CSP .50] A large caliber pistol holding 7 rounds. Usually affectionately called the 'hand cannon.' Uses Large Bore Rounds."
     cargocontainername="Weapons Shipping Box"
     impacttolerance="3"
-    price="2000"
-	canuseonself="true">
+    price="2000">
 
     <Deconstruct time="10">
       <Item name="Spare Parts"/>
@@ -193,8 +190,7 @@
     description="[CSP .50] A large caliber pistol holding 7 rounds. Usually affectionately called the 'hand cannon.' Uses Large Bore Rounds."
     cargocontainername="Weapons Shipping Box"
     impacttolerance="3"
-    price="2000"
-	canuseonself="true">
+    price="2000">
 
     <Deconstruct time="10">
       <Item name="Spare Parts"/>
@@ -278,8 +274,7 @@
     category="Equipment"
 	tags="meditem,weapon"
     description="It belongs in a museum! This old handgun still packs a punch, though."
-    impacttolerance="3"
-	canuseonself="true">
+    impacttolerance="3">
 
     <Deconstruct time="10">      
       <Item name="Steel Bar"/>
@@ -337,8 +332,7 @@
     category="Equipment"
 	tags="meditem,weapon"
     description="A prime example of why Engineering is never given access to weaponry."
-    impacttolerance="3"
-	canuseonself="true">
+    impacttolerance="3">
 
     <Deconstruct time="3">      
       <Item name="Old Revolver"/>
@@ -403,8 +397,7 @@
 	description="[DS-M2] The diving shotgun was an aging design, still used among a large majority of the Coalition. This is the upgraded variant, standard issue for security-heavy ships."
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3"
-    price="3750"
-	canuseonself="true">
+    price="3750">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -471,8 +464,7 @@
 	tags="bigitem,weapon"
 	description="[DS-M2] The diving shotgun was an aging design, still used among a large majority of the Coalition. This is the upgraded variant, standard issue for security-heavy ships. This one has an attached self-powered flashlight."
 	cargocontainername="Weapons Shipping Box"
-	impacttolerance="3"
-	canuseonself="true">
+	impacttolerance="3">
 
     <Deconstruct time="3">
       <Item name="Diving Shotgun"/>
@@ -546,8 +538,7 @@
 	description="[AS-M1] This rather standard semi-automatic shotgun is mainly used among prison ships, but only holds 6 shells. It can not load less than lethal, due to their low power."
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3"
-    price="4000"
-	canuseonself="true">
+    price="4000">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -615,8 +606,7 @@
 	description="[AS-M1] This rather standard semi-automatic shotgun is mainly used among prison ships, but only holds 6 shells. It can not load less than lethal, due to their low power. This one has an attached self-powered flashlight."
 	cargocontainername="Weapons Shipping Box"
 	impacttolerance="3"
-    price="4000"
-	canuseonself="true">
+    price="4000">
 
     <Deconstruct time="10">      
       <Item name="Spare Parts"/>
@@ -959,8 +949,7 @@
     tags="meditem,weapon"
     description="A small, unreliably made pistol with a suppressor attached. Quite clearly a traitor's weapon."
     cargocontainername="Weapons Shipping Box"
-    impacttolerance="3"
-	canuseonself="true">
+    impacttolerance="3">
 
     <Deconstruct time="10">
       <Item name="Steel Bar"/>
@@ -1021,8 +1010,7 @@
     tags="meditem,weapon"
     description="A small, unreliably made pistol with a suppressor attached. Quite clearly a traitor's weapon. Features a crudely-attached Flashlight."
     cargocontainername="Weapons Shipping Box"
-    impacttolerance="3"
-	canuseonself="true">
+    impacttolerance="3">
 
     <Deconstruct time="10">
       <Item name="Steel Bar"/>
@@ -1235,7 +1223,7 @@
     <Holdable slots="RightHand+LeftHand,Any" controlpose="true"
 			holdpos="50,-10" holdangle="-20" aimpos="68,0" handle1="-25,-3" handle2="15,4"/>
     
-    <RangedWeapon barrelpos="4,3" spread="0" unskilledspread="0" reload="10">
+    <RangedWeapon barrelpos="4,3" spread="0" unskilledspread="0" reload="3">
       <Sound file="Content/Items/Weapons/railgun.ogg" type="OnUse"/>
       <RequiredItems name="mprammo" type="Contained" msg="The loaded ammunition is too damaged"/>
       <RequiredSkill name="Weapons" level="50"/>
@@ -1256,7 +1244,7 @@
     name="Man-Portable Railgun Spear"
 	aliases="mprs"
     category="Equipment"
-	tags="mprammo">
+	tags="mprammo,bigitem">
 
     <!-- <Deconstruct time="16">
       <Item name="Steel Bar"/>

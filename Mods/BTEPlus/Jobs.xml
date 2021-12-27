@@ -217,7 +217,7 @@
   </Job>
   
   <Job name="Engineer" description="Engineers have above-average electrician skills, but fixing complex mechanical devices is still usually out of their skill set. They are competent at fixing electrical devices however, and are the ones to turn to when the power grid starts failing."
-	   minnumber="1" maxnumber="4" minkarma="0.4" initialcount="1">
+	   minnumber="0" maxnumber="4" minkarma="0.4" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="10,20"/>
       <Skill name="Construction" level="20,40"/>
@@ -254,7 +254,7 @@
   </Job>
 
   <Job name="Mechanic" description="Mechanics have high construction and mechanic skills. They are skilled at using tools such as plasma cutters and welders, and are usually the only ones who can fix broken mechanical devices."
-	   minnumber="1" maxnumber="4" minkarma="0.3" initialcount="1">
+	   minnumber="0" maxnumber="4" minkarma="0.3" initialcount="1">
     <Skills>
       <Skill name="Weapons" level="20,40"/>
       <Skill name="Construction" level="50,70"/>
